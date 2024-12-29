@@ -1,0 +1,7 @@
+<map id="UAtomicPriorityQueue&lt; T &gt;" name="UAtomicPriorityQueue&lt; T &gt;">
+<area shape="rect" id="node1" title="包含一个优先级队列成员，基于mutex_封装成一个原子的优先级队列，支持原子的tryPop/push/empty" alt="" coords="5,304,211,331"/>
+<area shape="rect" id="node2" href="$class_u_queue_object.html" title="UQueueObject单独继承UThreadObject，只在此基础上新增了mutex_和cv_成员" alt="" coords="50,229,166,256"/>
+<area shape="rect" id="node3" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="49,155,167,181"/>
+<area shape="rect" id="node4" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="61,80,155,107"/>
+<area shape="rect" id="node5" href="$class_c_object.html" title=" " alt="" coords="71,5,145,32"/>
+</map>

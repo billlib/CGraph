@@ -1,0 +1,23 @@
+<map id="UThreadObject" name="UThreadObject">
+<area shape="rect" id="node1" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="269,435,388,462"/>
+<area shape="rect" id="node4" href="$struct_u_cv_mutex.html" title=" " alt="" coords="449,269,539,295"/>
+<area shape="rect" id="node5" href="$class_u_queue_object.html" title="UQueueObject单独继承UThreadObject，只在此基础上新增了mutex_和cv_成员" alt="" coords="436,319,552,346"/>
+<area shape="rect" id="node15" href="$class_u_semaphore.html" title="基于mutex_/cv_和int计数器cnt_封装的信号量" alt="" coords="441,385,547,411"/>
+<area shape="rect" id="node16" href="$class_u_spin_lock.html" title="基于std::atomic_flag实现的用户态自旋锁，std::atomic_flag只有true/false两种状态； USpinLock提供以下三个方法：lock为忙等，tryLock为单次尝试，..." alt="" coords="449,435,539,462"/>
+<area shape="rect" id="node17" href="$class_u_task_group.html" title="注意，并非基于UTask，实际维护的是CGRAPH_DEFAULT_FUNCTION类型的函数数组(std::vector) 支持addTask将更多的函数加入task_arr_数组，支持指定任务组最大..." alt="" coords="444,486,544,513"/>
+<area shape="rect" id="node18" href="$class_u_thread_base.html" title="线程池中实际使用的线程的基类，有以下关键成员： UAtomicQueue&lt;UTask&gt;* pool_task_queue_：存储当前线程待执行的普通任务； UAtomicPriorityQueue&lt;UT..." alt="" coords="439,545,549,571"/>
+<area shape="rect" id="node21" href="$class_u_thread_pool.html" title="线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等" alt="" coords="441,595,547,622"/>
+<area shape="rect" id="node2" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="127,435,221,462"/>
+<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="5,435,79,462"/>
+<area shape="rect" id="node6" href="$class_u_atomic_priority_queue.html" title=" " alt="" coords="649,5,815,47"/>
+<area shape="rect" id="node7" href="$class_u_atomic_queue.html" title=" " alt="" coords="637,71,827,98"/>
+<area shape="rect" id="node8" href="$class_u_atomic_ring_buffer_queue.html" title=" " alt="" coords="600,122,864,178"/>
+<area shape="rect" id="node9" href="$class_u_work_stealing_queue.html" title=" " alt="" coords="652,203,812,244"/>
+<area shape="rect" id="node10" href="$class_u_atomic_priority_queue.html" title="包含一个优先级队列成员，基于mutex_封装成一个原子的优先级队列，支持原子的tryPop/push/empty" alt="" coords="629,269,835,295"/>
+<area shape="rect" id="node11" href="$class_u_atomic_queue.html" title="包含一个普通队列成员，基于mutex_封装成一个原子的优先级队列， 支持原子的waitPop/tryPop/popWithTimeout/push/empty 新增ready_flag_用于通知辅助线程..." alt="" coords="653,319,811,346"/>
+<area shape="rect" id="node12" href="$class_u_atomic_ring_buffer_queue.html" title="包含一个基于std::vector的环形队列，基于mutex_实现原子的waitPopWithTimeout/push head_/tail_初始化为0，tail_及tail_之后一直到head_之前的..." alt="" coords="638,371,826,412"/>
+<area shape="rect" id="node13" href="$class_u_lock_free_ring_buffer_queue.html" title="环形队列基于std::vector存储，head_和tail_通过std::atomic封装 号称是无锁的，但是从代码看起来push/tryPop操作并不能解决多线程的竞态条件问题，线程安全性存疑？" alt="" coords="632,436,832,477"/>
+<area shape="rect" id="node14" href="$class_u_work_stealing_queue.html" title="工作窃取队列，实现为双端队列(deque_)； push在队尾发生，可以一次性写入一个或多个任务，也支持tryPush和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持tryPo..." alt="" coords="633,502,831,529"/>
+<area shape="rect" id="node19" href="$class_u_thread_primary.html" title="主线程类，核心成员是primary_queue_和secondary_queue_ 自身准备执行任务时，优先从primary_queue_取，其次从secondary_queue_取 自身准备窃取任务时..." alt="" coords="668,553,796,579"/>
+<area shape="rect" id="node20" href="$class_u_thread_secondary.html" title="和主线程UThreadPrimary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool_task_queue_)和优先级任务队列(pool_priori..." alt="" coords="659,603,805,630"/>
+</map>

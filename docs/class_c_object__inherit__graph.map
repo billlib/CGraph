@@ -1,0 +1,51 @@
+<map id="CObject" name="CObject">
+<area shape="rect" id="node1" title=" " alt="" coords="5,588,79,615"/>
+<area shape="rect" id="node2" href="$class_graph_manager.html" title=" " alt="" coords="136,360,331,387"/>
+<area shape="rect" id="node4" href="$class_graph_manager.html" title=" " alt="" coords="127,259,339,285"/>
+<area shape="rect" id="node6" href="$class_graph_manager.html" title=" " alt="" coords="136,613,331,640"/>
+<area shape="rect" id="node8" href="$class_graph_manager.html" title=" " alt="" coords="127,157,340,184"/>
+<area shape="rect" id="node10" href="$class_graph_manager.html" title=" " alt="" coords="134,731,333,757"/>
+<area shape="rect" id="node12" href="$class_graph_manager.html" title=" " alt="" coords="133,665,334,706"/>
+<area shape="rect" id="node14" href="$class_graph_manager.html" title=" " alt="" coords="132,56,335,83"/>
+<area shape="rect" id="node16" href="$class_graph_manager.html" title=" " alt="" coords="128,563,339,589"/>
+<area shape="rect" id="node18" href="$class_domain_object.html" title="DAnnObject = CObject." alt="" coords="176,781,291,808"/>
+<area shape="rect" id="node22" href="$class_graph_manager.html" title="所有以GraphObject为基类的对象（GAsepct/GDaemon/GEvent/GElement/GPipeline/GParam）的管理器的基类" alt="" coords="153,832,313,859"/>
+<area shape="rect" id="node23" href="$class_graph_object.html" title="GraphObject = CObject，没有新增或删除任何成员" alt="" coords="182,461,285,488"/>
+<area shape="rect" id="node36" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="186,1267,281,1293"/>
+<area shape="rect" id="node3" href="$class_g_stage_manager.html" title=" " alt="" coords="701,385,827,412"/>
+<area shape="rect" id="node5" href="$class_g_element_manager.html" title=" " alt="" coords="693,233,835,260"/>
+<area shape="rect" id="node7" href="$class_g_event_manager.html" title=" " alt="" coords="701,639,827,665"/>
+<area shape="rect" id="node9" href="$class_g_daemon_manager.html" title="维护GDaemon实例的集合daemons_ 支持批量init/批量destroy，在daemons_里面add/destroy或者清空daemons_等" alt="" coords="692,107,836,133"/>
+<area shape="rect" id="node11" href="$class_g_param_manager.html" title=" " alt="" coords="699,829,829,856"/>
+<area shape="rect" id="node13" href="$class_g_message_manager.html" title="基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bindTopic生成一个唯一的conn_id_，实际上是绑定到这个con..." alt="" coords="669,753,859,780"/>
+<area shape="rect" id="node15" href="$class_g_aspect_manager.html" title=" " alt="" coords="697,5,831,32"/>
+<area shape="rect" id="node17" href="$class_g_pipeline_manager.html" title=" " alt="" coords="693,537,835,564"/>
+<area shape="rect" id="node19" href="$class_d_ann_object.html" title="DAnnObject = DomainObject, run设置为CGRAPH_NO_SUPPORT." alt="" coords="455,917,554,944"/>
+<area shape="rect" id="node20" href="$class_d_ann_node.html" title="ANN领域算子模型抽象，说人话，就是抽象了一套跑NN相关的范式 prepareParam准备要接下来要run的函数类型 函数类型和DAnnNode的成员函数一一对应，分别有 train/search/i..." alt="" coords="719,905,809,932"/>
+<area shape="rect" id="node21" href="$struct_d_ann_param.html" title=" " alt="" coords="715,956,813,983"/>
+<area shape="rect" id="node24" href="$class_g_aspect_object.html" title="在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/belong_ param_manager_/event_man..." alt="" coords="445,56,564,83"/>
+<area shape="rect" id="node26" href="$class_g_daemon_object.html" title="在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/interval_ param_manager_/event_m..." alt="" coords="440,157,569,184"/>
+<area shape="rect" id="node28" href="$class_g_element_object.html" title="GElementObject = GraphObject = CObject，没有新增或删除任何成员" alt="" coords="441,259,569,285"/>
+<area shape="rect" id="node29" href="$class_g_event_object.html" title=" " alt="" coords="449,613,560,640"/>
+<area shape="rect" id="node30" href="$class_g_message_object.html" title="GMessageObject在继承GraphObject的基础上删除了run函数 (GraphObject = CObject)" alt="" coords="439,715,571,741"/>
+<area shape="rect" id="node31" href="$class_g_param_object.html" title=" " alt="" coords="447,816,562,843"/>
+<area shape="rect" id="node32" href="$class_g_perf.html" title="pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline， 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipelin..." alt="" coords="475,360,534,387"/>
+<area shape="rect" id="node33" href="$class_g_pipeline_object.html" title=" " alt="" coords="441,512,568,539"/>
+<area shape="rect" id="node34" href="$class_g_schedule.html" title=" " alt="" coords="459,411,550,437"/>
+<area shape="rect" id="node35" href="$class_g_stage_object.html" title=" " alt="" coords="449,461,560,488"/>
+<area shape="rect" id="node25" href="$class_g_aspect.html" title=" " alt="" coords="726,56,802,83"/>
+<area shape="rect" id="node27" href="$class_g_daemon.html" title=" " alt="" coords="721,157,807,184"/>
+<area shape="rect" id="node37" href="$class_u_serial_unique_array.html" title=" " alt="" coords="429,1289,580,1330"/>
+<area shape="rect" id="node38" href="$class_u_singleton.html" title=" " alt="" coords="388,1355,621,1411"/>
+<area shape="rect" id="node39" href="$class_u_small_vector.html" title=" " alt="" coords="397,1435,612,1461"/>
+<area shape="rect" id="node40" href="$class_u_distance_object.html" title="UDistanceObject = UtilsObject." alt="" coords="439,1485,570,1512"/>
+<area shape="rect" id="node41" href="$class_u_lru.html" title="LRU(Least Recently Used)，基于双链表(list)存储 最少被使用的结点放在表尾，最近/最多被使用的结点放在表头" alt="" coords="394,1536,615,1563"/>
+<area shape="rect" id="node42" href="$struct_u_lru_node.html" title="ULru双链表nodes_存储的结点类型" alt="" coords="433,1587,576,1613"/>
+<area shape="rect" id="node43" href="$class_u_random.html" title="随机数生成类，支持模板入参T(默认CFloat)、SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后Fibonacci/...." alt="" coords="391,1637,618,1664"/>
+<area shape="rect" id="node44" href="$class_u_serial_unique_array.html" title="内部基于std::vector存储，每次插入前进行检查，重复则不插入(uniqueAdd)，保证对外表现为一个不重复数组" alt="" coords="411,968,599,995"/>
+<area shape="rect" id="node45" href="$class_u_singleton.html" title="支持默认构造一个T类型的对象、封装成单例使用 目前实际上只支持CObject及其派生类作为单例要维护的对象类型，其他类型在init/destroy阶段啥都不做" alt="" coords="426,1019,583,1061"/>
+<area shape="rect" id="node46" href="$class_u_small_vector.html" title="申请一块T类型的内存，封装为一个轻量级的std::vector使用 (主要为了减少内存占用?)， 内部的迭代器也使用自定义的UIter" alt="" coords="395,1085,614,1112"/>
+<area shape="rect" id="node47" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="445,1136,564,1163"/>
+<area shape="rect" id="node48" href="$class_u_time_counter.html" title="基于std::chrono::steady_clock::time_point封装的计时器； 构造的同时记录时间戳，析构的同时打印从构造到析构的间隔span" alt="" coords="447,1187,563,1213"/>
+<area shape="rect" id="node49" href="$class_u_timer.html" title="定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接..." alt="" coords="469,1237,540,1264"/>
+</map>
