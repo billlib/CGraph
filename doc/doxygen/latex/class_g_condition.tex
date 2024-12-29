@@ -1,0 +1,179 @@
+\hypertarget{class_g_condition}{}\doxysection{GCondition Class Reference}
+\label{class_g_condition}\index{GCondition@{GCondition}}
+
+
+{\ttfamily \#include $<$GCondition.\+h$>$}
+
+
+
+Inheritance diagram for GCondition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_condition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GCondition\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_condition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_condition_ae60995c82b6accd6cb89e779f3badf25}{GCondition}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_condition_acbe47305d2090e6f8136eadd29fedf86}{choose}} ()=0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_condition_a3fe3d13823a4355923c5f82901d7ab62}{get\+Range}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_condition_a452f5606542998af50a741f77fdec7e6}{dump}} (std\+::ostream \&oss) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_condition_a082335bbb4780045538d7bce5da34c73}{run}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_condition_a3c86d3be92b5e471693ba0eca276b91b}{is\+Separate}} (\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} a, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} b) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_condition_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_condition_ae60995c82b6accd6cb89e779f3badf25}\label{class_g_condition_ae60995c82b6accd6cb89e779f3badf25}} 
+\index{GCondition@{GCondition}!GCondition@{GCondition}}
+\index{GCondition@{GCondition}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{GCondition()}{GCondition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GCondition\+::\+GCondition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_condition_ae60995c82b6accd6cb89e779f3badf25_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_condition_acbe47305d2090e6f8136eadd29fedf86}\label{class_g_condition_acbe47305d2090e6f8136eadd29fedf86}} 
+\index{GCondition@{GCondition}!choose@{choose}}
+\index{choose@{choose}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{choose()}{choose()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} GCondition\+::choose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+计算需要返回第n个信息 执行最后一个，返回-\/1即可。 超出-\/1和size之间的范围，则不执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_g_multi_condition_aaa531b8e57695e88ae6d7ccc9097a510}{GMulti\+Condition$<$ type $>$}}.
+
+\mbox{\Hypertarget{class_g_condition_a452f5606542998af50a741f77fdec7e6}\label{class_g_condition_a452f5606542998af50a741f77fdec7e6}} 
+\index{GCondition@{GCondition}!dump@{dump}}
+\index{dump@{dump}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GCondition\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+graphviz dump 逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_aec443a823851fe901aefb704711a6072}{GElement}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_condition_a452f5606542998af50a741f77fdec7e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_condition_a3fe3d13823a4355923c5f82901d7ab62}\label{class_g_condition_a3fe3d13823a4355923c5f82901d7ab62}} 
+\index{GCondition@{GCondition}!getRange@{getRange}}
+\index{getRange@{getRange}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{getRange()}{getRange()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GCondition\+::get\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取当前condition组内部元素的个数 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_condition_a3c86d3be92b5e471693ba0eca276b91b}\label{class_g_condition_a3c86d3be92b5e471693ba0eca276b91b}} 
+\index{GCondition@{GCondition}!isSeparate@{isSeparate}}
+\index{isSeparate@{isSeparate}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{isSeparate()}{isSeparate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GCondition\+::is\+Separate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{a,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断两个element，是否相互独立 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果返回 true，则表示一定有前后依赖关系，不可能并发执行。否则表示不确定，原因是并发情况无法完全确定 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a61561121b34d561dbab7b2525bdd636f}{GGroup}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_multi_condition_a5664e0bf9e49f17b61e27afcdbbc44a6}{GMulti\+Condition$<$ type $>$}}.
+
+\mbox{\Hypertarget{class_g_condition_a082335bbb4780045538d7bce5da34c73}\label{class_g_condition_a082335bbb4780045538d7bce5da34c73}} 
+\index{GCondition@{GCondition}!run@{run}}
+\index{run@{run}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GCondition\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_multi_condition_ac25309690cfd1e3ebca75cd316dfcf08}{GMulti\+Condition$<$ type $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_g_condition_a082335bbb4780045538d7bce5da34c73_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_condition_a4e007dc772c018d10373bf18b528f96d}\label{class_g_condition_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GCondition@{GCondition}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GCondition@{GCondition}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GCondition/\mbox{\hyperlink{_g_condition_8h}{GCondition.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GCondition/\mbox{\hyperlink{_g_condition_8cpp}{GCondition.\+cpp}}\end{DoxyCompactItemize}

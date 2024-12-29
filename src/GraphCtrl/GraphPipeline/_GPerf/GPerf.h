@@ -17,6 +17,10 @@ CGRAPH_NAMESPACE_BEGIN
 
 class GPipeline;
 
+/**
+ * @brief pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline，
+ * 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipeline
+ */
 class GPerf : public GraphObject {
 protected:
     /**

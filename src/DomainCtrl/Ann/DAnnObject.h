@@ -13,6 +13,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief DAnnObject = DomainObject, run设置为CGRAPH_NO_SUPPORT
+ */
 class DAnnObject : public DomainObject {
 protected:
     CStatus run() override {

@@ -1,0 +1,220 @@
+\hypertarget{class_g_mutable}{}\doxysection{GMutable Class Reference}
+\label{class_g_mutable}\index{GMutable@{GMutable}}
+
+
+常规的\+GGroup及其派生类在运行时是不允许再修改前序后继关系的，但是\+GMutable可以 具体做法是\+GMutable在每次run的时候会先调用setup初始化自己这张子图(实际上就是清空)，再调用reshape修改前序后继关系，最后才是正常运行子图 GMutable的reshape是纯虚函数，派生类必须实现，可以参考\+My\+Mutable示例  
+
+
+
+
+{\ttfamily \#include $<$GMutable.\+h$>$}
+
+
+
+Inheritance diagram for GMutable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_mutable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMutable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_mutable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_mutable_a8a15f1d190cafb003f1718ca0893f08a}{reshape}} (\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&elements)=0
+\item 
+\mbox{\hyperlink{class_g_mutable_aa953456784b02778e703b63b74689243}{GMutable}} ()
+\item 
+\mbox{\hyperlink{class_g_mutable_af389d2b9ee4a9b899fe98e8c17e6fcc7}{$\sim$\+GMutable}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_mutable_a1744634dc9a231d3f788645f420557f2}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_mutable_ae9a7c3a88eb08e574f60d40582344809}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_mutable_a5735ac1dc33e6fe232864136f99f936d}{is\+Serializable}} () const override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_mutable_a7363e39c38afe8e8fa2e48b9e31aa0f7}{setup}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} \mbox{\hyperlink{class_g_mutable_a73a9c1dc7aa08b6ce5dadd0008efdc32}{manager\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_mutable_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_mutable_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+常规的\+GGroup及其派生类在运行时是不允许再修改前序后继关系的，但是\+GMutable可以 具体做法是\+GMutable在每次run的时候会先调用setup初始化自己这张子图(实际上就是清空)，再调用reshape修改前序后继关系，最后才是正常运行子图 GMutable的reshape是纯虚函数，派生类必须实现，可以参考\+My\+Mutable示例 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_mutable_aa953456784b02778e703b63b74689243}\label{class_g_mutable_aa953456784b02778e703b63b74689243}} 
+\index{GMutable@{GMutable}!GMutable@{GMutable}}
+\index{GMutable@{GMutable}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{GMutable()}{GMutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GMutable\+::\+GMutable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_mutable_aa953456784b02778e703b63b74689243_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_mutable_af389d2b9ee4a9b899fe98e8c17e6fcc7}\label{class_g_mutable_af389d2b9ee4a9b899fe98e8c17e6fcc7}} 
+\index{GMutable@{GMutable}!````~GMutable@{$\sim$GMutable}}
+\index{````~GMutable@{$\sim$GMutable}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{$\sim$GMutable()}{~GMutable()}}
+{\footnotesize\ttfamily GMutable\+::$\sim$\+GMutable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22}\label{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22}} 
+\index{GMutable@{GMutable}!destroy@{destroy}}
+\index{destroy@{destroy}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GMutable\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a448d258b7e3c0dbbadfbcd1c206f3caa}{GGroup}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_mutable_a1744634dc9a231d3f788645f420557f2}\label{class_g_mutable_a1744634dc9a231d3f788645f420557f2}} 
+\index{GMutable@{GMutable}!init@{init}}
+\index{init@{init}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GMutable\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a9ad2ee258dddebf191f37f0b79896559}{GGroup}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_mutable_a1744634dc9a231d3f788645f420557f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_mutable_a5735ac1dc33e6fe232864136f99f936d}\label{class_g_mutable_a5735ac1dc33e6fe232864136f99f936d}} 
+\index{GMutable@{GMutable}!isSerializable@{isSerializable}}
+\index{isSerializable@{isSerializable}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{isSerializable()}{isSerializable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GMutable\+::is\+Serializable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前元素，是否可以线性执行。默认返回true \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+针对group的情况，应该是所有在其中的element 都是可以串行的，才认定为可串行 但是在 region和 multi\+Condition中，有针对性的判断
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a468fa4cc1418a9636b787439174d3f04}{GGroup}}.
+
+\mbox{\Hypertarget{class_g_mutable_a8a15f1d190cafb003f1718ca0893f08a}\label{class_g_mutable_a8a15f1d190cafb003f1718ca0893f08a}} 
+\index{GMutable@{GMutable}!reshape@{reshape}}
+\index{reshape@{reshape}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{reshape()}{reshape()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GMutable\+::reshape (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+重新设定内部数据的结构信息 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_mutable_ae9a7c3a88eb08e574f60d40582344809}\label{class_g_mutable_ae9a7c3a88eb08e574f60d40582344809}} 
+\index{GMutable@{GMutable}!run@{run}}
+\index{run@{run}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GMutable\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+\begin{DoxyEnumerate}
+\item 初始化内容
+\item 通过外部复写 \mbox{\hyperlink{class_g_mutable_a8a15f1d190cafb003f1718ca0893f08a}{reshape()}}，来实现关系设定。其中，通过 -\/-\/$>$ 设定的，是会自动恢复visible的
+\item 通过 manager 执行
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_mutable_ae9a7c3a88eb08e574f60d40582344809_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_mutable_a7363e39c38afe8e8fa2e48b9e31aa0f7}\label{class_g_mutable_a7363e39c38afe8e8fa2e48b9e31aa0f7}} 
+\index{GMutable@{GMutable}!setup@{setup}}
+\index{setup@{setup}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GMutable\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+将数据进行恢复 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_mutable_a17a0077689f477d78437264108a1577c}\label{class_g_mutable_a17a0077689f477d78437264108a1577c}} 
+\index{GMutable@{GMutable}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_mutable_a4e007dc772c018d10373bf18b528f96d}\label{class_g_mutable_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GMutable@{GMutable}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_mutable_a73a9c1dc7aa08b6ce5dadd0008efdc32}\label{class_g_mutable_a73a9c1dc7aa08b6ce5dadd0008efdc32}} 
+\index{GMutable@{GMutable}!manager\_@{manager\_}}
+\index{manager\_@{manager\_}!GMutable@{GMutable}}
+\doxysubsubsection{\texorpdfstring{manager\_}{manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} GMutable\+::manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GMutable/\mbox{\hyperlink{_g_mutable_8h}{GMutable.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GMutable/\mbox{\hyperlink{_g_mutable_8cpp}{GMutable.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,187 @@
+\hypertarget{_utils_function_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Utils\+Function.h File Reference}
+\label{_utils_function_8h}\index{src/UtilsCtrl/UtilsFunction.h@{src/UtilsCtrl/UtilsFunction.h}}
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$cstdarg$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include \char`\"{}../\+CBasic/\+CBasic\+Include.\+h\char`\"{}}\newline
+Include dependency graph for Utils\+Function.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_function_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_function_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{_utils_function_8h_a73f68d0bd7513453fb72bb7c51e7d244}{CGRAPH\+\_\+\+GET\+\_\+\+CURRENT\+\_\+\+MS}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a4dcf85c49cc6708424ac3db96e9c7450}{CFMSec}} \mbox{\hyperlink{_utils_function_8h_a8b5aab5bbb0d249ef8205e87bd8f4612}{CGRAPH\+\_\+\+GET\+\_\+\+CURRENT\+\_\+\+ACCURATE\+\_\+\+MS}} ()
+\item 
+{\footnotesize template$<$typename T $>$ }\\T\+::value\+\_\+type \mbox{\hyperlink{_utils_function_8h_a48daed877e373f11573c141b32e4be0d}{CGRAPH\+\_\+\+CONTAINER\+\_\+\+SUM}} (const T \&container)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T\+::value\+\_\+type \mbox{\hyperlink{_utils_function_8h_a5b9060ee8b85663f2ee598c3ef1e6b14}{CGRAPH\+\_\+\+CONTAINER\+\_\+\+MULTIPLY}} (const T \&container)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{_utils_function_8h_ae043e484fb7dc4ecd77b751aba750b35}{CGRAPH\+\_\+\+MAX}} (T val)
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\T \mbox{\hyperlink{_utils_function_8h_aed4f4d2c7d0a011305870fea4ff56489}{CGRAPH\+\_\+\+MAX}} (T val, Args... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\T \mbox{\hyperlink{_utils_function_8h_ab3955a6ba240ba7e9547507c02d85857}{CGRAPH\+\_\+\+SUM}} (T t)
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\T \mbox{\hyperlink{_utils_function_8h_a426cc96f10a60aba2f8761b54d3ac572}{CGRAPH\+\_\+\+SUM}} (T val, Args... args)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{_utils_function_8h_aec01f90e4bfae255a051361997dcb639}{CGRAPH\+\_\+\+YIELD}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_utils_function_8h_a5b9060ee8b85663f2ee598c3ef1e6b14}\label{_utils_function_8h_a5b9060ee8b85663f2ee598c3ef1e6b14}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_CONTAINER\_MULTIPLY@{CGRAPH\_CONTAINER\_MULTIPLY}}
+\index{CGRAPH\_CONTAINER\_MULTIPLY@{CGRAPH\_CONTAINER\_MULTIPLY}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CONTAINER\_MULTIPLY()}{CGRAPH\_CONTAINER\_MULTIPLY()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\+::value\+\_\+type CGRAPH\+\_\+\+CONTAINER\+\_\+\+MULTIPLY (\begin{DoxyParamCaption}\item[{const T \&}]{container }\end{DoxyParamCaption})}
+
+通用容器累乘信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & (例：std\+::vector$<$int$>$) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em container} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_a48daed877e373f11573c141b32e4be0d}\label{_utils_function_8h_a48daed877e373f11573c141b32e4be0d}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_CONTAINER\_SUM@{CGRAPH\_CONTAINER\_SUM}}
+\index{CGRAPH\_CONTAINER\_SUM@{CGRAPH\_CONTAINER\_SUM}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CONTAINER\_SUM()}{CGRAPH\_CONTAINER\_SUM()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T\+::value\+\_\+type CGRAPH\+\_\+\+CONTAINER\+\_\+\+SUM (\begin{DoxyParamCaption}\item[{const T \&}]{container }\end{DoxyParamCaption})}
+
+通用容器累加信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & (例：std\+::vector$<$int$>$) \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em container} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_a8b5aab5bbb0d249ef8205e87bd8f4612}\label{_utils_function_8h_a8b5aab5bbb0d249ef8205e87bd8f4612}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_GET\_CURRENT\_ACCURATE\_MS@{CGRAPH\_GET\_CURRENT\_ACCURATE\_MS}}
+\index{CGRAPH\_GET\_CURRENT\_ACCURATE\_MS@{CGRAPH\_GET\_CURRENT\_ACCURATE\_MS}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_CURRENT\_ACCURATE\_MS()}{CGRAPH\_GET\_CURRENT\_ACCURATE\_MS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a4dcf85c49cc6708424ac3db96e9c7450}{CFMSec}} CGRAPH\+\_\+\+GET\+\_\+\+CURRENT\+\_\+\+ACCURATE\+\_\+\+MS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取当前的ms信息(包含小数) \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_a73f68d0bd7513453fb72bb7c51e7d244}\label{_utils_function_8h_a73f68d0bd7513453fb72bb7c51e7d244}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_GET\_CURRENT\_MS@{CGRAPH\_GET\_CURRENT\_MS}}
+\index{CGRAPH\_GET\_CURRENT\_MS@{CGRAPH\_GET\_CURRENT\_MS}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_CURRENT\_MS()}{CGRAPH\_GET\_CURRENT\_MS()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} CGRAPH\+\_\+\+GET\+\_\+\+CURRENT\+\_\+\+MS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取当前的ms信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_ae043e484fb7dc4ecd77b751aba750b35}\label{_utils_function_8h_ae043e484fb7dc4ecd77b751aba750b35}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_MAX@{CGRAPH\_MAX}}
+\index{CGRAPH\_MAX@{CGRAPH\_MAX}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX()}{CGRAPH\_MAX()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T CGRAPH\+\_\+\+MAX (\begin{DoxyParamCaption}\item[{T}]{val }\end{DoxyParamCaption})}
+
+获取max值 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_aed4f4d2c7d0a011305870fea4ff56489}\label{_utils_function_8h_aed4f4d2c7d0a011305870fea4ff56489}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_MAX@{CGRAPH\_MAX}}
+\index{CGRAPH\_MAX@{CGRAPH\_MAX}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX()}{CGRAPH\_MAX()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+T CGRAPH\+\_\+\+MAX (\begin{DoxyParamCaption}\item[{T}]{val,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{_utils_function_8h_aed4f4d2c7d0a011305870fea4ff56489_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_utils_function_8h_ab3955a6ba240ba7e9547507c02d85857}\label{_utils_function_8h_ab3955a6ba240ba7e9547507c02d85857}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_SUM@{CGRAPH\_SUM}}
+\index{CGRAPH\_SUM@{CGRAPH\_SUM}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SUM()}{CGRAPH\_SUM()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T CGRAPH\+\_\+\+SUM (\begin{DoxyParamCaption}\item[{T}]{t }\end{DoxyParamCaption})}
+
+累加 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em t} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{_utils_function_8h_a426cc96f10a60aba2f8761b54d3ac572}\label{_utils_function_8h_a426cc96f10a60aba2f8761b54d3ac572}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_SUM@{CGRAPH\_SUM}}
+\index{CGRAPH\_SUM@{CGRAPH\_SUM}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SUM()}{CGRAPH\_SUM()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+T CGRAPH\+\_\+\+SUM (\begin{DoxyParamCaption}\item[{T}]{val,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{_utils_function_8h_a426cc96f10a60aba2f8761b54d3ac572_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_utils_function_8h_aec01f90e4bfae255a051361997dcb639}\label{_utils_function_8h_aec01f90e4bfae255a051361997dcb639}} 
+\index{UtilsFunction.h@{UtilsFunction.h}!CGRAPH\_YIELD@{CGRAPH\_YIELD}}
+\index{CGRAPH\_YIELD@{CGRAPH\_YIELD}!UtilsFunction.h@{UtilsFunction.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_YIELD()}{CGRAPH\_YIELD()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} CGRAPH\+\_\+\+YIELD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+模拟的yield操作，兼容了 sleep 和 yield 两种情况 考虑到yield 在不同的os中，会有不同的实现方式，提供不同实现版本的yield方法 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}

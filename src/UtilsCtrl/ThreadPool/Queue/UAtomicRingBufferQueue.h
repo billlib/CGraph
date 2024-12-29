@@ -17,6 +17,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 包含一个基于std::vector的环形队列，基于mutex_实现原子的waitPopWithTimeout/push
+ *        head_/tail_初始化为0，tail_及tail_之后一直到head_之前的位置记为空
+ *        举例：head_为0、tail_为3、capaci_为64的情况下，[3,63]范围内的位置都记为空
+ * @tparam T 
+ * @tparam capacity 
+ */
 template<typename T, CUInt capacity = CGRAPH_DEFAULT_RINGBUFFER_SIZE>
 class UAtomicRingBufferQueue : public UQueueObject {
 public:

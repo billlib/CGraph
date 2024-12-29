@@ -1,0 +1,134 @@
+\hypertarget{class_u_task}{}\doxysection{UTask Class Reference}
+\label{class_u_task}\index{UTask@{UTask}}
+
+
+基于内嵌类\+Task\+Based和\+Task\+Derided，将传入的func完美转发成\+Task\+Derided的func\+\_\+成员； Task\+Derided是\+UTask的impl\+\_\+成员，运行\+UTask实际上就是调用impl\+\_\+-\/$>$run也就是调用func\+\_\+()  
+
+
+
+
+{\ttfamily \#include $<$UTask.\+h$>$}
+
+
+
+Inheritance diagram for UTask\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_u_task__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UTask\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=132pt]{class_u_task__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_u_task_1_1_task_based}{Task\+Based}}
+\item 
+struct \mbox{\hyperlink{struct_u_task_1_1_task_derided}{Task\+Derided}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename F $>$ }\\\mbox{\hyperlink{class_u_task_ae4f533dfeef083418e625ce26cc305c4}{UTask}} (F \&\&func, int priority=0)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_task_ad9164752a7a5d1a540186351e77b64bd}{operator()}} ()
+\item 
+\mbox{\hyperlink{class_u_task_a47dd7950a73a66dc117f5f9f3fbfb797}{UTask}} ()=default
+\item 
+\mbox{\hyperlink{class_u_task_ad2893dc314afb55b1c68983c0a8fbd20}{UTask}} (\mbox{\hyperlink{class_u_task}{UTask}} \&\&task) noexcept
+\item 
+\mbox{\hyperlink{class_u_task}{UTask}} \& \mbox{\hyperlink{class_u_task_a14d57620ab2c3bfdd51530e10d07dca2}{operator=}} (\mbox{\hyperlink{class_u_task}{UTask}} \&\&task) noexcept
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_task_aa16be8bcaf586eaa9ec71a23610ad6ac}{operator$>$}} (const \mbox{\hyperlink{class_u_task}{UTask}} \&task) const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_task_a6f4b65549c87c36966c9c7ad24a51c99}{operator$<$}} (const \mbox{\hyperlink{class_u_task}{UTask}} \&task) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{struct_u_task_1_1_task_based}{Task\+Based}} $>$ \mbox{\hyperlink{class_u_task_a2381d51d9b3afb0c578762cd475dee1b}{impl\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_task_a40662246243bb5542656a9d2833e442d}{priority\+\_\+}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+基于内嵌类\+Task\+Based和\+Task\+Derided，将传入的func完美转发成\+Task\+Derided的func\+\_\+成员； Task\+Derided是\+UTask的impl\+\_\+成员，运行\+UTask实际上就是调用impl\+\_\+-\/$>$run也就是调用func\+\_\+() 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_task_ae4f533dfeef083418e625ce26cc305c4}\label{class_u_task_ae4f533dfeef083418e625ce26cc305c4}} 
+\index{UTask@{UTask}!UTask@{UTask}}
+\index{UTask@{UTask}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{UTask()}{UTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename F $>$ \\
+UTask\+::\+UTask (\begin{DoxyParamCaption}\item[{F \&\&}]{func,  }\item[{int}]{priority = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_task_a47dd7950a73a66dc117f5f9f3fbfb797}\label{class_u_task_a47dd7950a73a66dc117f5f9f3fbfb797}} 
+\index{UTask@{UTask}!UTask@{UTask}}
+\index{UTask@{UTask}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{UTask()}{UTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily UTask\+::\+UTask (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_u_task_ad2893dc314afb55b1c68983c0a8fbd20}\label{class_u_task_ad2893dc314afb55b1c68983c0a8fbd20}} 
+\index{UTask@{UTask}!UTask@{UTask}}
+\index{UTask@{UTask}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{UTask()}{UTask()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily UTask\+::\+UTask (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_task}{UTask}} \&\&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_task_ad9164752a7a5d1a540186351e77b64bd}\label{class_u_task_ad9164752a7a5d1a540186351e77b64bd}} 
+\index{UTask@{UTask}!operator()@{operator()}}
+\index{operator()@{operator()}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{operator()()}{operator()()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UTask\+::operator() (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_task_a6f4b65549c87c36966c9c7ad24a51c99}\label{class_u_task_a6f4b65549c87c36966c9c7ad24a51c99}} 
+\index{UTask@{UTask}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UTask\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_u_task}{UTask}} \&}]{task }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_task_a14d57620ab2c3bfdd51530e10d07dca2}\label{class_u_task_a14d57620ab2c3bfdd51530e10d07dca2}} 
+\index{UTask@{UTask}!operator=@{operator=}}
+\index{operator=@{operator=}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_task}{UTask}}\& UTask\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_task}{UTask}} \&\&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+\mbox{\Hypertarget{class_u_task_aa16be8bcaf586eaa9ec71a23610ad6ac}\label{class_u_task_aa16be8bcaf586eaa9ec71a23610ad6ac}} 
+\index{UTask@{UTask}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UTask\+::operator$>$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_u_task}{UTask}} \&}]{task }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_task_a2381d51d9b3afb0c578762cd475dee1b}\label{class_u_task_a2381d51d9b3afb0c578762cd475dee1b}} 
+\index{UTask@{UTask}!impl\_@{impl\_}}
+\index{impl\_@{impl\_}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{impl\_}{impl\_}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{struct_u_task_1_1_task_based}{Task\+Based}}$>$ UTask\+::impl\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_task_a40662246243bb5542656a9d2833e442d}\label{class_u_task_a40662246243bb5542656a9d2833e442d}} 
+\index{UTask@{UTask}!priority\_@{priority\_}}
+\index{priority\_@{priority\_}!UTask@{UTask}}
+\doxysubsubsection{\texorpdfstring{priority\_}{priority\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UTask\+::priority\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Task/\mbox{\hyperlink{_u_task_8h}{UTask.\+h}}\end{DoxyCompactItemize}

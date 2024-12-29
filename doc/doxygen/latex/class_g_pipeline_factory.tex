@@ -1,0 +1,96 @@
+\hypertarget{class_g_pipeline_factory}{}\doxysection{GPipeline\+Factory Class Reference}
+\label{class_g_pipeline_factory}\index{GPipelineFactory@{GPipelineFactory}}
+
+
+{\ttfamily \#include $<$GPipeline\+Factory.\+h$>$}
+
+
+
+Inheritance diagram for GPipeline\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_g_pipeline_factory__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GPipeline\+Factory\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=178pt]{class_g_pipeline_factory__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_factory_ae8785e93f4faf78b0d0ff0337ecc1814}{create}} ()
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_factory_ab4be5bc284bd7e93a4b2ae9b90327aba}{remove}} (\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} pipeline)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_factory_a6c0882912f9e8aef28f4d19700cd290f}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} \mbox{\hyperlink{class_g_pipeline_factory_a24d4c4dfce59806caeb3700583c55059}{s\+\_\+pipeline\+\_\+list\+\_\+}}
+\item 
+static std\+::mutex \mbox{\hyperlink{class_g_pipeline_factory_a4ed4365687e3574d584c9d6c6ec390a1}{s\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_pipeline_factory_a6c0882912f9e8aef28f4d19700cd290f}\label{class_g_pipeline_factory_a6c0882912f9e8aef28f4d19700cd290f}} 
+\index{GPipelineFactory@{GPipelineFactory}!clear@{clear}}
+\index{clear@{clear}!GPipelineFactory@{GPipelineFactory}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Factory\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+清空所有的pipeline信息 \mbox{\Hypertarget{class_g_pipeline_factory_ae8785e93f4faf78b0d0ff0337ecc1814}\label{class_g_pipeline_factory_ae8785e93f4faf78b0d0ff0337ecc1814}} 
+\index{GPipelineFactory@{GPipelineFactory}!create@{create}}
+\index{create@{create}!GPipelineFactory@{GPipelineFactory}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+Factory\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+创建一个pipeline信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_factory_ab4be5bc284bd7e93a4b2ae9b90327aba}\label{class_g_pipeline_factory_ab4be5bc284bd7e93a4b2ae9b90327aba}} 
+\index{GPipelineFactory@{GPipelineFactory}!remove@{remove}}
+\index{remove@{remove}!GPipelineFactory@{GPipelineFactory}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Factory\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}}}]{pipeline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+销毁一个pipeline信息 
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_pipeline_factory_a4ed4365687e3574d584c9d6c6ec390a1}\label{class_g_pipeline_factory_a4ed4365687e3574d584c9d6c6ec390a1}} 
+\index{GPipelineFactory@{GPipelineFactory}!s\_lock\_@{s\_lock\_}}
+\index{s\_lock\_@{s\_lock\_}!GPipelineFactory@{GPipelineFactory}}
+\doxysubsubsection{\texorpdfstring{s\_lock\_}{s\_lock\_}}
+{\footnotesize\ttfamily std\+::mutex GPipeline\+Factory\+::s\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_factory_a24d4c4dfce59806caeb3700583c55059}\label{class_g_pipeline_factory_a24d4c4dfce59806caeb3700583c55059}} 
+\index{GPipelineFactory@{GPipelineFactory}!s\_pipeline\_list\_@{s\_pipeline\_list\_}}
+\index{s\_pipeline\_list\_@{s\_pipeline\_list\_}!GPipelineFactory@{GPipelineFactory}}
+\doxysubsubsection{\texorpdfstring{s\_pipeline\_list\_}{s\_pipeline\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} GPipeline\+Factory\+::s\+\_\+pipeline\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_factory_8h}{GPipeline\+Factory.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_factory_8cpp}{GPipeline\+Factory.\+cpp}}\end{DoxyCompactItemize}

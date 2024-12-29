@@ -17,6 +17,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 基于内嵌类TaskBased和TaskDerided，将传入的func完美转发成TaskDerided的func_成员；
+ *        TaskDerided是UTask的impl_成员，运行UTask实际上就是调用impl_->run也就是调用func_()
+ * 
+ */
 class UTask : public CStruct {
     struct TaskBased {
         explicit TaskBased() = default;

@@ -13,6 +13,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief ULru双链表nodes_存储的结点类型
+ * 
+ * @tparam K 
+ * @tparam V 
+ */
 template<typename K, typename V>
 struct ULruNode : public UtilsObject {
     K key_;

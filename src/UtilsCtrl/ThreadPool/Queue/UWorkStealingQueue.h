@@ -16,6 +16,15 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 工作窃取队列，实现为双端队列(deque_)；
+ *        push在队尾发生，可以一次性写入一个或多个任务，也支持tryPush和带锁的push；
+ *        pop在队头发生，可以一次性拿出一个或多个任务，也支持tryPop；
+ *        trySteal在队尾发生，可以一次性窃取一个或多个任务；
+ *        1. 工作的拿取发生在队头、窃取发生在队尾，可以显著减小工作线程和窃取线程竞争的概率；
+ *        2. 主线程的工作拿取优先发生在第一队列、其次第二队列；窃取优先发生在第二队列、其次发生在第一队列，又可以进一步降低竞争概率；
+ * @tparam T 
+ */
 template<typename T>
 class UWorkStealingQueue : public UQueueObject {
 public:
@@ -96,6 +105,8 @@ public:
      */
     CBool tryPop(T& value) {
         // 这里不使用raii锁，主要是考虑到多线程的情况下，可能会重复进入
+        // raii锁指的是类似于lock_guard的用法，锁和对象的构造时获取、析构时释放
+        // 此处直接使用mutex_的try_lock和unlock，手动管理加锁和释放，因此非RAII锁
         bool result = false;
         if (!deque_.empty() && mutex_.try_lock()) {
             if (!deque_.empty()) {

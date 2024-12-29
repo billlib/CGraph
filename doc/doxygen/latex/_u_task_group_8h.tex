@@ -1,0 +1,47 @@
+\hypertarget{_u_task_group_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Task/\+UTask\+Group.h File Reference}
+\label{_u_task_group_8h}\index{src/UtilsCtrl/ThreadPool/Task/UTaskGroup.h@{src/UtilsCtrl/ThreadPool/Task/UTaskGroup.h}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include \char`\"{}../\+UThread\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UTask\+Group.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_task_group_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_task_group_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_task_group}{UTask\+Group}}
+\begin{DoxyCompactList}\small\item\em 注意，并非基于\+UTask，实际维护的是\+CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION类型的函数数组(std\+::vector) 支持add\+Task将更多的函数加入task\+\_\+arr\+\_\+数组，支持指定任务组最大执行耗时ttl 以及对task\+\_\+arr\+\_\+数组内的全部函数执行完成(即这个\+UTask\+Group执行完成)指定后处理接口set\+On\+Finished \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_u_task_group_8h_abdd8f502b0d276af578f7240bfec9e9e}{UTask\+Group\+Ptr}} = \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} $\ast$
+\item 
+using \mbox{\hyperlink{_u_task_group_8h_a43754869fbfa641888fa619c670b5aa2}{UTask\+Group\+Ref}} = \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_u_task_group_8h_abdd8f502b0d276af578f7240bfec9e9e}\label{_u_task_group_8h_abdd8f502b0d276af578f7240bfec9e9e}} 
+\index{UTaskGroup.h@{UTaskGroup.h}!UTaskGroupPtr@{UTaskGroupPtr}}
+\index{UTaskGroupPtr@{UTaskGroupPtr}!UTaskGroup.h@{UTaskGroup.h}}
+\doxysubsubsection{\texorpdfstring{UTaskGroupPtr}{UTaskGroupPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_group_8h_abdd8f502b0d276af578f7240bfec9e9e}{UTask\+Group\+Ptr}} =  \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} $\ast$}
+
+\mbox{\Hypertarget{_u_task_group_8h_a43754869fbfa641888fa619c670b5aa2}\label{_u_task_group_8h_a43754869fbfa641888fa619c670b5aa2}} 
+\index{UTaskGroup.h@{UTaskGroup.h}!UTaskGroupRef@{UTaskGroupRef}}
+\index{UTaskGroupRef@{UTaskGroupRef}!UTaskGroup.h@{UTaskGroup.h}}
+\doxysubsubsection{\texorpdfstring{UTaskGroupRef}{UTaskGroupRef}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_group_8h_a43754869fbfa641888fa619c670b5aa2}{UTask\+Group\+Ref}} =  \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&}
+

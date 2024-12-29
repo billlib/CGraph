@@ -14,6 +14,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 预先写好的用于做性能分析的切面
+ * @tparam Args 
+ */
 template <typename ...Args>
 class GPerfAspect : public GTemplateAspect<Args ...> {
 protected:

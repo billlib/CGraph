@@ -12,7 +12,10 @@
 #include "../GElement.h"
 
 CGRAPH_NAMESPACE_BEGIN
-
+/**
+ * 适配器，可以派生出GCoordinator/GFence/GFunction/GSingleton等
+ * 作为具体适配某些场景的具体类型的共同基类
+ */
 class GAdapter : public GElement {
 protected:
     explicit GAdapter() {

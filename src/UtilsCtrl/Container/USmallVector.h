@@ -17,6 +17,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 申请一块T类型的内存，封装为一个轻量级的std::vector使用 (主要为了减少内存占用?)，
+ *        内部的迭代器也使用自定义的UIter
+ * @tparam T 
+ * @tparam CAPACITY 
+ */
 template<class T, CSize CAPACITY=8>
 class USmallVector : public UtilsObject {
 public:

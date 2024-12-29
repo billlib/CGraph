@@ -17,6 +17,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GElementObject = GraphObject = CObject，没有新增或删除任何成员
+ */
 class GElementObject : public GraphObject {
 };
 

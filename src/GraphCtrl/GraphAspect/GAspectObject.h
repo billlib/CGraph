@@ -20,6 +20,12 @@ CGRAPH_NAMESPACE_BEGIN
 
 class GElement;
 
+/**
+ * @brief 在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/belong_
+ * param_manager_/event_manager_用于引入GParamManager和GEventManager
+ * param_用于引入GPassedParam，对于GAspectObject来说是GAspectParam
+ * belong_则是GAspectObject独有的，维护切面和GElement的从属关系
+ */
 class GAspectObject : public GraphObject,
                       public CDescInfo {
 protected:

@@ -1,0 +1,100 @@
+\hypertarget{class_u_time_counter}{}\doxysection{UTime\+Counter Class Reference}
+\label{class_u_time_counter}\index{UTimeCounter@{UTimeCounter}}
+
+
+基于std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point封装的计时器； 构造的同时记录时间戳，析构的同时打印从构造到析构的间隔span  
+
+
+
+
+{\ttfamily \#include $<$UTime\+Counter.\+h$>$}
+
+
+
+Inheritance diagram for UTime\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_u_time_counter__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UTime\+Counter\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=167pt]{class_u_time_counter__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_time_counter_a3f3ae78a59ac3dffb3b92b443470ca2b}{UTime\+Counter}} ()
+\item 
+\mbox{\hyperlink{class_u_time_counter_aa25c4c334cffd8e7dbc21b4f9787033e}{UTime\+Counter}} (const std\+::string \&key)
+\item 
+\mbox{\hyperlink{class_u_time_counter_a4caa46aa72de009e2a462fa28cb6b392}{$\sim$\+UTime\+Counter}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point \mbox{\hyperlink{class_u_time_counter_a0585ff11e31f98aa64126dd298be86c0}{start\+\_\+ts\+\_\+}}
+\item 
+std\+::string \mbox{\hyperlink{class_u_time_counter_aeceb71a8942f30c0359fe976fc7cd5d9}{key\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+基于std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point封装的计时器； 构造的同时记录时间戳，析构的同时打印从构造到析构的间隔span 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_time_counter_a3f3ae78a59ac3dffb3b92b443470ca2b}\label{class_u_time_counter_a3f3ae78a59ac3dffb3b92b443470ca2b}} 
+\index{UTimeCounter@{UTimeCounter}!UTimeCounter@{UTimeCounter}}
+\index{UTimeCounter@{UTimeCounter}!UTimeCounter@{UTimeCounter}}
+\doxysubsubsection{\texorpdfstring{UTimeCounter()}{UTimeCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily UTime\+Counter\+::\+UTime\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_time_counter_aa25c4c334cffd8e7dbc21b4f9787033e}\label{class_u_time_counter_aa25c4c334cffd8e7dbc21b4f9787033e}} 
+\index{UTimeCounter@{UTimeCounter}!UTimeCounter@{UTimeCounter}}
+\index{UTimeCounter@{UTimeCounter}!UTimeCounter@{UTimeCounter}}
+\doxysubsubsection{\texorpdfstring{UTimeCounter()}{UTimeCounter()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily UTime\+Counter\+::\+UTime\+Counter (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_time_counter_a4caa46aa72de009e2a462fa28cb6b392}\label{class_u_time_counter_a4caa46aa72de009e2a462fa28cb6b392}} 
+\index{UTimeCounter@{UTimeCounter}!````~UTimeCounter@{$\sim$UTimeCounter}}
+\index{````~UTimeCounter@{$\sim$UTimeCounter}!UTimeCounter@{UTimeCounter}}
+\doxysubsubsection{\texorpdfstring{$\sim$UTimeCounter()}{~UTimeCounter()}}
+{\footnotesize\ttfamily UTime\+Counter\+::$\sim$\+UTime\+Counter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_time_counter_a4caa46aa72de009e2a462fa28cb6b392_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_time_counter_aeceb71a8942f30c0359fe976fc7cd5d9}\label{class_u_time_counter_aeceb71a8942f30c0359fe976fc7cd5d9}} 
+\index{UTimeCounter@{UTimeCounter}!key\_@{key\_}}
+\index{key\_@{key\_}!UTimeCounter@{UTimeCounter}}
+\doxysubsubsection{\texorpdfstring{key\_}{key\_}}
+{\footnotesize\ttfamily std\+::string UTime\+Counter\+::key\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_time_counter_a0585ff11e31f98aa64126dd298be86c0}\label{class_u_time_counter_a0585ff11e31f98aa64126dd298be86c0}} 
+\index{UTimeCounter@{UTimeCounter}!start\_ts\_@{start\_ts\_}}
+\index{start\_ts\_@{start\_ts\_}!UTimeCounter@{UTimeCounter}}
+\doxysubsubsection{\texorpdfstring{start\_ts\_}{start\_ts\_}}
+{\footnotesize\ttfamily std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point UTime\+Counter\+::start\+\_\+ts\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Timer/\mbox{\hyperlink{_u_time_counter_8h}{UTime\+Counter.\+h}}\end{DoxyCompactItemize}

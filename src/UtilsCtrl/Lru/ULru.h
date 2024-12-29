@@ -17,6 +17,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief LRU(Least Recently Used)，基于双链表(list)存储
+ *        最少被使用的结点放在表尾，最近/最多被使用的结点放在表头
+ * @tparam K 
+ * @tparam V 
+ * @tparam DefaultCapacity 
+ */
 template<typename K, typename V, CSize DefaultCapacity = 16>
 class ULru : public UtilsObject {
 public:

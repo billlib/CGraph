@@ -1,0 +1,196 @@
+\hypertarget{class_g_aspect_manager}{}\doxysection{GAspect\+Manager Class Reference}
+\label{class_g_aspect_manager}\index{GAspectManager@{GAspectManager}}
+
+
+{\ttfamily \#include $<$GAspect\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GAspect\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_g_aspect_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GAspect\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_aspect_manager_ac3812ccf7d2c114a0fc1942e831c29f4}{GAspect\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_g_aspect_manager_a1ca7a426df8de1e16f87c5bd92f2ad8f}{$\sim$\+GAspect\+Manager}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_aspect_manager_a30abd98058fab5c874a6028930a5c27c}{reflect}} (const \mbox{\hyperlink{_g_aspect_define_8h_aa266dc9f688b47469580f5f10b9239c2}{internal\+::\+GAspect\+Type}} \&type, const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&cur\+Status=\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}())
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_aspect_manager_ae718bbcb20d7b3ca52c8f98bbb7070cb}{add}} (\mbox{\hyperlink{_g_aspect_8h_ac6b4f82be23b2fb0d5543ec50c2cfb41}{GAspect\+Ptr}} aspect) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_aspect_manager_ac45e42bba5897f71c46ff88c53289099}{get\+Size}} () const final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_aspect_manager_a1732f5645720f075148549a8a836c5d9}{clear}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_aspect_manager_a99e14d2a36df7762f000ee63a30126fb}{pop\+Last}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} \mbox{\hyperlink{class_g_aspect_manager_a3748272bf6387d9cee816f9b0bdbfdac}{set\+GParam\+Manager}} (\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} pm) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} \mbox{\hyperlink{class_g_aspect_manager_ad005d20d2a6ab3501f8b127a1d60458f}{set\+GEvent\+Manager}} (\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} em) final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_aspect_8h_a83203b01a00d5a34e5116b7fe1eddf9c}{GAspect\+Ptr\+Arr}} \mbox{\hyperlink{class_g_aspect_manager_a5f5f3393448bf02622a636103aa36fb5}{aspect\+\_\+arr\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_aspect_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}{GElement}}
+\item 
+class \mbox{\hyperlink{class_g_aspect_manager_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+继承\+Graph\+Manager$<$\+T$>$的add/remove/find/create/get/reset/run等针对具体\+T类型对象的管理能力 继承\+GAspect\+Object的\+Get\+AParam/set\+AParam获取\+GAspect\+Param的能力，以及set\+Belong设置所属\+GElement的能力 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_aspect_manager_ac3812ccf7d2c114a0fc1942e831c29f4}\label{class_g_aspect_manager_ac3812ccf7d2c114a0fc1942e831c29f4}} 
+\index{GAspectManager@{GAspectManager}!GAspectManager@{GAspectManager}}
+\index{GAspectManager@{GAspectManager}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{GAspectManager()}{GAspectManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GAspect\+Manager\+::\+GAspect\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_aspect_manager_a1ca7a426df8de1e16f87c5bd92f2ad8f}\label{class_g_aspect_manager_a1ca7a426df8de1e16f87c5bd92f2ad8f}} 
+\index{GAspectManager@{GAspectManager}!````~GAspectManager@{$\sim$GAspectManager}}
+\index{````~GAspectManager@{$\sim$GAspectManager}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GAspectManager()}{~GAspectManager()}}
+{\footnotesize\ttfamily GAspect\+Manager\+::$\sim$\+GAspect\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_manager_a1ca7a426df8de1e16f87c5bd92f2ad8f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_aspect_manager_ae718bbcb20d7b3ca52c8f98bbb7070cb}\label{class_g_aspect_manager_ae718bbcb20d7b3ca52c8f98bbb7070cb}} 
+\index{GAspectManager@{GAspectManager}!add@{add}}
+\index{add@{add}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GAspect\+Manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_aspect_8h_ac6b4f82be23b2fb0d5543ec50c2cfb41}{GAspect\+Ptr}}}]{aspect }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_aspect_manager_a1732f5645720f075148549a8a836c5d9}\label{class_g_aspect_manager_a1732f5645720f075148549a8a836c5d9}} 
+\index{GAspectManager@{GAspectManager}!clear@{clear}}
+\index{clear@{clear}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GAspect\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GAspect $>$}}.
+
+\mbox{\Hypertarget{class_g_aspect_manager_ac45e42bba5897f71c46ff88c53289099}\label{class_g_aspect_manager_ac45e42bba5897f71c46ff88c53289099}} 
+\index{GAspectManager@{GAspectManager}!getSize@{getSize}}
+\index{getSize@{getSize}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GAspect\+Manager\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取大小信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}{Graph\+Manager$<$ GAspect $>$}}.
+
+\mbox{\Hypertarget{class_g_aspect_manager_a99e14d2a36df7762f000ee63a30126fb}\label{class_g_aspect_manager_a99e14d2a36df7762f000ee63a30126fb}} 
+\index{GAspectManager@{GAspectManager}!popLast@{popLast}}
+\index{popLast@{popLast}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{popLast()}{popLast()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GAspect\+Manager\+::pop\+Last (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+弹出去最后一个 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_manager_a99e14d2a36df7762f000ee63a30126fb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_aspect_manager_a30abd98058fab5c874a6028930a5c27c}\label{class_g_aspect_manager_a30abd98058fab5c874a6028930a5c27c}} 
+\index{GAspectManager@{GAspectManager}!reflect@{reflect}}
+\index{reflect@{reflect}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{reflect()}{reflect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GAspect\+Manager\+::reflect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_aspect_define_8h_aa266dc9f688b47469580f5f10b9239c2}{internal\+::\+GAspect\+Type}} \&}]{type,  }\item[{const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&}]{cur\+Status = {\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+执行切面逻辑 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+{\em cur\+Status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+仅针对\+Begin对应的内容，进行返回值判断 \mbox{\hyperlink{class_g_aspect_object_a1bac3cc253c06f369633a1287e66c445}{run()}}方法切面更容易被执行，故放在最前方判断\mbox{\Hypertarget{class_g_aspect_manager_ad005d20d2a6ab3501f8b127a1d60458f}\label{class_g_aspect_manager_ad005d20d2a6ab3501f8b127a1d60458f}} 
+\index{GAspectManager@{GAspectManager}!setGEventManager@{setGEventManager}}
+\index{setGEventManager@{setGEventManager}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{setGEventManager()}{setGEventManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} GAspect\+Manager\+::set\+GEvent\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}}}]{em }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_aspect_manager_a3748272bf6387d9cee816f9b0bdbfdac}\label{class_g_aspect_manager_a3748272bf6387d9cee816f9b0bdbfdac}} 
+\index{GAspectManager@{GAspectManager}!setGParamManager@{setGParamManager}}
+\index{setGParamManager@{setGParamManager}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{setGParamManager()}{setGParamManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} GAspect\+Manager\+::set\+GParam\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}}}]{pm }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_aspect_manager_a17a0077689f477d78437264108a1577c}\label{class_g_aspect_manager_a17a0077689f477d78437264108a1577c}} 
+\index{GAspectManager@{GAspectManager}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_aspect_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}\label{class_g_aspect_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}} 
+\index{GAspectManager@{GAspectManager}!GElement@{GElement}}
+\index{GElement@{GElement}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{GElement}{GElement}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element}{GElement}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_aspect_manager_a5f5f3393448bf02622a636103aa36fb5}\label{class_g_aspect_manager_a5f5f3393448bf02622a636103aa36fb5}} 
+\index{GAspectManager@{GAspectManager}!aspect\_arr\_@{aspect\_arr\_}}
+\index{aspect\_arr\_@{aspect\_arr\_}!GAspectManager@{GAspectManager}}
+\doxysubsubsection{\texorpdfstring{aspect\_arr\_}{aspect\_arr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_aspect_8h_a83203b01a00d5a34e5116b7fe1eddf9c}{GAspect\+Ptr\+Arr}} GAspect\+Manager\+::aspect\+\_\+arr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Aspect/\mbox{\hyperlink{_g_aspect_manager_8h}{GAspect\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Aspect/\mbox{\hyperlink{_g_aspect_manager_8cpp}{GAspect\+Manager.\+cpp}}\end{DoxyCompactItemize}

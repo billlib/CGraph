@@ -1,0 +1,188 @@
+\hypertarget{class_g_engine}{}\doxysection{GEngine Class Reference}
+\label{class_g_engine}\index{GEngine@{GEngine}}
+
+
+CGraph的核心引擎，提供setup/link/get\+Topo/is\+Dag等核心能力  
+
+
+
+
+{\ttfamily \#include $<$GEngine.\+h$>$}
+
+
+
+Inheritance diagram for GEngine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_engine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GEngine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_engine_ac6c30a7f14c28d6d091c339324d34f2c}{GEngine}} ()=default
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_engine_a3546d352c68f08255b57c75a2c92d3d5}{setup}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)=0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_engine_aee462b313b492568ff2f3d48a3ddcb34}{link}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \mbox{\hyperlink{class_g_engine_a4ac101b21c4b66df7eb351da8560d434}{get\+Topo}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_engine_a3e8af067a8a0acde4851c9b3c6dbf9b2}{is\+Dag}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_engine_a0d315e36a6dbd6c3a1af7feb83a5b75b}{thread\+\_\+pool\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_engine_a12d799e4a16cae7c0dc5d73c923074f9}{linked\+\_\+size\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_engine_affeeccde5245f99f2ee17a1a585064c3}{GElement\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_engine_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_engine_a778dc925482add12356db0a08d591b18}{GMutable}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+CGraph的核心引擎，提供setup/link/get\+Topo/is\+Dag等核心能力 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_engine_ac6c30a7f14c28d6d091c339324d34f2c}\label{class_g_engine_ac6c30a7f14c28d6d091c339324d34f2c}} 
+\index{GEngine@{GEngine}!GEngine@{GEngine}}
+\index{GEngine@{GEngine}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{GEngine()}{GEngine()}}
+{\footnotesize\ttfamily GEngine\+::\+GEngine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_engine_a4ac101b21c4b66df7eb351da8560d434}\label{class_g_engine_a4ac101b21c4b66df7eb351da8560d434}} 
+\index{GEngine@{GEngine}!getTopo@{getTopo}}
+\index{getTopo@{getTopo}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{getTopo()}{getTopo()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} GEngine\+::get\+Topo (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+计算当前elements的 拓扑排序信息 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_engine_a3e8af067a8a0acde4851c9b3c6dbf9b2}\label{class_g_engine_a3e8af067a8a0acde4851c9b3c6dbf9b2}} 
+\index{GEngine@{GEngine}!isDag@{isDag}}
+\index{isDag@{isDag}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{isDag()}{isDag()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GEngine\+::is\+Dag (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+判断是否是dag的逻辑 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{class_g_engine_a3e8af067a8a0acde4851c9b3c6dbf9b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_engine_aee462b313b492568ff2f3d48a3ddcb34}\label{class_g_engine_aee462b313b492568ff2f3d48a3ddcb34}} 
+\index{GEngine@{GEngine}!link@{link}}
+\index{link@{link}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{link()}{link()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GEngine\+::link (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+分析所有的可以设置 linkable 的数据 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+认定图可以连通的判定条件： 1，当前元素仅有一个后继 2，当前元素的唯一后继，仅有一个前驱 3，前后元素绑定机制是一样的\mbox{\Hypertarget{class_g_engine_a3546d352c68f08255b57c75a2c92d3d5}\label{class_g_engine_a3546d352c68f08255b57c75a2c92d3d5}} 
+\index{GEngine@{GEngine}!setup@{setup}}
+\index{setup@{setup}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEngine\+::setup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+将所有注册进入 pipeline的内容，进行分析和解构 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_g_topo_engine_a90e6ed25a78aeb66bc3ad3dad4a5dee5}{GTopo\+Engine}}, \mbox{\hyperlink{class_g_static_engine_ab358861384b0c76a184607a1f19a37aa}{GStatic\+Engine}}, and \mbox{\hyperlink{class_g_dynamic_engine_a17a1c3861917e7fc69f32f7ec97ffbc5}{GDynamic\+Engine}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_engine_affeeccde5245f99f2ee17a1a585064c3}\label{class_g_engine_affeeccde5245f99f2ee17a1a585064c3}} 
+\index{GEngine@{GEngine}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{GElementManager}{GElementManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_engine_a778dc925482add12356db0a08d591b18}\label{class_g_engine_a778dc925482add12356db0a08d591b18}} 
+\index{GEngine@{GEngine}!GMutable@{GMutable}}
+\index{GMutable@{GMutable}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{GMutable}{GMutable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_mutable}{GMutable}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_engine_a4e007dc772c018d10373bf18b528f96d}\label{class_g_engine_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GEngine@{GEngine}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_engine_a12d799e4a16cae7c0dc5d73c923074f9}\label{class_g_engine_a12d799e4a16cae7c0dc5d73c923074f9}} 
+\index{GEngine@{GEngine}!linked\_size\_@{linked\_size\_}}
+\index{linked\_size\_@{linked\_size\_}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{linked\_size\_}{linked\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GEngine\+::linked\+\_\+size\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_engine_a0d315e36a6dbd6c3a1af7feb83a5b75b}\label{class_g_engine_a0d315e36a6dbd6c3a1af7feb83a5b75b}} 
+\index{GEngine@{GEngine}!thread\_pool\_@{thread\_pool\_}}
+\index{thread\_pool\_@{thread\_pool\_}!GEngine@{GEngine}}
+\doxysubsubsection{\texorpdfstring{thread\_pool\_}{thread\_pool\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GEngine\+::thread\+\_\+pool\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\mbox{\hyperlink{_g_engine_8h}{GEngine.\+h}}\end{DoxyCompactItemize}

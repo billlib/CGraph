@@ -19,6 +19,14 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 线程池中实际使用的线程的基类，有以下关键成员：
+ *        UAtomicQueue<UTask>* pool_task_queue_：存储当前线程待执行的普通任务；
+ *        UAtomicPriorityQueue<UTask>* pool_priority_task_queue_：优先级队列的任务，仅辅助线程可以执行；
+ *        CInt type_：表明当前线程是普通线程还是辅助线程
+ *        UThreadPoolConfigPtr config_：当前线程所属的线程池的配置
+ *        std::thread thread_：标准线程对象，实际执行UTask任务的载体
+ */
 class UThreadBase : public UThreadObject {
 protected:
     explicit UThreadBase() {
@@ -57,13 +65,14 @@ protected:
             // 如果辅助线程没有获取到的话，还需要再尝试从长时间任务队列中，获取一次
             result = pool_priority_task_queue_->tryPop(task);
         }
+        // 更新UMetrics(线程池指标)
         metrics_.calcPool(result, 1);
         return result;
     }
 
 
     /**
-     * 从线程池的队列中中，获取批量任务
+     * 从线程池的队列中中，按照指定的max_pool_batch_size_获取批量任务
      * @param tasks
      * @return
      */
@@ -73,6 +82,7 @@ protected:
             result = pool_priority_task_queue_->tryPop(tasks, 1);    // 从优先队列里，最多pop出来一个
         }
 
+        // 更新UMetrics(线程池指标)
         metrics_.calcPool(result, tasks.size());
         return result;
     }

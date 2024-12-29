@@ -15,6 +15,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 默认的前序后继方式只能等待有连接关系的结点
+ * GFence用于在没有依赖关系的情况下，强行等待一个或一组异步结点的运行结束
+ */
 class GFence : public GAdapter {
 public:
     /**

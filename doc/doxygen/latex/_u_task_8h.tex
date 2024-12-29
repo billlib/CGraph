@@ -1,0 +1,69 @@
+\hypertarget{_u_task_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Task/\+UTask.h File Reference}
+\label{_u_task_8h}\index{src/UtilsCtrl/ThreadPool/Task/UTask.h@{src/UtilsCtrl/ThreadPool/Task/UTask.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+{\ttfamily \#include \char`\"{}../\+UThread\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UTask.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_task_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_task_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_task}{UTask}}
+\begin{DoxyCompactList}\small\item\em 基于内嵌类\+Task\+Based和\+Task\+Derided，将传入的func完美转发成\+Task\+Derided的func\+\_\+成员； Task\+Derided是\+UTask的impl\+\_\+成员，运行\+UTask实际上就是调用impl\+\_\+-\/$>$run也就是调用func\+\_\+() \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_u_task_1_1_task_based}{UTask\+::\+Task\+Based}}
+\item 
+struct \mbox{\hyperlink{struct_u_task_1_1_task_derided}{UTask\+::\+Task\+Derided$<$ F, T $>$}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}} = \mbox{\hyperlink{class_u_task}{UTask}} \&
+\item 
+using \mbox{\hyperlink{_u_task_8h_a90bf1df78403a3e0170fe21a40949d33}{UTask\+Ptr}} = \mbox{\hyperlink{class_u_task}{UTask}} $\ast$
+\item 
+using \mbox{\hyperlink{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}{UTask\+Arr}} = std\+::vector$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$
+\item 
+using \mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}} = std\+::vector$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ \&
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}\label{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}} 
+\index{UTask.h@{UTask.h}!UTaskArr@{UTaskArr}}
+\index{UTaskArr@{UTaskArr}!UTask.h@{UTask.h}}
+\doxysubsubsection{\texorpdfstring{UTaskArr}{UTaskArr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}{UTask\+Arr}} =  std\+::vector$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$}
+
+\mbox{\Hypertarget{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}\label{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}} 
+\index{UTask.h@{UTask.h}!UTaskArrRef@{UTaskArrRef}}
+\index{UTaskArrRef@{UTaskArrRef}!UTask.h@{UTask.h}}
+\doxysubsubsection{\texorpdfstring{UTaskArrRef}{UTaskArrRef}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}} =  std\+::vector$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$ \&}
+
+\mbox{\Hypertarget{_u_task_8h_a90bf1df78403a3e0170fe21a40949d33}\label{_u_task_8h_a90bf1df78403a3e0170fe21a40949d33}} 
+\index{UTask.h@{UTask.h}!UTaskPtr@{UTaskPtr}}
+\index{UTaskPtr@{UTaskPtr}!UTask.h@{UTask.h}}
+\doxysubsubsection{\texorpdfstring{UTaskPtr}{UTaskPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_8h_a90bf1df78403a3e0170fe21a40949d33}{UTask\+Ptr}} =  \mbox{\hyperlink{class_u_task}{UTask}} $\ast$}
+
+\mbox{\Hypertarget{_u_task_8h_a71950279b6577d35733e21094666d0db}\label{_u_task_8h_a71950279b6577d35733e21094666d0db}} 
+\index{UTask.h@{UTask.h}!UTaskRef@{UTaskRef}}
+\index{UTaskRef@{UTaskRef}!UTask.h@{UTask.h}}
+\doxysubsubsection{\texorpdfstring{UTaskRef}{UTaskRef}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}} =  \mbox{\hyperlink{class_u_task}{UTask}} \&}
+

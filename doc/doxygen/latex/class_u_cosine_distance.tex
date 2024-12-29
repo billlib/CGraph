@@ -1,0 +1,67 @@
+\hypertarget{class_u_cosine_distance}{}\doxysection{UCosine\+Distance$<$ TSrc, TRes $>$ Class Template Reference}
+\label{class_u_cosine_distance}\index{UCosineDistance$<$ TSrc, TRes $>$@{UCosineDistance$<$ TSrc, TRes $>$}}
+
+
+计算v1和v2两个向量的cos距离 默认v1和v2的维度相同(dim1 == dim2)且非零 (此处calc实现未做检查，可能出现除零错误)  
+
+
+
+
+{\ttfamily \#include $<$UCosine\+Distance.\+h$>$}
+
+
+
+Inheritance diagram for UCosine\+Distance$<$ TSrc, TRes $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_u_cosine_distance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UCosine\+Distance$<$ TSrc, TRes $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{class_u_cosine_distance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_cosine_distance_a9fca5e7e21a4a429aceac86441107a04}{calc}} (const TSrc $\ast$v1, const TSrc $\ast$v2, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim1, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim2, TRes \&result, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext) override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSrc, typename TRes = TSrc$>$\newline
+class UCosine\+Distance$<$ TSrc, TRes $>$}
+
+计算v1和v2两个向量的cos距离 默认v1和v2的维度相同(dim1 == dim2)且非零 (此处calc实现未做检查，可能出现除零错误) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TSrc} & \\
+\hline
+{\em TRes} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_cosine_distance_a9fca5e7e21a4a429aceac86441107a04}\label{class_u_cosine_distance_a9fca5e7e21a4a429aceac86441107a04}} 
+\index{UCosineDistance$<$ TSrc, TRes $>$@{UCosineDistance$<$ TSrc, TRes $>$}!calc@{calc}}
+\index{calc@{calc}!UCosineDistance$<$ TSrc, TRes $>$@{UCosineDistance$<$ TSrc, TRes $>$}}
+\doxysubsubsection{\texorpdfstring{calc()}{calc()}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes  = TSrc$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_cosine_distance}{UCosine\+Distance}}$<$ TSrc, TRes $>$\+::calc (\begin{DoxyParamCaption}\item[{const TSrc $\ast$}]{v1,  }\item[{const TSrc $\ast$}]{v2,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim1,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim2,  }\item[{TRes \&}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Distance/\+Common/\mbox{\hyperlink{_u_cosine_distance_8h}{UCosine\+Distance.\+h}}\end{DoxyCompactItemize}

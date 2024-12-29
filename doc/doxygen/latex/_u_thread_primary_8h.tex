@@ -1,0 +1,40 @@
+\hypertarget{_u_thread_primary_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Thread/\+UThread\+Primary.h File Reference}
+\label{_u_thread_primary_8h}\index{src/UtilsCtrl/ThreadPool/Thread/UThreadPrimary.h@{src/UtilsCtrl/ThreadPool/Thread/UThreadPrimary.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}UThread\+Base.\+h\char`\"{}}\newline
+Include dependency graph for UThread\+Primary.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_primary_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_primary_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}}
+\begin{DoxyCompactList}\small\item\em 主线程类，核心成员是primary\+\_\+queue\+\_\+和secondary\+\_\+queue\+\_\+ 自身准备执行任务时，优先从primary\+\_\+queue\+\_\+取，其次从secondary\+\_\+queue\+\_\+取 自身准备窃取任务时，优先从secondary\+\_\+queue\+\_\+，其次从primary\+\_\+queue\+\_\+取 这样设计的好处是\+A线程的执行和\+B线程从\+A线程窃取这两个异步事件发生竞争的可能性大大减小，从而提高性能 主线程所属的主线程池pool\+\_\+threads\+\_\+的指针也记录在每个主线程对象里面，在窃取相邻线程任务、安全检查等会用到 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}{UThread\+Primary\+Ptr}} = \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}\label{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}} 
+\index{UThreadPrimary.h@{UThreadPrimary.h}!UThreadPrimaryPtr@{UThreadPrimaryPtr}}
+\index{UThreadPrimaryPtr@{UThreadPrimaryPtr}!UThreadPrimary.h@{UThreadPrimary.h}}
+\doxysubsubsection{\texorpdfstring{UThreadPrimaryPtr}{UThreadPrimaryPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}{UThread\+Primary\+Ptr}} =  \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$}
+

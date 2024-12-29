@@ -1,0 +1,1203 @@
+\hypertarget{class_g_pipeline}{}\doxysection{GPipeline Class Reference}
+\label{class_g_pipeline}\index{GPipeline@{GPipeline}}
+
+
+{\ttfamily \#include $<$GPipeline.\+h$>$}
+
+
+
+Inheritance diagram for GPipeline\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_pipeline__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GPipeline\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_aa4c4f1e8bef18c55ce77df9ae4092e81}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_aad85bc43324bad2609f5b683e281a371}{run}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_aac0c00d6fc7723eefd0872e657c395ee}{destroy}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a058cfc5959b189c10d969b7e6c8fcf19}{process}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} run\+Times=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} $>$ \mbox{\hyperlink{class_g_pipeline_aa061dde24ccbf055f93f020b735f6c76}{async\+Run}} (std\+::launch policy=std\+::launch\+::async)
+\item 
+std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} $>$ \mbox{\hyperlink{class_g_pipeline_a08b815f677a16fe896e31c15ea299ceb}{async\+Process}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} run\+Times=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}, std\+::launch policy=std\+::launch\+::async)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a91302e7b087dbf86675c719976299b74}{cancel}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a85992359839ee5e9ae3d948bafb2fa70}{yield}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a3ec1b50afdcf1a1747155b61565c88d6}{resume}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a7e320c3811bcecf01d6522313ce65c1a}{dump}} (std\+::ostream \&oss=std\+::cout)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a92bdfe574f309a7627be1105a0038df9}{perf}} (std\+::ostream \&oss=std\+::cout)
+\item 
+{\footnotesize template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$  = 0$>$ }\\TNode $\ast$ \mbox{\hyperlink{class_g_pipeline_a5e072521f46c65e8378d6be9d4339299}{create\+GNode}} (const \mbox{\hyperlink{struct_g_node_info}{GNode\+Info}} \&info, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$  = 0$>$ }\\TNode $\ast$ \mbox{\hyperlink{class_g_pipeline_a1ec2ce5ecd3153f28f6961d2cfdc7f94}{create\+GNode}} (const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&dependence=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename TGroup , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GGroup, TGroup $>$\+::value, int $>$  = 0$>$ }\\TGroup $\ast$ \mbox{\hyperlink{class_g_pipeline_a39273cc3001da1d2ec4a0b60971b8b49}{create\+GGroup}} (const \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&elements, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement, T $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a355dea14f2c434c98562c53ed3fb0994}{register\+GElement}} (\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} element\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Node$<$ Args ... $>$, TNode $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a7db1bcbe21e5c7e699bcae1e32de3a39}{register\+GElement}} (\mbox{\hyperlink{_g_template_node_8h_a8a03ee5aa35e544ebd9de06d31f2c874}{GTemplate\+Node\+Ptr}}$<$ Args ... $>$ $\ast$element\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends, Args... args)
+\item 
+{\footnotesize template$<$typename TNode , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$  = 0$>$ }\\TNode $\ast$ \mbox{\hyperlink{class_g_pipeline_a0f7f37a3fa1b95cd280808c946c4785e}{register\+GNode}} (const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Node$<$ Args ... $>$, TNode $>$\+::value, int $>$  = 0$>$ }\\TNode $\ast$ \mbox{\hyperlink{class_g_pipeline_ac208b902d9d070c68e7abb1fdeb6561e}{register\+GNode}} (const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends, Args... args)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_abb5f39ac0f53b64b9bfab1abef4e2439}{register\+GNode}} (\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} node\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_ad185265a58b8a9f4f24558e55c1b1426}{register\+GGroup}} (\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} group\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename GFunction $>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a64b346846b396ed07d6d825ea5be59b8}{register\+GElement}} (\mbox{\hyperlink{_g_function_8h_a2254f9f738350d6c3d8e0f8ca0600204}{GFunction\+PPtr}} function\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename GFence $>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a34792d5ca601c4515eafbc102eb5dd12}{register\+GElement}} (\mbox{\hyperlink{_g_fence_8h_a9e0206a6daddb93c24cb92b434d2b118}{GFence\+PPtr}} fence\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename GCoordinator , CInt SIZE$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a6e563655bf9d465dc3554da50f051962}{register\+GElement}} (\mbox{\hyperlink{_g_coordinator_8h_ac1c3cbc3ddf45d19385cba303849dcb6}{GCoordinator\+PPtr}}$<$ SIZE $>$ coordinator\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), const std\+::string \&name=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop=\mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}})
+\item 
+{\footnotesize template$<$typename TAspect , typename TParam  = GAspect\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_aaa72998e95e647217231deac6ca8c3ef}{add\+GAspect}} (const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&elements=std\+::initializer\+\_\+list$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$(), TParam $\ast$param=nullptr)
+\item 
+{\footnotesize template$<$typename TDaemon , typename TParam  = GDaemon\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon, TDaemon $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, TParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a3ec76ae236c5de6ceab6e98038654473}{add\+GDaemon}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms, TParam $\ast$param=nullptr)
+\item 
+{\footnotesize template$<$typename TDaemon , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Daemon$<$ Args... $>$, TDaemon $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a45a3aa41cde676dc12eee15d506bddcb}{add\+GDaemon}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename TEvent , typename TParam  = GEvent\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a1b24fbbcbd336b06f72b045d44c00c1d}{add\+GEvent}} (const std\+::string \&key, TParam $\ast$param=nullptr)
+\item 
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a71ee07644f3d60b25e054e3d86ff5b2c}{add\+GStage}} (const std\+::string \&key, \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} threshold)
+\item 
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_ad5879769c007e8870a214e92e78b9f37}{set\+GEngine\+Type}} (\mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}} type)
+\item 
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a3626045f4269aba39a2ebdbfce979df1}{set\+Unique\+Thread\+Pool\+Config}} (const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&config)
+\item 
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$ \mbox{\hyperlink{class_g_pipeline_a1dc59ccf115ec344cac1366188dfb46a}{set\+Shared\+Thread\+Pool}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} ptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_pipeline_ad2be6d10c49d4b9674659a1034105940}{get\+Max\+Para}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_pipeline_a3047fa353945872982b2abed08390e05}{trim}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_ab3040347d775cc94602e7dfecb5eb4ab}{make\+Serial}} ()
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GPipeline\+State}} \mbox{\hyperlink{class_g_pipeline_aa6c91ea4223c309a6b2081be8f328718}{get\+Cur\+State}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_pipeline_a4f1014a5e595d6c5d8e5620ea7959397}{check\+Separate}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} fst, \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} snd) const
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement, T $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a9900afcae5fc9df798f1ce29982609af}{register\+GElement}} (\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} element\+Ref, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends, const std\+::string \&name, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop)
+\item 
+{\footnotesize template$<$typename TAspect , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_ae2c51c493f2ff445ccd0fa8a1228d73b}{add\+GAspect}} (const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&elements, TParam $\ast$param)
+\item 
+{\footnotesize template$<$typename TDaemon , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon, TDaemon $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, TParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a043db45c829659a50fdf8c0d6fddd389}{add\+GDaemon}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms, TParam $\ast$param)
+\item 
+{\footnotesize template$<$typename TDaemon , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Daemon$<$ Args... $>$, TDaemon $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_ace6b03515a8ce2741c2de865ec3e8558}{add\+GDaemon}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms, Args \&\&... args)
+\item 
+{\footnotesize template$<$typename TEvent , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a9e5e1a4a4a61e064ce0ac7f1bf4f6406}{add\+GEvent}} (const std\+::string \&key, TParam $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_pipeline_af388ce12e84b38d8a3217720d6dcb2ae}{GPipeline}} ()
+\item 
+\mbox{\hyperlink{class_g_pipeline_ad64038907a8cc7f730ebbe5ad4fd5bcf}{$\sim$\+GPipeline}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_a300b2fd31e29e85ab3e52b874d2ba3d5}{init\+Env}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_ab31d933d50fdbce0cac1310eb4f65d53}{inner\+Register}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element, const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&depends, const std\+::string \&name, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a66f8304cfa2011001ec61a1376dc8109}{element\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a8b495438f71dcdc40f27dd18631c1828}{param\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_daemon_manager_8h_aef7e979dd2758823a8ea96ab0b024e7a}{GDaemon\+Manager\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a2157421c745632c8292cc72dff40612c}{daemon\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} \mbox{\hyperlink{class_g_pipeline_a55ba1c6544ab370acd92d76bf2db28f6}{event\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}} \mbox{\hyperlink{class_g_pipeline_ac2538f51e2d2a3ba598807afe9d81636}{stage\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{class_g_schedule}{GSchedule}} \mbox{\hyperlink{class_g_pipeline_ac8472088946f6d7543c2a8d7f95e0516}{schedule\+\_\+}}
+\item 
+\mbox{\hyperlink{class_g_element_repository}{GElement\+Repository}} \mbox{\hyperlink{class_g_pipeline_a40db56814f54f2d82f7d46fc4526a6e5}{repository\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_pipeline_ae4caee2cf6c526a1e0b5df7c27750824}{GPipeline\+Factory}}
+\item 
+class \mbox{\hyperlink{class_g_pipeline_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\item 
+class \mbox{\hyperlink{class_g_pipeline_a055afb5e5454b2ba7056f31bf09b49cd}{GPerf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_pipeline_af388ce12e84b38d8a3217720d6dcb2ae}\label{class_g_pipeline_af388ce12e84b38d8a3217720d6dcb2ae}} 
+\index{GPipeline@{GPipeline}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{GPipeline()}{GPipeline()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GPipeline\+::\+GPipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+注册\+GParam 交互类集合 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_af388ce12e84b38d8a3217720d6dcb2ae_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ad64038907a8cc7f730ebbe5ad4fd5bcf}\label{class_g_pipeline_ad64038907a8cc7f730ebbe5ad4fd5bcf}} 
+\index{GPipeline@{GPipeline}!````~GPipeline@{$\sim$GPipeline}}
+\index{````~GPipeline@{$\sim$GPipeline}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPipeline()}{~GPipeline()}}
+{\footnotesize\ttfamily GPipeline\+::$\sim$\+GPipeline (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_pipeline_ae2c51c493f2ff445ccd0fa8a1228d73b}\label{class_g_pipeline_ae2c51c493f2ff445ccd0fa8a1228d73b}} 
+\index{GPipeline@{GPipeline}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::add\+GAspect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{elements,  }\item[{TParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ae2c51c493f2ff445ccd0fa8a1228d73b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_aaa72998e95e647217231deac6ca8c3ef}\label{class_g_pipeline_aaa72998e95e647217231deac6ca8c3ef}} 
+\index{GPipeline@{GPipeline}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename TParam  = GAspect\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}}$\ast$ GPipeline\+::add\+GAspect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{elements = {\ttfamily std\+:\+:initializer\+\_\+list$<$~\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}~$>$()},  }\item[{TParam $\ast$}]{param = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+添加切面 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TAspect} & \\
+\hline
+{\em TParam} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a45a3aa41cde676dc12eee15d506bddcb}\label{class_g_pipeline_a45a3aa41cde676dc12eee15d506bddcb}} 
+\index{GPipeline@{GPipeline}!addGDaemon@{addGDaemon}}
+\index{addGDaemon@{addGDaemon}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGDaemon()}{addGDaemon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename TDaemon , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Daemon$<$ Args... $>$, TDaemon $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}}$\ast$ GPipeline\+::add\+GDaemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+添加模板类型守护 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TAspect} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & \\
+\hline
+{\em args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_ace6b03515a8ce2741c2de865ec3e8558}\label{class_g_pipeline_ace6b03515a8ce2741c2de865ec3e8558}} 
+\index{GPipeline@{GPipeline}!addGDaemon@{addGDaemon}}
+\index{addGDaemon@{addGDaemon}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGDaemon()}{addGDaemon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename TDaemon , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Daemon$<$ Args... $>$, TDaemon $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::add\+GDaemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ace6b03515a8ce2741c2de865ec3e8558_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a043db45c829659a50fdf8c0d6fddd389}\label{class_g_pipeline_a043db45c829659a50fdf8c0d6fddd389}} 
+\index{GPipeline@{GPipeline}!addGDaemon@{addGDaemon}}
+\index{addGDaemon@{addGDaemon}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGDaemon()}{addGDaemon()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename TDaemon , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon, TDaemon $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, TParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::add\+GDaemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms,  }\item[{TParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a043db45c829659a50fdf8c0d6fddd389_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a3ec76ae236c5de6ceab6e98038654473}\label{class_g_pipeline_a3ec76ae236c5de6ceab6e98038654473}} 
+\index{GPipeline@{GPipeline}!addGDaemon@{addGDaemon}}
+\index{addGDaemon@{addGDaemon}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGDaemon()}{addGDaemon()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename TDaemon , typename TParam  = GDaemon\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon, TDaemon $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, TParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}}$\ast$ GPipeline\+::add\+GDaemon (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms,  }\item[{TParam $\ast$}]{param = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+添加守护 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TDaemon} & \\
+\hline
+{\em TParam} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em ms} & \\
+\hline
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a9e5e1a4a4a61e064ce0ac7f1bf4f6406}\label{class_g_pipeline_a9e5e1a4a4a61e064ce0ac7f1bf4f6406}} 
+\index{GPipeline@{GPipeline}!addGEvent@{addGEvent}}
+\index{addGEvent@{addGEvent}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGEvent()}{addGEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TEvent , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::add\+GEvent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{TParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a9e5e1a4a4a61e064ce0ac7f1bf4f6406_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a1b24fbbcbd336b06f72b045d44c00c1d}\label{class_g_pipeline_a1b24fbbcbd336b06f72b045d44c00c1d}} 
+\index{GPipeline@{GPipeline}!addGEvent@{addGEvent}}
+\index{addGEvent@{addGEvent}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGEvent()}{addGEvent()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TEvent , typename TParam  = GEvent\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_pipeline}{GPipeline}}$\ast$ GPipeline\+::add\+GEvent (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{TParam $\ast$}]{param = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+添加一个事件 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TEvent} & \\
+\hline
+{\em TParam} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a71ee07644f3d60b25e054e3d86ff5b2c}\label{class_g_pipeline_a71ee07644f3d60b25e054e3d86ff5b2c}} 
+\index{GPipeline@{GPipeline}!addGStage@{addGStage}}
+\index{addGStage@{addGStage}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{addGStage()}{addGStage()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::add\+GStage (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}}]{threshold }\end{DoxyParamCaption})}
+
+添加一个阶段 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em threshold} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a71ee07644f3d60b25e054e3d86ff5b2c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a08b815f677a16fe896e31c15ea299ceb}\label{class_g_pipeline_a08b815f677a16fe896e31c15ea299ceb}} 
+\index{GPipeline@{GPipeline}!asyncProcess@{asyncProcess}}
+\index{asyncProcess@{asyncProcess}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{asyncProcess()}{asyncProcess()}}
+{\footnotesize\ttfamily std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} $>$ GPipeline\+::async\+Process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{run\+Times = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}},  }\item[{std\+::launch}]{policy = {\ttfamily std\+:\+:launch\+:\+:async} }\end{DoxyParamCaption})}
+
+异步执行pipeline的全部流程 
+\begin{DoxyParams}{Parameters}
+{\em run\+Times} & \\
+\hline
+{\em policy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a08b815f677a16fe896e31c15ea299ceb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_aa061dde24ccbf055f93f020b735f6c76}\label{class_g_pipeline_aa061dde24ccbf055f93f020b735f6c76}} 
+\index{GPipeline@{GPipeline}!asyncRun@{asyncRun}}
+\index{asyncRun@{asyncRun}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{asyncRun()}{asyncRun()}}
+{\footnotesize\ttfamily std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} $>$ GPipeline\+::async\+Run (\begin{DoxyParamCaption}\item[{std\+::launch}]{policy = {\ttfamily std\+:\+:launch\+:\+:async} }\end{DoxyParamCaption})}
+
+异步执行pipeline的run流程 
+\begin{DoxyParams}{Parameters}
+{\em policy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyEnumerate}
+\item 确认当前pipeline已经初始化完毕
+\item 异步的执行 \mbox{\hyperlink{class_g_pipeline_aad85bc43324bad2609f5b683e281a371}{run()}} 方法，并且返回执行结果的 future 信息
+\end{DoxyEnumerate}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_aa061dde24ccbf055f93f020b735f6c76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a91302e7b087dbf86675c719976299b74}\label{class_g_pipeline_a91302e7b087dbf86675c719976299b74}} 
+\index{GPipeline@{GPipeline}!cancel@{cancel}}
+\index{cancel@{cancel}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{cancel()}{cancel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::cancel (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+停止执行流程，多用于异步执行流程中 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_g_pipeline_a91302e7b087dbf86675c719976299b74_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a4f1014a5e595d6c5d8e5620ea7959397}\label{class_g_pipeline_a4f1014a5e595d6c5d8e5620ea7959397}} 
+\index{GPipeline@{GPipeline}!checkSeparate@{checkSeparate}}
+\index{checkSeparate@{checkSeparate}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{checkSeparate()}{checkSeparate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GPipeline\+::check\+Separate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{fst,  }\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{snd }\end{DoxyParamCaption}) const}
+
+判断两个element，是否有依赖关系 
+\begin{DoxyParams}{Parameters}
+{\em fst} & \\
+\hline
+{\em snd} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果返回 true，则表示不可能并发执行；否则表示可能并发执行 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a4f1014a5e595d6c5d8e5620ea7959397_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a39273cc3001da1d2ec4a0b60971b8b49}\label{class_g_pipeline_a39273cc3001da1d2ec4a0b60971b8b49}} 
+\index{GPipeline@{GPipeline}!createGGroup@{createGGroup}}
+\index{createGGroup@{createGGroup}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{createGGroup()}{createGGroup()}}
+{\footnotesize\ttfamily template$<$typename TGroup , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GGroup, TGroup $>$\+::value, int $>$ $>$ \\
+TGroup $\ast$ GPipeline\+::create\+GGroup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&}]{elements,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+根据传入的信息，创建\+Group信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a39273cc3001da1d2ec4a0b60971b8b49_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a1ec2ce5ecd3153f28f6961d2cfdc7f94}\label{class_g_pipeline_a1ec2ce5ecd3153f28f6961d2cfdc7f94}} 
+\index{GPipeline@{GPipeline}!createGNode@{createGNode}}
+\index{createGNode@{createGNode}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{createGNode()}{createGNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$ $>$ \\
+TNode $\ast$ GPipeline\+::create\+GNode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{dependence = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}},  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+根据传入的信息，创建node节点 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+{\em dependence} & \\
+\hline
+{\em args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a5e072521f46c65e8378d6be9d4339299}\label{class_g_pipeline_a5e072521f46c65e8378d6be9d4339299}} 
+\index{GPipeline@{GPipeline}!createGNode@{createGNode}}
+\index{createGNode@{createGNode}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{createGNode()}{createGNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$ $>$ \\
+TNode $\ast$ GPipeline\+::create\+GNode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_g_node_info}{GNode\+Info}} \&}]{info,  }\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+
+根据传入的info信息，创建node节点 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TNode} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em info} & \\
+\hline
+{\em args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a5e072521f46c65e8378d6be9d4339299_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_aac0c00d6fc7723eefd0872e657c395ee}\label{class_g_pipeline_aac0c00d6fc7723eefd0872e657c395ee}} 
+\index{GPipeline@{GPipeline}!destroy@{destroy}}
+\index{destroy@{destroy}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+释放函数 需要先将线程池相关内容析构，然后再做destroy。 否则的话，在错误status累积的情况下，在windows平台上，会产生崩溃
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_aac0c00d6fc7723eefd0872e657c395ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a7e320c3811bcecf01d6522313ce65c1a}\label{class_g_pipeline_a7e320c3811bcecf01d6522313ce65c1a}} 
+\index{GPipeline@{GPipeline}!dump@{dump}}
+\index{dump@{dump}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})}
+
+生成图可视化 graphviz 信息 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 将输出的内容，复制到 \href{https://dreampuf.github.io/GraphvizOnline/}{\texttt{ https\+://dreampuf.\+github.\+io/\+Graphviz\+Online/}} 中查看效果 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_aa6c91ea4223c309a6b2081be8f328718}\label{class_g_pipeline_aa6c91ea4223c309a6b2081be8f328718}} 
+\index{GPipeline@{GPipeline}!getCurState@{getCurState}}
+\index{getCurState@{getCurState}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{getCurState()}{getCurState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GPipeline\+State}} GPipeline\+::get\+Cur\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+获取当前的执行状态 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_ad2be6d10c49d4b9674659a1034105940}\label{class_g_pipeline_ad2be6d10c49d4b9674659a1034105940}} 
+\index{GPipeline@{GPipeline}!getMaxPara@{getMaxPara}}
+\index{getMaxPara@{getMaxPara}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{getMaxPara()}{getMaxPara()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GPipeline\+::get\+Max\+Para (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+获取最大并发度 \begin{DoxyReturn}{Returns}
+@notice 暂时仅支持dag中所有内容均为 node的情况下计算。返回的值，是理论最大线程数，不是最优值 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ad2be6d10c49d4b9674659a1034105940_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_aa4c4f1e8bef18c55ce77df9ae4092e81}\label{class_g_pipeline_aa4c4f1e8bef18c55ce77df9ae4092e81}} 
+\index{GPipeline@{GPipeline}!init@{init}}
+\index{init@{init}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_aa4c4f1e8bef18c55ce77df9ae4092e81_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a300b2fd31e29e85ab3e52b874d2ba3d5}\label{class_g_pipeline_a300b2fd31e29e85ab3e52b874d2ba3d5}} 
+\index{GPipeline@{GPipeline}!initEnv@{initEnv}}
+\index{initEnv@{initEnv}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{initEnv()}{initEnv()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::init\+Env (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+初始化环境信息，包括线程池 等 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a300b2fd31e29e85ab3e52b874d2ba3d5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ab31d933d50fdbce0cac1310eb4f65d53}\label{class_g_pipeline_ab31d933d50fdbce0cac1310eb4f65d53}} 
+\index{GPipeline@{GPipeline}!innerRegister@{innerRegister}}
+\index{innerRegister@{innerRegister}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{innerRegister()}{innerRegister()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::inner\+Register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+内部真实一个 element 信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ab31d933d50fdbce0cac1310eb4f65d53_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ab3040347d775cc94602e7dfecb5eb4ab}\label{class_g_pipeline_ab3040347d775cc94602e7dfecb5eb4ab}} 
+\index{GPipeline@{GPipeline}!makeSerial@{makeSerial}}
+\index{makeSerial@{makeSerial}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{makeSerial()}{makeSerial()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::make\+Serial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+将符合串行执行条件的pipeline，设定为串行执行的模式。可以大幅度提升运行性能。 \begin{DoxyReturn}{Returns}
+@notice 如果pipeline不可以设定的话，通过返回值提示对应信息 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ab3040347d775cc94602e7dfecb5eb4ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a92bdfe574f309a7627be1105a0038df9}\label{class_g_pipeline_a92bdfe574f309a7627be1105a0038df9}} 
+\index{GPipeline@{GPipeline}!perf@{perf}}
+\index{perf@{perf}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{perf()}{perf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::perf (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption})}
+
+查看性能分析 \begin{DoxyReturn}{Returns}
+@notice 将输出的内容，复制到 \href{https://dreampuf.github.io/GraphvizOnline/}{\texttt{ https\+://dreampuf.\+github.\+io/\+Graphviz\+Online/}} 中查看效果，字段解释如下： start \+: 当前element第一次被执行的时间 finish \+: 当前element最后一次被执行结束的时间 per\+\_\+cost \+: 当前element单次执行耗时 total\+\_\+cost \+: 当前element执行的总耗时（仅在element多次执行时展示） 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a92bdfe574f309a7627be1105a0038df9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a058cfc5959b189c10d969b7e6c8fcf19}\label{class_g_pipeline_a058cfc5959b189c10d969b7e6c8fcf19}} 
+\index{GPipeline@{GPipeline}!process@{process}}
+\index{process@{process}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{run\+Times = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+一次性执行完成初始化，执行run\+Times次，和销毁的过程 
+\begin{DoxyParams}{Parameters}
+{\em run\+Times} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyEnumerate}
+\item 执行轮数（run\+Times）没有结束
+\item 执行结果正常
+\item 没有进入取消状态
+\end{DoxyEnumerate}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a058cfc5959b189c10d969b7e6c8fcf19_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a6e563655bf9d465dc3554da50f051962}\label{class_g_pipeline_a6e563655bf9d465dc3554da50f051962}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily template$<$typename GCoordinator , CInt SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_coordinator_8h_ac1c3cbc3ddf45d19385cba303849dcb6}{GCoordinator\+PPtr}}$<$ SIZE $>$}]{coordinator\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册\+GCoordinator类型的内容，模板特化 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}} & \\
+\hline
+{\em SIZE} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em coordinator\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a9900afcae5fc9df798f1ce29982609af}\label{class_g_pipeline_a9900afcae5fc9df798f1ce29982609af}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement, T $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{element\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})}
+
+如果是\+GGroup类型的信息，则： 1，必须外部创建 2，未被注册到其他的pipeline中
+
+如果不是group信息的话，且属于element（包含node和adapter） 则直接内部创建该信息Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a9900afcae5fc9df798f1ce29982609af_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a355dea14f2c434c98562c53ed3fb0994}\label{class_g_pipeline_a355dea14f2c434c98562c53ed3fb0994}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{element\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$~\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}~$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+在图中注册一个 GElement信息 如果注册的是\+GNode信息，则内部自动生成 如果注册的是\+GGroup信息，则需外部提前生成，然后注册进来 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a34792d5ca601c4515eafbc102eb5dd12}\label{class_g_pipeline_a34792d5ca601c4515eafbc102eb5dd12}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily template$<$typename GFence $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_fence_8h_a9e0206a6daddb93c24cb92b434d2b118}{GFence\+PPtr}}}]{fence\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册fence类型的内容，模板特化 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{class_g_fence}{GFence}}} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em fence\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a64b346846b396ed07d6d825ea5be59b8}\label{class_g_pipeline_a64b346846b396ed07d6d825ea5be59b8}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily template$<$typename GFunction $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_function_8h_a2254f9f738350d6c3d8e0f8ca0600204}{GFunction\+PPtr}}}]{function\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册function类型的内容，模板特化 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em \mbox{\hyperlink{class_g_function}{GFunction}}} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em function\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a7db1bcbe21e5c7e699bcae1e32de3a39}\label{class_g_pipeline_a7db1bcbe21e5c7e699bcae1e32de3a39}} 
+\index{GPipeline@{GPipeline}!registerGElement@{registerGElement}}
+\index{registerGElement@{registerGElement}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGElement()}{registerGElement()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Node$<$ Args ... $>$, TNode $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_template_node_8h_a8a03ee5aa35e544ebd9de06d31f2c874}{GTemplate\+Node\+Ptr}}$<$ Args ... $>$ $\ast$}]{element\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+在图中注册一个模板\+Element信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TNode} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em element\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a7db1bcbe21e5c7e699bcae1e32de3a39_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ad185265a58b8a9f4f24558e55c1b1426}\label{class_g_pipeline_ad185265a58b8a9f4f24558e55c1b1426}} 
+\index{GPipeline@{GPipeline}!registerGGroup@{registerGGroup}}
+\index{registerGGroup@{registerGGroup}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGGroup()}{registerGGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GGroup (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{group\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册一个组信息（推荐使用） 
+\begin{DoxyParams}{Parameters}
+{\em group\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ad185265a58b8a9f4f24558e55c1b1426_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ac208b902d9d070c68e7abb1fdeb6561e}\label{class_g_pipeline_ac208b902d9d070c68e7abb1fdeb6561e}} 
+\index{GPipeline@{GPipeline}!registerGNode@{registerGNode}}
+\index{registerGNode@{registerGNode}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGNode()}{registerGNode()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename TNode , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Node$<$ Args ... $>$, TNode $>$\+::value, int $>$ $>$ \\
+TNode $\ast$ GPipeline\+::register\+GNode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+注册一个 node 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TNode} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em depends} & \\
+\hline
+{\em args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_a0f7f37a3fa1b95cd280808c946c4785e}\label{class_g_pipeline_a0f7f37a3fa1b95cd280808c946c4785e}} 
+\index{GPipeline@{GPipeline}!registerGNode@{registerGNode}}
+\index{registerGNode@{registerGNode}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGNode()}{registerGNode()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename TNode , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GNode, TNode $>$\+::value, int $>$ $>$ \\
+TNode $\ast$ GPipeline\+::register\+GNode (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册一个 node 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_abb5f39ac0f53b64b9bfab1abef4e2439}\label{class_g_pipeline_abb5f39ac0f53b64b9bfab1abef4e2439}} 
+\index{GPipeline@{GPipeline}!registerGNode@{registerGNode}}
+\index{registerGNode@{registerGNode}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{registerGNode()}{registerGNode()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::register\+GNode (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{node\+Ref,  }\item[{const \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \&}]{depends = {\ttfamily std\+:\+:initializer\+\_\+list$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$()},  }\item[{const std\+::string \&}]{name = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}}} }\end{DoxyParamCaption})}
+
+注册一个节点信息 
+\begin{DoxyParams}{Parameters}
+{\em node\+Ref} & \\
+\hline
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_abb5f39ac0f53b64b9bfab1abef4e2439_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a3ec1b50afdcf1a1747155b61565c88d6}\label{class_g_pipeline_a3ec1b50afdcf1a1747155b61565c88d6}} 
+\index{GPipeline@{GPipeline}!resume@{resume}}
+\index{resume@{resume}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{resume()}{resume()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::resume (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+恢复当前pipeline的执行，多用于异步执行流程中 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{class_g_pipeline_a3ec1b50afdcf1a1747155b61565c88d6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_aad85bc43324bad2609f5b683e281a371}\label{class_g_pipeline_aad85bc43324bad2609f5b683e281a371}} 
+\index{GPipeline@{GPipeline}!run@{run}}
+\index{run@{run}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+\begin{DoxyEnumerate}
+\item 将所有 \mbox{\hyperlink{class_g_element}{GElement}} 的状态设定为 NORMAL
+\item 将所有的 \mbox{\hyperlink{class_g_param}{GParam}} 设置为初始值
+\item 执行dag逻辑
+\item 将所有 \mbox{\hyperlink{class_g_element}{GElement}} 的状态恢复为 NORMAL
+\item 等到所有异步事件执行结束
+\item 将所有的 \mbox{\hyperlink{class_g_param}{GParam}} 复原
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_aad85bc43324bad2609f5b683e281a371_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_ad5879769c007e8870a214e92e78b9f37}\label{class_g_pipeline_ad5879769c007e8870a214e92e78b9f37}} 
+\index{GPipeline@{GPipeline}!setGEngineType@{setGEngineType}}
+\index{setGEngineType@{setGEngineType}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{setGEngineType()}{setGEngineType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::set\+GEngine\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}}}]{type }\end{DoxyParamCaption})}
+
+设置引擎策略 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_ad5879769c007e8870a214e92e78b9f37_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a1dc59ccf115ec344cac1366188dfb46a}\label{class_g_pipeline_a1dc59ccf115ec344cac1366188dfb46a}} 
+\index{GPipeline@{GPipeline}!setSharedThreadPool@{setSharedThreadPool}}
+\index{setSharedThreadPool@{setSharedThreadPool}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{setSharedThreadPool()}{setSharedThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::set\+Shared\+Thread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{ptr }\end{DoxyParamCaption})}
+
+设置共享的线程池 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果传入 nullptr 的话，则默认使用本地独占线程池 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a1dc59ccf115ec344cac1366188dfb46a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a3626045f4269aba39a2ebdbfce979df1}\label{class_g_pipeline_a3626045f4269aba39a2ebdbfce979df1}} 
+\index{GPipeline@{GPipeline}!setUniqueThreadPoolConfig@{setUniqueThreadPoolConfig}}
+\index{setUniqueThreadPoolConfig@{setUniqueThreadPoolConfig}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{setUniqueThreadPoolConfig()}{setUniqueThreadPoolConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+::set\+Unique\+Thread\+Pool\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&}]{config }\end{DoxyParamCaption})}
+
+设置本pipeline内部线程池相关信息 
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+实际是将信息传递给 schedule中，如果是unique的话，就使用这个参数 如果是 shared的话，其实配置是无效的Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a3626045f4269aba39a2ebdbfce979df1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a3047fa353945872982b2abed08390e05}\label{class_g_pipeline_a3047fa353945872982b2abed08390e05}} 
+\index{GPipeline@{GPipeline}!trim@{trim}}
+\index{trim@{trim}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GPipeline\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+针对图结构，做多余边剪裁 \begin{DoxyReturn}{Returns}
+返回值表示裁剪了多少条信息 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_a3047fa353945872982b2abed08390e05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_pipeline_a85992359839ee5e9ae3d948bafb2fa70}\label{class_g_pipeline_a85992359839ee5e9ae3d948bafb2fa70}} 
+\index{GPipeline@{GPipeline}!yield@{yield}}
+\index{yield@{yield}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{yield()}{yield()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+::yield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+暂停当前pipeline的执行，多用于异步执行流程中 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{class_g_pipeline_a85992359839ee5e9ae3d948bafb2fa70_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_pipeline_a17a0077689f477d78437264108a1577c}\label{class_g_pipeline_a17a0077689f477d78437264108a1577c}} 
+\index{GPipeline@{GPipeline}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_pipeline_a055afb5e5454b2ba7056f31bf09b49cd}\label{class_g_pipeline_a055afb5e5454b2ba7056f31bf09b49cd}} 
+\index{GPipeline@{GPipeline}!GPerf@{GPerf}}
+\index{GPerf@{GPerf}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{GPerf}{GPerf}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_perf}{GPerf}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_pipeline_ae4caee2cf6c526a1e0b5df7c27750824}\label{class_g_pipeline_ae4caee2cf6c526a1e0b5df7c27750824}} 
+\index{GPipeline@{GPipeline}!GPipelineFactory@{GPipelineFactory}}
+\index{GPipelineFactory@{GPipelineFactory}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{GPipelineFactory}{GPipelineFactory}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline_factory}{GPipeline\+Factory}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_pipeline_a2157421c745632c8292cc72dff40612c}\label{class_g_pipeline_a2157421c745632c8292cc72dff40612c}} 
+\index{GPipeline@{GPipeline}!daemon\_manager\_@{daemon\_manager\_}}
+\index{daemon\_manager\_@{daemon\_manager\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{daemon\_manager\_}{daemon\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_daemon_manager_8h_aef7e979dd2758823a8ea96ab0b024e7a}{GDaemon\+Manager\+Ptr}} GPipeline\+::daemon\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_a66f8304cfa2011001ec61a1376dc8109}\label{class_g_pipeline_a66f8304cfa2011001ec61a1376dc8109}} 
+\index{GPipeline@{GPipeline}!element\_manager\_@{element\_manager\_}}
+\index{element\_manager\_@{element\_manager\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{element\_manager\_}{element\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} GPipeline\+::element\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+不允许外部赋值和构造 \mbox{\Hypertarget{class_g_pipeline_a55ba1c6544ab370acd92d76bf2db28f6}\label{class_g_pipeline_a55ba1c6544ab370acd92d76bf2db28f6}} 
+\index{GPipeline@{GPipeline}!event\_manager\_@{event\_manager\_}}
+\index{event\_manager\_@{event\_manager\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{event\_manager\_}{event\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} GPipeline\+::event\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_a8b495438f71dcdc40f27dd18631c1828}\label{class_g_pipeline_a8b495438f71dcdc40f27dd18631c1828}} 
+\index{GPipeline@{GPipeline}!param\_manager\_@{param\_manager\_}}
+\index{param\_manager\_@{param\_manager\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{param\_manager\_}{param\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} GPipeline\+::param\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_a40db56814f54f2d82f7d46fc4526a6e5}\label{class_g_pipeline_a40db56814f54f2d82f7d46fc4526a6e5}} 
+\index{GPipeline@{GPipeline}!repository\_@{repository\_}}
+\index{repository\_@{repository\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{repository\_}{repository\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_element_repository}{GElement\+Repository}} GPipeline\+::repository\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_ac8472088946f6d7543c2a8d7f95e0516}\label{class_g_pipeline_ac8472088946f6d7543c2a8d7f95e0516}} 
+\index{GPipeline@{GPipeline}!schedule\_@{schedule\_}}
+\index{schedule\_@{schedule\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{schedule\_}{schedule\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_schedule}{GSchedule}} GPipeline\+::schedule\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_ac2538f51e2d2a3ba598807afe9d81636}\label{class_g_pipeline_ac2538f51e2d2a3ba598807afe9d81636}} 
+\index{GPipeline@{GPipeline}!stage\_manager\_@{stage\_manager\_}}
+\index{stage\_manager\_@{stage\_manager\_}!GPipeline@{GPipeline}}
+\doxysubsubsection{\texorpdfstring{stage\_manager\_}{stage\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}} GPipeline\+::stage\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_8h}{GPipeline.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_8cpp}{GPipeline.\+cpp}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_8inl}{GPipeline.\+inl}}\end{DoxyCompactItemize}

@@ -1,0 +1,25 @@
+\hypertarget{_d_ann_node_8h}{}\doxysection{src/\+Domain\+Ctrl/\+Ann/\+DAnn\+Node.h File Reference}
+\label{_d_ann_node_8h}\index{src/DomainCtrl/Ann/DAnnNode.h@{src/DomainCtrl/Ann/DAnnNode.h}}
+{\ttfamily \#include \char`\"{}DAnn\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}DAnn\+Object.\+h\char`\"{}}\newline
+Include dependency graph for DAnn\+Node.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_ann_node_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_d_ann_node_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_d_ann_node}{DAnn\+Node}}
+\begin{DoxyCompactList}\small\item\em ANN领域算子模型抽象，说人话，就是抽象了一套跑\+NN相关的范式 prepare\+Param准备要接下来要run的函数类型 函数类型和\+DAnn\+Node的成员函数一一对应，分别有 train/search/insert/update/remove/load\+Model/save\+Model/edition； 上述接口在\+DAnn\+Node这个基类都为空，由派生类自行实现，在run统一调用； \end{DoxyCompactList}\end{DoxyCompactItemize}

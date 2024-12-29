@@ -1,0 +1,277 @@
+\hypertarget{class_g_some}{}\doxysection{GSome$<$ Trigger\+Num $>$ Class Template Reference}
+\label{class_g_some}\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+
+
+对于插入的所有\+GElement，不管实际能不能并行，\+GSome都会把这些\+GElement提交到异步任务里面全并发执行(详见run) Trigger\+Num个\+GElement执行完成后就退出不再执行剩余的，剩余的置为\+TIMEOUT(在\+GElement的fat\+Processor里面会不执行直接结束)  
+
+
+
+
+{\ttfamily \#include $<$GSome.\+h$>$}
+
+
+
+Inheritance diagram for GSome$<$ Trigger\+Num $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_some__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GSome$<$ Trigger\+Num $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_some__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_some_a2d5b303739e967356bcc3c8591536763}{GSome}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some_ab38afa766186f02f0482bb3574cb6a64}{add\+Element}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some_aab3f67f031b41033292346a93c586796}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_some_ac9bfdec6d03da3b841bab00a91876011}{is\+Serializable}} () const final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_some_a8bcf65f6693d5fa8db59257aa68cfa76}{dump}} (std\+::ostream \&oss) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_some_a1c77548dc66364dafd986f6749a8fc35}{is\+Hold}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some_ae2f0d3592c8d825c9c3c2eece5f828b1}{check\+Suitable}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_g_some_ab2a62a5c16c473a3274f68373205a632}{left\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some_a02833c4d37d6bb28e5e2745b7ec7837f}{cur\+\_\+status\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_some_a2b54279e37eecda540867bf1bc68e2d6}{lock\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_g_some_a39d7321c9c6f34f7a3e3b60514663489}{cv\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_some_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_some_a68cfa23c068ba69587e80f64739fda70}{GDynamic\+Engine}}
+\item 
+class \mbox{\hyperlink{class_g_some_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$CInt Trigger\+Num = 1$>$\newline
+class GSome$<$ Trigger\+Num $>$}
+
+对于插入的所有\+GElement，不管实际能不能并行，\+GSome都会把这些\+GElement提交到异步任务里面全并发执行(详见run) Trigger\+Num个\+GElement执行完成后就退出不再执行剩余的，剩余的置为\+TIMEOUT(在\+GElement的fat\+Processor里面会不执行直接结束) 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Trigger\+Num} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_some_a2d5b303739e967356bcc3c8591536763}\label{class_g_some_a2d5b303739e967356bcc3c8591536763}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!GSome@{GSome}}
+\index{GSome@{GSome}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{GSome()}{GSome()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::\mbox{\hyperlink{class_g_some}{GSome}}\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_some_a2d5b303739e967356bcc3c8591536763_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_some_ab38afa766186f02f0482bb3574cb6a64}\label{class_g_some_ab38afa766186f02f0482bb3574cb6a64}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!addElement@{addElement}}
+\index{addElement@{addElement}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::add\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+向group中，添加element信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+GSome中插入的元素，必须要有 timeout的设定，如果没有的话，强行写到max值。 用于确保在pipeline run执行完成之前，所有的 element 都会被回收
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a9f18367c67402637fadb53b4c0cc5ab2}{GGroup}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_some_ab38afa766186f02f0482bb3574cb6a64_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_some_ae2f0d3592c8d825c9c3c2eece5f828b1}\label{class_g_some_ae2f0d3592c8d825c9c3c2eece5f828b1}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!checkSuitable@{checkSuitable}}
+\index{checkSuitable@{checkSuitable}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{checkSuitable()}{checkSuitable()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::check\+Suitable\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+判断当前节点，是否符合执行逻辑。主要用于init的早期阶段 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}{GElement}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_some_ae2f0d3592c8d825c9c3c2eece5f828b1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_some_a8bcf65f6693d5fa8db59257aa68cfa76}\label{class_g_some_a8bcf65f6693d5fa8db59257aa68cfa76}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!dump@{dump}}
+\index{dump@{dump}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+graphviz dump 逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_aec443a823851fe901aefb704711a6072}{GElement}}.
+
+\mbox{\Hypertarget{class_g_some_a1c77548dc66364dafd986f6749a8fc35}\label{class_g_some_a1c77548dc66364dafd986f6749a8fc35}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!isHold@{isHold}}
+\index{isHold@{isHold}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{isHold()}{isHold()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::is\+Hold\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+是否持续进行 默认为false，表示执行且仅执行一次 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+默认仅返回false 可以根据自己逻辑，来实现\char`\"{}持续循环执行，直到特定条件出现的时候停止\char`\"{}的逻辑
+
+Reimplemented from \mbox{\hyperlink{class_g_element_acf3abb5e770a41a7123d678e471c2b74}{GElement}}.
+
+\mbox{\Hypertarget{class_g_some_ac9bfdec6d03da3b841bab00a91876011}\label{class_g_some_ac9bfdec6d03da3b841bab00a91876011}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!isSerializable@{isSerializable}}
+\index{isSerializable@{isSerializable}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{isSerializable()}{isSerializable()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::is\+Serializable\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+判断当前元素，是否可以线性执行。默认返回true \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+针对group的情况，应该是所有在其中的element 都是可以串行的，才认定为可串行 但是在 region和 multi\+Condition中，有针对性的判断
+
+Reimplemented from \mbox{\hyperlink{class_g_group_a468fa4cc1418a9636b787439174d3f04}{GGroup}}.
+
+\mbox{\Hypertarget{class_g_some_aab3f67f031b41033292346a93c586796}\label{class_g_some_aab3f67f031b41033292346a93c586796}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!run@{run}}
+\index{run@{run}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+\begin{DoxyEnumerate}
+\item 并发的执行，其中的所有逻辑信息
+\item 等待 Trigger Num 个element执行完成
+\item 将所有未执行完的element 设置为timeout
+\item 赋返回值
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_some_a17a0077689f477d78437264108a1577c}\label{class_g_some_a17a0077689f477d78437264108a1577c}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_some_a68cfa23c068ba69587e80f64739fda70}\label{class_g_some_a68cfa23c068ba69587e80f64739fda70}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!GDynamicEngine@{GDynamicEngine}}
+\index{GDynamicEngine@{GDynamicEngine}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{GDynamicEngine}{GDynamicEngine}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+friend class \mbox{\hyperlink{class_g_dynamic_engine}{GDynamic\+Engine}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_some_a4e007dc772c018d10373bf18b528f96d}\label{class_g_some_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_some_a02833c4d37d6bb28e5e2745b7ec7837f}\label{class_g_some_a02833c4d37d6bb28e5e2745b7ec7837f}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!cur\_status\_@{cur\_status\_}}
+\index{cur\_status\_@{cur\_status\_}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{cur\_status\_}{cur\_status\_}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::cur\+\_\+status\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_some_a39d7321c9c6f34f7a3e3b60514663489}\label{class_g_some_a39d7321c9c6f34f7a3e3b60514663489}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_some_ab2a62a5c16c473a3274f68373205a632}\label{class_g_some_ab2a62a5c16c473a3274f68373205a632}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!left\_num\_@{left\_num\_}}
+\index{left\_num\_@{left\_num\_}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{left\_num\_}{left\_num\_}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::left\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_some_a2b54279e37eecda540867bf1bc68e2d6}\label{class_g_some_a2b54279e37eecda540867bf1bc68e2d6}} 
+\index{GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!GSome$<$ TriggerNum $>$@{GSome$<$ TriggerNum $>$}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily template$<$CInt Trigger\+Num = 1$>$ \\
+std\+::mutex \mbox{\hyperlink{class_g_some}{GSome}}$<$ Trigger\+Num $>$\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GSome/\mbox{\hyperlink{_g_some_8h}{GSome.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GSome/\mbox{\hyperlink{_g_some_8inl}{GSome.\+inl}}\end{DoxyCompactItemize}

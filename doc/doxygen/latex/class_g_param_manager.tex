@@ -1,0 +1,273 @@
+\hypertarget{class_g_param_manager}{}\doxysection{GParam\+Manager Class Reference}
+\label{class_g_param_manager}\index{GParamManager@{GParamManager}}
+
+
+{\ttfamily \#include $<$GParam\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GParam\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_g_param_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GParam\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{class_g_param_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_abe86f74146c1c4c9a61ff2a2badd1f15}{create}} (const std\+::string \&key, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} backtrace=false)
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$  = 0$>$ }\\T $\ast$ \mbox{\hyperlink{class_g_param_manager_adecc01c6a77b4c8194300e66279e2405}{get}} (const std\+::string \&key)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_a67303ec7dcb925025cd46388152f9381}{remove\+By\+Key}} (const std\+::string \&key)
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_g_param_manager_a74a30790857770695bc9168fff1009c6}{get\+Keys}} ()
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_af05b6e9709d3d8bd419699759254ea83}{create}} (const std\+::string \&key, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} backtrace)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_param_manager_a399782676ca6785d6988f02b10ed97f2}{GParam\+Manager}} ()
+\item 
+\mbox{\hyperlink{class_g_param_manager_a7345a375e13f3db22103adc176c1cb67}{$\sim$\+GParam\+Manager}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_a1c84546f05a06b126a42b10897065503}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_ae2a3ab71c8fa9dd680c989302f5f1984}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_abd19bdc5f1ec4a45ffea6b284f1921e4}{clear}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_manager_a29ec5f759c50c2027b0409004db33839}{setup}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_param_manager_af62739f0c9e26b16fbbc925123e1c1a1}{reset\+With\+Status}} (const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&cur\+Status)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{_g_param_8h_a256f621b5b44f61a71bc04db1c619cce}{GParam\+Ptr}} $>$ \mbox{\hyperlink{class_g_param_manager_a107954a180471a96b1bb8a35bf151d6f}{params\+\_\+map\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_param_manager_a0b487b85193a20f09c390ed6b4d5fe80}{mutex\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_param_manager_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_param_manager_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_param_manager_a399782676ca6785d6988f02b10ed97f2}\label{class_g_param_manager_a399782676ca6785d6988f02b10ed97f2}} 
+\index{GParamManager@{GParamManager}!GParamManager@{GParamManager}}
+\index{GParamManager@{GParamManager}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{GParamManager()}{GParamManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GParam\+Manager\+::\+GParam\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param_manager_a399782676ca6785d6988f02b10ed97f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_param_manager_a7345a375e13f3db22103adc176c1cb67}\label{class_g_param_manager_a7345a375e13f3db22103adc176c1cb67}} 
+\index{GParamManager@{GParamManager}!````~GParamManager@{$\sim$GParamManager}}
+\index{````~GParamManager@{$\sim$GParamManager}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GParamManager()}{~GParamManager()}}
+{\footnotesize\ttfamily GParam\+Manager\+::$\sim$\+GParam\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param_manager_a7345a375e13f3db22103adc176c1cb67_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_param_manager_abd19bdc5f1ec4a45ffea6b284f1921e4}\label{class_g_param_manager_abd19bdc5f1ec4a45ffea6b284f1921e4}} 
+\index{GParamManager@{GParamManager}!clear@{clear}}
+\index{clear@{clear}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GParam $>$}}.
+
+\mbox{\Hypertarget{class_g_param_manager_af05b6e9709d3d8bd419699759254ea83}\label{class_g_param_manager_af05b6e9709d3d8bd419699759254ea83}} 
+\index{GParamManager@{GParamManager}!create@{create}}
+\index{create@{create}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{backtrace }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_param_manager_abe86f74146c1c4c9a61ff2a2badd1f15}\label{class_g_param_manager_abe86f74146c1c4c9a61ff2a2badd1f15}} 
+\index{GParamManager@{GParamManager}!create@{create}}
+\index{create@{create}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{backtrace = {\ttfamily false} }\end{DoxyParamCaption})}
+
+创建一个特定类型的参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em backtrace} & 是否开启记录调用链路功能 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_manager_ae2a3ab71c8fa9dd680c989302f5f1984}\label{class_g_param_manager_ae2a3ab71c8fa9dd680c989302f5f1984}} 
+\index{GParamManager@{GParamManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_param_manager_adecc01c6a77b4c8194300e66279e2405}\label{class_g_param_manager_adecc01c6a77b4c8194300e66279e2405}} 
+\index{GParamManager@{GParamManager}!get@{get}}
+\index{get@{get}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GParam, T $>$\+::value, int $>$ $>$ \\
+T $\ast$ GParam\+Manager\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+获取一个特定类型的参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+实测比 return dynamic\+\_\+cast$<$\+T $\ast$$>$(iter-\/$>$second); 快很多 dynamic\+\_\+cast$<$\+T $\ast$$>$ \+: 当前方案，耗时比约为 10\+:3
+
+Reimplemented from \mbox{\hyperlink{class_graph_manager_aae0ea42b1609163e4188212410b0fc39}{Graph\+Manager$<$ GParam $>$}}.
+
+\mbox{\Hypertarget{class_g_param_manager_a74a30790857770695bc9168fff1009c6}\label{class_g_param_manager_a74a30790857770695bc9168fff1009c6}} 
+\index{GParamManager@{GParamManager}!getKeys@{getKeys}}
+\index{getKeys@{getKeys}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{getKeys()}{getKeys()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ GParam\+Manager\+::get\+Keys (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+获取所有的 \mbox{\hyperlink{class_g_param}{GParam}} keys 信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_manager_a1c84546f05a06b126a42b10897065503}\label{class_g_param_manager_a1c84546f05a06b126a42b10897065503}} 
+\index{GParamManager@{GParamManager}!init@{init}}
+\index{init@{init}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 一般情况下，是不需要init的。需要注意init 和 setup的执行阶段的信息 \mbox{\hyperlink{class_g_param_manager_a1c84546f05a06b126a42b10897065503}{init()}} 是在pipeline init的时候被执行的 \mbox{\hyperlink{class_g_param_manager_a29ec5f759c50c2027b0409004db33839}{setup()}} 是在pipeline run开始的时候被执行的
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_param_manager_a67303ec7dcb925025cd46388152f9381}\label{class_g_param_manager_a67303ec7dcb925025cd46388152f9381}} 
+\index{GParamManager@{GParamManager}!removeByKey@{removeByKey}}
+\index{removeByKey@{removeByKey}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{removeByKey()}{removeByKey()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::remove\+By\+Key (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})}
+
+删除特定的param信息 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_manager_af62739f0c9e26b16fbbc925123e1c1a1}\label{class_g_param_manager_af62739f0c9e26b16fbbc925123e1c1a1}} 
+\index{GParamManager@{GParamManager}!resetWithStatus@{resetWithStatus}}
+\index{resetWithStatus@{resetWithStatus}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{resetWithStatus()}{resetWithStatus()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GParam\+Manager\+::reset\+With\+Status (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&}]{cur\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+重置所有的\+GParam信息 
+\begin{DoxyParams}{Parameters}
+{\em cur\+Status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_manager_a29ec5f759c50c2027b0409004db33839}\label{class_g_param_manager_a29ec5f759c50c2027b0409004db33839}} 
+\index{GParamManager@{GParamManager}!setup@{setup}}
+\index{setup@{setup}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+Manager\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+初始化所有的参数信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_param_manager_a17a0077689f477d78437264108a1577c}\label{class_g_param_manager_a17a0077689f477d78437264108a1577c}} 
+\index{GParamManager@{GParamManager}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_param_manager_a4e007dc772c018d10373bf18b528f96d}\label{class_g_param_manager_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GParamManager@{GParamManager}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_param_manager_a0b487b85193a20f09c390ed6b4d5fe80}\label{class_g_param_manager_a0b487b85193a20f09c390ed6b4d5fe80}} 
+\index{GParamManager@{GParamManager}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex GParam\+Manager\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_param_manager_a107954a180471a96b1bb8a35bf151d6f}\label{class_g_param_manager_a107954a180471a96b1bb8a35bf151d6f}} 
+\index{GParamManager@{GParamManager}!params\_map\_@{params\_map\_}}
+\index{params\_map\_@{params\_map\_}!GParamManager@{GParamManager}}
+\doxysubsubsection{\texorpdfstring{params\_map\_}{params\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{_g_param_8h_a256f621b5b44f61a71bc04db1c619cce}{GParam\+Ptr}}$>$ GParam\+Manager\+::params\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Param/\mbox{\hyperlink{_g_param_manager_8h}{GParam\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Param/\mbox{\hyperlink{_g_param_manager_8cpp}{GParam\+Manager.\+cpp}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Param/\mbox{\hyperlink{_g_param_manager_8inl}{GParam\+Manager.\+inl}}\end{DoxyCompactItemize}

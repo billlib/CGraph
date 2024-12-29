@@ -18,6 +18,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief CGraph的核心引擎，提供setup/link/getTopo/isDag等核心能力
+ */
 class GEngine : public GElementObject {
 protected:
     explicit GEngine() = default;

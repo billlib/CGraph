@@ -1,0 +1,168 @@
+\hypertarget{class_g_daemon}{}\doxysection{GDaemon Class Reference}
+\label{class_g_daemon}\index{GDaemon@{GDaemon}}
+
+
+{\ttfamily \#include $<$GDaemon.\+h$>$}
+
+
+
+Inheritance diagram for GDaemon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GDaemon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_daemon_ac279b11681064f116c065cc21b4adf8d}{daemon\+Task}} (\mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}} param)=0
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_g_daemon_ae8de758ef5beb5df2ba04bfe48e7d84a}{modify}} (\mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}} param)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_g_daemon_af350541cf6392b19a95940483c846175}{get\+Interval}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_af2ef765d77365cdff4e2e055e5fa19b8}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_a855879b5255582e1be8f87f95b554fb6}{destroy}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_timer}{UTimer}} \mbox{\hyperlink{class_g_daemon_a475bcde220126c49c0025895907f5394}{timer\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_daemon_a78bf95457b3ec50fc0f8b6653e232d44}{GDaemon\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_daemon_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+基于\+UTimer实现的定时器，通过async提交异步任务，通过future等待异步任务完成 支持中途打断，以及支持中途改变每次执行任务的间隔时间 不需要run，在init的同时就会启动timer\+\_\+定周期执行daemon\+Task 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_ac279b11681064f116c065cc21b4adf8d}\label{class_g_daemon_ac279b11681064f116c065cc21b4adf8d}} 
+\index{GDaemon@{GDaemon}!daemonTask@{daemonTask}}
+\index{daemonTask@{daemonTask}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{daemonTask()}{daemonTask()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDaemon\+::daemon\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}}}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+后台执行函数，间隔interval时间后，执行一次 
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_camera_g_daemon_a72744aa9f2e3a807db4bf0620ef7849e}{Camera\+GDaemon}}.
+
+\mbox{\Hypertarget{class_g_daemon_a855879b5255582e1be8f87f95b554fb6}\label{class_g_daemon_a855879b5255582e1be8f87f95b554fb6}} 
+\index{GDaemon@{GDaemon}!destroy@{destroy}}
+\index{destroy@{destroy}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_g_daemon_a855879b5255582e1be8f87f95b554fb6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_daemon_af350541cf6392b19a95940483c846175}\label{class_g_daemon_af350541cf6392b19a95940483c846175}} 
+\index{GDaemon@{GDaemon}!getInterval@{getInterval}}
+\index{getInterval@{getInterval}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{getInterval()}{getInterval()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} GDaemon\+::get\+Interval (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取设置的延时信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_daemon_af2ef765d77365cdff4e2e055e5fa19b8}\label{class_g_daemon_af2ef765d77365cdff4e2e055e5fa19b8}} 
+\index{GDaemon@{GDaemon}!init@{init}}
+\index{init@{init}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_af2ef765d77365cdff4e2e055e5fa19b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_daemon_ae8de758ef5beb5df2ba04bfe48e7d84a}\label{class_g_daemon_ae8de758ef5beb5df2ba04bfe48e7d84a}} 
+\index{GDaemon@{GDaemon}!modify@{modify}}
+\index{modify@{modify}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} GDaemon\+::modify (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}}}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+修改下一次休眠的时间 
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 返回值 $<$=0 的时候，不生效。 $>$ 0 的时候，仅针对下一次生效 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_a78bf95457b3ec50fc0f8b6653e232d44}\label{class_g_daemon_a78bf95457b3ec50fc0f8b6653e232d44}} 
+\index{GDaemon@{GDaemon}!GDaemonManager@{GDaemonManager}}
+\index{GDaemonManager@{GDaemonManager}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{GDaemonManager}{GDaemonManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_daemon_manager}{GDaemon\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_daemon_a4e007dc772c018d10373bf18b528f96d}\label{class_g_daemon_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GDaemon@{GDaemon}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_daemon_a475bcde220126c49c0025895907f5394}\label{class_g_daemon_a475bcde220126c49c0025895907f5394}} 
+\index{GDaemon@{GDaemon}!timer\_@{timer\_}}
+\index{timer\_@{timer\_}!GDaemon@{GDaemon}}
+\doxysubsubsection{\texorpdfstring{timer\_}{timer\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_timer}{UTimer}} GDaemon\+::timer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_8h}{GDaemon.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_8cpp}{GDaemon.\+cpp}}\end{DoxyCompactItemize}

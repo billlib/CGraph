@@ -14,6 +14,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GMessageObject在继承GraphObject的基础上删除了run函数 (GraphObject = CObject)
+ */
 class GMessageObject : public GraphObject {
 public:
     CStatus run() final {

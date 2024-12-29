@@ -1,0 +1,264 @@
+\hypertarget{class_g_element_repository}{}\doxysection{GElement\+Repository Class Reference}
+\label{class_g_element_repository}\index{GElementRepository@{GElementRepository}}
+
+
+{\ttfamily \#include $<$GElement\+Repository.\+h$>$}
+
+
+
+Inheritance diagram for GElement\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_g_element_repository__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GElement\+Repository\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=197pt]{class_g_element_repository__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_repository_aa75048dfe63b5c73a37092afcc64ae24}{insert}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} ptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_repository_afcf80c9009f785177a039567fbdd26da}{find}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} ptr) const
+\item 
+\mbox{\hyperlink{class_g_element_repository}{GElement\+Repository}} $\ast$ \mbox{\hyperlink{class_g_element_repository_acd3a48143e9f496f18601d90bed588ae}{set\+Thread\+Pool}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} ptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_a239a528c7a280f271d2b3e149c913387}{setup}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_a9a985096cae8959255651ac46028787b}{reset}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_a6adf69d44afaeafaea0e8740cdd9abdc}{push\+All\+State}} (const \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} \&state)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_repository_afb83846469494f6158232619b4286e78}{is\+Cancel\+State}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_aa984aa68d082f2566da1f1c2a718c5cf}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_a6699d4b398407177f5d5ee852a39522a}{destroy}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_repository_a78d2c4c697919322320c0f61e0dfb98f}{run}} () final
+\item 
+\mbox{\hyperlink{class_g_element_repository_a106efab79473e3c654d8c2fe970f2a31}{$\sim$\+GElement\+Repository}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \mbox{\hyperlink{class_g_element_repository_ad23ec101be3305da1f1431f63ae5d3a5}{elements\+\_\+}} \{\}
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} \mbox{\hyperlink{class_g_element_repository_a3e2b4d296f952dc26b4bd9915978af9c}{cur\+\_\+state\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}{GElement\+State\+::\+CREATE}} \}
+\item 
+\mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} \mbox{\hyperlink{class_g_element_repository_acba3eb84c246ad964c28e92085b4e3d6}{async\+\_\+elements\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_element_repository_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_element_repository_a055afb5e5454b2ba7056f31bf09b49cd}{GPerf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_element_repository_a106efab79473e3c654d8c2fe970f2a31}\label{class_g_element_repository_a106efab79473e3c654d8c2fe970f2a31}} 
+\index{GElementRepository@{GElementRepository}!````~GElementRepository@{$\sim$GElementRepository}}
+\index{````~GElementRepository@{$\sim$GElementRepository}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{$\sim$GElementRepository()}{~GElementRepository()}}
+{\footnotesize\ttfamily GElement\+Repository\+::$\sim$\+GElement\+Repository (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_element_repository_a6699d4b398407177f5d5ee852a39522a}\label{class_g_element_repository_a6699d4b398407177f5d5ee852a39522a}} 
+\index{GElementRepository@{GElementRepository}!destroy@{destroy}}
+\index{destroy@{destroy}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 destroy的时候，恢复create的状态，确保再次轮训的时候正常 理论上，cancel状态仅会出现在极短的时间段之内， 当程序 cancel完成之后，就会重新恢复 CREATE的状态 问题详见\+: \href{https://github.com/ChunelFeng/CGraph/issues/153}{\texttt{ https\+://github.\+com/\+Chunel\+Feng/\+CGraph/issues/153}}
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_repository_a6699d4b398407177f5d5ee852a39522a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_repository_afcf80c9009f785177a039567fbdd26da}\label{class_g_element_repository_afcf80c9009f785177a039567fbdd26da}} 
+\index{GElementRepository@{GElementRepository}!find@{find}}
+\index{find@{find}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+Repository\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+查找对应的element 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_repository_aa984aa68d082f2566da1f1c2a718c5cf}\label{class_g_element_repository_aa984aa68d082f2566da1f1c2a718c5cf}} 
+\index{GElementRepository@{GElementRepository}!init@{init}}
+\index{init@{init}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+\begin{DoxyEnumerate}
+\item 查验element是否为空
+\item 查验配置信息是否正确
+\item 记录异步节点的信息
+\end{DoxyEnumerate}
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_repository_aa984aa68d082f2566da1f1c2a718c5cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_repository_aa75048dfe63b5c73a37092afcc64ae24}\label{class_g_element_repository_aa75048dfe63b5c73a37092afcc64ae24}} 
+\index{GElementRepository@{GElementRepository}!insert@{insert}}
+\index{insert@{insert}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+Repository\+::insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+插入一个element 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_repository_afb83846469494f6158232619b4286e78}\label{class_g_element_repository_afb83846469494f6158232619b4286e78}} 
+\index{GElementRepository@{GElementRepository}!isCancelState@{isCancelState}}
+\index{isCancelState@{isCancelState}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{isCancelState()}{isCancelState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+Repository\+::is\+Cancel\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+用于判断是否是出于退出状态 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+因为每次执行的时候，都需要判断一下这个状态是否为 cancel 且理论上不会出现多线程问题 故这一层的 cur\+\_\+state\+\_\+ 就不设置为atomic类型的了\mbox{\Hypertarget{class_g_element_repository_a6adf69d44afaeafaea0e8740cdd9abdc}\label{class_g_element_repository_a6adf69d44afaeafaea0e8740cdd9abdc}} 
+\index{GElementRepository@{GElementRepository}!pushAllState@{pushAllState}}
+\index{pushAllState@{pushAllState}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{pushAllState()}{pushAllState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::push\+All\+State (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} \&}]{state }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+设置所有内部的element状态 
+\begin{DoxyParams}{Parameters}
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_repository_a9a985096cae8959255651ac46028787b}\label{class_g_element_repository_a9a985096cae8959255651ac46028787b}} 
+\index{GElementRepository@{GElementRepository}!reset@{reset}}
+\index{reset@{reset}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+等待所有的element执行结束 \begin{DoxyReturn}{Returns}
+@notice 主要针对异步流程 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_repository_a78d2c4c697919322320c0f61e0dfb98f}\label{class_g_element_repository_a78d2c4c697919322320c0f61e0dfb98f}} 
+\index{GElementRepository@{GElementRepository}!run@{run}}
+\index{run@{run}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+\mbox{\Hypertarget{class_g_element_repository_acd3a48143e9f496f18601d90bed588ae}\label{class_g_element_repository_acd3a48143e9f496f18601d90bed588ae}} 
+\index{GElementRepository@{GElementRepository}!setThreadPool@{setThreadPool}}
+\index{setThreadPool@{setThreadPool}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{setThreadPool()}{setThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_repository_8h_ab2d519da33dd02c62dd6deed3488b58c}{GElement\+Repository\+Ptr}} GElement\+Repository\+::set\+Thread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+给所有的element，设定线程池 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_repository_a239a528c7a280f271d2b3e149c913387}\label{class_g_element_repository_a239a528c7a280f271d2b3e149c913387}} 
+\index{GElementRepository@{GElementRepository}!setup@{setup}}
+\index{setup@{setup}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Repository\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+准备执行流程 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_repository_a239a528c7a280f271d2b3e149c913387_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_element_repository_a055afb5e5454b2ba7056f31bf09b49cd}\label{class_g_element_repository_a055afb5e5454b2ba7056f31bf09b49cd}} 
+\index{GElementRepository@{GElementRepository}!GPerf@{GPerf}}
+\index{GPerf@{GPerf}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{GPerf}{GPerf}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_perf}{GPerf}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_repository_a4e007dc772c018d10373bf18b528f96d}\label{class_g_element_repository_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GElementRepository@{GElementRepository}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_element_repository_acba3eb84c246ad964c28e92085b4e3d6}\label{class_g_element_repository_acba3eb84c246ad964c28e92085b4e3d6}} 
+\index{GElementRepository@{GElementRepository}!async\_elements\_@{async\_elements\_}}
+\index{async\_elements\_@{async\_elements\_}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{async\_elements\_}{async\_elements\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} GElement\+Repository\+::async\+\_\+elements\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_repository_a3e2b4d296f952dc26b4bd9915978af9c}\label{class_g_element_repository_a3e2b4d296f952dc26b4bd9915978af9c}} 
+\index{GElementRepository@{GElementRepository}!cur\_state\_@{cur\_state\_}}
+\index{cur\_state\_@{cur\_state\_}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{cur\_state\_}{cur\_state\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} GElement\+Repository\+::cur\+\_\+state\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}{GElement\+State\+::\+CREATE}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_repository_ad23ec101be3305da1f1431f63ae5d3a5}\label{class_g_element_repository_ad23ec101be3305da1f1431f63ae5d3a5}} 
+\index{GElementRepository@{GElementRepository}!elements\_@{elements\_}}
+\index{elements\_@{elements\_}!GElementRepository@{GElementRepository}}
+\doxysubsubsection{\texorpdfstring{elements\_}{elements\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} GElement\+Repository\+::elements\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_repository_8h}{GElement\+Repository.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_repository_8cpp}{GElement\+Repository.\+cpp}}\end{DoxyCompactItemize}

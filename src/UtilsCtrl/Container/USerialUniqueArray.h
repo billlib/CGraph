@@ -16,6 +16,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 内部基于std::vector存储，每次插入前进行检查，重复则不插入(uniqueAdd)，保证对外表现为一个不重复数组
+ * @tparam T 
+ */
 template<class T>
 class USerialUniqueArray : public UtilsObject {
 public:

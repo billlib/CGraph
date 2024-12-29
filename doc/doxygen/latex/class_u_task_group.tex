@@ -1,0 +1,198 @@
+\hypertarget{class_u_task_group}{}\doxysection{UTask\+Group Class Reference}
+\label{class_u_task_group}\index{UTaskGroup@{UTaskGroup}}
+
+
+注意，并非基于\+UTask，实际维护的是\+CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION类型的函数数组(std\+::vector) 支持add\+Task将更多的函数加入task\+\_\+arr\+\_\+数组，支持指定任务组最大执行耗时ttl 以及对task\+\_\+arr\+\_\+数组内的全部函数执行完成(即这个\+UTask\+Group执行完成)指定后处理接口set\+On\+Finished  
+
+
+
+
+{\ttfamily \#include $<$UTask\+Group.\+h$>$}
+
+
+
+Inheritance diagram for UTask\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_task_group__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UTask\+Group\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_task_group__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_task_group_ae3f0bdce268ee5e5eb6dd0a7a0deac07}{UTask\+Group}} ()=default
+\item 
+\mbox{\hyperlink{class_u_task_group_a872099902397692fea88d7a51033ec30}{UTask\+Group}} (\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} task, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ttl=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}, \mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} on\+Finished=nullptr) noexcept
+\item 
+\mbox{\hyperlink{class_u_task_group}{UTask\+Group}} $\ast$ \mbox{\hyperlink{class_u_task_group_a523e192ca2bece6ae7cc3187d594102f}{add\+Task}} (\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} task)
+\item 
+\mbox{\hyperlink{class_u_task_group}{UTask\+Group}} $\ast$ \mbox{\hyperlink{class_u_task_group_ae6979e1016108e57724a531e1b76d181}{set\+Ttl}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ttl)
+\item 
+\mbox{\hyperlink{class_u_task_group}{UTask\+Group}} $\ast$ \mbox{\hyperlink{class_u_task_group_a5b4671c9049acd890da1df0288dea85d}{set\+On\+Finished}} (\mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} on\+Finished)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_u_task_group_aa9235bc8a8a19a45e5493ac595d06c7d}{get\+Ttl}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_task_group_a10d02cf190728597a60c653578d8da9f}{clear}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_task_group_aa6f00c42d52dde0abc331ab922500ff8}{get\+Size}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION}} $>$ \mbox{\hyperlink{class_u_task_group_a0a4a3b43df60f524e1201e73b6e6d336}{task\+\_\+arr\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_u_task_group_a66e4b0313c5b3f553cd8d22b5aac5e7b}{ttl\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}
+\item 
+\mbox{\hyperlink{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+FUNCTION}} \mbox{\hyperlink{class_u_task_group_a046edc2daa1af7f29bc520de1665d222}{on\+\_\+finished\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_task_group_ae7586d1a5baa7d0f65aee7c2f2041a43}{UThread\+Pool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+注意，并非基于\+UTask，实际维护的是\+CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION类型的函数数组(std\+::vector) 支持add\+Task将更多的函数加入task\+\_\+arr\+\_\+数组，支持指定任务组最大执行耗时ttl 以及对task\+\_\+arr\+\_\+数组内的全部函数执行完成(即这个\+UTask\+Group执行完成)指定后处理接口set\+On\+Finished 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_task_group_ae3f0bdce268ee5e5eb6dd0a7a0deac07}\label{class_u_task_group_ae3f0bdce268ee5e5eb6dd0a7a0deac07}} 
+\index{UTaskGroup@{UTaskGroup}!UTaskGroup@{UTaskGroup}}
+\index{UTaskGroup@{UTaskGroup}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{UTaskGroup()}{UTaskGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily UTask\+Group\+::\+UTask\+Group (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_u_task_group_a872099902397692fea88d7a51033ec30}\label{class_u_task_group_a872099902397692fea88d7a51033ec30}} 
+\index{UTaskGroup@{UTaskGroup}!UTaskGroup@{UTaskGroup}}
+\index{UTaskGroup@{UTaskGroup}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{UTaskGroup()}{UTaskGroup()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily UTask\+Group\+::\+UTask\+Group (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ttl = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}},  }\item[{\mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{on\+Finished = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+直接通过函数来申明task\+Group 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em ttl} & \\
+\hline
+{\em on\+Finished} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_task_group_a872099902397692fea88d7a51033ec30_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_task_group_a523e192ca2bece6ae7cc3187d594102f}\label{class_u_task_group_a523e192ca2bece6ae7cc3187d594102f}} 
+\index{UTaskGroup@{UTaskGroup}!addTask@{addTask}}
+\index{addTask@{addTask}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{addTask()}{addTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_task_group}{UTask\+Group}}$\ast$ UTask\+Group\+::add\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+添加一个任务 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_task_group_a10d02cf190728597a60c653578d8da9f}\label{class_u_task_group_a10d02cf190728597a60c653578d8da9f}} 
+\index{UTaskGroup@{UTaskGroup}!clear@{clear}}
+\index{clear@{clear}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UTask\+Group\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+清空任务组 \mbox{\Hypertarget{class_u_task_group_aa6f00c42d52dde0abc331ab922500ff8}\label{class_u_task_group_aa6f00c42d52dde0abc331ab922500ff8}} 
+\index{UTaskGroup@{UTaskGroup}!getSize@{getSize}}
+\index{getSize@{getSize}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UTask\+Group\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取任务组大小 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_task_group_aa9235bc8a8a19a45e5493ac595d06c7d}\label{class_u_task_group_aa9235bc8a8a19a45e5493ac595d06c7d}} 
+\index{UTaskGroup@{UTaskGroup}!getTtl@{getTtl}}
+\index{getTtl@{getTtl}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{getTtl()}{getTtl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UTask\+Group\+::get\+Ttl (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取最大超时时间信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_task_group_a5b4671c9049acd890da1df0288dea85d}\label{class_u_task_group_a5b4671c9049acd890da1df0288dea85d}} 
+\index{UTaskGroup@{UTaskGroup}!setOnFinished@{setOnFinished}}
+\index{setOnFinished@{setOnFinished}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{setOnFinished()}{setOnFinished()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_task_group}{UTask\+Group}}$\ast$ UTask\+Group\+::set\+On\+Finished (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{on\+Finished }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+设置执行完成后的回调函数 
+\begin{DoxyParams}{Parameters}
+{\em on\+Finished} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_task_group_ae6979e1016108e57724a531e1b76d181}\label{class_u_task_group_ae6979e1016108e57724a531e1b76d181}} 
+\index{UTaskGroup@{UTaskGroup}!setTtl@{setTtl}}
+\index{setTtl@{setTtl}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{setTtl()}{setTtl()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_task_group}{UTask\+Group}}$\ast$ UTask\+Group\+::set\+Ttl (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ttl }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+设置任务最大超时时间 
+\begin{DoxyParams}{Parameters}
+{\em ttl} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_u_task_group_ae7586d1a5baa7d0f65aee7c2f2041a43}\label{class_u_task_group_ae7586d1a5baa7d0f65aee7c2f2041a43}} 
+\index{UTaskGroup@{UTaskGroup}!UThreadPool@{UThreadPool}}
+\index{UThreadPool@{UThreadPool}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{UThreadPool}{UThreadPool}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_pool}{UThread\+Pool}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_task_group_a046edc2daa1af7f29bc520de1665d222}\label{class_u_task_group_a046edc2daa1af7f29bc520de1665d222}} 
+\index{UTaskGroup@{UTaskGroup}!on\_finished\_@{on\_finished\_}}
+\index{on\_finished\_@{on\_finished\_}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{on\_finished\_}{on\_finished\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+FUNCTION}} UTask\+Group\+::on\+\_\+finished\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_task_group_a0a4a3b43df60f524e1201e73b6e6d336}\label{class_u_task_group_a0a4a3b43df60f524e1201e73b6e6d336}} 
+\index{UTaskGroup@{UTaskGroup}!task\_arr\_@{task\_arr\_}}
+\index{task\_arr\_@{task\_arr\_}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{task\_arr\_}{task\_arr\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION}}$>$ UTask\+Group\+::task\+\_\+arr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_task_group_a66e4b0313c5b3f553cd8d22b5aac5e7b}\label{class_u_task_group_a66e4b0313c5b3f553cd8d22b5aac5e7b}} 
+\index{UTaskGroup@{UTaskGroup}!ttl\_@{ttl\_}}
+\index{ttl\_@{ttl\_}!UTaskGroup@{UTaskGroup}}
+\doxysubsubsection{\texorpdfstring{ttl\_}{ttl\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UTask\+Group\+::ttl\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Task/\mbox{\hyperlink{_u_task_group_8h}{UTask\+Group.\+h}}\end{DoxyCompactItemize}

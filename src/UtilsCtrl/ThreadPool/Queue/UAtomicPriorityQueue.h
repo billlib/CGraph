@@ -15,6 +15,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 包含一个优先级队列成员，基于mutex_封装成一个原子的优先级队列，支持原子的tryPop/push/empty
+ * 
+ * @tparam T 
+ */
 template<typename T>
 class UAtomicPriorityQueue : public UQueueObject {
 public:

@@ -14,6 +14,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT
+ * 
+ */
 class UThreadObject : public UtilsObject {
 protected:
     /**

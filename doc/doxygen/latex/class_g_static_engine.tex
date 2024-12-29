@@ -1,0 +1,145 @@
+\hypertarget{class_g_static_engine}{}\doxysection{GStatic\+Engine Class Reference}
+\label{class_g_static_engine}\index{GStaticEngine@{GStaticEngine}}
+
+
+将待执行的图中的所有结点进行拓扑排序(setup)，排序结果存储在element\+\_\+mat\+\_\+； 然后将element\+\_\+mat\+\_\+各个拓扑排序好的结点提交到微线程或者线程池，等待执行完成获取结果(run)  
+
+
+
+
+{\ttfamily \#include $<$GStatic\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for GStatic\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_g_static_engine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GStatic\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_static_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_static_engine_af1dc64467134631ecbc4119c8bc81035}{GStatic\+Engine}} ()=default
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_static_engine_ab358861384b0c76a184607a1f19a37aa}{setup}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements) override
+\begin{DoxyCompactList}\small\item\em 对elements内的元素进行拓扑排序，排序结果存入element\+\_\+mat\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_static_engine_a8034a728da240903879824939870035a}{run}} () override
+\begin{DoxyCompactList}\small\item\em 未绑定线程的微任务在macros排队执行；其他任务提交到线程池 TODO(bill.\+lee)\+: 拓扑排序完，但是提交到线程池和微线程的线程怎么保证按照拓扑排序的顺序执行? 如果不能保证按照拓扑排序的顺序串行执行，那setup的意义在哪? \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_8h_a3fc198095336295670b524eeb530dc79}{GElement\+Ptr\+Mat2D}} \mbox{\hyperlink{class_g_static_engine_a21dc6e3c55e7af9267568fcd03bb439a}{element\+\_\+mat\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_static_engine_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\item 
+class \mbox{\hyperlink{class_g_static_engine_affeeccde5245f99f2ee17a1a585064c3}{GElement\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+将待执行的图中的所有结点进行拓扑排序(setup)，排序结果存储在element\+\_\+mat\+\_\+； 然后将element\+\_\+mat\+\_\+各个拓扑排序好的结点提交到微线程或者线程池，等待执行完成获取结果(run) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_static_engine_af1dc64467134631ecbc4119c8bc81035}\label{class_g_static_engine_af1dc64467134631ecbc4119c8bc81035}} 
+\index{GStaticEngine@{GStaticEngine}!GStaticEngine@{GStaticEngine}}
+\index{GStaticEngine@{GStaticEngine}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{GStaticEngine()}{GStaticEngine()}}
+{\footnotesize\ttfamily GStatic\+Engine\+::\+GStatic\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_static_engine_a8034a728da240903879824939870035a}\label{class_g_static_engine_a8034a728da240903879824939870035a}} 
+\index{GStaticEngine@{GStaticEngine}!run@{run}}
+\index{run@{run}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStatic\+Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+未绑定线程的微任务在macros排队执行；其他任务提交到线程池 TODO(bill.\+lee)\+: 拓扑排序完，但是提交到线程池和微线程的线程怎么保证按照拓扑排序的顺序执行? 如果不能保证按照拓扑排序的顺序串行执行，那setup的意义在哪? 
+
+\begin{DoxyReturn}{Returns}
+CStatus 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_g_static_engine_a8034a728da240903879824939870035a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_static_engine_ab358861384b0c76a184607a1f19a37aa}\label{class_g_static_engine_ab358861384b0c76a184607a1f19a37aa}} 
+\index{GStaticEngine@{GStaticEngine}!setup@{setup}}
+\index{setup@{setup}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStatic\+Engine\+::setup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+对elements内的元素进行拓扑排序，排序结果存入element\+\_\+mat\+\_\+ 
+
+
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CStatus 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_g_engine_a3546d352c68f08255b57c75a2c92d3d5}{GEngine}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_static_engine_a17a0077689f477d78437264108a1577c}\label{class_g_static_engine_a17a0077689f477d78437264108a1577c}} 
+\index{GStaticEngine@{GStaticEngine}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_static_engine_affeeccde5245f99f2ee17a1a585064c3}\label{class_g_static_engine_affeeccde5245f99f2ee17a1a585064c3}} 
+\index{GStaticEngine@{GStaticEngine}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{GElementManager}{GElementManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_static_engine_a21dc6e3c55e7af9267568fcd03bb439a}\label{class_g_static_engine_a21dc6e3c55e7af9267568fcd03bb439a}} 
+\index{GStaticEngine@{GStaticEngine}!element\_mat\_@{element\_mat\_}}
+\index{element\_mat\_@{element\_mat\_}!GStaticEngine@{GStaticEngine}}
+\doxysubsubsection{\texorpdfstring{element\_mat\_}{element\_mat\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a3fc198095336295670b524eeb530dc79}{GElement\+Ptr\+Mat2D}} GStatic\+Engine\+::element\+\_\+mat\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GStatic\+Engine/\mbox{\hyperlink{_g_static_engine_8h}{GStatic\+Engine.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GStatic\+Engine/\mbox{\hyperlink{_g_static_engine_8cpp}{GStatic\+Engine.\+cpp}}\end{DoxyCompactItemize}

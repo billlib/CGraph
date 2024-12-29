@@ -19,6 +19,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 包含一个普通队列成员，基于mutex_封装成一个原子的优先级队列，
+ *        支持原子的waitPop/tryPop/popWithTimeout/push/empty
+ *        新增ready_flag_用于通知辅助线程快速退出
+ * @tparam T 
+ */
 template<typename T>
 class UAtomicQueue : public UQueueObject {
 public:

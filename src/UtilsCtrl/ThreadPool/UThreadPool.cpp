@@ -89,6 +89,16 @@ CStatus UThreadPool::init() {
 }
 
 
+/**
+ * @brief 遍历入参taskGroup的task_arr_，通过commit接口提交到对应的线程池或者任务队列；
+ *        将commit返回的std::future对象存入futures数组；
+ *        根据taskGtoup的TTL和本线程池配置的TTL计算futures等待的timeout (deadline)，
+ *        在deadline到达之前遍历等到所有的std::future对象返回，并根据返回值统计status；
+ *        最后执行taskGroup自带的on_finished_接口
+ * @param taskGroup 
+ * @param ttl 
+ * @return CStatus 
+ */
 CStatus UThreadPool::submit(const UTaskGroup& taskGroup, CMSec ttl) {
     CGRAPH_FUNCTION_BEGIN
     CGRAPH_ASSERT_INIT(true)
@@ -195,6 +205,9 @@ CStatus UThreadPool::releaseSecondaryThread(CInt size) {
                                             + "only [" + std::to_string(secondary_threads_.size()) + "] left.")
 
     // 再标记几个需要删除的信息
+    // 标记线程在freeze删除(done_ false是运行中，true是已完成)
+    // freeze中只有done_为true且TTL已经到了的辅助线程才会被销毁
+    // TODO(bill.lee): 那哪里会更新辅助线程的done_?
     for (auto iter = secondary_threads_.begin();
          iter != secondary_threads_.end() && size-- > 0; ) {
         (*iter)->done_ = false;

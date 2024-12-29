@@ -1,0 +1,87 @@
+\hypertarget{class_u_spin_lock}{}\doxysection{USpin\+Lock Class Reference}
+\label{class_u_spin_lock}\index{USpinLock@{USpinLock}}
+
+
+基于std\+::atomic\+\_\+flag实现的用户态自旋锁，std\+::atomic\+\_\+flag只有true/false两种状态； USpin\+Lock提供以下三个方法：lock为忙等，try\+Lock为单次尝试，unlock为解锁； (基于std\+::atomic\+\_\+flag实现的用户态自旋锁是一种采用的做法，)  
+
+
+
+
+{\ttfamily \#include $<$USpin\+Lock.\+h$>$}
+
+
+
+Inheritance diagram for USpin\+Lock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_spin_lock__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USpin\+Lock\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_spin_lock__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_spin_lock_ae96eae184ba5f2389fed987ff14407ca}{lock}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_spin_lock_a033bc52167c93c776f23c9b182352cda}{unlock}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_spin_lock_a7f9e1e1cf66914d7d821672ac41e5c82}{try\+Lock}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic\+\_\+flag \mbox{\hyperlink{class_u_spin_lock_a00fec2de5c1ad21dcf1904daef5ab9aa}{flag\+\_\+}} = ATOMIC\+\_\+\+FLAG\+\_\+\+INIT
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+基于std\+::atomic\+\_\+flag实现的用户态自旋锁，std\+::atomic\+\_\+flag只有true/false两种状态； USpin\+Lock提供以下三个方法：lock为忙等，try\+Lock为单次尝试，unlock为解锁； (基于std\+::atomic\+\_\+flag实现的用户态自旋锁是一种采用的做法，) 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_spin_lock_ae96eae184ba5f2389fed987ff14407ca}\label{class_u_spin_lock_ae96eae184ba5f2389fed987ff14407ca}} 
+\index{USpinLock@{USpinLock}!lock@{lock}}
+\index{lock@{lock}!USpinLock@{USpinLock}}
+\doxysubsubsection{\texorpdfstring{lock()}{lock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} USpin\+Lock\+::lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+加锁 \mbox{\Hypertarget{class_u_spin_lock_a7f9e1e1cf66914d7d821672ac41e5c82}\label{class_u_spin_lock_a7f9e1e1cf66914d7d821672ac41e5c82}} 
+\index{USpinLock@{USpinLock}!tryLock@{tryLock}}
+\index{tryLock@{tryLock}!USpinLock@{USpinLock}}
+\doxysubsubsection{\texorpdfstring{tryLock()}{tryLock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} USpin\+Lock\+::try\+Lock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试加锁。若未加锁，会上锁 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_spin_lock_a033bc52167c93c776f23c9b182352cda}\label{class_u_spin_lock_a033bc52167c93c776f23c9b182352cda}} 
+\index{USpinLock@{USpinLock}!unlock@{unlock}}
+\index{unlock@{unlock}!USpinLock@{USpinLock}}
+\doxysubsubsection{\texorpdfstring{unlock()}{unlock()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} USpin\+Lock\+::unlock (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+解锁 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_spin_lock_a00fec2de5c1ad21dcf1904daef5ab9aa}\label{class_u_spin_lock_a00fec2de5c1ad21dcf1904daef5ab9aa}} 
+\index{USpinLock@{USpinLock}!flag\_@{flag\_}}
+\index{flag\_@{flag\_}!USpinLock@{USpinLock}}
+\doxysubsubsection{\texorpdfstring{flag\_}{flag\_}}
+{\footnotesize\ttfamily std\+::atomic\+\_\+flag USpin\+Lock\+::flag\+\_\+ = ATOMIC\+\_\+\+FLAG\+\_\+\+INIT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Lock/\mbox{\hyperlink{_u_spin_lock_8h}{USpin\+Lock.\+h}}\end{DoxyCompactItemize}

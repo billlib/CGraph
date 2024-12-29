@@ -14,6 +14,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 维护GDaemon实例的集合daemons_
+ * 支持批量init/批量destroy，在daemons_里面add/destroy或者清空daemons_等
+ * 
+ */
 class GDaemonManager : public GDaemonObject,
                        public GraphManager<GDaemon> {
 protected:

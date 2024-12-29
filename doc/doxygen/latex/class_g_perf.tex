@@ -1,0 +1,149 @@
+\hypertarget{class_g_perf}{}\doxysection{GPerf Class Reference}
+\label{class_g_perf}\index{GPerf@{GPerf}}
+
+
+pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline， 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipeline  
+
+
+
+
+{\ttfamily \#include $<$GPerf.\+h$>$}
+
+
+
+Inheritance diagram for GPerf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_g_perf__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GPerf\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_g_perf__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_perf_a348e708792a0c55acd2136c9ff958c05}{perf}} (\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$pipeline, std\+::ostream \&oss)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_perf_ac3cce837b94405577c334fd04684ac15}{inject}} (\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$pipeline)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_perf_a75f62d8a65408b75108994228e502185}{mark\+Longest\+Path}} (\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$pipeline)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_perf_a221aadf8c8ece72d967195f7436ce233}{recover}} (\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$pipeline)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_perf_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline， 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipeline 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_perf_ac3cce837b94405577c334fd04684ac15}\label{class_g_perf_ac3cce837b94405577c334fd04684ac15}} 
+\index{GPerf@{GPerf}!inject@{inject}}
+\index{inject@{inject}!GPerf@{GPerf}}
+\doxysubsubsection{\texorpdfstring{inject()}{inject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPerf\+::inject (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$}]{pipeline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+注入对应的切面信息 
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+给其中的每个element，都添加这个切面信息 这里是不需要考虑 delete perf\+\_\+info\+\_\+的，因为在 element结束的时候，会自动释放Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_g_perf_ac3cce837b94405577c334fd04684ac15_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_perf_a75f62d8a65408b75108994228e502185}\label{class_g_perf_a75f62d8a65408b75108994228e502185}} 
+\index{GPerf@{GPerf}!markLongestPath@{markLongestPath}}
+\index{markLongestPath@{markLongestPath}!GPerf@{GPerf}}
+\doxysubsubsection{\texorpdfstring{markLongestPath()}{markLongestPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPerf\+::mark\+Longest\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$}]{pipeline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+查询最长链路信息 
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_perf_a75f62d8a65408b75108994228e502185_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_perf_a348e708792a0c55acd2136c9ff958c05}\label{class_g_perf_a348e708792a0c55acd2136c9ff958c05}} 
+\index{GPerf@{GPerf}!perf@{perf}}
+\index{perf@{perf}!GPerf@{GPerf}}
+\doxysubsubsection{\texorpdfstring{perf()}{perf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPerf\+::perf (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$}]{pipeline,  }\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+针对pipeline进行性能分析 
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_perf_a348e708792a0c55acd2136c9ff958c05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_perf_a221aadf8c8ece72d967195f7436ce233}\label{class_g_perf_a221aadf8c8ece72d967195f7436ce233}} 
+\index{GPerf@{GPerf}!recover@{recover}}
+\index{recover@{recover}!GPerf@{GPerf}}
+\doxysubsubsection{\texorpdfstring{recover()}{recover()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPerf\+::recover (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_pipeline}{GPipeline}} $\ast$}]{pipeline }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+恢复原来的pipeline信息 
+\begin{DoxyParams}{Parameters}
+{\em pipeline} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_perf_a4e007dc772c018d10373bf18b528f96d}\label{class_g_perf_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GPerf@{GPerf}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GPerf@{GPerf}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\+\_\+\+GPerf/\mbox{\hyperlink{_g_perf_8h}{GPerf.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\+\_\+\+GPerf/\mbox{\hyperlink{_g_perf_8cpp}{GPerf.\+cpp}}\end{DoxyCompactItemize}

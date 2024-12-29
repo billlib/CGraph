@@ -1,0 +1,113 @@
+\hypertarget{class_g_max_para_optimizer}{}\doxysection{GMax\+Para\+Optimizer Class Reference}
+\label{class_g_max_para_optimizer}\index{GMaxParaOptimizer@{GMaxParaOptimizer}}
+
+
+{\ttfamily \#include $<$GMax\+Para\+Optimizer.\+h$>$}
+
+
+
+Inheritance diagram for GMax\+Para\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_g_max_para_optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMax\+Para\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=194pt]{class_g_max_para_optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_max_para_optimizer_a9c780fe402c8666701b67402e0366b5e}{match}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_max_para_optimizer_a2f12141709c0f356d5fc012b9e1b3e84}{get\+Max\+Para\+Size}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_max_para_optimizer_a00a53f6282a7c88baed39f2703782e97}{calc\+Max\+Clique\+Size}} (const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&graph)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_max_para_optimizer_affeeccde5245f99f2ee17a1a585064c3}{GElement\+Manager}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_max_para_optimizer_a00a53f6282a7c88baed39f2703782e97}\label{class_g_max_para_optimizer_a00a53f6282a7c88baed39f2703782e97}} 
+\index{GMaxParaOptimizer@{GMaxParaOptimizer}!calcMaxCliqueSize@{calcMaxCliqueSize}}
+\index{calcMaxCliqueSize@{calcMaxCliqueSize}!GMaxParaOptimizer@{GMaxParaOptimizer}}
+\doxysubsubsection{\texorpdfstring{calcMaxCliqueSize()}{calcMaxCliqueSize()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GMax\+Para\+Optimizer\+::calc\+Max\+Clique\+Size (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ std\+::vector$<$ int $>$$>$ \&}]{graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+计算当前最大团的大小 
+\begin{DoxyParams}{Parameters}
+{\em graph} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_max_para_optimizer_a2f12141709c0f356d5fc012b9e1b3e84}\label{class_g_max_para_optimizer_a2f12141709c0f356d5fc012b9e1b3e84}} 
+\index{GMaxParaOptimizer@{GMaxParaOptimizer}!getMaxParaSize@{getMaxParaSize}}
+\index{getMaxParaSize@{getMaxParaSize}!GMaxParaOptimizer@{GMaxParaOptimizer}}
+\doxysubsubsection{\texorpdfstring{getMaxParaSize()}{getMaxParaSize()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GMax\+Para\+Optimizer\+::get\+Max\+Para\+Size (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+计算当前dag的最大并发度 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+计算思路如下：
+\begin{DoxyEnumerate}
+\item 列出来所有的可行路径(paths)
+\item 根据路径，生成一张全连通图，然后将图取反，得到对应的补图(re\+Graph)
+\item 计算补图的最大团中元素个数(max\+Clique\+Size)，即为当前dag的最大并行度
+\end{DoxyEnumerate}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_max_para_optimizer_a2f12141709c0f356d5fc012b9e1b3e84_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_max_para_optimizer_a9c780fe402c8666701b67402e0366b5e}\label{class_g_max_para_optimizer_a9c780fe402c8666701b67402e0366b5e}} 
+\index{GMaxParaOptimizer@{GMaxParaOptimizer}!match@{match}}
+\index{match@{match}!GMaxParaOptimizer@{GMaxParaOptimizer}}
+\doxysubsubsection{\texorpdfstring{match()}{match()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GMax\+Para\+Optimizer\+::match (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+判定是否match计算条件 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_max_para_optimizer_affeeccde5245f99f2ee17a1a585064c3}\label{class_g_max_para_optimizer_affeeccde5245f99f2ee17a1a585064c3}} 
+\index{GMaxParaOptimizer@{GMaxParaOptimizer}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GMaxParaOptimizer@{GMaxParaOptimizer}}
+\doxysubsubsection{\texorpdfstring{GElementManager}{GElementManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GOptimizer/\mbox{\hyperlink{_g_max_para_optimizer_8h}{GMax\+Para\+Optimizer.\+h}}\end{DoxyCompactItemize}

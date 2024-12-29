@@ -15,6 +15,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 切面(beginInit/finishInit, beginRun/finishRun, beginDestroy/finishDestroy)
+ * 基类GAspectObject可以派生出GAspectManager，而aspect_manager_作为GElement的成员，提供面向GElement的切面管理能力
+ */
 class GAspect : public GAspectObject {
 public:
     /**

@@ -1,0 +1,7 @@
+<map id="UCosineDistance&lt; TSrc, TRes &gt;" name="UCosineDistance&lt; TSrc, TRes &gt;">
+<area shape="rect" id="node1" title="计算v1和v2两个向量的cos距离 默认v1和v2的维度相同(dim1 == dim2)且非零 (此处calc实现未做检查，可能出现除零错误)" alt="" coords="7,304,187,345"/>
+<area shape="rect" id="node2" href="$class_u_distance.html" title=" " alt="" coords="5,229,188,256"/>
+<area shape="rect" id="node3" href="$class_u_distance_object.html" title="UDistanceObject = UtilsObject." alt="" coords="31,155,162,181"/>
+<area shape="rect" id="node4" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="49,80,144,107"/>
+<area shape="rect" id="node5" href="$class_c_object.html" title=" " alt="" coords="60,5,133,32"/>
+</map>

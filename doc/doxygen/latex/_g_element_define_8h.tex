@@ -1,0 +1,248 @@
+\hypertarget{_g_element_define_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+GElement\+Define.h File Reference}
+\label{_g_element_define_8h}\index{src/GraphCtrl/GraphElement/GElementDefine.h@{src/GraphCtrl/GraphElement/GElementDefine.h}}
+{\ttfamily \#include \char`\"{}../\+Graph\+Object.\+h\char`\"{}}\newline
+Include dependency graph for GElement\+Define.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_element_define_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_element_define_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_g_element_define_8h_aacd3abec8c858234cd5bba0d70509563}{GPipeline\+State}} = \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}{GElement\+Type}} \{ \newline
+\mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a88be69b0577a14f4fa3bbfa0ff17a41d}{ELEMENT}} = 0x00000000
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a0cc25b606fe928a0c9a58f7f209c4495}{NODE}} = 0x00010000
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a720909a4b948fc9e33633b61960d6b3c}{GROUP}} = 0x00020000
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a425d2057e82f8858378dfe7008cbabb6}{CLUSTER}} = 0x00020001
+, \newline
+\mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a69aede266809f89b89fe70681f6a129f}{REGION}} = 0x00020002
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9f768c0bb1c3e84ca086a85211e978ac}{CONDITION}} = 0x00020004
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a7c3e1ce969660271ac92e0a5796f5006}{SOME}} = 0x00020008
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9ee6770e3dfbe2b9c0f68760489442af}{MUTABLE}} = 0x0002000A
+, \newline
+\mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a2b3254ba9c686e11902551e79c8e1672}{MULTI\+\_\+\+CONDITION}} = 0x00020014
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a98f0cd748f38ead2f2914ca91e45ab78}{ADAPTER}} = 0x00040000
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a6a72a6a776662a244f82d31e9274a07b}{FUNCTION}} = 0x00040001
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1aecf2a6aabcb0538532ba2a7d0d281557}{SINGLETON}} = 0x00040002
+, \newline
+\mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a680f61224afe352a026a616896f47a29}{FENCE}} = 0x00040004
+, \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1ad5ca8f4640f74943b969fb9f2ff9ccdd}{COORDINATOR}} = 0x00040008
+ \}
+\item 
+enum class \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} \{ \newline
+\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}{CREATE}} = 0x0000
+, \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a1e23852820b9154316c7c06e2b7ba051}{NORMAL}} = 0x1000
+, \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a2027c027133e22c8929e2874dc44dd36}{CANCEL}} = 0x1001
+, \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a18e25ac6cc28c2b91bce1fbe629b682a}{YIELD}} = 0x1002
+, \newline
+\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a070a0fb40f6c308ab544b227660aadff}{TIMEOUT}} = 0x1010
+ \}
+\item 
+enum class \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}} \{ \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}{AS\+\_\+\+ERROR}} = 0
+, \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adc6233dcf44a2d4052b1fb401566738c}{HOLD\+\_\+\+BY\+\_\+\+PIPELINE}} = 1
+, \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90a11b812d7fd1e1c35d3c41056ed075872}{NO\+\_\+\+HOLD}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}{GElement\+Shape}} \{ \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471da1e23852820b9154316c7c06e2b7ba051}{NORMAL}} = 0
+, \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471dacfc2c2dcb41a061e8c63546346a7b91b}{LINKABLE}} = 1
+, \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471daea2adde5c377cb5e09d14b71935c6f32}{ROOT}} = 2
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} static const \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}} = 1
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}} \mbox{\hyperlink{_g_element_define_8h_abef6b87e75de5c7845e999c82144f0bc}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+LEVEL}} = 0
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{_g_element_define_8h_a098b5c4758285993c2076ecf7728c09c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+BINDING\+\_\+\+INDEX}} = -\/1
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{_g_element_define_8h_ad6c1fd86b20cd6d0c1e77421798c15ea}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+TIMEOUT}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_g_element_define_8h_aacd3abec8c858234cd5bba0d70509563}\label{_g_element_define_8h_aacd3abec8c858234cd5bba0d70509563}} 
+\index{GElementDefine.h@{GElementDefine.h}!GPipelineState@{GPipelineState}}
+\index{GPipelineState@{GPipelineState}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{GPipelineState}{GPipelineState}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GPipeline\+State}} =  \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}}}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}\label{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}} 
+\index{GElementDefine.h@{GElementDefine.h}!GElementShape@{GElementShape}}
+\index{GElementShape@{GElementShape}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{GElementShape}{GElementShape}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}{GElement\+Shape}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471da1e23852820b9154316c7c06e2b7ba051}\label{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471da1e23852820b9154316c7c06e2b7ba051}} 
+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{LINKABLE@{LINKABLE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!LINKABLE@{LINKABLE}}}\mbox{\Hypertarget{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471dacfc2c2dcb41a061e8c63546346a7b91b}\label{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471dacfc2c2dcb41a061e8c63546346a7b91b}} 
+LINKABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ROOT@{ROOT}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!ROOT@{ROOT}}}\mbox{\Hypertarget{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471daea2adde5c377cb5e09d14b71935c6f32}\label{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471daea2adde5c377cb5e09d14b71935c6f32}} 
+ROOT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}} 
+\index{GElementDefine.h@{GElementDefine.h}!GElementState@{GElementState}}
+\index{GElementState@{GElementState}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{GElementState}{GElementState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CREATE@{CREATE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!CREATE@{CREATE}}}\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}} 
+CREATE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!NORMAL@{NORMAL}}}\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a1e23852820b9154316c7c06e2b7ba051}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a1e23852820b9154316c7c06e2b7ba051}} 
+NORMAL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CANCEL@{CANCEL}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!CANCEL@{CANCEL}}}\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a2027c027133e22c8929e2874dc44dd36}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a2027c027133e22c8929e2874dc44dd36}} 
+CANCEL&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{YIELD@{YIELD}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!YIELD@{YIELD}}}\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a18e25ac6cc28c2b91bce1fbe629b682a}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a18e25ac6cc28c2b91bce1fbe629b682a}} 
+YIELD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TIMEOUT@{TIMEOUT}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!TIMEOUT@{TIMEOUT}}}\mbox{\Hypertarget{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a070a0fb40f6c308ab544b227660aadff}\label{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a070a0fb40f6c308ab544b227660aadff}} 
+TIMEOUT&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}\label{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}} 
+\index{GElementDefine.h@{GElementDefine.h}!GElementTimeoutStrategy@{GElementTimeoutStrategy}}
+\index{GElementTimeoutStrategy@{GElementTimeoutStrategy}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{GElementTimeoutStrategy}{GElementTimeoutStrategy}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{AS\_ERROR@{AS\_ERROR}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!AS\_ERROR@{AS\_ERROR}}}\mbox{\Hypertarget{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}\label{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}} 
+AS\+\_\+\+ERROR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HOLD\_BY\_PIPELINE@{HOLD\_BY\_PIPELINE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!HOLD\_BY\_PIPELINE@{HOLD\_BY\_PIPELINE}}}\mbox{\Hypertarget{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adc6233dcf44a2d4052b1fb401566738c}\label{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adc6233dcf44a2d4052b1fb401566738c}} 
+HOLD\+\_\+\+BY\+\_\+\+PIPELINE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NO\_HOLD@{NO\_HOLD}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!NO\_HOLD@{NO\_HOLD}}}\mbox{\Hypertarget{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90a11b812d7fd1e1c35d3c41056ed075872}\label{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90a11b812d7fd1e1c35d3c41056ed075872}} 
+NO\+\_\+\+HOLD&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}} 
+\index{GElementDefine.h@{GElementDefine.h}!GElementType@{GElementType}}
+\index{GElementType@{GElementType}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{GElementType}{GElementType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}{GElement\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELEMENT@{ELEMENT}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!ELEMENT@{ELEMENT}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a88be69b0577a14f4fa3bbfa0ff17a41d}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a88be69b0577a14f4fa3bbfa0ff17a41d}} 
+ELEMENT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NODE@{NODE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!NODE@{NODE}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a0cc25b606fe928a0c9a58f7f209c4495}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a0cc25b606fe928a0c9a58f7f209c4495}} 
+NODE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GROUP@{GROUP}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!GROUP@{GROUP}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a720909a4b948fc9e33633b61960d6b3c}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a720909a4b948fc9e33633b61960d6b3c}} 
+GROUP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLUSTER@{CLUSTER}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!CLUSTER@{CLUSTER}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a425d2057e82f8858378dfe7008cbabb6}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a425d2057e82f8858378dfe7008cbabb6}} 
+CLUSTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{REGION@{REGION}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!REGION@{REGION}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a69aede266809f89b89fe70681f6a129f}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a69aede266809f89b89fe70681f6a129f}} 
+REGION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CONDITION@{CONDITION}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!CONDITION@{CONDITION}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9f768c0bb1c3e84ca086a85211e978ac}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9f768c0bb1c3e84ca086a85211e978ac}} 
+CONDITION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SOME@{SOME}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!SOME@{SOME}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a7c3e1ce969660271ac92e0a5796f5006}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a7c3e1ce969660271ac92e0a5796f5006}} 
+SOME&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MUTABLE@{MUTABLE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!MUTABLE@{MUTABLE}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9ee6770e3dfbe2b9c0f68760489442af}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a9ee6770e3dfbe2b9c0f68760489442af}} 
+MUTABLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MULTI\_CONDITION@{MULTI\_CONDITION}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!MULTI\_CONDITION@{MULTI\_CONDITION}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a2b3254ba9c686e11902551e79c8e1672}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a2b3254ba9c686e11902551e79c8e1672}} 
+MULTI\+\_\+\+CONDITION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ADAPTER@{ADAPTER}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!ADAPTER@{ADAPTER}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a98f0cd748f38ead2f2914ca91e45ab78}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a98f0cd748f38ead2f2914ca91e45ab78}} 
+ADAPTER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FUNCTION@{FUNCTION}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!FUNCTION@{FUNCTION}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a6a72a6a776662a244f82d31e9274a07b}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a6a72a6a776662a244f82d31e9274a07b}} 
+FUNCTION&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SINGLETON@{SINGLETON}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!SINGLETON@{SINGLETON}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1aecf2a6aabcb0538532ba2a7d0d281557}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1aecf2a6aabcb0538532ba2a7d0d281557}} 
+SINGLETON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FENCE@{FENCE}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!FENCE@{FENCE}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a680f61224afe352a026a616896f47a29}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a680f61224afe352a026a616896f47a29}} 
+FENCE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COORDINATOR@{COORDINATOR}!GElementDefine.h@{GElementDefine.h}}\index{GElementDefine.h@{GElementDefine.h}!COORDINATOR@{COORDINATOR}}}\mbox{\Hypertarget{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1ad5ca8f4640f74943b969fb9f2ff9ccdd}\label{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1ad5ca8f4640f74943b969fb9f2ff9ccdd}} 
+COORDINATOR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_g_element_define_8h_a098b5c4758285993c2076ecf7728c09c}\label{_g_element_define_8h_a098b5c4758285993c2076ecf7728c09c}} 
+\index{GElementDefine.h@{GElementDefine.h}!CGRAPH\_DEFAULT\_BINDING\_INDEX@{CGRAPH\_DEFAULT\_BINDING\_INDEX}}
+\index{CGRAPH\_DEFAULT\_BINDING\_INDEX@{CGRAPH\_DEFAULT\_BINDING\_INDEX}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_BINDING\_INDEX}{CGRAPH\_DEFAULT\_BINDING\_INDEX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+BINDING\+\_\+\+INDEX = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_g_element_define_8h_abef6b87e75de5c7845e999c82144f0bc}\label{_g_element_define_8h_abef6b87e75de5c7845e999c82144f0bc}} 
+\index{GElementDefine.h@{GElementDefine.h}!CGRAPH\_DEFAULT\_ELEMENT\_LEVEL@{CGRAPH\_DEFAULT\_ELEMENT\_LEVEL}}
+\index{CGRAPH\_DEFAULT\_ELEMENT\_LEVEL@{CGRAPH\_DEFAULT\_ELEMENT\_LEVEL}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_ELEMENT\_LEVEL}{CGRAPH\_DEFAULT\_ELEMENT\_LEVEL}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+LEVEL = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_g_element_define_8h_ad6c1fd86b20cd6d0c1e77421798c15ea}\label{_g_element_define_8h_ad6c1fd86b20cd6d0c1e77421798c15ea}} 
+\index{GElementDefine.h@{GElementDefine.h}!CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT@{CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT}}
+\index{CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT@{CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT}{CGRAPH\_DEFAULT\_ELEMENT\_TIMEOUT}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+TIMEOUT = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}\label{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}} 
+\index{GElementDefine.h@{GElementDefine.h}!CGRAPH\_DEFAULT\_LOOP\_TIMES@{CGRAPH\_DEFAULT\_LOOP\_TIMES}}
+\index{CGRAPH\_DEFAULT\_LOOP\_TIMES@{CGRAPH\_DEFAULT\_LOOP\_TIMES}!GElementDefine.h@{GElementDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_LOOP\_TIMES}{CGRAPH\_DEFAULT\_LOOP\_TIMES}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} static const \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES = 1\hspace{0.3cm}{\ttfamily [static]}}
+

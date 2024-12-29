@@ -13,6 +13,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可；
+ *        start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接口；
+ *        定时器的结束通过is_stop_这个std::atomic_bool值和std::condition_variable实现，
+ *        start接口is_stop_ exchange为false，对exchange之前的值做检查也保证了不会重复start
+ *        stop接口将is_stop_设置为true，并通知正在cv_上等待的start直接退出，接着等待std::future对象返回
+ */
 class UTimer : public UtilsObject {
 public:
     UTimer() = default;

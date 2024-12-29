@@ -1,0 +1,4 @@
+<map id="UTask" name="UTask">
+<area shape="rect" id="node1" title="基于内嵌类TaskBased和TaskDerided，将传入的func完美转发成TaskDerided的func_成员； TaskDerided是UTask的impl_成员，运行UTask实际上就是调用..." alt="" coords="9,80,71,107"/>
+<area shape="rect" id="node2" href="$struct_c_struct.html" title=" " alt="" coords="5,5,75,32"/>
+</map>

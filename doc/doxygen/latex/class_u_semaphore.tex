@@ -1,0 +1,92 @@
+\hypertarget{class_u_semaphore}{}\doxysection{USemaphore Class Reference}
+\label{class_u_semaphore}\index{USemaphore@{USemaphore}}
+
+
+基于mutex\+\_\+/cv\+\_\+和int计数器cnt\+\_\+封装的信号量  
+
+
+
+
+{\ttfamily \#include $<$USemaphore.\+h$>$}
+
+
+
+Inheritance diagram for USemaphore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_semaphore__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USemaphore\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_semaphore__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_semaphore_aeca6a21aa1e726c65e7d430a3c1349bb}{signal}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_semaphore_a1656338e49417e2194f9343e9127e24e}{wait}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_semaphore_aa8e924462e7ef85cb81b6bb3c151bf42}{cnt\+\_\+}} = 0
+\item 
+std\+::mutex \mbox{\hyperlink{class_u_semaphore_ab8284140ea66adf843324cd7442c6e76}{mutex\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_semaphore_a48440371bd7980543f1633cba6bb8301}{cv\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+基于mutex\+\_\+/cv\+\_\+和int计数器cnt\+\_\+封装的信号量 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_semaphore_aeca6a21aa1e726c65e7d430a3c1349bb}\label{class_u_semaphore_aeca6a21aa1e726c65e7d430a3c1349bb}} 
+\index{USemaphore@{USemaphore}!signal@{signal}}
+\index{signal@{signal}!USemaphore@{USemaphore}}
+\doxysubsubsection{\texorpdfstring{signal()}{signal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} USemaphore\+::signal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+触发一次信号 \mbox{\Hypertarget{class_u_semaphore_a1656338e49417e2194f9343e9127e24e}\label{class_u_semaphore_a1656338e49417e2194f9343e9127e24e}} 
+\index{USemaphore@{USemaphore}!wait@{wait}}
+\index{wait@{wait}!USemaphore@{USemaphore}}
+\doxysubsubsection{\texorpdfstring{wait()}{wait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} USemaphore\+::wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+等待信号触发 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_semaphore_aa8e924462e7ef85cb81b6bb3c151bf42}\label{class_u_semaphore_aa8e924462e7ef85cb81b6bb3c151bf42}} 
+\index{USemaphore@{USemaphore}!cnt\_@{cnt\_}}
+\index{cnt\_@{cnt\_}!USemaphore@{USemaphore}}
+\doxysubsubsection{\texorpdfstring{cnt\_}{cnt\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} USemaphore\+::cnt\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_semaphore_a48440371bd7980543f1633cba6bb8301}\label{class_u_semaphore_a48440371bd7980543f1633cba6bb8301}} 
+\index{USemaphore@{USemaphore}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!USemaphore@{USemaphore}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable USemaphore\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_semaphore_ab8284140ea66adf843324cd7442c6e76}\label{class_u_semaphore_ab8284140ea66adf843324cd7442c6e76}} 
+\index{USemaphore@{USemaphore}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!USemaphore@{USemaphore}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex USemaphore\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Semaphore/\mbox{\hyperlink{_u_semaphore_8h}{USemaphore.\+h}}\end{DoxyCompactItemize}

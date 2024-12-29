@@ -1,0 +1,290 @@
+\hypertarget{_utils_define_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Utils\+Define.h File Reference}
+\label{_utils_define_8h}\index{src/UtilsCtrl/UtilsDefine.h@{src/UtilsCtrl/UtilsDefine.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}../\+CBasic/\+CBasic\+Include.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Utils\+Function.\+h\char`\"{}}\newline
+Include dependency graph for Utils\+Define.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_define_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_define_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a89a4a8b83d2f0ae7d11f65574d5768c9}{likely}}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}{CGRAPH\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL}}(ptr, ...)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a46afea7a8bf0cb4fc76e154f31b2f87a}{CGRAPH\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+ERROR}}(ptr, ...)~    \mbox{\hyperlink{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION}}(ptr, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);                                   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a1588b25fd0afe2468aff4d64c6cb3371}{CGRAPH\+\_\+\+DELETE\+\_\+\+PTR}}(ptr)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a2494cd83b8d66921a2cac0cb237d4f83}{CGRAPH\+\_\+\+DELETE\+\_\+\+PTR\+\_\+\+ARRAY}}(arr)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a80add6b432bcedffb8972695f0f6c8cc}{CGRAPH\+\_\+\+ASSERT\+\_\+\+INIT}}(is\+Init)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a98e613c5c201eba24ba26c669ff222e5}{CGRAPH\+\_\+\+ASSERT\+\_\+\+INIT\+\_\+\+THROW\+\_\+\+ERROR}}(is\+Init)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_ae15642ec5e03032d27b1d7025f2ff86d}{CGRAPH\+\_\+\+ASSERT\+\_\+\+MUTABLE\+\_\+\+INIT\+\_\+\+THROW\+\_\+\+ERROR}}(is\+Init)
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_ae9b1169a0d93435c95432eaa1356c0f1}{CGRAPH\+\_\+\+SLEEP\+\_\+\+SECOND}}(s)~    std\+::this\+\_\+thread\+::sleep\+\_\+for(std\+::chrono\+::seconds(s));                       \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_a287f7e95638ec6f3e5ef858806fc5280}{CGRAPH\+\_\+\+SLEEP\+\_\+\+MILLISECOND}}(ms)~    std\+::this\+\_\+thread\+::sleep\+\_\+for(std\+::chrono\+::milliseconds(ms));                 \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_utils_define_8h_aabe51d152ba60890d4044022e759e5b2}{CGRAPH\+\_\+\+FUNCTION\+\_\+\+CHECK\+\_\+\+STATUS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_utils_define_8h_abaffd4c2b6010aad1bd05ea3ae3af151}{CGRAPH\+\_\+\+LOCK\+\_\+\+GUARD}} = std\+::lock\+\_\+guard$<$ std\+::mutex $>$
+\item 
+using \mbox{\hyperlink{_utils_define_8h_a3d7db7347118cdaeb998ccaf3043cf8e}{CGRAPH\+\_\+\+UNIQUE\+\_\+\+LOCK}} = std\+::unique\+\_\+lock$<$ std\+::mutex $>$
+\item 
+using \mbox{\hyperlink{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}{CGRAPH\+\_\+\+READ\+\_\+\+LOCK}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\item 
+using \mbox{\hyperlink{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}{CGRAPH\+\_\+\+WRITE\+\_\+\+LOCK}} = std\+::lock\+\_\+guard$<$ std\+::recursive\+\_\+mutex $>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{_utils_define_8h_a69948d01f4a5146bda9a5642b870ea1d}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL}} (T t)
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{_utils_define_8h_a8f1aa0d42c86cb61003e3981606a6cb8}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL}} (T t, Args... args)
+\item 
+{\footnotesize template$<$typename T $>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{_utils_define_8h_a1c8ca531e5cfb12d023de547ed4aa143}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION}} (T t)
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION}} (T t, Args... args)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{_utils_define_8h_a70610995af51b1f59859d714c84b8c06}{CGRAPH\+\_\+\+ECHO}} (const char $\ast$cmd,...)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_utils_define_8h_a80add6b432bcedffb8972695f0f6c8cc}\label{_utils_define_8h_a80add6b432bcedffb8972695f0f6c8cc}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ASSERT\_INIT@{CGRAPH\_ASSERT\_INIT}}
+\index{CGRAPH\_ASSERT\_INIT@{CGRAPH\_ASSERT\_INIT}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ASSERT\_INIT}{CGRAPH\_ASSERT\_INIT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+ASSERT\+\_\+\+INIT(\begin{DoxyParamCaption}\item[{}]{is\+Init }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((isInit) != is\_init\_)) \{                                       \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_RETURN\_ERROR\_STATUS(\textcolor{stringliteral}{"{}init status is not suitable"{}})               \(\backslash\)}
+\DoxyCodeLine{    \}                                                                           \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_a98e613c5c201eba24ba26c669ff222e5}\label{_utils_define_8h_a98e613c5c201eba24ba26c669ff222e5}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ASSERT\_INIT\_THROW\_ERROR@{CGRAPH\_ASSERT\_INIT\_THROW\_ERROR}}
+\index{CGRAPH\_ASSERT\_INIT\_THROW\_ERROR@{CGRAPH\_ASSERT\_INIT\_THROW\_ERROR}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ASSERT\_INIT\_THROW\_ERROR}{CGRAPH\_ASSERT\_INIT\_THROW\_ERROR}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+ASSERT\+\_\+\+INIT\+\_\+\+THROW\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{is\+Init }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((isInit) != is\_init\_)) \{                                       \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_THROW\_EXCEPTION(\textcolor{stringliteral}{"{}[CException] init status is not suitable"{}}) \}    \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_ae15642ec5e03032d27b1d7025f2ff86d}\label{_utils_define_8h_ae15642ec5e03032d27b1d7025f2ff86d}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR@{CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR}}
+\index{CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR@{CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR}{CGRAPH\_ASSERT\_MUTABLE\_INIT\_THROW\_ERROR}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+ASSERT\+\_\+\+MUTABLE\+\_\+\+INIT\+\_\+\+THROW\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{is\+Init }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((isInit) != is\_init\_) \&\& !isMutable()) \{                               \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_THROW\_EXCEPTION(\textcolor{stringliteral}{"{}[CException] mutable init status is not suitable"{}}) \}    \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}\label{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ASSERT\_NOT\_NULL@{CGRAPH\_ASSERT\_NOT\_NULL}}
+\index{CGRAPH\_ASSERT\_NOT\_NULL@{CGRAPH\_ASSERT\_NOT\_NULL}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ASSERT\_NOT\_NULL}{CGRAPH\_ASSERT\_NOT\_NULL}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \{                                                                                        \(\backslash\)}
+\DoxyCodeLine{        const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}\& \_\_cur\_status\_\_ = \mbox{\hyperlink{_utils_define_8h_a69948d01f4a5146bda9a5642b870ea1d}{\_\_ASSERT\_NOT\_NULL}}(ptr, \#\#\_\_VA\_ARGS\_\_);               \(\backslash\)}
+\DoxyCodeLine{        if (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(\_\_cur\_status\_\_.isErr())) \{ \textcolor{keywordflow}{return} \_\_cur\_status\_\_; \}                     \(\backslash\)}
+\DoxyCodeLine{    \}                                                                                        \(\backslash\)}
+
+\end{DoxyCode}
+判断传入的多个指针信息，是否为空 \mbox{\Hypertarget{_utils_define_8h_a46afea7a8bf0cb4fc76e154f31b2f87a}\label{_utils_define_8h_a46afea7a8bf0cb4fc76e154f31b2f87a}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR@{CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR}}
+\index{CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR@{CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR}{CGRAPH\_ASSERT\_NOT\_NULL\_THROW\_ERROR}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+ERROR(\begin{DoxyParamCaption}\item[{}]{ptr,  }\item[{}]{... }\end{DoxyParamCaption})~    \mbox{\hyperlink{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33}{\+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION}}(ptr, \#\#\+\_\+\+\_\+\+VA\+\_\+\+ARGS\+\_\+\+\_\+);                                   \textbackslash{}}
+
+判断传入的多个指针，是否为空。如果为空，则抛出异常信息 \mbox{\Hypertarget{_utils_define_8h_a1588b25fd0afe2468aff4d64c6cb3371}\label{_utils_define_8h_a1588b25fd0afe2468aff4d64c6cb3371}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_DELETE\_PTR@{CGRAPH\_DELETE\_PTR}}
+\index{CGRAPH\_DELETE\_PTR@{CGRAPH\_DELETE\_PTR}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DELETE\_PTR}{CGRAPH\_DELETE\_PTR}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+DELETE\+\_\+\+PTR(\begin{DoxyParamCaption}\item[{}]{ptr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((ptr) != \textcolor{keyword}{nullptr})) \{                                           \(\backslash\)}
+\DoxyCodeLine{        delete (ptr);                                                           \(\backslash\)}
+\DoxyCodeLine{        (ptr) = \textcolor{keyword}{nullptr};                                                        \(\backslash\)}
+\DoxyCodeLine{    \}                                                                           \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_a2494cd83b8d66921a2cac0cb237d4f83}\label{_utils_define_8h_a2494cd83b8d66921a2cac0cb237d4f83}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_DELETE\_PTR\_ARRAY@{CGRAPH\_DELETE\_PTR\_ARRAY}}
+\index{CGRAPH\_DELETE\_PTR\_ARRAY@{CGRAPH\_DELETE\_PTR\_ARRAY}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DELETE\_PTR\_ARRAY}{CGRAPH\_DELETE\_PTR\_ARRAY}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+DELETE\+\_\+\+PTR\+\_\+\+ARRAY(\begin{DoxyParamCaption}\item[{}]{arr }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((arr) != \textcolor{keyword}{nullptr})) \{                                           \(\backslash\)}
+\DoxyCodeLine{        delete[] (arr);                                                         \(\backslash\)}
+\DoxyCodeLine{        (arr) = \textcolor{keyword}{nullptr};                                                        \(\backslash\)}
+\DoxyCodeLine{    \}                                                                           \(\backslash\)}
+\DoxyCodeLine{                                                                                \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_aabe51d152ba60890d4044022e759e5b2}\label{_utils_define_8h_aabe51d152ba60890d4044022e759e5b2}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_FUNCTION\_CHECK\_STATUS@{CGRAPH\_FUNCTION\_CHECK\_STATUS}}
+\index{CGRAPH\_FUNCTION\_CHECK\_STATUS@{CGRAPH\_FUNCTION\_CHECK\_STATUS}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_FUNCTION\_CHECK\_STATUS}{CGRAPH\_FUNCTION\_CHECK\_STATUS}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+FUNCTION\+\_\+\+CHECK\+\_\+\+STATUS}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(status.isErr())) \{                                             \(\backslash\)}
+\DoxyCodeLine{        if (status.isCrash()) \{ \textcolor{keywordflow}{throw} \mbox{\hyperlink{_c_val_type_8h_a0bf31180c2ed175def27060a21ccc65d}{CException}}(status.getInfo()); \}           \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_ECHO(\textcolor{stringliteral}{"{}errorCode = [\%d], errorInfo = [\%s]."{}},                      \(\backslash\)}
+\DoxyCodeLine{            status.getCode(), status.getInfo().c\_str());                        \(\backslash\)}
+\DoxyCodeLine{        return status;                                                          \(\backslash\)}
+\DoxyCodeLine{    \}                                                                           \(\backslash\)}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{_utils_define_8h_a287f7e95638ec6f3e5ef858806fc5280}\label{_utils_define_8h_a287f7e95638ec6f3e5ef858806fc5280}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_SLEEP\_MILLISECOND@{CGRAPH\_SLEEP\_MILLISECOND}}
+\index{CGRAPH\_SLEEP\_MILLISECOND@{CGRAPH\_SLEEP\_MILLISECOND}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SLEEP\_MILLISECOND}{CGRAPH\_SLEEP\_MILLISECOND}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SLEEP\+\_\+\+MILLISECOND(\begin{DoxyParamCaption}\item[{}]{ms }\end{DoxyParamCaption})~    std\+::this\+\_\+thread\+::sleep\+\_\+for(std\+::chrono\+::milliseconds(ms));                 \textbackslash{}}
+
+\mbox{\Hypertarget{_utils_define_8h_ae9b1169a0d93435c95432eaa1356c0f1}\label{_utils_define_8h_ae9b1169a0d93435c95432eaa1356c0f1}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_SLEEP\_SECOND@{CGRAPH\_SLEEP\_SECOND}}
+\index{CGRAPH\_SLEEP\_SECOND@{CGRAPH\_SLEEP\_SECOND}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SLEEP\_SECOND}{CGRAPH\_SLEEP\_SECOND}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SLEEP\+\_\+\+SECOND(\begin{DoxyParamCaption}\item[{}]{s }\end{DoxyParamCaption})~    std\+::this\+\_\+thread\+::sleep\+\_\+for(std\+::chrono\+::seconds(s));                       \textbackslash{}}
+
+\mbox{\Hypertarget{_utils_define_8h_a89a4a8b83d2f0ae7d11f65574d5768c9}\label{_utils_define_8h_a89a4a8b83d2f0ae7d11f65574d5768c9}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!likely@{likely}}
+\index{likely@{likely}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{likely}{likely}}
+{\footnotesize\ttfamily \#define likely}
+
+\mbox{\Hypertarget{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}\label{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!unlikely@{unlikely}}
+\index{unlikely@{unlikely}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{unlikely}{unlikely}}
+{\footnotesize\ttfamily \#define unlikely}
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_utils_define_8h_abaffd4c2b6010aad1bd05ea3ae3af151}\label{_utils_define_8h_abaffd4c2b6010aad1bd05ea3ae3af151}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_LOCK\_GUARD@{CGRAPH\_LOCK\_GUARD}}
+\index{CGRAPH\_LOCK\_GUARD@{CGRAPH\_LOCK\_GUARD}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_LOCK\_GUARD}{CGRAPH\_LOCK\_GUARD}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_utils_define_8h_abaffd4c2b6010aad1bd05ea3ae3af151}{CGRAPH\+\_\+\+LOCK\+\_\+\+GUARD}} =  std\+::lock\+\_\+guard$<$std\+::mutex$>$}
+
+\mbox{\Hypertarget{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}\label{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_READ\_LOCK@{CGRAPH\_READ\_LOCK}}
+\index{CGRAPH\_READ\_LOCK@{CGRAPH\_READ\_LOCK}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_READ\_LOCK}{CGRAPH\_READ\_LOCK}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}{CGRAPH\+\_\+\+READ\+\_\+\+LOCK}} =  std\+::lock\+\_\+guard$<$std\+::recursive\+\_\+mutex$>$}
+
+\mbox{\Hypertarget{_utils_define_8h_a3d7db7347118cdaeb998ccaf3043cf8e}\label{_utils_define_8h_a3d7db7347118cdaeb998ccaf3043cf8e}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_UNIQUE\_LOCK@{CGRAPH\_UNIQUE\_LOCK}}
+\index{CGRAPH\_UNIQUE\_LOCK@{CGRAPH\_UNIQUE\_LOCK}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_UNIQUE\_LOCK}{CGRAPH\_UNIQUE\_LOCK}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_utils_define_8h_a3d7db7347118cdaeb998ccaf3043cf8e}{CGRAPH\+\_\+\+UNIQUE\+\_\+\+LOCK}} =  std\+::unique\+\_\+lock$<$std\+::mutex$>$}
+
+\mbox{\Hypertarget{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}\label{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_WRITE\_LOCK@{CGRAPH\_WRITE\_LOCK}}
+\index{CGRAPH\_WRITE\_LOCK@{CGRAPH\_WRITE\_LOCK}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_WRITE\_LOCK}{CGRAPH\_WRITE\_LOCK}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}{CGRAPH\+\_\+\+WRITE\+\_\+\+LOCK}} =  std\+::lock\+\_\+guard$<$std\+::recursive\+\_\+mutex$>$}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_utils_define_8h_a69948d01f4a5146bda9a5642b870ea1d}\label{_utils_define_8h_a69948d01f4a5146bda9a5642b870ea1d}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!\_\_ASSERT\_NOT\_NULL@{\_\_ASSERT\_NOT\_NULL}}
+\index{\_\_ASSERT\_NOT\_NULL@{\_\_ASSERT\_NOT\_NULL}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ASSERT\_NOT\_NULL()}{\_\_ASSERT\_NOT\_NULL()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL (\begin{DoxyParamCaption}\item[{T}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_utils_define_8h_a8f1aa0d42c86cb61003e3981606a6cb8}\label{_utils_define_8h_a8f1aa0d42c86cb61003e3981606a6cb8}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!\_\_ASSERT\_NOT\_NULL@{\_\_ASSERT\_NOT\_NULL}}
+\index{\_\_ASSERT\_NOT\_NULL@{\_\_ASSERT\_NOT\_NULL}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ASSERT\_NOT\_NULL()}{\_\_ASSERT\_NOT\_NULL()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL (\begin{DoxyParamCaption}\item[{T}]{t,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_define_8h_a8f1aa0d42c86cb61003e3981606a6cb8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_utils_define_8h_a1c8ca531e5cfb12d023de547ed4aa143}\label{_utils_define_8h_a1c8ca531e5cfb12d023de547ed4aa143}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION@{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION}}
+\index{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION@{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION()}{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION (\begin{DoxyParamCaption}\item[{T}]{t }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33}\label{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION@{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION}}
+\index{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION@{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION()}{\_\_ASSERT\_NOT\_NULL\_THROW\_EXCEPTION()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \+\_\+\+\_\+\+ASSERT\+\_\+\+NOT\+\_\+\+NULL\+\_\+\+THROW\+\_\+\+EXCEPTION (\begin{DoxyParamCaption}\item[{T}]{t,  }\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_utils_define_8h_a334f02b56e9f8d5b4688c8aa79eedd33_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_utils_define_8h_a70610995af51b1f59859d714c84b8c06}\label{_utils_define_8h_a70610995af51b1f59859d714c84b8c06}} 
+\index{UtilsDefine.h@{UtilsDefine.h}!CGRAPH\_ECHO@{CGRAPH\_ECHO}}
+\index{CGRAPH\_ECHO@{CGRAPH\_ECHO}!UtilsDefine.h@{UtilsDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_ECHO()}{CGRAPH\_ECHO()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} CGRAPH\+\_\+\+ECHO (\begin{DoxyParamCaption}\item[{const char $\ast$}]{cmd,  }\item[{}]{... }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+定制化输出 
+\begin{DoxyParams}{Parameters}
+{\em cmd} & \\
+\hline
+{\em ...} & 注：内部包含全局锁，不建议正式上线的时候使用 \\
+\hline
+\end{DoxyParams}

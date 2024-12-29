@@ -1,0 +1,228 @@
+\hypertarget{class_d_ann_node}{}\doxysection{DAnn\+Node Class Reference}
+\label{class_d_ann_node}\index{DAnnNode@{DAnnNode}}
+
+
+ANN领域算子模型抽象，说人话，就是抽象了一套跑\+NN相关的范式 prepare\+Param准备要接下来要run的函数类型 函数类型和\+DAnn\+Node的成员函数一一对应，分别有 train/search/insert/update/remove/load\+Model/save\+Model/edition； 上述接口在\+DAnn\+Node这个基类都为空，由派生类自行实现，在run统一调用；  
+
+
+
+
+{\ttfamily \#include $<$DAnn\+Node.\+h$>$}
+
+
+
+Inheritance diagram for DAnn\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_d_ann_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for DAnn\+Node\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_d_ann_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_d_ann_define_8h_a1059eb943256570719fd673181a5956a}{DAnn\+Func\+Type}} \mbox{\hyperlink{class_d_ann_node_aa7aae307c8ebd354d25a99f85206ce6b}{prepare\+Param}} ()=0
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_ac253b0edf9be2836c6a01f2f804f5303}{train}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_aa12be9d6ba910d280c751fde9d005fb6}{search}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a774e1a4bab55caa68d74bd1e85008788}{insert}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a0143932374606bc409829a7250c606f7}{update}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_aece28dac2985b39b888cbd9d36ea70ab}{remove}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a9aefd1d50d2bb8d3599bf444ae5642a9}{load\+Model}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a9bd2da5b30cc5d056bb6d0c51d0a10a1}{save\+Model}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a8dd438494eb6d34fab4972f18df11a21}{edition}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_afb7df1c832069d5e1bfa61e1296e9c01}{refresh\+Param}} ()
+\item 
+\mbox{\hyperlink{class_d_ann_node_ac8ab8e194476641a738898aea48db9fd}{DAnn\+Node}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_d_ann_node_a1e4ecc67278b40c6bdd41705e3aa5fea}{run}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(DAnn\+Node\+::$\ast$ \mbox{\hyperlink{class_d_ann_node_a3c4e3c2eeee18a5a8f338897c8a4344d}{DAnn\+Node\+Func\+Ptr}}) ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_d_ann_node_a3c4e3c2eeee18a5a8f338897c8a4344d}{DAnn\+Node\+Func\+Ptr}} \mbox{\hyperlink{class_d_ann_node_aac02d4f14e596af048215f7049ec1fbb}{ann\+\_\+func\+\_\+arr\+\_\+}} \mbox{[}static\+\_\+cast$<$ \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} $>$(DAnn\+Func\+Type\+::\+ANN\+\_\+\+MAX\+\_\+\+SIZE)\mbox{]} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+ANN领域算子模型抽象，说人话，就是抽象了一套跑\+NN相关的范式 prepare\+Param准备要接下来要run的函数类型 函数类型和\+DAnn\+Node的成员函数一一对应，分别有 train/search/insert/update/remove/load\+Model/save\+Model/edition； 上述接口在\+DAnn\+Node这个基类都为空，由派生类自行实现，在run统一调用； 
+
+run的调用逻辑： prepare\+Param为纯虚函数，派生类必须重写，返回的是接下来run要跑的函数类型 接着run会调用这个函数类型在ann\+\_\+func\+\_\+arr\+\_\+实际注册的函数 最后再调用一次refresh\+Param刷新参数
+
+P.\+S. 感觉用处不大，和目前常用的 前处理 -\/$>$ NN -\/$>$ 后处理 不太match，倒是比较契合算法的模型训练流程? 
+
+\doxysubsection{Member Typedef Documentation}
+\mbox{\Hypertarget{class_d_ann_node_a3c4e3c2eeee18a5a8f338897c8a4344d}\label{class_d_ann_node_a3c4e3c2eeee18a5a8f338897c8a4344d}} 
+\index{DAnnNode@{DAnnNode}!DAnnNodeFuncPtr@{DAnnNodeFuncPtr}}
+\index{DAnnNodeFuncPtr@{DAnnNodeFuncPtr}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{DAnnNodeFuncPtr}{DAnnNodeFuncPtr}}
+{\footnotesize\ttfamily typedef \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(DAnn\+Node\+::$\ast$ DAnn\+Node\+::\+DAnn\+Node\+Func\+Ptr) ()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_ann_node_ac8ab8e194476641a738898aea48db9fd}\label{class_d_ann_node_ac8ab8e194476641a738898aea48db9fd}} 
+\index{DAnnNode@{DAnnNode}!DAnnNode@{DAnnNode}}
+\index{DAnnNode@{DAnnNode}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{DAnnNode()}{DAnnNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} DAnn\+Node\+::\+DAnn\+Node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+构造函数信息 初始化函数映射关系Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_d_ann_node_ac8ab8e194476641a738898aea48db9fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_ann_node_a8dd438494eb6d34fab4972f18df11a21}\label{class_d_ann_node_a8dd438494eb6d34fab4972f18df11a21}} 
+\index{DAnnNode@{DAnnNode}!edition@{edition}}
+\index{edition@{edition}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{edition()}{edition()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::edition (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+其他方法 \mbox{\Hypertarget{class_d_ann_node_a774e1a4bab55caa68d74bd1e85008788}\label{class_d_ann_node_a774e1a4bab55caa68d74bd1e85008788}} 
+\index{DAnnNode@{DAnnNode}!insert@{insert}}
+\index{insert@{insert}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::insert (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+插入 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_a9aefd1d50d2bb8d3599bf444ae5642a9}\label{class_d_ann_node_a9aefd1d50d2bb8d3599bf444ae5642a9}} 
+\index{DAnnNode@{DAnnNode}!loadModel@{loadModel}}
+\index{loadModel@{loadModel}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{loadModel()}{loadModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::load\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+加载模型信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_aa7aae307c8ebd354d25a99f85206ce6b}\label{class_d_ann_node_aa7aae307c8ebd354d25a99f85206ce6b}} 
+\index{DAnnNode@{DAnnNode}!prepareParam@{prepareParam}}
+\index{prepareParam@{prepareParam}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{prepareParam()}{prepareParam()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_d_ann_define_8h_a1059eb943256570719fd673181a5956a}{DAnn\+Func\+Type}} DAnn\+Node\+::prepare\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+预处理参数信息，并且返回需要执行的函数信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_afb7df1c832069d5e1bfa61e1296e9c01}\label{class_d_ann_node_afb7df1c832069d5e1bfa61e1296e9c01}} 
+\index{DAnnNode@{DAnnNode}!refreshParam@{refreshParam}}
+\index{refreshParam@{refreshParam}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{refreshParam()}{refreshParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::refresh\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+将参数更新，作用于所有功能函数之后 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_aece28dac2985b39b888cbd9d36ea70ab}\label{class_d_ann_node_aece28dac2985b39b888cbd9d36ea70ab}} 
+\index{DAnnNode@{DAnnNode}!remove@{remove}}
+\index{remove@{remove}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+删除 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_a1e4ecc67278b40c6bdd41705e3aa5fea}\label{class_d_ann_node_a1e4ecc67278b40c6bdd41705e3aa5fea}} 
+\index{DAnnNode@{DAnnNode}!run@{run}}
+\index{run@{run}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+分拆执行函数 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+整体流程思路 1，先准备参数，并且确定走哪个功能函数（必须实现） 2，执行具体功能函数 3，如有参数修改，将最终的参数同步回主流程
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=349pt]{class_d_ann_node_a1e4ecc67278b40c6bdd41705e3aa5fea_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_d_ann_node_a9bd2da5b30cc5d056bb6d0c51d0a10a1}\label{class_d_ann_node_a9bd2da5b30cc5d056bb6d0c51d0a10a1}} 
+\index{DAnnNode@{DAnnNode}!saveModel@{saveModel}}
+\index{saveModel@{saveModel}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{saveModel()}{saveModel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::save\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+保存模型信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_aa12be9d6ba910d280c751fde9d005fb6}\label{class_d_ann_node_aa12be9d6ba910d280c751fde9d005fb6}} 
+\index{DAnnNode@{DAnnNode}!search@{search}}
+\index{search@{search}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::search (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+查询 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_ac253b0edf9be2836c6a01f2f804f5303}\label{class_d_ann_node_ac253b0edf9be2836c6a01f2f804f5303}} 
+\index{DAnnNode@{DAnnNode}!train@{train}}
+\index{train@{train}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{train()}{train()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::train (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+训练 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_ann_node_a0143932374606bc409829a7250c606f7}\label{class_d_ann_node_a0143932374606bc409829a7250c606f7}} 
+\index{DAnnNode@{DAnnNode}!update@{update}}
+\index{update@{update}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} DAnn\+Node\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+修改 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_d_ann_node_aac02d4f14e596af048215f7049ec1fbb}\label{class_d_ann_node_aac02d4f14e596af048215f7049ec1fbb}} 
+\index{DAnnNode@{DAnnNode}!ann\_func\_arr\_@{ann\_func\_arr\_}}
+\index{ann\_func\_arr\_@{ann\_func\_arr\_}!DAnnNode@{DAnnNode}}
+\doxysubsubsection{\texorpdfstring{ann\_func\_arr\_}{ann\_func\_arr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_ann_node_a3c4e3c2eeee18a5a8f338897c8a4344d}{DAnn\+Node\+Func\+Ptr}} DAnn\+Node\+::ann\+\_\+func\+\_\+arr\+\_\+\mbox{[}static\+\_\+cast$<$ \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} $>$(DAnn\+Func\+Type\+::\+ANN\+\_\+\+MAX\+\_\+\+SIZE)\mbox{]} \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Domain\+Ctrl/\+Ann/\mbox{\hyperlink{_d_ann_node_8h}{DAnn\+Node.\+h}}\item 
+src/\+Domain\+Ctrl/\+Ann/\mbox{\hyperlink{_d_ann_node_8cpp}{DAnn\+Node.\+cpp}}\end{DoxyCompactItemize}

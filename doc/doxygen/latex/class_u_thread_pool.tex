@@ -1,0 +1,518 @@
+\hypertarget{class_u_thread_pool}{}\doxysection{UThread\+Pool Class Reference}
+\label{class_u_thread_pool}\index{UThreadPool@{UThreadPool}}
+
+
+线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等  
+
+
+
+
+{\ttfamily \#include $<$UThread\+Pool.\+h$>$}
+
+
+
+Inheritance diagram for UThread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=169pt]{class_u_thread_pool__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UThread\+Pool\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_thread_pool_ab161976551361b744cd3b1bfd0c95789}{UThread\+Pool}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} auto\+Init=true, const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&config=\mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}}()) noexcept
+\item 
+\mbox{\hyperlink{class_u_thread_pool_ab364b61fa4250ecd2d9e4c4d7192aae3}{$\sim$\+UThread\+Pool}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a67da898e519ba7a37896110288c485a0}{set\+Config}} (const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&config)
+\item 
+\mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \mbox{\hyperlink{class_u_thread_pool_a3abde926b8a348afd3ec6d39966ab0ec}{get\+Config}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3}{init}} () final
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\auto \mbox{\hyperlink{class_u_thread_pool_a888b45b81008cc0bda0e8009e5d4e941}{commit}} (const Function\+Type \&task, \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} index=\mbox{\hyperlink{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY}}) -\/$>$ std\+::future$<$ decltype(std\+::declval$<$ Function\+Type $>$()())$>$
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\auto \mbox{\hyperlink{class_u_thread_pool_a94cd8d8e5a4632cc4c3f54151bac76c2}{commit\+With\+Tid}} (const Function\+Type \&task, \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} tid, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} enable, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} lockable) -\/$>$ std\+::future$<$ decltype(std\+::declval$<$ Function\+Type $>$()())$>$
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\auto \mbox{\hyperlink{class_u_thread_pool_aa28a27a744f6d3c1f44ed327c6bfe391}{commit\+With\+Priority}} (const Function\+Type \&task, int priority) -\/$>$ std\+::future$<$ decltype(std\+::declval$<$ Function\+Type $>$()())$>$
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_pool_acfb7229622dabd233988f005f107373c}{execute}} (const Function\+Type \&task, \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} index=\mbox{\hyperlink{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY}})
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a8dc7fc9d31f8491f5ef9d5eccc8436fb}{submit}} (const \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&task\+Group, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ttl=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\begin{DoxyCompactList}\small\item\em 遍历入参task\+Group的task\+\_\+arr\+\_\+，通过commit接口提交到对应的线程池或者任务队列； 将commit返回的std\+::future对象存入futures数组； 根据task\+Gtoup的\+TTL和本线程池配置的\+TTL计算futures等待的timeout (deadline)， 在deadline到达之前遍历等到所有的std\+::future对象返回，并根据返回值统计status； 最后执行task\+Group自带的on\+\_\+finished\+\_\+接口 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a0086f24b4fb154339825a9d300f6dab6}{submit}} (\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} func, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ttl=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}, \mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} on\+Finished=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_u_thread_pool_a3addbf22902baf6763689204bc6df01d}{get\+Thread\+Index}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} tid)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a220dbebf17eeeebcb75742e7a4fa82d3}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_pool_aeff47e66090711bda414ad3793a75e3e}{is\+Init}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a78aa0f25971774e7bd5c968349f2658f}{create\+Secondary\+Thread}} (\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_pool_a9935425eecf8b42776a8cdd4f50d193a}{release\+Secondary\+Thread}} (\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} size)
+\item 
+{\footnotesize template$<$typename Function\+Type $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} auto \mbox{\hyperlink{class_u_thread_pool_a86f8867235af7946a5decd134808580a}{commit}} (const Function\+Type \&task, \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} index) -\/$>$ std\+::future$<$ decltype(std\+::declval$<$ Function\+Type $>$()())$>$
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_u_thread_pool_aa177a2efd859344ca9c4bb23af691cee}{dispatch}} (\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} orig\+Index)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_pool_a1759c459c16239892a174ce594d1e223}{monitor}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_pool_afc1dba5561cc22f02dc2396a802f5660}{is\+\_\+init\+\_\+}} \{ false \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_pool_aa86c1475b75bd7acaec1b329ad6fc272}{cur\+\_\+index\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ \mbox{\hyperlink{class_u_thread_pool_a61fe88476c09f53e6dc35594760fcb6e}{task\+\_\+queue\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ \mbox{\hyperlink{class_u_thread_pool_aa0e6281a67229e269d20f44dc3773c59}{priority\+\_\+task\+\_\+queue\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}{UThread\+Primary\+Ptr}} $>$ \mbox{\hyperlink{class_u_thread_pool_a8921f697a0623a41bc74bbc4678a0247}{primary\+\_\+threads\+\_\+}}
+\item 
+std\+::list$<$ std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}} $>$ $>$ \mbox{\hyperlink{class_u_thread_pool_a0bbdfab9983ba638a470dc60a3ef849c}{secondary\+\_\+threads\+\_\+}}
+\item 
+\mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \mbox{\hyperlink{class_u_thread_pool_ae589c5073ac18e929804caf9f90c37d3}{config\+\_\+}}
+\item 
+std\+::thread \mbox{\hyperlink{class_u_thread_pool_a92ef602554db721be625b019d92677aa}{monitor\+\_\+thread\+\_\+}}
+\item 
+std\+::map$<$ \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}, int $>$ \mbox{\hyperlink{class_u_thread_pool_a549267144fcee53e2d6a2a77663af4c2}{thread\+\_\+record\+\_\+map\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_u_thread_pool_a475d8ee09e699fb2fe860b3ee4421969}{st\+\_\+mutex\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_thread_pool_ab161976551361b744cd3b1bfd0c95789}\label{class_u_thread_pool_ab161976551361b744cd3b1bfd0c95789}} 
+\index{UThreadPool@{UThreadPool}!UThreadPool@{UThreadPool}}
+\index{UThreadPool@{UThreadPool}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{UThreadPool()}{UThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} UThread\+Pool\+::\+UThread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{auto\+Init = {\ttfamily true},  }\item[{const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&}]{config = {\ttfamily \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+通过默认设置参数，来创建线程池 
+\begin{DoxyParams}{Parameters}
+{\em auto\+Init} & 是否自动开启线程池功能 \\
+\hline
+{\em config} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_thread_pool_ab364b61fa4250ecd2d9e4c4d7192aae3}\label{class_u_thread_pool_ab364b61fa4250ecd2d9e4c4d7192aae3}} 
+\index{UThreadPool@{UThreadPool}!````~UThreadPool@{$\sim$UThreadPool}}
+\index{````~UThreadPool@{$\sim$UThreadPool}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{$\sim$UThreadPool()}{~UThreadPool()}}
+{\footnotesize\ttfamily UThread\+Pool\+::$\sim$\+UThread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+析构函数 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_ab364b61fa4250ecd2d9e4c4d7192aae3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_thread_pool_a86f8867235af7946a5decd134808580a}\label{class_u_thread_pool_a86f8867235af7946a5decd134808580a}} 
+\index{UThreadPool@{UThreadPool}!commit@{commit}}
+\index{commit@{commit}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} auto UThread\+Pool\+::commit (\begin{DoxyParamCaption}\item[{const Function\+Type \&}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{index }\end{DoxyParamCaption}) -\/$>$ std\+::future$<$decltype(std\+::declval$<$Function\+Type$>$()())$>$ }
+
+如果是长时间任务，则交给特定的任务队列，仅由辅助线程处理 目的是防止有很多长时间任务，将所有运行的线程均阻塞 长任务程序，默认优先级较低\mbox{\Hypertarget{class_u_thread_pool_a888b45b81008cc0bda0e8009e5d4e941}\label{class_u_thread_pool_a888b45b81008cc0bda0e8009e5d4e941}} 
+\index{UThreadPool@{UThreadPool}!commit@{commit}}
+\index{commit@{commit}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{commit()}{commit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+auto UThread\+Pool\+::commit (\begin{DoxyParamCaption}\item[{const Function\+Type \&}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{index = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY}}} }\end{DoxyParamCaption}) -\/$>$  std\+::future$<$ decltype(std\+::declval$<$ Function\+Type $>$()())$>$}
+
+提交任务信息并分发到对应的任务队列(普通or优先)和线程池(主or辅) 入参index可以指定线程id，但是实际上仍然需要通过dispatch来真正分发 分发到的index在主线程index范围内的，提交到主线程池的执行(primary\+\_\+threads\+\_\+) 指定的index为长时间任务的，只能分发到优先级队列执行(priority\+\_\+task\+\_\+queue\+\_\+) 其他情况下分发到默认的任务队列执行(task\+\_\+queue\+\_\+) 返回的是将task封装成std\+::packaged\+\_\+task后get\+\_\+future返回的std\+::future对象 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Function\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_aa28a27a744f6d3c1f44ed327c6bfe391}\label{class_u_thread_pool_aa28a27a744f6d3c1f44ed327c6bfe391}} 
+\index{UThreadPool@{UThreadPool}!commitWithPriority@{commitWithPriority}}
+\index{commitWithPriority@{commitWithPriority}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{commitWithPriority()}{commitWithPriority()}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+auto UThread\+Pool\+::commit\+With\+Priority (\begin{DoxyParamCaption}\item[{const Function\+Type \&}]{task,  }\item[{int}]{priority }\end{DoxyParamCaption}) -\/$>$ std\+::future$<$decltype(std\+::declval$<$Function\+Type$>$()())$>$}
+
+根据优先级，执行任务 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Function\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em priority} & 优先级别。自然序从大到小依次执行 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 建议，priority 范围在 \mbox{[}-\/100, 100\mbox{]} 之间 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a94cd8d8e5a4632cc4c3f54151bac76c2}\label{class_u_thread_pool_a94cd8d8e5a4632cc4c3f54151bac76c2}} 
+\index{UThreadPool@{UThreadPool}!commitWithTid@{commitWithTid}}
+\index{commitWithTid@{commitWithTid}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{commitWithTid()}{commitWithTid()}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+auto UThread\+Pool\+::commit\+With\+Tid (\begin{DoxyParamCaption}\item[{const Function\+Type \&}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{tid,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{enable,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{lockable }\end{DoxyParamCaption}) -\/$>$ std\+::future$<$decltype(std\+::declval$<$Function\+Type$>$()())$>$}
+
+向特定的线程id中，提交任务信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Function\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em tid} & 线程id。如果超出主线程个数范围，则默认写入pool的通用队列中 \\
+\hline
+{\em enable} & 是否启用上锁/解锁功能 \\
+\hline
+{\em lockable} & 上锁(true) / 解锁(false) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a78aa0f25971774e7bd5c968349f2658f}\label{class_u_thread_pool_a78aa0f25971774e7bd5c968349f2658f}} 
+\index{UThreadPool@{UThreadPool}!createSecondaryThread@{createSecondaryThread}}
+\index{createSecondaryThread@{createSecondaryThread}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{createSecondaryThread()}{createSecondaryThread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::create\+Secondary\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}}]{size }\end{DoxyParamCaption})}
+
+生成辅助线程。内部确保辅助线程数量不超过设定参数 最大线程数量(max) ≥ 主线程数量(default) + 已有辅助线程数量(secondary) 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a220dbebf17eeeebcb75742e7a4fa82d3}\label{class_u_thread_pool_a220dbebf17eeeebcb75742e7a4fa82d3}} 
+\index{UThreadPool@{UThreadPool}!destroy@{destroy}}
+\index{destroy@{destroy}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+释放所有的线程信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+这里之所以 destroy和 delete分开两个循环执行， 是因为当前线程被delete后，还可能存在未被delete的主线程，来steal当前线程的任务 在windows环境下，可能出现问题。 destroy 和 delete 分开之后，不会出现此问题。 感谢 Ryan大佬(\href{https://github.com/ryanhuang}{\texttt{ https\+://github.\+com/ryanhuang}}) 提供的帮助
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_a220dbebf17eeeebcb75742e7a4fa82d3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_pool_aa177a2efd859344ca9c4bb23af691cee}\label{class_u_thread_pool_aa177a2efd859344ca9c4bb23af691cee}} 
+\index{UThreadPool@{UThreadPool}!dispatch@{dispatch}}
+\index{dispatch@{dispatch}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{dispatch()}{dispatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} UThread\+Pool\+::dispatch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{orig\+Index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+根据传入的策略信息，确定最终执行方式 
+\begin{DoxyParams}{Parameters}
+{\em orig\+Index} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_acfb7229622dabd233988f005f107373c}\label{class_u_thread_pool_acfb7229622dabd233988f005f107373c}} 
+\index{UThreadPool@{UThreadPool}!execute@{execute}}
+\index{execute@{execute}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{execute()}{execute()}}
+{\footnotesize\ttfamily template$<$typename Function\+Type $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Pool\+::execute (\begin{DoxyParamCaption}\item[{const Function\+Type \&}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{index = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY}}} }\end{DoxyParamCaption})}
+
+异步执行任务 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em Function\+Type} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em index} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_acfb7229622dabd233988f005f107373c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_pool_a3abde926b8a348afd3ec6d39966ab0ec}\label{class_u_thread_pool_a3abde926b8a348afd3ec6d39966ab0ec}} 
+\index{UThreadPool@{UThreadPool}!getConfig@{getConfig}}
+\index{getConfig@{getConfig}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{getConfig()}{getConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} UThread\+Pool\+::get\+Config (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+获取线程池配置信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a3addbf22902baf6763689204bc6df01d}\label{class_u_thread_pool_a3addbf22902baf6763689204bc6df01d}} 
+\index{UThreadPool@{UThreadPool}!getThreadIndex@{getThreadIndex}}
+\index{getThreadIndex@{getThreadIndex}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{getThreadIndex()}{getThreadIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} UThread\+Pool\+::get\+Thread\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{tid }\end{DoxyParamCaption})}
+
+获取根据线程id信息，获取线程index信息 thread\+\_\+record\+\_\+map\+\_\+会维护tid到线程index的映射关系，通过查表得到index 
+\begin{DoxyParams}{Parameters}
+{\em tid} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 辅助线程返回-\/1 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3}\label{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3}} 
+\index{UThreadPool@{UThreadPool}!init@{init}}
+\index{init@{init}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+开启所有的线程信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+等待所有thread 设置完毕之后，再进行 \mbox{\hyperlink{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3}{init()}}， 避免在个别的平台上，可能出现 thread竞争访问其他线程、并且导致异常的情况 参考： \href{https://github.com/ChunelFeng/CGraph/issues/309}{\texttt{ https\+://github.\+com/\+Chunel\+Feng/\+CGraph/issues/309}}
+
+策略更新： 初始化的时候，也可以创建n个辅助线程。目的是为了配合仅使用 pool中 priority\+\_\+queue 的场景 一般情况下，建议为0。
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_pool_aeff47e66090711bda414ad3793a75e3e}\label{class_u_thread_pool_aeff47e66090711bda414ad3793a75e3e}} 
+\index{UThreadPool@{UThreadPool}!isInit@{isInit}}
+\index{isInit@{isInit}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{isInit()}{isInit()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Pool\+::is\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+判断线程池是否已经初始化了 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a1759c459c16239892a174ce594d1e223}\label{class_u_thread_pool_a1759c459c16239892a174ce594d1e223}} 
+\index{UThreadPool@{UThreadPool}!monitor@{monitor}}
+\index{monitor@{monitor}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{monitor()}{monitor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Pool\+::monitor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+监控线程执行函数，主要是判断是否需要增加线程，或销毁线程 增/删 操作，仅针对secondary类型线程生效 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_a1759c459c16239892a174ce594d1e223_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_pool_a9935425eecf8b42776a8cdd4f50d193a}\label{class_u_thread_pool_a9935425eecf8b42776a8cdd4f50d193a}} 
+\index{UThreadPool@{UThreadPool}!releaseSecondaryThread@{releaseSecondaryThread}}
+\index{releaseSecondaryThread@{releaseSecondaryThread}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{releaseSecondaryThread()}{releaseSecondaryThread()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::release\+Secondary\+Thread (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}}]{size }\end{DoxyParamCaption})}
+
+删除辅助线程 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a67da898e519ba7a37896110288c485a0}\label{class_u_thread_pool_a67da898e519ba7a37896110288c485a0}} 
+\index{UThreadPool@{UThreadPool}!setConfig@{setConfig}}
+\index{setConfig@{setConfig}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{setConfig()}{setConfig()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::set\+Config (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \&}]{config }\end{DoxyParamCaption})}
+
+设置线程池相关配置信息，需要在init()函数调用前，完成设置 
+\begin{DoxyParams}{Parameters}
+{\em config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 通过单例类(\+UThread\+Pool\+Singleton)开启线程池，则线程池默认init。需要 destroy 后才可以设置参数 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_pool_a0086f24b4fb154339825a9d300f6dab6}\label{class_u_thread_pool_a0086f24b4fb154339825a9d300f6dab6}} 
+\index{UThreadPool@{UThreadPool}!submit@{submit}}
+\index{submit@{submit}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::submit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{func,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ttl = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}},  }\item[{\mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{on\+Finished = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+针对单个任务的情况，复用任务组信息，实现单个任务直接执行 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em ttl} & \\
+\hline
+{\em on\+Finished} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_a0086f24b4fb154339825a9d300f6dab6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_pool_a8dc7fc9d31f8491f5ef9d5eccc8436fb}\label{class_u_thread_pool_a8dc7fc9d31f8491f5ef9d5eccc8436fb}} 
+\index{UThreadPool@{UThreadPool}!submit@{submit}}
+\index{submit@{submit}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{submit()}{submit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+::submit (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&}]{task\+Group,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ttl = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})}
+
+
+
+遍历入参task\+Group的task\+\_\+arr\+\_\+，通过commit接口提交到对应的线程池或者任务队列； 将commit返回的std\+::future对象存入futures数组； 根据task\+Gtoup的\+TTL和本线程池配置的\+TTL计算futures等待的timeout (deadline)， 在deadline到达之前遍历等到所有的std\+::future对象返回，并根据返回值统计status； 最后执行task\+Group自带的on\+\_\+finished\+\_\+接口 
+
+执行任务组信息 取task\+Group内部ttl和入参ttl的最小值，为计算ttl标准 
+\begin{DoxyParams}{Parameters}
+{\em task\+Group} & \\
+\hline
+{\em ttl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em task\+Group} & \\
+\hline
+{\em ttl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+CStatus 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_pool_a8dc7fc9d31f8491f5ef9d5eccc8436fb_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_thread_pool_ae589c5073ac18e929804caf9f90c37d3}\label{class_u_thread_pool_ae589c5073ac18e929804caf9f90c37d3}} 
+\index{UThreadPool@{UThreadPool}!config\_@{config\_}}
+\index{config\_@{config\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{config\_}{config\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} UThread\+Pool\+::config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_aa86c1475b75bd7acaec1b329ad6fc272}\label{class_u_thread_pool_aa86c1475b75bd7acaec1b329ad6fc272}} 
+\index{UThreadPool@{UThreadPool}!cur\_index\_@{cur\_index\_}}
+\index{cur\_index\_@{cur\_index\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{cur\_index\_}{cur\_index\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+::cur\+\_\+index\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_afc1dba5561cc22f02dc2396a802f5660}\label{class_u_thread_pool_afc1dba5561cc22f02dc2396a802f5660}} 
+\index{UThreadPool@{UThreadPool}!is\_init\_@{is\_init\_}}
+\index{is\_init\_@{is\_init\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{is\_init\_}{is\_init\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Pool\+::is\+\_\+init\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a92ef602554db721be625b019d92677aa}\label{class_u_thread_pool_a92ef602554db721be625b019d92677aa}} 
+\index{UThreadPool@{UThreadPool}!monitor\_thread\_@{monitor\_thread\_}}
+\index{monitor\_thread\_@{monitor\_thread\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{monitor\_thread\_}{monitor\_thread\_}}
+{\footnotesize\ttfamily std\+::thread UThread\+Pool\+::monitor\+\_\+thread\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a8921f697a0623a41bc74bbc4678a0247}\label{class_u_thread_pool_a8921f697a0623a41bc74bbc4678a0247}} 
+\index{UThreadPool@{UThreadPool}!primary\_threads\_@{primary\_threads\_}}
+\index{primary\_threads\_@{primary\_threads\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{primary\_threads\_}{primary\_threads\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{_u_thread_primary_8h_a36e0d85dcdfed329eb9cc7153a515ca2}{UThread\+Primary\+Ptr}}$>$ UThread\+Pool\+::primary\+\_\+threads\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_aa0e6281a67229e269d20f44dc3773c59}\label{class_u_thread_pool_aa0e6281a67229e269d20f44dc3773c59}} 
+\index{UThreadPool@{UThreadPool}!priority\_task\_queue\_@{priority\_task\_queue\_}}
+\index{priority\_task\_queue\_@{priority\_task\_queue\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{priority\_task\_queue\_}{priority\_task\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$ UThread\+Pool\+::priority\+\_\+task\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a0bbdfab9983ba638a470dc60a3ef849c}\label{class_u_thread_pool_a0bbdfab9983ba638a470dc60a3ef849c}} 
+\index{UThreadPool@{UThreadPool}!secondary\_threads\_@{secondary\_threads\_}}
+\index{secondary\_threads\_@{secondary\_threads\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{secondary\_threads\_}{secondary\_threads\_}}
+{\footnotesize\ttfamily std\+::list$<$std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}}$>$ $>$ UThread\+Pool\+::secondary\+\_\+threads\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a475d8ee09e699fb2fe860b3ee4421969}\label{class_u_thread_pool_a475d8ee09e699fb2fe860b3ee4421969}} 
+\index{UThreadPool@{UThreadPool}!st\_mutex\_@{st\_mutex\_}}
+\index{st\_mutex\_@{st\_mutex\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{st\_mutex\_}{st\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex UThread\+Pool\+::st\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a61fe88476c09f53e6dc35594760fcb6e}\label{class_u_thread_pool_a61fe88476c09f53e6dc35594760fcb6e}} 
+\index{UThreadPool@{UThreadPool}!task\_queue\_@{task\_queue\_}}
+\index{task\_queue\_@{task\_queue\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{task\_queue\_}{task\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$ UThread\+Pool\+::task\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_pool_a549267144fcee53e2d6a2a77663af4c2}\label{class_u_thread_pool_a549267144fcee53e2d6a2a77663af4c2}} 
+\index{UThreadPool@{UThreadPool}!thread\_record\_map\_@{thread\_record\_map\_}}
+\index{thread\_record\_map\_@{thread\_record\_map\_}!UThreadPool@{UThreadPool}}
+\doxysubsubsection{\texorpdfstring{thread\_record\_map\_}{thread\_record\_map\_}}
+{\footnotesize\ttfamily std\+::map$<$\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}, int$>$ UThread\+Pool\+::thread\+\_\+record\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\mbox{\hyperlink{_u_thread_pool_8h}{UThread\+Pool.\+h}}\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\mbox{\hyperlink{_u_thread_pool_8cpp}{UThread\+Pool.\+cpp}}\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\mbox{\hyperlink{_u_thread_pool_8inl}{UThread\+Pool.\+inl}}\end{DoxyCompactItemize}

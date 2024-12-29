@@ -1,0 +1,189 @@
+\hypertarget{class_g_schedule}{}\doxysection{GSchedule Class Reference}
+\label{class_g_schedule}\index{GSchedule@{GSchedule}}
+
+
+{\ttfamily \#include $<$GSchedule.\+h$>$}
+
+
+
+Inheritance diagram for GSchedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{class_g_schedule__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GSchedule\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_schedule__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_schedule_a899f35c3bcbf3b0a334944d0f49402d3}{make\+Type}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} tp)
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_schedule_ab672807254d0b26901df2c1fe37b374f}{get\+Thread\+Pool}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_schedule_a4223060858214d3df79395fec4dc42a4}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_schedule_a906672e51e9d60c40a0ad72d2ec2152a}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_schedule_ac267b986abc6bfbaad066b072ce1112c}{destroy}} () final
+\item 
+\mbox{\hyperlink{class_g_schedule_aec643dac8d7e9b8939820faf33b212c6}{GSchedule}} ()=default
+\item 
+\mbox{\hyperlink{class_g_schedule_ab6d46dd359ca355b400a715a40be1947}{$\sim$\+GSchedule}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_schedule_ad3636f3660e9cb22bbda405c935c8c29}{unique\+\_\+tp\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_schedule_a7f48ac62462ad7a91b27ac60c5873144}{shared\+\_\+tp\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \mbox{\hyperlink{class_g_schedule_a153ac95853c3f8894f45de736bd695b8}{config\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_schedule_define_8h_af3d9a050d77324f4dcc9ee7b43eb3c5f}{internal\+::\+GSchedule\+Type}} \mbox{\hyperlink{class_g_schedule_a0bc7b7a8cc4128d7492268bd3df93a03}{type\+\_\+}} = internal\+::\+GSchedule\+Type\+::\+UNIQUE
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_schedule_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_schedule_aec643dac8d7e9b8939820faf33b212c6}\label{class_g_schedule_aec643dac8d7e9b8939820faf33b212c6}} 
+\index{GSchedule@{GSchedule}!GSchedule@{GSchedule}}
+\index{GSchedule@{GSchedule}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{GSchedule()}{GSchedule()}}
+{\footnotesize\ttfamily GSchedule\+::\+GSchedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_g_schedule_ab6d46dd359ca355b400a715a40be1947}\label{class_g_schedule_ab6d46dd359ca355b400a715a40be1947}} 
+\index{GSchedule@{GSchedule}!````~GSchedule@{$\sim$GSchedule}}
+\index{````~GSchedule@{$\sim$GSchedule}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{$\sim$GSchedule()}{~GSchedule()}}
+{\footnotesize\ttfamily GSchedule\+::$\sim$\+GSchedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_schedule_ab6d46dd359ca355b400a715a40be1947_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_schedule_ac267b986abc6bfbaad066b072ce1112c}\label{class_g_schedule_ac267b986abc6bfbaad066b072ce1112c}} 
+\index{GSchedule@{GSchedule}!destroy@{destroy}}
+\index{destroy@{destroy}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GSchedule\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_schedule_ab672807254d0b26901df2c1fe37b374f}\label{class_g_schedule_ab672807254d0b26901df2c1fe37b374f}} 
+\index{GSchedule@{GSchedule}!getThreadPool@{getThreadPool}}
+\index{getThreadPool@{getThreadPool}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{getThreadPool()}{getThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GSchedule\+::get\+Thread\+Pool (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+获取线程池信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+返回一个可用的 pool utp和stp，应该是有且仅有一个为非空的\mbox{\Hypertarget{class_g_schedule_a4223060858214d3df79395fec4dc42a4}\label{class_g_schedule_a4223060858214d3df79395fec4dc42a4}} 
+\index{GSchedule@{GSchedule}!init@{init}}
+\index{init@{init}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GSchedule\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 如果是 unique 的数据，则在这里初始化一下 如果是 shared 的数据，则不做任何操作
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_g_schedule_a4223060858214d3df79395fec4dc42a4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_schedule_a899f35c3bcbf3b0a334944d0f49402d3}\label{class_g_schedule_a899f35c3bcbf3b0a334944d0f49402d3}} 
+\index{GSchedule@{GSchedule}!makeType@{makeType}}
+\index{makeType@{makeType}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{makeType()}{makeType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GSchedule\+::make\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{tp }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+设置调度资源模式 
+\begin{DoxyParams}{Parameters}
+{\em tp} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_schedule_a906672e51e9d60c40a0ad72d2ec2152a}\label{class_g_schedule_a906672e51e9d60c40a0ad72d2ec2152a}} 
+\index{GSchedule@{GSchedule}!run@{run}}
+\index{run@{run}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GSchedule\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_schedule_a4e007dc772c018d10373bf18b528f96d}\label{class_g_schedule_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GSchedule@{GSchedule}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_schedule_a153ac95853c3f8894f45de736bd695b8}\label{class_g_schedule_a153ac95853c3f8894f45de736bd695b8}} 
+\index{GSchedule@{GSchedule}!config\_@{config\_}}
+\index{config\_@{config\_}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{config\_}{config\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} GSchedule\+::config\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_schedule_a7f48ac62462ad7a91b27ac60c5873144}\label{class_g_schedule_a7f48ac62462ad7a91b27ac60c5873144}} 
+\index{GSchedule@{GSchedule}!shared\_tp\_@{shared\_tp\_}}
+\index{shared\_tp\_@{shared\_tp\_}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{shared\_tp\_}{shared\_tp\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GSchedule\+::shared\+\_\+tp\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_schedule_a0bc7b7a8cc4128d7492268bd3df93a03}\label{class_g_schedule_a0bc7b7a8cc4128d7492268bd3df93a03}} 
+\index{GSchedule@{GSchedule}!type\_@{type\_}}
+\index{type\_@{type\_}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_schedule_define_8h_af3d9a050d77324f4dcc9ee7b43eb3c5f}{internal\+::\+GSchedule\+Type}} GSchedule\+::type\+\_\+ = internal\+::\+GSchedule\+Type\+::\+UNIQUE\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_schedule_ad3636f3660e9cb22bbda405c935c8c29}\label{class_g_schedule_ad3636f3660e9cb22bbda405c935c8c29}} 
+\index{GSchedule@{GSchedule}!unique\_tp\_@{unique\_tp\_}}
+\index{unique\_tp\_@{unique\_tp\_}!GSchedule@{GSchedule}}
+\doxysubsubsection{\texorpdfstring{unique\_tp\_}{unique\_tp\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GSchedule\+::unique\+\_\+tp\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\+\_\+\+GSchedule/\mbox{\hyperlink{_g_schedule_8h}{GSchedule.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\+\_\+\+GSchedule/\mbox{\hyperlink{_g_schedule_8cpp}{GSchedule.\+cpp}}\end{DoxyCompactItemize}

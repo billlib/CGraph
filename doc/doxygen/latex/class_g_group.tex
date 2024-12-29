@@ -1,0 +1,308 @@
+\hypertarget{class_g_group}{}\doxysection{GGroup Class Reference}
+\label{class_g_group}\index{GGroup@{GGroup}}
+
+
+所有节点组合的基类，所有节点组合功能，均继承自此类  
+
+
+
+
+{\ttfamily \#include $<$GGroup.\+h$>$}
+
+
+
+Inheritance diagram for GGroup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_group__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GGroup\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_group__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_group_a9f18367c67402637fadb53b4c0cc5ab2}{add\+Element}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_group_a468fa4cc1418a9636b787439174d3f04}{is\+Serializable}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_group_a7532c6f613d6dfcea495f652311d957f}{GGroup}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_group_a6d9e94508e489a337f5661c1d581089c}{add\+Managers}} (\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} param\+Manager, \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} event\+Manager, \mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}} stage\+Manager) override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_group_a9ad2ee258dddebf191f37f0b79896559}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_group_a448d258b7e3c0dbbadfbcd1c206f3caa}{destroy}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_group_a502115101364db1f9aa954e6c7d2ff5a}{dump\+Group\+Label\+Begin}} (std\+::ostream \&oss)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_group_a1a1506c5f081a467e0df339e1feac82c}{dump\+Group\+Label\+End}} (std\+::ostream \&oss)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_group_a61561121b34d561dbab7b2525bdd636f}{is\+Separate}} (\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} a, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} b) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \mbox{\hyperlink{class_g_group_a750f862ca122a0f469cf946c5770b9da}{group\+\_\+elements\+\_\+arr\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_group_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_group_a8e6ba751c2d1abe312f8adeb58970d44}{GCluster}}
+\item 
+class \mbox{\hyperlink{class_g_group_a2ddf6b2a302039a39825b3613cd3e48c}{GRegion}}
+\item 
+class \mbox{\hyperlink{class_g_group_aca56fc53710b1f141174f24dc50e84ab}{GCondition}}
+\item 
+class \mbox{\hyperlink{class_g_group_a778dc925482add12356db0a08d591b18}{GMutable}}
+\item 
+{\footnotesize template$<$GMulti\+Condition\+Type $>$ }\\class \mbox{\hyperlink{class_g_group_a16dc7c734f13ff32bdc0022b1b9cfbdf}{GMulti\+Condition}}
+\item 
+{\footnotesize template$<$CInt $>$ }\\class \mbox{\hyperlink{class_g_group_a2b63c9503b760080d8480c98024324bb}{GSome}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+所有节点组合的基类，所有节点组合功能，均继承自此类 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_group_a7532c6f613d6dfcea495f652311d957f}\label{class_g_group_a7532c6f613d6dfcea495f652311d957f}} 
+\index{GGroup@{GGroup}!GGroup@{GGroup}}
+\index{GGroup@{GGroup}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GGroup()}{GGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GGroup\+::\+GGroup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_group_a9f18367c67402637fadb53b4c0cc5ab2}\label{class_g_group_a9f18367c67402637fadb53b4c0cc5ab2}} 
+\index{GGroup@{GGroup}!addElement@{addElement}}
+\index{addElement@{addElement}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{addElement()}{addElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GGroup\+::add\+Element (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+向group中，添加element信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_some_ab38afa766186f02f0482bb3574cb6a64}{GSome$<$ Trigger\+Num $>$}}, and \mbox{\hyperlink{class_g_region_a68648eec9b95204b76bf4502bbdad3c7}{GRegion}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_group_a9f18367c67402637fadb53b4c0cc5ab2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_group_a6d9e94508e489a337f5661c1d581089c}\label{class_g_group_a6d9e94508e489a337f5661c1d581089c}} 
+\index{GGroup@{GGroup}!addManagers@{addManagers}}
+\index{addManagers@{addManagers}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{addManagers()}{addManagers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GGroup\+::add\+Managers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}}}]{param\+Manager,  }\item[{\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}}}]{event\+Manager,  }\item[{\mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}}}]{stage\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+设置manager信息 
+\begin{DoxyParams}{Parameters}
+{\em param\+Manager} & \\
+\hline
+{\em event\+Manager} & \\
+\hline
+{\em stage\+Manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd}{GElement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_region_af68e8ce9800c8206a47402aba23806c7}{GRegion}}.
+
+\mbox{\Hypertarget{class_g_group_a448d258b7e3c0dbbadfbcd1c206f3caa}\label{class_g_group_a448d258b7e3c0dbbadfbcd1c206f3caa}} 
+\index{GGroup@{GGroup}!destroy@{destroy}}
+\index{destroy@{destroy}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GGroup\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_region_a533c3fa06477672267d37d75081b079c}{GRegion}}, and \mbox{\hyperlink{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22}{GMutable}}.
+
+\mbox{\Hypertarget{class_g_group_a502115101364db1f9aa954e6c7d2ff5a}\label{class_g_group_a502115101364db1f9aa954e6c7d2ff5a}} 
+\index{GGroup@{GGroup}!dumpGroupLabelBegin@{dumpGroupLabelBegin}}
+\index{dumpGroupLabelBegin@{dumpGroupLabelBegin}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{dumpGroupLabelBegin()}{dumpGroupLabelBegin()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GGroup\+::dump\+Group\+Label\+Begin (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+生成graphviz中 group对应的label 的开头信息 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_group_a502115101364db1f9aa954e6c7d2ff5a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_group_a1a1506c5f081a467e0df339e1feac82c}\label{class_g_group_a1a1506c5f081a467e0df339e1feac82c}} 
+\index{GGroup@{GGroup}!dumpGroupLabelEnd@{dumpGroupLabelEnd}}
+\index{dumpGroupLabelEnd@{dumpGroupLabelEnd}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{dumpGroupLabelEnd()}{dumpGroupLabelEnd()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GGroup\+::dump\+Group\+Label\+End (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+生成graphviz中的 group对应的label 的结尾信息 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_group_a9ad2ee258dddebf191f37f0b79896559}\label{class_g_group_a9ad2ee258dddebf191f37f0b79896559}} 
+\index{GGroup@{GGroup}!init@{init}}
+\index{init@{init}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GGroup\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_region_a6aa354202effbde2d368a59516c78e7d}{GRegion}}, and \mbox{\hyperlink{class_g_mutable_a1744634dc9a231d3f788645f420557f2}{GMutable}}.
+
+\mbox{\Hypertarget{class_g_group_a61561121b34d561dbab7b2525bdd636f}\label{class_g_group_a61561121b34d561dbab7b2525bdd636f}} 
+\index{GGroup@{GGroup}!isSeparate@{isSeparate}}
+\index{isSeparate@{isSeparate}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{isSeparate()}{isSeparate()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GGroup\+::is\+Separate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{a,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断两个element，是否相互独立 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果返回 true，则表示一定有前后依赖关系，不可能并发执行。否则表示不确定，原因是并发情况无法完全确定 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_condition_a3c86d3be92b5e471693ba0eca276b91b}{GCondition}}, \mbox{\hyperlink{class_g_region_a1fbd91225ca1b093f746e248c69e7af5}{GRegion}}, \mbox{\hyperlink{class_g_multi_condition_a5664e0bf9e49f17b61e27afcdbbc44a6}{GMulti\+Condition$<$ type $>$}}, and \mbox{\hyperlink{class_g_cluster_a1aeb01ab7e7c90e6c9a6895a4bf6b5e3}{GCluster}}.
+
+\mbox{\Hypertarget{class_g_group_a468fa4cc1418a9636b787439174d3f04}\label{class_g_group_a468fa4cc1418a9636b787439174d3f04}} 
+\index{GGroup@{GGroup}!isSerializable@{isSerializable}}
+\index{isSerializable@{isSerializable}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{isSerializable()}{isSerializable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GGroup\+::is\+Serializable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+判断当前元素，是否可以线性执行。默认返回true \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+针对group的情况，应该是所有在其中的element 都是可以串行的，才认定为可串行 但是在 region和 multi\+Condition中，有针对性的判断
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a0518bf2f7c7388f0835e01cd122923ea}{GElement}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{class_g_mutable_a5735ac1dc33e6fe232864136f99f936d}{GMutable}}, \mbox{\hyperlink{class_g_some_ac9bfdec6d03da3b841bab00a91876011}{GSome$<$ Trigger\+Num $>$}}, and \mbox{\hyperlink{class_g_region_a22f3f34d0351c36f86146a7ddc7bbc53}{GRegion}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_group_a8e6ba751c2d1abe312f8adeb58970d44}\label{class_g_group_a8e6ba751c2d1abe312f8adeb58970d44}} 
+\index{GGroup@{GGroup}!GCluster@{GCluster}}
+\index{GCluster@{GCluster}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GCluster}{GCluster}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_cluster}{GCluster}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_aca56fc53710b1f141174f24dc50e84ab}\label{class_g_group_aca56fc53710b1f141174f24dc50e84ab}} 
+\index{GGroup@{GGroup}!GCondition@{GCondition}}
+\index{GCondition@{GCondition}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GCondition}{GCondition}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_condition}{GCondition}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_a16dc7c734f13ff32bdc0022b1b9cfbdf}\label{class_g_group_a16dc7c734f13ff32bdc0022b1b9cfbdf}} 
+\index{GGroup@{GGroup}!GMultiCondition@{GMultiCondition}}
+\index{GMultiCondition@{GMultiCondition}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GMultiCondition}{GMultiCondition}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type $>$ \\
+friend class \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_a778dc925482add12356db0a08d591b18}\label{class_g_group_a778dc925482add12356db0a08d591b18}} 
+\index{GGroup@{GGroup}!GMutable@{GMutable}}
+\index{GMutable@{GMutable}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GMutable}{GMutable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_mutable}{GMutable}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_a4e007dc772c018d10373bf18b528f96d}\label{class_g_group_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GGroup@{GGroup}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_a2ddf6b2a302039a39825b3613cd3e48c}\label{class_g_group_a2ddf6b2a302039a39825b3613cd3e48c}} 
+\index{GGroup@{GGroup}!GRegion@{GRegion}}
+\index{GRegion@{GRegion}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GRegion}{GRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_region}{GRegion}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_group_a2b63c9503b760080d8480c98024324bb}\label{class_g_group_a2b63c9503b760080d8480c98024324bb}} 
+\index{GGroup@{GGroup}!GSome@{GSome}}
+\index{GSome@{GSome}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{GSome}{GSome}}
+{\footnotesize\ttfamily template$<$CInt $>$ \\
+friend class \mbox{\hyperlink{class_g_some}{GSome}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_group_a750f862ca122a0f469cf946c5770b9da}\label{class_g_group_a750f862ca122a0f469cf946c5770b9da}} 
+\index{GGroup@{GGroup}!group\_elements\_arr\_@{group\_elements\_arr\_}}
+\index{group\_elements\_arr\_@{group\_elements\_arr\_}!GGroup@{GGroup}}
+\doxysubsubsection{\texorpdfstring{group\_elements\_arr\_}{group\_elements\_arr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} GGroup\+::group\+\_\+elements\+\_\+arr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\mbox{\hyperlink{_g_group_8h}{GGroup.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\mbox{\hyperlink{_g_group_8cpp}{GGroup.\+cpp}}\end{DoxyCompactItemize}

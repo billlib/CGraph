@@ -15,6 +15,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/interval_
+ * param_manager_/event_manager_用于引入GParamManager和GEventManager
+ * param_用于引入GPassedParam，对于GDaemonObject来说是GDaemonParam
+ * interval_则是GDaemonObject独有的，维护定时器的执行周期
+ */
 class GDaemonObject : public GraphObject,
                       public CDescInfo {
 protected:

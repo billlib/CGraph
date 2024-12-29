@@ -16,6 +16,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 基于std::chrono::steady_clock::time_point封装的计时器；
+ *        构造的同时记录时间戳，析构的同时打印从构造到析构的间隔span
+ * 
+ */
 class UTimeCounter : public UtilsObject {
 public:
     explicit UTimeCounter() {

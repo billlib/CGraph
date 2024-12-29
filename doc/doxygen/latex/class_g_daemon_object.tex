@@ -1,0 +1,213 @@
+\hypertarget{class_g_daemon_object}{}\doxysection{GDaemon\+Object Class Reference}
+\label{class_g_daemon_object}\index{GDaemonObject@{GDaemonObject}}
+
+
+在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/interval\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GDaemon\+Object来说是\+GDaemon\+Param interval\+\_\+则是\+GDaemon\+Object独有的，维护定时器的执行周期  
+
+
+
+
+{\ttfamily \#include $<$GDaemon\+Object.\+h$>$}
+
+
+
+Inheritance diagram for GDaemon\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GDaemon\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename DParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, DParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_daemon_object_8h_a12561372de3d78d4be11e72a289836ce}{GDaemon\+Object\+Ptr}} \mbox{\hyperlink{class_g_daemon_object_a695c84f5ce4952bee3f6950a4c69ce49}{set\+DParam}} (DParam $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_daemon_object_a5f0b517b6714c4cb974d5df6c8be1a79}{GDaemon\+Object}} ()
+\item 
+\mbox{\hyperlink{class_g_daemon_object_a1f19483a86f79633ba5e2abe0824c8ed}{$\sim$\+GDaemon\+Object}} () override
+\item 
+virtual \mbox{\hyperlink{class_g_daemon_object}{GDaemon\+Object}} $\ast$ \mbox{\hyperlink{class_g_daemon_object_a27ceaf624fb0ebce1200295312a1656a}{set\+Interval}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} interval)
+\item 
+{\footnotesize template$<$typename DParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, DParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_daemon_object}{GDaemon\+Object}} $\ast$ \mbox{\hyperlink{class_g_daemon_object_a0340f41f6a09f11a1391f1967264f0fe}{set\+DParam}} (DParam $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_object_a8e754bb7885e3c80f82433c5842aacca}{run}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} \mbox{\hyperlink{class_g_daemon_object_ac2b51acb68c2aba40f33c094acdf3af6}{param\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} \mbox{\hyperlink{class_g_daemon_object_a53d437c9ac01354020f27c59a1af246d}{event\+\_\+manager\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}} \mbox{\hyperlink{class_g_daemon_object_a0e09516c24e565ec3c92596984bc0bb5}{param\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_g_daemon_object_a94ff2243fd57fd598add14f4488a8b79}{interval\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_daemon_object_af9365973ac9b3d6e9826c04567faa67a}{GDaemon}}
+\item 
+class \mbox{\hyperlink{class_g_daemon_object_a78bf95457b3ec50fc0f8b6653e232d44}{GDaemon\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_daemon_object_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/interval\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GDaemon\+Object来说是\+GDaemon\+Param interval\+\_\+则是\+GDaemon\+Object独有的，维护定时器的执行周期 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_daemon_object_a5f0b517b6714c4cb974d5df6c8be1a79}\label{class_g_daemon_object_a5f0b517b6714c4cb974d5df6c8be1a79}} 
+\index{GDaemonObject@{GDaemonObject}!GDaemonObject@{GDaemonObject}}
+\index{GDaemonObject@{GDaemonObject}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{GDaemonObject()}{GDaemonObject()}}
+{\footnotesize\ttfamily GDaemon\+Object\+::\+GDaemon\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_object_a5f0b517b6714c4cb974d5df6c8be1a79_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_daemon_object_a1f19483a86f79633ba5e2abe0824c8ed}\label{class_g_daemon_object_a1f19483a86f79633ba5e2abe0824c8ed}} 
+\index{GDaemonObject@{GDaemonObject}!````~GDaemonObject@{$\sim$GDaemonObject}}
+\index{````~GDaemonObject@{$\sim$GDaemonObject}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GDaemonObject()}{~GDaemonObject()}}
+{\footnotesize\ttfamily GDaemon\+Object\+::$\sim$\+GDaemon\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_object_a8e754bb7885e3c80f82433c5842aacca}\label{class_g_daemon_object_a8e754bb7885e3c80f82433c5842aacca}} 
+\index{GDaemonObject@{GDaemonObject}!run@{run}}
+\index{run@{run}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Object\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+所有\+Daemon均不执行run方法 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+\mbox{\Hypertarget{class_g_daemon_object_a0340f41f6a09f11a1391f1967264f0fe}\label{class_g_daemon_object_a0340f41f6a09f11a1391f1967264f0fe}} 
+\index{GDaemonObject@{GDaemonObject}!setDParam@{setDParam}}
+\index{setDParam@{setDParam}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{setDParam()}{setDParam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename DParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, DParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_daemon_object}{GDaemon\+Object}}$\ast$ GDaemon\+Object\+::set\+DParam (\begin{DoxyParamCaption}\item[{DParam $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置daemon中参数，类型为\+GDaemon\+Param (即：\+GPassed\+Param) 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_daemon_object_a695c84f5ce4952bee3f6950a4c69ce49}\label{class_g_daemon_object_a695c84f5ce4952bee3f6950a4c69ce49}} 
+\index{GDaemonObject@{GDaemonObject}!setDParam@{setDParam}}
+\index{setDParam@{setDParam}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{setDParam()}{setDParam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename DParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GDaemon\+Param, DParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_daemon_object_8h_a12561372de3d78d4be11e72a289836ce}{GDaemon\+Object\+Ptr}} GDaemon\+Object\+::set\+DParam (\begin{DoxyParamCaption}\item[{DParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_object_a695c84f5ce4952bee3f6950a4c69ce49_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_daemon_object_a27ceaf624fb0ebce1200295312a1656a}\label{class_g_daemon_object_a27ceaf624fb0ebce1200295312a1656a}} 
+\index{GDaemonObject@{GDaemonObject}!setInterval@{setInterval}}
+\index{setInterval@{setInterval}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{setInterval()}{setInterval()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{class_g_daemon_object}{GDaemon\+Object}}$\ast$ GDaemon\+Object\+::set\+Interval (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{interval }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+设置休眠时间信息，单位ms \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_object_af9365973ac9b3d6e9826c04567faa67a}\label{class_g_daemon_object_af9365973ac9b3d6e9826c04567faa67a}} 
+\index{GDaemonObject@{GDaemonObject}!GDaemon@{GDaemon}}
+\index{GDaemon@{GDaemon}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{GDaemon}{GDaemon}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_daemon}{GDaemon}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_daemon_object_a78bf95457b3ec50fc0f8b6653e232d44}\label{class_g_daemon_object_a78bf95457b3ec50fc0f8b6653e232d44}} 
+\index{GDaemonObject@{GDaemonObject}!GDaemonManager@{GDaemonManager}}
+\index{GDaemonManager@{GDaemonManager}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{GDaemonManager}{GDaemonManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_daemon_manager}{GDaemon\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_daemon_object_a4e007dc772c018d10373bf18b528f96d}\label{class_g_daemon_object_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GDaemonObject@{GDaemonObject}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_daemon_object_a53d437c9ac01354020f27c59a1af246d}\label{class_g_daemon_object_a53d437c9ac01354020f27c59a1af246d}} 
+\index{GDaemonObject@{GDaemonObject}!event\_manager\_@{event\_manager\_}}
+\index{event\_manager\_@{event\_manager\_}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{event\_manager\_}{event\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} GDaemon\+Object\+::event\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_daemon_object_a94ff2243fd57fd598add14f4488a8b79}\label{class_g_daemon_object_a94ff2243fd57fd598add14f4488a8b79}} 
+\index{GDaemonObject@{GDaemonObject}!interval\_@{interval\_}}
+\index{interval\_@{interval\_}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{interval\_}{interval\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} GDaemon\+Object\+::interval\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_daemon_object_a0e09516c24e565ec3c92596984bc0bb5}\label{class_g_daemon_object_a0e09516c24e565ec3c92596984bc0bb5}} 
+\index{GDaemonObject@{GDaemonObject}!param\_@{param\_}}
+\index{param\_@{param\_}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{param\_}{param\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_passed_param_8h_adaed4cad72de366dfd9b93f09126361f}{GDaemon\+Param\+Ptr}} GDaemon\+Object\+::param\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_daemon_object_ac2b51acb68c2aba40f33c094acdf3af6}\label{class_g_daemon_object_ac2b51acb68c2aba40f33c094acdf3af6}} 
+\index{GDaemonObject@{GDaemonObject}!param\_manager\_@{param\_manager\_}}
+\index{param\_manager\_@{param\_manager\_}!GDaemonObject@{GDaemonObject}}
+\doxysubsubsection{\texorpdfstring{param\_manager\_}{param\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} GDaemon\+Object\+::param\+\_\+manager\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_object_8h}{GDaemon\+Object.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_object_8inl}{GDaemon\+Object.\+inl}}\end{DoxyCompactItemize}

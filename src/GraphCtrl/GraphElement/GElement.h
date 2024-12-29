@@ -24,6 +24,20 @@ CGRAPH_NAMESPACE_BEGIN
 enum class GMultiConditionType;
 struct GPerfInfo;
 
+/**
+ * @brief CGraph所有广义"结点"的基类，可派生出GNode/GGroup/GAdapter类
+ * public:
+ * 提供addGAspect加入切面/addDependGElement加入前序依赖/removeDepend删除前序依赖的能力
+ * 提供setName更新名称/setLoop设置循环次数/setLevel设置优先级/setVisible隐藏当前元素/setBindingIndex设置亲和线程等能力
+ * 提供setTimeout设置元素执行的超时时间/setMacro设置为微任务的能力
+ * 提供addEParam添加GElement内部参数(GElementParam，实际上就是GPassedParam)
+ * 还额外提供运算符重载：--(setVisible)、>(设置后继依赖)、&(设置后继依赖)、*(setLoop)
+ * 
+ * protected:
+ * 支持设置GAspectManager/GParamManager/GEventManager(后两者通过宏来实现，doxygen分析不出来)
+ * 
+ * 
+ */
 class GElement : public GElementObject,
                  public CDescInfo {
 public:

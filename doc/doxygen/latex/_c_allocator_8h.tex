@@ -1,0 +1,51 @@
+\hypertarget{_c_allocator_8h}{}\doxysection{src/\+CBasic/\+CAllocator.h File Reference}
+\label{_c_allocator_8h}\index{src/CBasic/CAllocator.h@{src/CBasic/CAllocator.h}}
+{\ttfamily \#include $<$new$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}CObject.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CStruct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CStd\+Ex.\+h\char`\"{}}\newline
+Include dependency graph for CAllocator.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_allocator_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_allocator_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_allocator}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_c_allocator_8h_a5730039cfca2e8bf3dbb8c13dc722e22}{CGRAPH\+\_\+\+SAFE\+\_\+\+MALLOC\+\_\+\+COBJECT}}(Type)~    \mbox{\hyperlink{class_c_allocator_a0dc9aab7eb021bd5432ea101842acafc}{CAllocator\+::safe\+Malloc\+CObject}}$<$Type$>$();                       \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_allocator_8h_a111a8fdaa09915d5698c2e226fd06463}{CGRAPH\+\_\+\+MAKE\+\_\+\+UNIQUE\+\_\+\+COBJECT}}(Type)~    \mbox{\hyperlink{class_c_allocator_a75322cd522856c6941c6ff62adc93ead}{CAllocator\+::make\+Unique\+CObject}}$<$Type$>$();                       \textbackslash{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_c_allocator_8h_a111a8fdaa09915d5698c2e226fd06463}\label{_c_allocator_8h_a111a8fdaa09915d5698c2e226fd06463}} 
+\index{CAllocator.h@{CAllocator.h}!CGRAPH\_MAKE\_UNIQUE\_COBJECT@{CGRAPH\_MAKE\_UNIQUE\_COBJECT}}
+\index{CGRAPH\_MAKE\_UNIQUE\_COBJECT@{CGRAPH\_MAKE\_UNIQUE\_COBJECT}!CAllocator.h@{CAllocator.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAKE\_UNIQUE\_COBJECT}{CGRAPH\_MAKE\_UNIQUE\_COBJECT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+MAKE\+\_\+\+UNIQUE\+\_\+\+COBJECT(\begin{DoxyParamCaption}\item[{}]{Type }\end{DoxyParamCaption})~    \mbox{\hyperlink{class_c_allocator_a75322cd522856c6941c6ff62adc93ead}{CAllocator\+::make\+Unique\+CObject}}$<$Type$>$();                       \textbackslash{}}
+
+\mbox{\Hypertarget{_c_allocator_8h_a5730039cfca2e8bf3dbb8c13dc722e22}\label{_c_allocator_8h_a5730039cfca2e8bf3dbb8c13dc722e22}} 
+\index{CAllocator.h@{CAllocator.h}!CGRAPH\_SAFE\_MALLOC\_COBJECT@{CGRAPH\_SAFE\_MALLOC\_COBJECT}}
+\index{CGRAPH\_SAFE\_MALLOC\_COBJECT@{CGRAPH\_SAFE\_MALLOC\_COBJECT}!CAllocator.h@{CAllocator.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SAFE\_MALLOC\_COBJECT}{CGRAPH\_SAFE\_MALLOC\_COBJECT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SAFE\+\_\+\+MALLOC\+\_\+\+COBJECT(\begin{DoxyParamCaption}\item[{}]{Type }\end{DoxyParamCaption})~    \mbox{\hyperlink{class_c_allocator_a0dc9aab7eb021bd5432ea101842acafc}{CAllocator\+::safe\+Malloc\+CObject}}$<$Type$>$();                       \textbackslash{}}
+

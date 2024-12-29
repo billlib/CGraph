@@ -15,6 +15,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 计算几何距离(欧氏距离)
+ * 
+ * @tparam TSrc 
+ * @tparam TRes 
+ * @tparam needSqrt 
+ */
 template<typename TSrc, typename TRes = TSrc, const CBool needSqrt = true>    // 默认给出的值，是开平方后的值
 class UEuclideanDistance : public UDistance<TSrc, TRes> {
 public:

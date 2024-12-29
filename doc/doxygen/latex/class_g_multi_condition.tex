@@ -1,0 +1,183 @@
+\hypertarget{class_g_multi_condition}{}\doxysection{GMulti\+Condition$<$ type $>$ Class Template Reference}
+\label{class_g_multi_condition}\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+
+
+{\ttfamily \#include $<$GMulti\+Condition.\+h$>$}
+
+
+
+Inheritance diagram for GMulti\+Condition$<$ type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_multi_condition__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMulti\+Condition$<$ type $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_multi_condition__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_multi_condition_a5568ebea2f9190e80a316046410cf94e}{GMulti\+Condition}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition_ac25309690cfd1e3ebca75cd316dfcf08}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition_a11b5a1c5288f2f4e78232caf52998ce3}{serial\+Run}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition_adbd00c525cc23bd8377a98e4d78b258d}{parallel\+Run}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_multi_condition_aaa531b8e57695e88ae6d7ccc9097a510}{choose}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_multi_condition_a53dd39ded0442152cef1d770a3eb9554}{is\+Serializable}} () const override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_multi_condition_a5664e0bf9e49f17b61e27afcdbbc44a6}{is\+Separate}} (\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} a, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} b) const final
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_multi_condition_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_multi_condition_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_multi_condition_a5568ebea2f9190e80a316046410cf94e}\label{class_g_multi_condition_a5568ebea2f9190e80a316046410cf94e}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!GMultiCondition@{GMultiCondition}}
+\index{GMultiCondition@{GMultiCondition}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{GMultiCondition()}{GMultiCondition()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::\mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_multi_condition_a5568ebea2f9190e80a316046410cf94e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_multi_condition_aaa531b8e57695e88ae6d7ccc9097a510}\label{class_g_multi_condition_aaa531b8e57695e88ae6d7ccc9097a510}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!choose@{choose}}
+\index{choose@{choose}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{choose()}{choose()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::choose (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+计算需要返回第n个信息 执行最后一个，返回-\/1即可。 超出-\/1和size之间的范围，则不执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_g_condition_acbe47305d2090e6f8136eadd29fedf86}{GCondition}}.
+
+\mbox{\Hypertarget{class_g_multi_condition_a5664e0bf9e49f17b61e27afcdbbc44a6}\label{class_g_multi_condition_a5664e0bf9e49f17b61e27afcdbbc44a6}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!isSeparate@{isSeparate}}
+\index{isSeparate@{isSeparate}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{isSeparate()}{isSeparate()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::is\+Separate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{a,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{b }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断两个element，是否相互独立 
+\begin{DoxyParams}{Parameters}
+{\em a} & \\
+\hline
+{\em b} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果返回 true，则表示一定有前后依赖关系，不可能并发执行。否则表示不确定，原因是并发情况无法完全确定 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_condition_a3c86d3be92b5e471693ba0eca276b91b}{GCondition}}.
+
+\mbox{\Hypertarget{class_g_multi_condition_a53dd39ded0442152cef1d770a3eb9554}\label{class_g_multi_condition_a53dd39ded0442152cef1d770a3eb9554}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!isSerializable@{isSerializable}}
+\index{isSerializable@{isSerializable}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{isSerializable()}{isSerializable()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::is\+Serializable\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前元素，是否可以线性执行。默认返回true \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果是\+PARALLEL模式的话，并且其中的元素个数大于1，则一定不可以串行执行 PARALLEL模式中，仅有一个元素的情况，和 SERIAL模式的判断方式一样， 均为判断其中所有的element是否可以并行 故放在下面的条件中判断了
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a0518bf2f7c7388f0835e01cd122923ea}{GElement}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_multi_condition_a53dd39ded0442152cef1d770a3eb9554_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_multi_condition_adbd00c525cc23bd8377a98e4d78b258d}\label{class_g_multi_condition_adbd00c525cc23bd8377a98e4d78b258d}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!parallelRun@{parallelRun}}
+\index{parallelRun@{parallelRun}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{parallelRun()}{parallelRun()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::parallel\+Run\hspace{0.3cm}{\ttfamily [private]}}
+
+并行执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果有异常值的化，也等待所有内容计算完成后，统一返回 暂时没有处理超时的情况。预计今后会统一处理\mbox{\Hypertarget{class_g_multi_condition_ac25309690cfd1e3ebca75cd316dfcf08}\label{class_g_multi_condition_ac25309690cfd1e3ebca75cd316dfcf08}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!run@{run}}
+\index{run@{run}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Reimplemented from \mbox{\hyperlink{class_g_condition_a082335bbb4780045538d7bce5da34c73}{GCondition}}.
+
+\mbox{\Hypertarget{class_g_multi_condition_a11b5a1c5288f2f4e78232caf52998ce3}\label{class_g_multi_condition_a11b5a1c5288f2f4e78232caf52998ce3}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!serialRun@{serialRun}}
+\index{serialRun@{serialRun}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{serialRun()}{serialRun()}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}$<$ type $>$\+::serial\+Run\hspace{0.3cm}{\ttfamily [private]}}
+
+串行执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_multi_condition_a17a0077689f477d78437264108a1577c}\label{class_g_multi_condition_a17a0077689f477d78437264108a1577c}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_multi_condition_a4e007dc772c018d10373bf18b528f96d}\label{class_g_multi_condition_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GMultiCondition$<$ type $>$@{GMultiCondition$<$ type $>$}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type type$>$ \\
+friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GCondition/\mbox{\hyperlink{_g_multi_condition_8h}{GMulti\+Condition.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GCondition/\mbox{\hyperlink{_g_multi_condition_8inl}{GMulti\+Condition.\+inl}}\end{DoxyCompactItemize}

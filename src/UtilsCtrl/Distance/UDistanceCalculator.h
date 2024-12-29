@@ -16,6 +16,15 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 对UDistance及其派生类UDist的进一步封装
+ *        UDist本身也是模板参数，通过另一个模板参数needCheck指定在calc之前是否要check
+ * 
+ * @tparam TSrc 
+ * @tparam TRes 
+ * @tparam UDist 
+ * @tparam needCheck 
+ */
 template<typename TSrc, typename TRes, typename UDist,
         const CBool needCheck = false,
         c_enable_if_t<std::is_base_of<UDistance<TSrc, TRes>, UDist>::value, int> = 0>

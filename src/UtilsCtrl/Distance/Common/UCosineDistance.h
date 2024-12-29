@@ -13,6 +13,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 计算v1和v2两个向量的cos距离
+ *        默认v1和v2的维度相同(dim1 ==  dim2)且非零 (此处calc实现未做检查，可能出现除零错误)
+ * 
+ * @tparam TSrc 
+ * @tparam TRes 
+ */
 template<typename TSrc, typename TRes = TSrc>
 class UCosineDistance : public UDistance<TSrc, TRes> {
 public:

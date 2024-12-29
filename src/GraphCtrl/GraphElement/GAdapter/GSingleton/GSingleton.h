@@ -13,6 +13,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GAdapter的派生类，核心成员是static USingleton<T> s_singleton单例，可以方便地作为单例GElement使用
+ * @tparam T 
+ */
 template<typename T>
 class GSingleton : public GAdapter {
 private:

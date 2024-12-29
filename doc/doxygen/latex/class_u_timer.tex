@@ -1,0 +1,175 @@
+\hypertarget{class_u_timer}{}\doxysection{UTimer Class Reference}
+\label{class_u_timer}\index{UTimer@{UTimer}}
+
+
+定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接口； 定时器的结束通过is\+\_\+stop\+\_\+这个std\+::atomic\+\_\+bool值和std\+::condition\+\_\+variable实现， start接口is\+\_\+stop\+\_\+ exchange为false，对exchange之前的值做检查也保证了不会重复start stop接口将is\+\_\+stop\+\_\+设置为true，并通知正在cv\+\_\+上等待的start直接退出，接着等待std\+::future对象返回  
+
+
+
+
+{\ttfamily \#include $<$UTimer.\+h$>$}
+
+
+
+Inheritance diagram for UTimer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_u_timer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UTimer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{class_u_timer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_timer_a83a362595ee8feb89f1674ef8cff7c84}{UTimer}} ()=default
+\item 
+\mbox{\hyperlink{class_u_timer_a682cd9431ecffbac5cf3621ea930a568}{$\sim$\+UTimer}} () override
+\item 
+{\footnotesize template$<$typename TTask , typename TMod $>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_timer_a3a6df61914c58cff5f84bd088fec99c9}{start}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} interval, const TTask \&task, const TMod \&modify)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_timer_a26cb31cdcfa60d47cf3caf6e004ccf5d}{stop}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} $>$ \mbox{\hyperlink{class_u_timer_ab377b10529a8ca55f0cf7c5fbb4913da}{is\+\_\+stop\+\_\+}} \{ true \}
+\item 
+std\+::mutex \mbox{\hyperlink{class_u_timer_a6f06dab78f21638c69246c2f888263ca}{mutex\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_timer_ae34117affb5d04bec1feba316924b3f0}{cv\+\_\+}}
+\item 
+std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} $>$ \mbox{\hyperlink{class_u_timer_ae31e3cd764649c7474dda18454e27e5e}{future\+\_\+}} \{\}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_u_timer_a5d94039d976a68f49d03a8435d43ece0}{origin\+\_\+interval\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_u_timer_abceadbf15453c689602dfb32ac4a8f2b}{left\+\_\+interval\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接口； 定时器的结束通过is\+\_\+stop\+\_\+这个std\+::atomic\+\_\+bool值和std\+::condition\+\_\+variable实现， start接口is\+\_\+stop\+\_\+ exchange为false，对exchange之前的值做检查也保证了不会重复start stop接口将is\+\_\+stop\+\_\+设置为true，并通知正在cv\+\_\+上等待的start直接退出，接着等待std\+::future对象返回 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_timer_a83a362595ee8feb89f1674ef8cff7c84}\label{class_u_timer_a83a362595ee8feb89f1674ef8cff7c84}} 
+\index{UTimer@{UTimer}!UTimer@{UTimer}}
+\index{UTimer@{UTimer}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{UTimer()}{UTimer()}}
+{\footnotesize\ttfamily UTimer\+::\+UTimer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_u_timer_a682cd9431ecffbac5cf3621ea930a568}\label{class_u_timer_a682cd9431ecffbac5cf3621ea930a568}} 
+\index{UTimer@{UTimer}!````~UTimer@{$\sim$UTimer}}
+\index{````~UTimer@{$\sim$UTimer}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{$\sim$UTimer()}{~UTimer()}}
+{\footnotesize\ttfamily UTimer\+::$\sim$\+UTimer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{class_u_timer_a682cd9431ecffbac5cf3621ea930a568_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_timer_a3a6df61914c58cff5f84bd088fec99c9}\label{class_u_timer_a3a6df61914c58cff5f84bd088fec99c9}} 
+\index{UTimer@{UTimer}!start@{start}}
+\index{start@{start}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{start()}{start()}}
+{\footnotesize\ttfamily template$<$typename TTask , typename TMod $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UTimer\+::start (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{interval,  }\item[{const TTask \&}]{task,  }\item[{const TMod \&}]{modify }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+开始执行定时器 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TTask} & \\
+\hline
+{\em TMod} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em interval} & \\
+\hline
+{\em task} & \\
+\hline
+{\em modify} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+std\+::launch\+::async：在调用async就开始创建线程。 std\+::launch\+::deferred：延迟加载方式创建线程。调用async时不创建线程，直到调用了future的get或者wait时才创建线程。
+
+如果有时间修改函数，并且修改了时间 则修改下一次的休眠时间
+
+如果任务执行时间 $<$ 设定的时间，则消除任务耗时影响 如果任务执行时间 $>$ 设定的时间，则继续sleep设定时长Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_timer_a3a6df61914c58cff5f84bd088fec99c9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_timer_a26cb31cdcfa60d47cf3caf6e004ccf5d}\label{class_u_timer_a26cb31cdcfa60d47cf3caf6e004ccf5d}} 
+\index{UTimer@{UTimer}!stop@{stop}}
+\index{stop@{stop}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{stop()}{stop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UTimer\+::stop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+关闭定时器 
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_timer_ae34117affb5d04bec1feba316924b3f0}\label{class_u_timer_ae34117affb5d04bec1feba316924b3f0}} 
+\index{UTimer@{UTimer}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable UTimer\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_timer_ae31e3cd764649c7474dda18454e27e5e}\label{class_u_timer_ae31e3cd764649c7474dda18454e27e5e}} 
+\index{UTimer@{UTimer}!future\_@{future\_}}
+\index{future\_@{future\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{future\_}{future\_}}
+{\footnotesize\ttfamily std\+::future$<$\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}}$>$ UTimer\+::future\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_timer_ab377b10529a8ca55f0cf7c5fbb4913da}\label{class_u_timer_ab377b10529a8ca55f0cf7c5fbb4913da}} 
+\index{UTimer@{UTimer}!is\_stop\_@{is\_stop\_}}
+\index{is\_stop\_@{is\_stop\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{is\_stop\_}{is\_stop\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}$>$ UTimer\+::is\+\_\+stop\+\_\+ \{ true \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_timer_abceadbf15453c689602dfb32ac4a8f2b}\label{class_u_timer_abceadbf15453c689602dfb32ac4a8f2b}} 
+\index{UTimer@{UTimer}!left\_interval\_@{left\_interval\_}}
+\index{left\_interval\_@{left\_interval\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{left\_interval\_}{left\_interval\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UTimer\+::left\+\_\+interval\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_timer_a6f06dab78f21638c69246c2f888263ca}\label{class_u_timer_a6f06dab78f21638c69246c2f888263ca}} 
+\index{UTimer@{UTimer}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex UTimer\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_timer_a5d94039d976a68f49d03a8435d43ece0}\label{class_u_timer_a5d94039d976a68f49d03a8435d43ece0}} 
+\index{UTimer@{UTimer}!origin\_interval\_@{origin\_interval\_}}
+\index{origin\_interval\_@{origin\_interval\_}!UTimer@{UTimer}}
+\doxysubsubsection{\texorpdfstring{origin\_interval\_}{origin\_interval\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UTimer\+::origin\+\_\+interval\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Timer/\mbox{\hyperlink{_u_timer_8h}{UTimer.\+h}}\end{DoxyCompactItemize}

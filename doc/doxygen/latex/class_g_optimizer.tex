@@ -1,0 +1,136 @@
+\hypertarget{class_g_optimizer}{}\doxysection{GOptimizer Class Reference}
+\label{class_g_optimizer}\index{GOptimizer@{GOptimizer}}
+
+
+GOptimizer是用来干嘛的?  
+
+
+
+
+{\ttfamily \#include $<$GOptimizer.\+h$>$}
+
+
+
+Inheritance diagram for GOptimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GOptimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_g_optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_optimizer_adb5206167521ad6fe66664c62f9924ee}{collect}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element, std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&cur\+Path, std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$$>$ \&paths)
+\item 
+static std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ $>$ \mbox{\hyperlink{class_g_optimizer_a3a2c149058812d1be4d196991ecb0ffa}{collect\+Paths}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+static std\+::vector$<$ std\+::vector$<$ int $>$ $>$ \mbox{\hyperlink{class_g_optimizer_a7fb744697a02f8ed5d38d4b6a54d45a9}{build\+Graph}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements, const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$$>$ \&paths, int father, int son, int unlink)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_optimizer_a055afb5e5454b2ba7056f31bf09b49cd}{GPerf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+GOptimizer是用来干嘛的? 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_optimizer_a7fb744697a02f8ed5d38d4b6a54d45a9}\label{class_g_optimizer_a7fb744697a02f8ed5d38d4b6a54d45a9}} 
+\index{GOptimizer@{GOptimizer}!buildGraph@{buildGraph}}
+\index{buildGraph@{buildGraph}!GOptimizer@{GOptimizer}}
+\doxysubsubsection{\texorpdfstring{buildGraph()}{buildGraph()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::vector$<$int$>$ $>$ GOptimizer\+::build\+Graph (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements,  }\item[{const std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$$>$ \&}]{paths,  }\item[{int}]{father,  }\item[{int}]{son,  }\item[{int}]{unlink }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+构造对应的二维矩阵图 将每条path的可达关系构造成一个二维矩阵图，father可以直接或通过串联的多个元素到达son，反之不行 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+{\em paths} & \\
+\hline
+{\em father} & \\
+\hline
+{\em son} & \\
+\hline
+{\em unlink} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_optimizer_adb5206167521ad6fe66664c62f9924ee}\label{class_g_optimizer_adb5206167521ad6fe66664c62f9924ee}} 
+\index{GOptimizer@{GOptimizer}!collect@{collect}}
+\index{collect@{collect}!GOptimizer@{GOptimizer}}
+\doxysubsubsection{\texorpdfstring{collect()}{collect()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GOptimizer\+::collect (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element,  }\item[{std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&}]{cur\+Path,  }\item[{std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$$>$ \&}]{paths }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+记录 path 信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+{\em cur\+Path} & \\
+\hline
+{\em paths} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{class_g_optimizer_adb5206167521ad6fe66664c62f9924ee_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_optimizer_a3a2c149058812d1be4d196991ecb0ffa}\label{class_g_optimizer_a3a2c149058812d1be4d196991ecb0ffa}} 
+\index{GOptimizer@{GOptimizer}!collectPaths@{collectPaths}}
+\index{collectPaths@{collectPaths}!GOptimizer@{GOptimizer}}
+\doxysubsubsection{\texorpdfstring{collectPaths()}{collectPaths()}}
+{\footnotesize\ttfamily static std\+::vector$<$std\+::vector$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$ $>$ GOptimizer\+::collect\+Paths (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+记录所有的path信息 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_optimizer_a3a2c149058812d1be4d196991ecb0ffa_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_optimizer_a055afb5e5454b2ba7056f31bf09b49cd}\label{class_g_optimizer_a055afb5e5454b2ba7056f31bf09b49cd}} 
+\index{GOptimizer@{GOptimizer}!GPerf@{GPerf}}
+\index{GPerf@{GPerf}!GOptimizer@{GOptimizer}}
+\doxysubsubsection{\texorpdfstring{GPerf}{GPerf}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_perf}{GPerf}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GOptimizer/\mbox{\hyperlink{_g_optimizer_8h}{GOptimizer.\+h}}\end{DoxyCompactItemize}

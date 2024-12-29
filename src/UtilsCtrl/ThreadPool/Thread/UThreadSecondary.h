@@ -13,6 +13,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 和主线程UThreadPrimary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取，
+ *        而是直接从普通任务队列(pool_task_queue_)和优先级任务队列(pool_priority_task_queue_)取任务
+ *        当然：主线程不会从优先级任务队列(pool_priority_task_queue_)取任务，
+ *        这个任务队列存储的一般是长时间任务，是辅助线程专用的
+ */
 class UThreadSecondary : public UThreadBase {
 public:
     explicit UThreadSecondary() {

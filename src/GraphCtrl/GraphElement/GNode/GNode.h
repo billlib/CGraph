@@ -13,6 +13,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 功能运行的最小单元(结点)
+ */
 class GNode : public GElement {
 protected:
     /**

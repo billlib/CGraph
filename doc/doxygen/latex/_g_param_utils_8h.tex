@@ -1,0 +1,90 @@
+\hypertarget{_g_param_utils_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Param/\+GParam\+Utils.h File Reference}
+\label{_g_param_utils_8h}\index{src/GraphCtrl/GraphParam/GParamUtils.h@{src/GraphCtrl/GraphParam/GParamUtils.h}}
+{\ttfamily \#include \char`\"{}../\+Graph\+Object.\+h\char`\"{}}\newline
+Include dependency graph for GParam\+Utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_param_utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_param_utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_afb5fea0d69a89f9d1cd714eab6651924}{CGRAPH\+\_\+\+CREATE\+\_\+\+GPARAM}}(Type,  key)~    this-\/$>$template create\+GParam$<$Type$>$(key);                                   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a059f01342170068e8d260b7b4012122a}{CGRAPH\+\_\+\+CREATE\+\_\+\+GPARAM\+\_\+\+WITH\+\_\+\+BACKTRACE}}(Type,  key)~    this-\/$>$template create\+GParam$<$Type$>$(key, true);                             \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_aa4c0e8db4ac3a333a1c7b1b40db825a5}{CGRAPH\+\_\+\+GET\+\_\+\+GPARAM}}(Type,  key)~    this-\/$>$template get\+GParam$<$Type$>$(key);                                      \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a715c6b5eb1c011f608d12e4587ea81ab}{CGRAPH\+\_\+\+GET\+\_\+\+GPARAM\+\_\+\+WITH\+\_\+\+NO\+\_\+\+EMPTY}}(Type,  key)~    this-\/$>$template get\+GParam\+With\+No\+Empty$<$Type$>$(key);                           \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a81d18bd6efeb3f5597d811ba525763de}{CGRAPH\+\_\+\+DELETE\+\_\+\+GPARAM}}(key)~    this-\/$>$remove\+GParam(key);                                                  \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a7ddcc276f10c6fc9cccdd1f28130e8db}{CGRAPH\+\_\+\+GET\+\_\+\+EPARAM}}(Type,  key)~    this-\/$>$template get\+EParam$<$Type$>$(key);                                      \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a31dfa388edc0b773b928899ee025726a}{CGRAPH\+\_\+\+PARAM\+\_\+\+WRITE\+\_\+\+CODE\+\_\+\+BLOCK}}(param)~    \mbox{\hyperlink{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}{CGraph\+::\+CGRAPH\+\_\+\+WRITE\+\_\+\+LOCK}} \+\_\+\+\_\+param\+WLock\+\_\+\+\_\+((param)-\/$>$\+\_\+param\+\_\+shared\+\_\+lock\+\_\+);   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_param_utils_8h_a1a8a720447fe6342d5d434db939cf138}{CGRAPH\+\_\+\+PARAM\+\_\+\+READ\+\_\+\+CODE\+\_\+\+BLOCK}}(param)~    \mbox{\hyperlink{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}{CGraph\+::\+CGRAPH\+\_\+\+READ\+\_\+\+LOCK}} \+\_\+\+\_\+param\+RLock\+\_\+\+\_\+((param)-\/$>$\+\_\+param\+\_\+shared\+\_\+lock\+\_\+);    \textbackslash{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_g_param_utils_8h_afb5fea0d69a89f9d1cd714eab6651924}\label{_g_param_utils_8h_afb5fea0d69a89f9d1cd714eab6651924}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_CREATE\_GPARAM@{CGRAPH\_CREATE\_GPARAM}}
+\index{CGRAPH\_CREATE\_GPARAM@{CGRAPH\_CREATE\_GPARAM}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CREATE\_GPARAM}{CGRAPH\_CREATE\_GPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+CREATE\+\_\+\+GPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$template create\+GParam$<$Type$>$(key);                                   \textbackslash{}}
+
+创建参数信息 \mbox{\Hypertarget{_g_param_utils_8h_a059f01342170068e8d260b7b4012122a}\label{_g_param_utils_8h_a059f01342170068e8d260b7b4012122a}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE@{CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE}}
+\index{CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE@{CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE}{CGRAPH\_CREATE\_GPARAM\_WITH\_BACKTRACE}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+CREATE\+\_\+\+GPARAM\+\_\+\+WITH\+\_\+\+BACKTRACE(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$template create\+GParam$<$Type$>$(key, true);                             \textbackslash{}}
+
+\mbox{\Hypertarget{_g_param_utils_8h_a81d18bd6efeb3f5597d811ba525763de}\label{_g_param_utils_8h_a81d18bd6efeb3f5597d811ba525763de}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_DELETE\_GPARAM@{CGRAPH\_DELETE\_GPARAM}}
+\index{CGRAPH\_DELETE\_GPARAM@{CGRAPH\_DELETE\_GPARAM}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DELETE\_GPARAM}{CGRAPH\_DELETE\_GPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+DELETE\+\_\+\+GPARAM(\begin{DoxyParamCaption}\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$remove\+GParam(key);                                                  \textbackslash{}}
+
+删除一个参数 \mbox{\Hypertarget{_g_param_utils_8h_a7ddcc276f10c6fc9cccdd1f28130e8db}\label{_g_param_utils_8h_a7ddcc276f10c6fc9cccdd1f28130e8db}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_GET\_EPARAM@{CGRAPH\_GET\_EPARAM}}
+\index{CGRAPH\_GET\_EPARAM@{CGRAPH\_GET\_EPARAM}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_EPARAM}{CGRAPH\_GET\_EPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+GET\+\_\+\+EPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$template get\+EParam$<$Type$>$(key);                                      \textbackslash{}}
+
+获取element内部参数信息 \mbox{\Hypertarget{_g_param_utils_8h_aa4c0e8db4ac3a333a1c7b1b40db825a5}\label{_g_param_utils_8h_aa4c0e8db4ac3a333a1c7b1b40db825a5}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_GET\_GPARAM@{CGRAPH\_GET\_GPARAM}}
+\index{CGRAPH\_GET\_GPARAM@{CGRAPH\_GET\_GPARAM}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_GPARAM}{CGRAPH\_GET\_GPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+GET\+\_\+\+GPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$template get\+GParam$<$Type$>$(key);                                      \textbackslash{}}
+
+获取参数信息 \mbox{\Hypertarget{_g_param_utils_8h_a715c6b5eb1c011f608d12e4587ea81ab}\label{_g_param_utils_8h_a715c6b5eb1c011f608d12e4587ea81ab}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY@{CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY}}
+\index{CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY@{CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY}{CGRAPH\_GET\_GPARAM\_WITH\_NO\_EMPTY}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+GET\+\_\+\+GPARAM\+\_\+\+WITH\+\_\+\+NO\+\_\+\+EMPTY(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{key }\end{DoxyParamCaption})~    this-\/$>$template get\+GParam\+With\+No\+Empty$<$Type$>$(key);                           \textbackslash{}}
+
+获取参数信息，为空则抛出异常 \mbox{\Hypertarget{_g_param_utils_8h_a1a8a720447fe6342d5d434db939cf138}\label{_g_param_utils_8h_a1a8a720447fe6342d5d434db939cf138}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_PARAM\_READ\_CODE\_BLOCK@{CGRAPH\_PARAM\_READ\_CODE\_BLOCK}}
+\index{CGRAPH\_PARAM\_READ\_CODE\_BLOCK@{CGRAPH\_PARAM\_READ\_CODE\_BLOCK}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PARAM\_READ\_CODE\_BLOCK}{CGRAPH\_PARAM\_READ\_CODE\_BLOCK}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+PARAM\+\_\+\+READ\+\_\+\+CODE\+\_\+\+BLOCK(\begin{DoxyParamCaption}\item[{}]{param }\end{DoxyParamCaption})~    \mbox{\hyperlink{_utils_define_8h_ac7301fa6db62067848443ad162ab677b}{CGraph\+::\+CGRAPH\+\_\+\+READ\+\_\+\+LOCK}} \+\_\+\+\_\+param\+RLock\+\_\+\+\_\+((param)-\/$>$\+\_\+param\+\_\+shared\+\_\+lock\+\_\+);    \textbackslash{}}
+
+上参数读锁 \mbox{\Hypertarget{_g_param_utils_8h_a31dfa388edc0b773b928899ee025726a}\label{_g_param_utils_8h_a31dfa388edc0b773b928899ee025726a}} 
+\index{GParamUtils.h@{GParamUtils.h}!CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK@{CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK}}
+\index{CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK@{CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK}!GParamUtils.h@{GParamUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK}{CGRAPH\_PARAM\_WRITE\_CODE\_BLOCK}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+PARAM\+\_\+\+WRITE\+\_\+\+CODE\+\_\+\+BLOCK(\begin{DoxyParamCaption}\item[{}]{param }\end{DoxyParamCaption})~    \mbox{\hyperlink{_utils_define_8h_a8ebabd9696c3a2a24f0e42fc1b2a149e}{CGraph\+::\+CGRAPH\+\_\+\+WRITE\+\_\+\+LOCK}} \+\_\+\+\_\+param\+WLock\+\_\+\+\_\+((param)-\/$>$\+\_\+param\+\_\+shared\+\_\+lock\+\_\+);   \textbackslash{}}
+
+上参数写锁 

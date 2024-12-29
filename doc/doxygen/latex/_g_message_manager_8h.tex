@@ -1,0 +1,29 @@
+\hypertarget{_g_message_manager_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Message/\+GMessage\+Manager.h File Reference}
+\label{_g_message_manager_8h}\index{src/GraphCtrl/GraphMessage/GMessageManager.h@{src/GraphCtrl/GraphMessage/GMessageManager.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}GMessage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GMessage\+Define.\+h\char`\"{}}\newline
+Include dependency graph for GMessage\+Manager.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_manager_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_manager_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager$<$ T, $>$}}
+\begin{DoxyCompactList}\small\item\em 基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bind\+Topic生成一个唯一的conn\+\_\+id\+\_\+，实际上是绑定到这个conn\+\_\+id\+\_\+对应的\+GMessage\+Object的消息队列 recv是一发一收则可以直接用topic作为入参 \end{DoxyCompactList}\end{DoxyCompactItemize}

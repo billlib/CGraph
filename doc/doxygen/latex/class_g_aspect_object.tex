@@ -1,0 +1,254 @@
+\hypertarget{class_g_aspect_object}{}\doxysection{GAspect\+Object Class Reference}
+\label{class_g_aspect_object}\index{GAspectObject@{GAspectObject}}
+
+
+在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/belong\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GAspect\+Object来说是\+GAspect\+Param belong\+\_\+则是\+GAspect\+Object独有的，维护切面和\+GElement的从属关系  
+
+
+
+
+{\ttfamily \#include $<$GAspect\+Object.\+h$>$}
+
+
+
+Inheritance diagram for GAspect\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GAspect\+Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_aspect_object_8h_a67bad1f2ef6fe9f33e87c4b955489e91}{GAspect\+Object\+Ptr}} \mbox{\hyperlink{class_g_aspect_object_ad4d764e44071a308a9726f2f05576a4e}{set\+AParam}} (T $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_aspect_object_adf7add0c7c07b5fd4bf3a3ba0138b3ff}{GAspect\+Object}} ()
+\item 
+\mbox{\hyperlink{class_g_aspect_object_a34bff264d67bc385b402ff0ec0613df3}{$\sim$\+GAspect\+Object}} () override
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$  = 0$>$ }\\T $\ast$ \mbox{\hyperlink{class_g_aspect_object_a25f80e5dbe6e42737a4cc82ae2007581}{get\+AParam}} ()
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_aspect_object}{GAspect\+Object}} $\ast$ \mbox{\hyperlink{class_g_aspect_object_a209158a90b4d5942fadbba12f40fc986}{set\+AParam}} (T $\ast$param)
+\item 
+\mbox{\hyperlink{class_g_aspect_object}{GAspect\+Object}} $\ast$ \mbox{\hyperlink{class_g_aspect_object_a0e683a182fe8ee6e57a065b7ff053ae9}{set\+Belong}} (\mbox{\hyperlink{class_g_element}{GElement}} $\ast$belong)
+\item 
+const std\+::string \& \mbox{\hyperlink{class_g_aspect_object_a04ce4f5b69337e4d53f26b4a16cff2f2}{get\+Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_aspect_object_a1bac3cc253c06f369633a1287e66c445}{run}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_passed_param_8h_a0b80983d864b1fe0afd0e0babb1c6c10}{GAspect\+Param\+Ptr}} \mbox{\hyperlink{class_g_aspect_object_a1a0d357a63a229a8a298a132b24f2c1d}{param\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} \mbox{\hyperlink{class_g_aspect_object_a7972eb4d733c9c5664bbb617c19a6430}{param\+\_\+manager\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} \mbox{\hyperlink{class_g_aspect_object_a84d930b2ae52bc37fd0527c4ec67a575}{event\+\_\+manager\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_aspect_object_a0597c23f190d1c4b7116140f501f97fe}{belong\+\_\+}} \{ nullptr \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_aspect_object_a22b32ca80e1527bff7b9b26bd90ecba8}{GAspect\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_aspect_object_af04c5eeb8a4c54f1a043ac95c5a6f579}{GAspect}}
+\item 
+class \mbox{\hyperlink{class_g_aspect_object_a3b499f78a14d7b84a9574b2e5fb0b2e1}{GElement}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/belong\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GAspect\+Object来说是\+GAspect\+Param belong\+\_\+则是\+GAspect\+Object独有的，维护切面和\+GElement的从属关系 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_aspect_object_adf7add0c7c07b5fd4bf3a3ba0138b3ff}\label{class_g_aspect_object_adf7add0c7c07b5fd4bf3a3ba0138b3ff}} 
+\index{GAspectObject@{GAspectObject}!GAspectObject@{GAspectObject}}
+\index{GAspectObject@{GAspectObject}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{GAspectObject()}{GAspectObject()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GAspect\+Object\+::\+GAspect\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object_adf7add0c7c07b5fd4bf3a3ba0138b3ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_aspect_object_a34bff264d67bc385b402ff0ec0613df3}\label{class_g_aspect_object_a34bff264d67bc385b402ff0ec0613df3}} 
+\index{GAspectObject@{GAspectObject}!````~GAspectObject@{$\sim$GAspectObject}}
+\index{````~GAspectObject@{$\sim$GAspectObject}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$GAspectObject()}{~GAspectObject()}}
+{\footnotesize\ttfamily GAspect\+Object\+::$\sim$\+GAspect\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_aspect_object_a25f80e5dbe6e42737a4cc82ae2007581}\label{class_g_aspect_object_a25f80e5dbe6e42737a4cc82ae2007581}} 
+\index{GAspectObject@{GAspectObject}!getAParam@{getAParam}}
+\index{getAParam@{getAParam}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{getAParam()}{getAParam()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$ $>$ \\
+T $\ast$ GAspect\+Object\+::get\+AParam\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取切面参数内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_aspect_object_a04ce4f5b69337e4d53f26b4a16cff2f2}\label{class_g_aspect_object_a04ce4f5b69337e4d53f26b4a16cff2f2}} 
+\index{GAspectObject@{GAspectObject}!getName@{getName}}
+\index{getName@{getName}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily const std\+::string \& GAspect\+Object\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取名称信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_desc_info_ab3acfc8742c1ceeb1d650febdf92e3f1}{CDesc\+Info}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object_a04ce4f5b69337e4d53f26b4a16cff2f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_aspect_object_a1bac3cc253c06f369633a1287e66c445}\label{class_g_aspect_object_a1bac3cc253c06f369633a1287e66c445}} 
+\index{GAspectObject@{GAspectObject}!run@{run}}
+\index{run@{run}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GAspect\+Object\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_g_aspect}{GAspect}} 相关内容，不需要执行run方法 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+\mbox{\Hypertarget{class_g_aspect_object_a209158a90b4d5942fadbba12f40fc986}\label{class_g_aspect_object_a209158a90b4d5942fadbba12f40fc986}} 
+\index{GAspectObject@{GAspectObject}!setAParam@{setAParam}}
+\index{setAParam@{setAParam}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{setAParam()}{setAParam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_aspect_object}{GAspect\+Object}}$\ast$ GAspect\+Object\+::set\+AParam (\begin{DoxyParamCaption}\item[{T $\ast$}]{param }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置切面参数内容 
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_aspect_object_ad4d764e44071a308a9726f2f05576a4e}\label{class_g_aspect_object_ad4d764e44071a308a9726f2f05576a4e}} 
+\index{GAspectObject@{GAspectObject}!setAParam@{setAParam}}
+\index{setAParam@{setAParam}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{setAParam()}{setAParam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, T $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_aspect_object_8h_a67bad1f2ef6fe9f33e87c4b955489e91}{GAspect\+Object\+Ptr}} GAspect\+Object\+::set\+AParam (\begin{DoxyParamCaption}\item[{T $\ast$}]{param }\end{DoxyParamCaption})}
+
+传入的param可以为空Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object_ad4d764e44071a308a9726f2f05576a4e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_aspect_object_a0e683a182fe8ee6e57a065b7ff053ae9}\label{class_g_aspect_object_a0e683a182fe8ee6e57a065b7ff053ae9}} 
+\index{GAspectObject@{GAspectObject}!setBelong@{setBelong}}
+\index{setBelong@{setBelong}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{setBelong()}{setBelong()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_aspect_object_8h_a67bad1f2ef6fe9f33e87c4b955489e91}{GAspect\+Object\+Ptr}} GAspect\+Object\+::set\+Belong (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{belong }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置从属的 element信息 
+\begin{DoxyParams}{Parameters}
+{\em belong} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_aspect_object_a0e683a182fe8ee6e57a065b7ff053ae9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_aspect_object_af04c5eeb8a4c54f1a043ac95c5a6f579}\label{class_g_aspect_object_af04c5eeb8a4c54f1a043ac95c5a6f579}} 
+\index{GAspectObject@{GAspectObject}!GAspect@{GAspect}}
+\index{GAspect@{GAspect}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{GAspect}{GAspect}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_aspect}{GAspect}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_aspect_object_a22b32ca80e1527bff7b9b26bd90ecba8}\label{class_g_aspect_object_a22b32ca80e1527bff7b9b26bd90ecba8}} 
+\index{GAspectObject@{GAspectObject}!GAspectManager@{GAspectManager}}
+\index{GAspectManager@{GAspectManager}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{GAspectManager}{GAspectManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_aspect_manager}{GAspect\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_aspect_object_a3b499f78a14d7b84a9574b2e5fb0b2e1}\label{class_g_aspect_object_a3b499f78a14d7b84a9574b2e5fb0b2e1}} 
+\index{GAspectObject@{GAspectObject}!GElement@{GElement}}
+\index{GElement@{GElement}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{GElement}{GElement}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element}{GElement}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_aspect_object_a0597c23f190d1c4b7116140f501f97fe}\label{class_g_aspect_object_a0597c23f190d1c4b7116140f501f97fe}} 
+\index{GAspectObject@{GAspectObject}!belong\_@{belong\_}}
+\index{belong\_@{belong\_}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{belong\_}{belong\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_element}{GElement}}$\ast$ GAspect\+Object\+::belong\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_aspect_object_a84d930b2ae52bc37fd0527c4ec67a575}\label{class_g_aspect_object_a84d930b2ae52bc37fd0527c4ec67a575}} 
+\index{GAspectObject@{GAspectObject}!event\_manager\_@{event\_manager\_}}
+\index{event\_manager\_@{event\_manager\_}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{event\_manager\_}{event\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} GAspect\+Object\+::event\+\_\+manager\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_aspect_object_a1a0d357a63a229a8a298a132b24f2c1d}\label{class_g_aspect_object_a1a0d357a63a229a8a298a132b24f2c1d}} 
+\index{GAspectObject@{GAspectObject}!param\_@{param\_}}
+\index{param\_@{param\_}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{param\_}{param\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_passed_param_8h_a0b80983d864b1fe0afd0e0babb1c6c10}{GAspect\+Param\+Ptr}} GAspect\+Object\+::param\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_aspect_object_a7972eb4d733c9c5664bbb617c19a6430}\label{class_g_aspect_object_a7972eb4d733c9c5664bbb617c19a6430}} 
+\index{GAspectObject@{GAspectObject}!param\_manager\_@{param\_manager\_}}
+\index{param\_manager\_@{param\_manager\_}!GAspectObject@{GAspectObject}}
+\doxysubsubsection{\texorpdfstring{param\_manager\_}{param\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} GAspect\+Object\+::param\+\_\+manager\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Aspect/\mbox{\hyperlink{_g_aspect_object_8h}{GAspect\+Object.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Aspect/\mbox{\hyperlink{_g_aspect_object_8cpp}{GAspect\+Object.\+cpp}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Aspect/\mbox{\hyperlink{_g_aspect_object_8inl}{GAspect\+Object.\+inl}}\end{DoxyCompactItemize}

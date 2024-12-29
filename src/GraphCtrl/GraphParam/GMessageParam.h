@@ -13,6 +13,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GMessageParam作用域为进程，GParam作用域为图(piepline)
+ * GPassedParam作用域为结点(GElement/GDaemon/GAspect/GEvent)
+ */
 class GMessageParam : public GParamObject {
     /**
      * 用于消息传递的参数时，建议实现构造拷贝 和 赋值拷贝函数

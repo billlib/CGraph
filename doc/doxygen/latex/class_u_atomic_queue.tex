@@ -1,0 +1,224 @@
+\hypertarget{class_u_atomic_queue}{}\doxysection{UAtomic\+Queue$<$ T $>$ Class Template Reference}
+\label{class_u_atomic_queue}\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+
+
+包含一个普通队列成员，基于mutex\+\_\+封装成一个原子的优先级队列， 支持原子的wait\+Pop/try\+Pop/pop\+With\+Timeout/push/empty 新增ready\+\_\+flag\+\_\+用于通知辅助线程快速退出  
+
+
+
+
+{\ttfamily \#include $<$UAtomic\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for UAtomic\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_u_atomic_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UAtomic\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{class_u_atomic_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_atomic_queue_a646c44414c0cc7950d52e588e48b3a72}{UAtomic\+Queue}} ()=default
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue_a104ccbb09a480629d7380fa81be11501}{wait\+Pop}} (T \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue_a20bcc2c87ee0111fb082a183388982ab}{try\+Pop}} (T \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue_a2075b8c469e2b1c429b4a34eaee67016}{try\+Pop}} (std\+::vector$<$ T $>$ \&values, int max\+Pool\+Batch\+Size)
+\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_u_atomic_queue_ab43e249168d29cbf393528f18b89d4bf}{pop\+With\+Timeout}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms)
+\item 
+std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_u_atomic_queue_a8d08d5cfdf77f0ca310e2db03d40aaf5}{try\+Pop}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue_ab574267bd297208eab3144003e42f458}{push}} (T \&\&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue_ae13639ea78755cb089ed77ec2076543f}{empty}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue_a12d3583fc7a0e4a3089afb02c28b397a}{reset}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue_aed167973e9db6d025f624db5b3b8b3e9}{setup}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::queue$<$ std\+::unique\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{class_u_atomic_queue_ae6855e6b5898868bfdab31862f00b6d6}{queue\+\_\+}} \{\}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue_a6949cd2875b8b5f417cdbefe906e212d}{ready\+\_\+flag\+\_\+}} \{ true \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class UAtomic\+Queue$<$ T $>$}
+
+包含一个普通队列成员，基于mutex\+\_\+封装成一个原子的优先级队列， 支持原子的wait\+Pop/try\+Pop/pop\+With\+Timeout/push/empty 新增ready\+\_\+flag\+\_\+用于通知辅助线程快速退出 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_atomic_queue_a646c44414c0cc7950d52e588e48b3a72}\label{class_u_atomic_queue_a646c44414c0cc7950d52e588e48b3a72}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!UAtomicQueue@{UAtomicQueue}}
+\index{UAtomicQueue@{UAtomicQueue}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UAtomicQueue()}{UAtomicQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_atomic_queue_ae13639ea78755cb089ed77ec2076543f}\label{class_u_atomic_queue_ae13639ea78755cb089ed77ec2076543f}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+判定队列是否为空 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_ab43e249168d29cbf393528f18b89d4bf}\label{class_u_atomic_queue_ab43e249168d29cbf393528f18b89d4bf}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!popWithTimeout@{popWithTimeout}}
+\index{popWithTimeout@{popWithTimeout}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{popWithTimeout()}{popWithTimeout()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unique\+\_\+ptr$<$T$>$ \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::pop\+With\+Timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+阻塞式等待弹出 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_ab574267bd297208eab3144003e42f458}\label{class_u_atomic_queue_ab574267bd297208eab3144003e42f458}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+传入数据 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_u_atomic_queue_ab574267bd297208eab3144003e42f458_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_atomic_queue_a12d3583fc7a0e4a3089afb02c28b397a}\label{class_u_atomic_queue_a12d3583fc7a0e4a3089afb02c28b397a}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!reset@{reset}}
+\index{reset@{reset}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+功能是通知所有的辅助线程停止工作 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_aed167973e9db6d025f624db5b3b8b3e9}\label{class_u_atomic_queue_aed167973e9db6d025f624db5b3b8b3e9}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!setup@{setup}}
+\index{setup@{setup}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+初始化状态 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_a8d08d5cfdf77f0ca310e2db03d40aaf5}\label{class_u_atomic_queue_a8d08d5cfdf77f0ca310e2db03d40aaf5}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::unique\+\_\+ptr$<$T$>$ \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+非阻塞式等待弹出 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_a2075b8c469e2b1c429b4a34eaee67016}\label{class_u_atomic_queue_a2075b8c469e2b1c429b4a34eaee67016}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{values,  }\item[{int}]{max\+Pool\+Batch\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试弹出多个任务 
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+{\em max\+Pool\+Batch\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_a20bcc2c87ee0111fb082a183388982ab}\label{class_u_atomic_queue_a20bcc2c87ee0111fb082a183388982ab}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试弹出 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_queue_a104ccbb09a480629d7380fa81be11501}\label{class_u_atomic_queue_a104ccbb09a480629d7380fa81be11501}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!waitPop@{waitPop}}
+\index{waitPop@{waitPop}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{waitPop()}{waitPop()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::wait\+Pop (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+等待弹出 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_atomic_queue_ae6855e6b5898868bfdab31862f00b6d6}\label{class_u_atomic_queue_ae6855e6b5898868bfdab31862f00b6d6}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::queue$<$std\+::unique\+\_\+ptr$<$T$>$ $>$ \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::queue\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_queue_a6949cd2875b8b5f417cdbefe906e212d}\label{class_u_atomic_queue_a6949cd2875b8b5f417cdbefe906e212d}} 
+\index{UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}!ready\_flag\_@{ready\_flag\_}}
+\index{ready\_flag\_@{ready\_flag\_}!UAtomicQueue$<$ T $>$@{UAtomicQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{ready\_flag\_}{ready\_flag\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ T $>$\+::ready\+\_\+flag\+\_\+ \{ true \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\mbox{\hyperlink{_u_atomic_queue_8h}{UAtomic\+Queue.\+h}}\end{DoxyCompactItemize}

@@ -13,6 +13,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 性能分析数据，目前只支持耗时和最长连路分析
+ */
 struct GPerfInfo : public CStruct {
     CUInt loop_ = 0;                       // 循环数
     CFMSec first_start_ts_ = 0.0;          // 开始的时间戳

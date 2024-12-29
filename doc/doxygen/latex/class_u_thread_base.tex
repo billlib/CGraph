@@ -1,0 +1,390 @@
+\hypertarget{class_u_thread_base}{}\doxysection{UThread\+Base Class Reference}
+\label{class_u_thread_base}\index{UThreadBase@{UThreadBase}}
+
+
+线程池中实际使用的线程的基类，有以下关键成员： \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+task\+\_\+queue\+\_\+：存储当前线程待执行的普通任务； \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+：优先级队列的任务，仅辅助线程可以执行； CInt type\+\_\+：表明当前线程是普通线程还是辅助线程 UThread\+Pool\+Config\+Ptr config\+\_\+：当前线程所属的线程池的配置 std\+::thread thread\+\_\+：标准线程对象，实际执行\+UTask任务的载体  
+
+
+
+
+{\ttfamily \#include $<$UThread\+Base.\+h$>$}
+
+
+
+Inheritance diagram for UThread\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=304pt]{class_u_thread_base__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UThread\+Base\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_thread_base_a5bc682c3d1c37d7fd536dc87e321004b}{UThread\+Base}} ()
+\item 
+\mbox{\hyperlink{class_u_thread_base_a747805af5068d79d1e38f0a22ab45de5}{$\sim$\+UThread\+Base}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_base_a56f1b10bb175d42238347130c66f173a}{destroy}} () override
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_base_a480003658f495a96d46cd30d725ae200}{pop\+Pool\+Task}} (\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}} task)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_base_ae6e149ec457a98eb76b77d65c0b6d93c}{pop\+Pool\+Task}} (\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}} tasks)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_a0b1faa02b11151adcbff35b56212f1f3}{run\+Task}} (\mbox{\hyperlink{class_u_task}{UTask}} \&task)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_aec245d7ac310dc62f182397e58ea1371}{run\+Tasks}} (\mbox{\hyperlink{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}{UTask\+Arr}} \&tasks)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_a53effd4deeb943044cd1e62f1699b383}{reset}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_a1cb1daeabcc24165364c3ddda824b40b}{process\+Task}} ()=0
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_ad080dc8122f15d38ab5b09c0f9499c8c}{process\+Tasks}} ()=0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_aeff22cc3fe5006da7a3a0af6ef78aef4}{loop\+Process}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_a758398496dd54c2f6415178d823aed30}{set\+Sched\+Param}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_base_a0b9db2571d08aa259066b9ae099674c2}{set\+Affinity}} (int index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_base_aa66bd6d32da568dea75524188504c86c}{done\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_base_a348dfe070145f8cb7339bed5ec3c8a6e}{is\+\_\+init\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_base_afa745b1e8799a63ac3755b8ee335fefd}{is\+\_\+running\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_base_abfb178d85164e6de2b178d9906e5bfa9}{type\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af6f75f2c423a8954a8d66f414043f81f}{CULong}} \mbox{\hyperlink{class_u_thread_base_ab0cdcaa2a3b6cbfc5265eb2339532084}{total\+\_\+task\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$ \mbox{\hyperlink{class_u_thread_base_acd5fed9a74b5d90757fcd5756640cdfc}{pool\+\_\+task\+\_\+queue\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$ \mbox{\hyperlink{class_u_thread_base_a3d34c71679eec3a0099051fadd2f231e}{pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+}}
+\item 
+\mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} \mbox{\hyperlink{class_u_thread_base_acdca5c7d24005a1177e5ae991c38ed71}{config\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{class_u_metrics}{UMetrics}} \mbox{\hyperlink{class_u_thread_base_a40bcc750dc4d1ee5daab8b4b15a8bc9c}{metrics\+\_\+}}
+\item 
+std\+::thread \mbox{\hyperlink{class_u_thread_base_ac121cf0dcafd2e12bb71ce0beb3d3b8d}{thread\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_u_thread_base_a634d7ad8b25e3c09579b7745a0aa5edc}{mutex\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_thread_base_a0bdd8b5b9e17773cf1467ded3cd179a6}{cv\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_base_a13015e22ddeac05cfccfd08a054c9ce3}{calc\+Policy}} (int policy)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_base_aaeaf74ad4c9f42138e63cd920c3948ba}{calc\+Priority}} (int priority)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+线程池中实际使用的线程的基类，有以下关键成员： \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+task\+\_\+queue\+\_\+：存储当前线程待执行的普通任务； \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+：优先级队列的任务，仅辅助线程可以执行； CInt type\+\_\+：表明当前线程是普通线程还是辅助线程 UThread\+Pool\+Config\+Ptr config\+\_\+：当前线程所属的线程池的配置 std\+::thread thread\+\_\+：标准线程对象，实际执行\+UTask任务的载体 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_thread_base_a5bc682c3d1c37d7fd536dc87e321004b}\label{class_u_thread_base_a5bc682c3d1c37d7fd536dc87e321004b}} 
+\index{UThreadBase@{UThreadBase}!UThreadBase@{UThreadBase}}
+\index{UThreadBase@{UThreadBase}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{UThreadBase()}{UThreadBase()}}
+{\footnotesize\ttfamily UThread\+Base\+::\+UThread\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a747805af5068d79d1e38f0a22ab45de5}\label{class_u_thread_base_a747805af5068d79d1e38f0a22ab45de5}} 
+\index{UThreadBase@{UThreadBase}!````~UThreadBase@{$\sim$UThreadBase}}
+\index{````~UThreadBase@{$\sim$UThreadBase}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$UThreadBase()}{~UThreadBase()}}
+{\footnotesize\ttfamily UThread\+Base\+::$\sim$\+UThread\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_a747805af5068d79d1e38f0a22ab45de5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_thread_base_a13015e22ddeac05cfccfd08a054c9ce3}\label{class_u_thread_base_a13015e22ddeac05cfccfd08a054c9ce3}} 
+\index{UThreadBase@{UThreadBase}!calcPolicy@{calcPolicy}}
+\index{calcPolicy@{calcPolicy}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{calcPolicy()}{calcPolicy()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Base\+::calc\+Policy (\begin{DoxyParamCaption}\item[{int}]{policy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+设定计算线程调度策略信息， 非\+OTHER/\+RR/\+FIFO对应数值，统一返回\+OTHER类型 
+\begin{DoxyParams}{Parameters}
+{\em policy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_base_aaeaf74ad4c9f42138e63cd920c3948ba}\label{class_u_thread_base_aaeaf74ad4c9f42138e63cd920c3948ba}} 
+\index{UThreadBase@{UThreadBase}!calcPriority@{calcPriority}}
+\index{calcPriority@{calcPriority}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{calcPriority()}{calcPriority()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Base\+::calc\+Priority (\begin{DoxyParamCaption}\item[{int}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+设定线程优先级信息 超过\mbox{[}min,max\mbox{]}范围，统一设置为min值 
+\begin{DoxyParams}{Parameters}
+{\em priority} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_base_a56f1b10bb175d42238347130c66f173a}\label{class_u_thread_base_a56f1b10bb175d42238347130c66f173a}} 
+\index{UThreadBase@{UThreadBase}!destroy@{destroy}}
+\index{destroy@{destroy}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Base\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_a56f1b10bb175d42238347130c66f173a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_base_aeff22cc3fe5006da7a3a0af6ef78aef4}\label{class_u_thread_base_aeff22cc3fe5006da7a3a0af6ef78aef4}} 
+\index{UThreadBase@{UThreadBase}!loopProcess@{loopProcess}}
+\index{loopProcess@{loopProcess}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{loopProcess()}{loopProcess()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::loop\+Process (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+循环处理任务 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_aeff22cc3fe5006da7a3a0af6ef78aef4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_base_ae6e149ec457a98eb76b77d65c0b6d93c}\label{class_u_thread_base_ae6e149ec457a98eb76b77d65c0b6d93c}} 
+\index{UThreadBase@{UThreadBase}!popPoolTask@{popPoolTask}}
+\index{popPoolTask@{popPoolTask}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{popPoolTask()}{popPoolTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Base\+::pop\+Pool\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}}}]{tasks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+从线程池的队列中中，按照指定的max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+获取批量任务 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_ae6e149ec457a98eb76b77d65c0b6d93c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_base_a480003658f495a96d46cd30d725ae200}\label{class_u_thread_base_a480003658f495a96d46cd30d725ae200}} 
+\index{UThreadBase@{UThreadBase}!popPoolTask@{popPoolTask}}
+\index{popPoolTask@{popPoolTask}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{popPoolTask()}{popPoolTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Base\+::pop\+Pool\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+从线程池的队列中，获取任务 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_a480003658f495a96d46cd30d725ae200_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_base_a1cb1daeabcc24165364c3ddda824b40b}\label{class_u_thread_base_a1cb1daeabcc24165364c3ddda824b40b}} 
+\index{UThreadBase@{UThreadBase}!processTask@{processTask}}
+\index{processTask@{processTask}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{processTask()}{processTask()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::process\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+执行单个消息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_u_thread_secondary_a2eb9cfbedf52354d14c891e8c9885e1a}{UThread\+Secondary}}, and \mbox{\hyperlink{class_u_thread_primary_a81b27fd2d854491e45967eb70c08e1f2}{UThread\+Primary}}.
+
+\mbox{\Hypertarget{class_u_thread_base_ad080dc8122f15d38ab5b09c0f9499c8c}\label{class_u_thread_base_ad080dc8122f15d38ab5b09c0f9499c8c}} 
+\index{UThreadBase@{UThreadBase}!processTasks@{processTasks}}
+\index{processTasks@{processTasks}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{processTasks()}{processTasks()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::process\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+获取批量执行task信息 
+
+Implemented in \mbox{\hyperlink{class_u_thread_secondary_a9891a73382ad1f14194b2bb6cda716d4}{UThread\+Secondary}}, and \mbox{\hyperlink{class_u_thread_primary_a3c34865e8238620cd9b3e59db9178d0c}{UThread\+Primary}}.
+
+\mbox{\Hypertarget{class_u_thread_base_a53effd4deeb943044cd1e62f1699b383}\label{class_u_thread_base_a53effd4deeb943044cd1e62f1699b383}} 
+\index{UThreadBase@{UThreadBase}!reset@{reset}}
+\index{reset@{reset}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+清空所有任务内容 \mbox{\Hypertarget{class_u_thread_base_a0b1faa02b11151adcbff35b56212f1f3}\label{class_u_thread_base_a0b1faa02b11151adcbff35b56212f1f3}} 
+\index{UThreadBase@{UThreadBase}!runTask@{runTask}}
+\index{runTask@{runTask}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{runTask()}{runTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::run\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_task}{UTask}} \&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+执行单个任务 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_thread_base_aec245d7ac310dc62f182397e58ea1371}\label{class_u_thread_base_aec245d7ac310dc62f182397e58ea1371}} 
+\index{UThreadBase@{UThreadBase}!runTasks@{runTasks}}
+\index{runTasks@{runTasks}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{runTasks()}{runTasks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::run\+Tasks (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_ab70051beb51eb9fbcde56e947ea11f2b}{UTask\+Arr}} \&}]{tasks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+批量执行任务 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_thread_base_a0b9db2571d08aa259066b9ae099674c2}\label{class_u_thread_base_a0b9db2571d08aa259066b9ae099674c2}} 
+\index{UThreadBase@{UThreadBase}!setAffinity@{setAffinity}}
+\index{setAffinity@{setAffinity}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{setAffinity()}{setAffinity()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::set\+Affinity (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+设置线程亲和性，仅针对linux系统 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_u_thread_base_a0b9db2571d08aa259066b9ae099674c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_base_a758398496dd54c2f6415178d823aed30}\label{class_u_thread_base_a758398496dd54c2f6415178d823aed30}} 
+\index{UThreadBase@{UThreadBase}!setSchedParam@{setSchedParam}}
+\index{setSchedParam@{setSchedParam}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{setSchedParam()}{setSchedParam()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Base\+::set\+Sched\+Param (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+设置线程优先级，仅针对非windows平台使用 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_base_a758398496dd54c2f6415178d823aed30_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_thread_base_acdca5c7d24005a1177e5ae991c38ed71}\label{class_u_thread_base_acdca5c7d24005a1177e5ae991c38ed71}} 
+\index{UThreadBase@{UThreadBase}!config\_@{config\_}}
+\index{config\_@{config\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{config\_}{config\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} UThread\+Base\+::config\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a0bdd8b5b9e17773cf1467ded3cd179a6}\label{class_u_thread_base_a0bdd8b5b9e17773cf1467ded3cd179a6}} 
+\index{UThreadBase@{UThreadBase}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable UThread\+Base\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_aa66bd6d32da568dea75524188504c86c}\label{class_u_thread_base_aa66bd6d32da568dea75524188504c86c}} 
+\index{UThreadBase@{UThreadBase}!done\_@{done\_}}
+\index{done\_@{done\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{done\_}{done\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Base\+::done\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a348dfe070145f8cb7339bed5ec3c8a6e}\label{class_u_thread_base_a348dfe070145f8cb7339bed5ec3c8a6e}} 
+\index{UThreadBase@{UThreadBase}!is\_init\_@{is\_init\_}}
+\index{is\_init\_@{is\_init\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{is\_init\_}{is\_init\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Base\+::is\+\_\+init\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_afa745b1e8799a63ac3755b8ee335fefd}\label{class_u_thread_base_afa745b1e8799a63ac3755b8ee335fefd}} 
+\index{UThreadBase@{UThreadBase}!is\_running\_@{is\_running\_}}
+\index{is\_running\_@{is\_running\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{is\_running\_}{is\_running\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Base\+::is\+\_\+running\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a40bcc750dc4d1ee5daab8b4b15a8bc9c}\label{class_u_thread_base_a40bcc750dc4d1ee5daab8b4b15a8bc9c}} 
+\index{UThreadBase@{UThreadBase}!metrics\_@{metrics\_}}
+\index{metrics\_@{metrics\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{metrics\_}{metrics\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_metrics}{UMetrics}} UThread\+Base\+::metrics\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a634d7ad8b25e3c09579b7745a0aa5edc}\label{class_u_thread_base_a634d7ad8b25e3c09579b7745a0aa5edc}} 
+\index{UThreadBase@{UThreadBase}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex UThread\+Base\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_a3d34c71679eec3a0099051fadd2f231e}\label{class_u_thread_base_a3d34c71679eec3a0099051fadd2f231e}} 
+\index{UThreadBase@{UThreadBase}!pool\_priority\_task\_queue\_@{pool\_priority\_task\_queue\_}}
+\index{pool\_priority\_task\_queue\_@{pool\_priority\_task\_queue\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{pool\_priority\_task\_queue\_}{pool\_priority\_task\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$$\ast$ UThread\+Base\+::pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_acd5fed9a74b5d90757fcd5756640cdfc}\label{class_u_thread_base_acd5fed9a74b5d90757fcd5756640cdfc}} 
+\index{UThreadBase@{UThreadBase}!pool\_task\_queue\_@{pool\_task\_queue\_}}
+\index{pool\_task\_queue\_@{pool\_task\_queue\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{pool\_task\_queue\_}{pool\_task\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$$\ast$ UThread\+Base\+::pool\+\_\+task\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_ac121cf0dcafd2e12bb71ce0beb3d3b8d}\label{class_u_thread_base_ac121cf0dcafd2e12bb71ce0beb3d3b8d}} 
+\index{UThreadBase@{UThreadBase}!thread\_@{thread\_}}
+\index{thread\_@{thread\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{thread\_}{thread\_}}
+{\footnotesize\ttfamily std\+::thread UThread\+Base\+::thread\+\_\+\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_ab0cdcaa2a3b6cbfc5265eb2339532084}\label{class_u_thread_base_ab0cdcaa2a3b6cbfc5265eb2339532084}} 
+\index{UThreadBase@{UThreadBase}!total\_task\_num\_@{total\_task\_num\_}}
+\index{total\_task\_num\_@{total\_task\_num\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{total\_task\_num\_}{total\_task\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af6f75f2c423a8954a8d66f414043f81f}{CULong}} UThread\+Base\+::total\+\_\+task\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_base_abfb178d85164e6de2b178d9906e5bfa9}\label{class_u_thread_base_abfb178d85164e6de2b178d9906e5bfa9}} 
+\index{UThreadBase@{UThreadBase}!type\_@{type\_}}
+\index{type\_@{type\_}!UThreadBase@{UThreadBase}}
+\doxysubsubsection{\texorpdfstring{type\_}{type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Base\+::type\+\_\+ = 0\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Thread/\mbox{\hyperlink{_u_thread_base_8h}{UThread\+Base.\+h}}\end{DoxyCompactItemize}

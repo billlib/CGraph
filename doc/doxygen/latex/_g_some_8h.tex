@@ -1,0 +1,28 @@
+\hypertarget{_g_some_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GSome/\+GSome.h File Reference}
+\label{_g_some_8h}\index{src/GraphCtrl/GraphElement/GGroup/GSome/GSome.h@{src/GraphCtrl/GraphElement/GGroup/GSome/GSome.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include \char`\"{}../\+GGroup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GSome.\+inl\char`\"{}}\newline
+Include dependency graph for GSome.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_some_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_some_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_some}{GSome$<$ Trigger\+Num $>$}}
+\begin{DoxyCompactList}\small\item\em 对于插入的所有\+GElement，不管实际能不能并行，\+GSome都会把这些\+GElement提交到异步任务里面全并发执行(详见run) Trigger\+Num个\+GElement执行完成后就退出不再执行剩余的，剩余的置为\+TIMEOUT(在\+GElement的fat\+Processor里面会不执行直接结束) \end{DoxyCompactList}\end{DoxyCompactItemize}

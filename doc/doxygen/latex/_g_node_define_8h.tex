@@ -1,0 +1,63 @@
+\hypertarget{_g_node_define_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+GNode/\+GNode\+Define.h File Reference}
+\label{_g_node_define_8h}\index{src/GraphCtrl/GraphElement/GNode/GNodeDefine.h@{src/GraphCtrl/GraphElement/GNode/GNodeDefine.h}}
+{\ttfamily \#include $<$utility$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include \char`\"{}../\+GElement.\+h\char`\"{}}\newline
+Include dependency graph for GNode\+Define.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_node_define_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_node_define_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_g_node_info}{GNode\+Info}}
+\begin{DoxyCompactList}\small\item\em 功能节点信息 创建\+GCluster和\+GRegion的中的\+GNode的时候，使用到的信息 创建\+GCluster的时候，dependence为空 创建\+GRegion的时候，dependence不为空。若为空，则表示可直接执行 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}} \{ \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95ae4ac03f6c9f00665644e868dd1fb9f1e}{BASIC}} = 0
+, \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95acf3882f1c43ab22bff0bd9d82d83251b}{IO}} = 1
+, \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a2b55387dd066c5bac646ac61543d152d}{CPU}} = 2
+, \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a52f9ec21735243ad9917cda3ca077d32}{GPU}} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}\label{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}} 
+\index{GNodeDefine.h@{GNodeDefine.h}!GNodeType@{GNodeType}}
+\index{GNodeType@{GNodeType}!GNodeDefine.h@{GNodeDefine.h}}
+\doxysubsubsection{\texorpdfstring{GNodeType}{GNodeType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BASIC@{BASIC}!GNodeDefine.h@{GNodeDefine.h}}\index{GNodeDefine.h@{GNodeDefine.h}!BASIC@{BASIC}}}\mbox{\Hypertarget{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95ae4ac03f6c9f00665644e868dd1fb9f1e}\label{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95ae4ac03f6c9f00665644e868dd1fb9f1e}} 
+BASIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IO@{IO}!GNodeDefine.h@{GNodeDefine.h}}\index{GNodeDefine.h@{GNodeDefine.h}!IO@{IO}}}\mbox{\Hypertarget{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95acf3882f1c43ab22bff0bd9d82d83251b}\label{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95acf3882f1c43ab22bff0bd9d82d83251b}} 
+IO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CPU@{CPU}!GNodeDefine.h@{GNodeDefine.h}}\index{GNodeDefine.h@{GNodeDefine.h}!CPU@{CPU}}}\mbox{\Hypertarget{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a2b55387dd066c5bac646ac61543d152d}\label{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a2b55387dd066c5bac646ac61543d152d}} 
+CPU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GPU@{GPU}!GNodeDefine.h@{GNodeDefine.h}}\index{GNodeDefine.h@{GNodeDefine.h}!GPU@{GPU}}}\mbox{\Hypertarget{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a52f9ec21735243ad9917cda3ca077d32}\label{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95a52f9ec21735243ad9917cda3ca077d32}} 
+GPU&\\
+\hline
+
+\end{DoxyEnumFields}

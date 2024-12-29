@@ -14,6 +14,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 默认的GMessageObject使用的参数类型是GMessageParam，是全局参数，用单例管理更合适
+ * 
+ */
 class GMessageManagerSingleton : public GMessageObject {
 public:
     /**

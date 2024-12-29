@@ -1,0 +1,342 @@
+\hypertarget{class_u_atomic_ring_buffer_queue}{}\doxysection{UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$ Class Template Reference}
+\label{class_u_atomic_ring_buffer_queue}\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+
+
+包含一个基于std\+::vector的环形队列，基于mutex\+\_\+实现原子的wait\+Pop\+With\+Timeout/push head\+\_\+/tail\+\_\+初始化为0，tail\+\_\+及tail\+\_\+之后一直到head\+\_\+之前的位置记为空 举例：head\+\_\+为0、tail\+\_\+为3、capaci\+\_\+为64的情况下，\mbox{[}3,63\mbox{]}范围内的位置都记为空  
+
+
+
+
+{\ttfamily \#include $<$UAtomic\+Ring\+Buffer\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_atomic_ring_buffer_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_atomic_ring_buffer_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue_adc6d3a19c4403b765fd2d99eb98e0b31}{UAtomic\+Ring\+Buffer\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a86a1517e8a9c8683082eb746c99b9197}{$\sim$\+UAtomic\+Ring\+Buffer\+Queue}} () override
+\item 
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}} $\ast$ \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_ae9e5c75fcc843582523e5f62eb0b0827}{set\+Capacity}} (\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a8762be1d658bf5f0ecea800da3fd9dbd}{get\+Capacity}} () const
+\item 
+{\footnotesize template$<$class TImpl  = T$>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_ae859a4017f046aa1d688489d32071b85}{push}} (const TImpl \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{URing\+Buffer\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$class TImpl  = T$>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a3da2389672de6247305bb8d1501526a7}{push}} (std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{URing\+Buffer\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$class TImpl  = T$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a1c7c5de1fe46bc450fa970f76b917545}{wait\+Pop\+With\+Timeout}} (TImpl \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout)
+\item 
+{\footnotesize template$<$class TImpl  = T$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a97a6c5490cd876076e89b2dbe30330e6}{wait\+Pop\+With\+Timeout}} (std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_ac9d3a248197fa2808968ddea0dc8dd39}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_aa5f3c93d7a07e9e9fc3237c8f09c267e}{is\+Full}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_ad632dcc4a6d6c5d6f16c5ff2a8bcaa08}{is\+Empty}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a7406b69d6cdf8e49180b4e8aa153d9c7}{head\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a82979703c409e411f46b69fa1ac041a5}{tail\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a61b7118d8370c6122e6f601f5367b974}{capacity\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a2ca6e0e63fd908140f773635cf441168}{push\+\_\+cv\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_af9b2867f00a11166b9f3043bba64b613}{pop\+\_\+cv\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{class_u_atomic_ring_buffer_queue_a08b0580efcc43dceabfaffb99aa63e86}{ring\+\_\+buffer\+\_\+queue\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$\newline
+class UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$}
+
+包含一个基于std\+::vector的环形队列，基于mutex\+\_\+实现原子的wait\+Pop\+With\+Timeout/push head\+\_\+/tail\+\_\+初始化为0，tail\+\_\+及tail\+\_\+之后一直到head\+\_\+之前的位置记为空 举例：head\+\_\+为0、tail\+\_\+为3、capaci\+\_\+为64的情况下，\mbox{[}3,63\mbox{]}范围内的位置都记为空 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em capacity} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_adc6d3a19c4403b765fd2d99eb98e0b31}\label{class_u_atomic_ring_buffer_queue_adc6d3a19c4403b765fd2d99eb98e0b31}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!UAtomicRingBufferQueue@{UAtomicRingBufferQueue}}
+\index{UAtomicRingBufferQueue@{UAtomicRingBufferQueue}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{UAtomicRingBufferQueue()}{UAtomicRingBufferQueue()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a86a1517e8a9c8683082eb746c99b9197}\label{class_u_atomic_ring_buffer_queue_a86a1517e8a9c8683082eb746c99b9197}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!````~UAtomicRingBufferQueue@{$\sim$UAtomicRingBufferQueue}}
+\index{````~UAtomicRingBufferQueue@{$\sim$UAtomicRingBufferQueue}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$UAtomicRingBufferQueue()}{~UAtomicRingBufferQueue()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::$\sim$\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_atomic_ring_buffer_queue_a86a1517e8a9c8683082eb746c99b9197_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_ac9d3a248197fa2808968ddea0dc8dd39}\label{class_u_atomic_ring_buffer_queue_ac9d3a248197fa2808968ddea0dc8dd39}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!clear@{clear}}
+\index{clear@{clear}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+清空所有的数据 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a8762be1d658bf5f0ecea800da3fd9dbd}\label{class_u_atomic_ring_buffer_queue_a8762be1d658bf5f0ecea800da3fd9dbd}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取容量信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_ad632dcc4a6d6c5d6f16c5ff2a8bcaa08}\label{class_u_atomic_ring_buffer_queue_ad632dcc4a6d6c5d6f16c5ff2a8bcaa08}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!isEmpty@{isEmpty}}
+\index{isEmpty@{isEmpty}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{isEmpty()}{isEmpty()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::is\+Empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+当前队列是否为空 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_aa5f3c93d7a07e9e9fc3237c8f09c267e}\label{class_u_atomic_ring_buffer_queue_aa5f3c93d7a07e9e9fc3237c8f09c267e}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!isFull@{isFull}}
+\index{isFull@{isFull}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{isFull()}{isFull()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::is\+Full (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+当前队列是否为满 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_ae859a4017f046aa1d688489d32071b85}\label{class_u_atomic_ring_buffer_queue_ae859a4017f046aa1d688489d32071b85}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!push@{push}}
+\index{push@{push}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+template$<$class TImpl  = T$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::push (\begin{DoxyParamCaption}\item[{const TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{URing\+Buffer\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+写入信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_atomic_ring_buffer_queue_ae859a4017f046aa1d688489d32071b85_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a3da2389672de6247305bb8d1501526a7}\label{class_u_atomic_ring_buffer_queue_a3da2389672de6247305bb8d1501526a7}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!push@{push}}
+\index{push@{push}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+template$<$class TImpl  = T$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::push (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{URing\+Buffer\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+写入智能指针类型的信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_atomic_ring_buffer_queue_a3da2389672de6247305bb8d1501526a7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_ae9e5c75fcc843582523e5f62eb0b0827}\label{class_u_atomic_ring_buffer_queue_ae9e5c75fcc843582523e5f62eb0b0827}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!setCapacity@{setCapacity}}
+\index{setCapacity@{setCapacity}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{setCapacity()}{setCapacity()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$\ast$ \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::set\+Capacity (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+设置容量信息 
+\begin{DoxyParams}{Parameters}
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 谨慎使用，push信息之后，不推荐使用 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a97a6c5490cd876076e89b2dbe30330e6}\label{class_u_atomic_ring_buffer_queue_a97a6c5490cd876076e89b2dbe30330e6}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!waitPopWithTimeout@{waitPopWithTimeout}}
+\index{waitPopWithTimeout@{waitPopWithTimeout}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{waitPopWithTimeout()}{waitPopWithTimeout()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+template$<$class TImpl  = T$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::wait\+Pop\+With\+Timeout (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+等待弹出信息。ps：当入参为智能指针的情况 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+当传入的内容，是智能指针的时候， 这里就直接通过 move转移过去好了，跟直接传值的方式，保持区别Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_atomic_ring_buffer_queue_a97a6c5490cd876076e89b2dbe30330e6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a1c7c5de1fe46bc450fa970f76b917545}\label{class_u_atomic_ring_buffer_queue_a1c7c5de1fe46bc450fa970f76b917545}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!waitPopWithTimeout@{waitPopWithTimeout}}
+\index{waitPopWithTimeout@{waitPopWithTimeout}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{waitPopWithTimeout()}{waitPopWithTimeout()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+template$<$class TImpl  = T$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::wait\+Pop\+With\+Timeout (\begin{DoxyParamCaption}\item[{TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+等待弹出信息 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_atomic_ring_buffer_queue_a1c7c5de1fe46bc450fa970f76b917545_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a61b7118d8370c6122e6f601f5367b974}\label{class_u_atomic_ring_buffer_queue_a61b7118d8370c6122e6f601f5367b974}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a7406b69d6cdf8e49180b4e8aa153d9c7}\label{class_u_atomic_ring_buffer_queue_a7406b69d6cdf8e49180b4e8aa153d9c7}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!head\_@{head\_}}
+\index{head\_@{head\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{head\_}{head\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::head\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_af9b2867f00a11166b9f3043bba64b613}\label{class_u_atomic_ring_buffer_queue_af9b2867f00a11166b9f3043bba64b613}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!pop\_cv\_@{pop\_cv\_}}
+\index{pop\_cv\_@{pop\_cv\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_cv\_}{pop\_cv\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::pop\+\_\+cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a2ca6e0e63fd908140f773635cf441168}\label{class_u_atomic_ring_buffer_queue_a2ca6e0e63fd908140f773635cf441168}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!push\_cv\_@{push\_cv\_}}
+\index{push\_cv\_@{push\_cv\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{push\_cv\_}{push\_cv\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::push\+\_\+cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a08b0580efcc43dceabfaffb99aa63e86}\label{class_u_atomic_ring_buffer_queue_a08b0580efcc43dceabfaffb99aa63e86}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!ring\_buffer\_queue\_@{ring\_buffer\_queue\_}}
+\index{ring\_buffer\_queue\_@{ring\_buffer\_queue\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{ring\_buffer\_queue\_}{ring\_buffer\_queue\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::vector$<$std\+::unique\+\_\+ptr$<$T$>$ $>$ \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::ring\+\_\+buffer\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_atomic_ring_buffer_queue_a82979703c409e411f46b69fa1ac041a5}\label{class_u_atomic_ring_buffer_queue_a82979703c409e411f46b69fa1ac041a5}} 
+\index{UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}!tail\_@{tail\_}}
+\index{tail\_@{tail\_}!UAtomicRingBufferQueue$<$ T, capacity $>$@{UAtomicRingBufferQueue$<$ T, capacity $>$}}
+\doxysubsubsection{\texorpdfstring{tail\_}{tail\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$\+::tail\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\mbox{\hyperlink{_u_atomic_ring_buffer_queue_8h}{UAtomic\+Ring\+Buffer\+Queue.\+h}}\end{DoxyCompactItemize}

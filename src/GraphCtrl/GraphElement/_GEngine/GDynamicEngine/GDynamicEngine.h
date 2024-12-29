@@ -15,6 +15,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief CGraph的核心引擎，提供DAG类型分析、拓扑分析、动态图运行、全并发执行、全串行执行等能力
+ */
 class GDynamicEngine : public GEngine {
 protected:
     explicit GDynamicEngine() = default;

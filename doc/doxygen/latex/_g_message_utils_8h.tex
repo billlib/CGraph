@@ -1,0 +1,113 @@
+\hypertarget{_g_message_utils_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Message/\+GMessage\+Utils.h File Reference}
+\label{_g_message_utils_8h}\index{src/GraphCtrl/GraphMessage/GMessageUtils.h@{src/GraphCtrl/GraphMessage/GMessageUtils.h}}
+{\ttfamily \#include \char`\"{}GMessage\+Manager\+Singleton.\+h\char`\"{}}\newline
+Include dependency graph for GMessage\+Utils.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_utils_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_utils_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a6775bcf3cbfceb032e89eec8ce92d646}{CGRAPH\+\_\+\+CREATE\+\_\+\+MESSAGE\+\_\+\+TOPIC}}(Type,  topic,  size)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template create\+Topic$<$Type$>$(topic, size);                 \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a9b638c6d4fe14abc898df87f16b65194}{CGRAPH\+\_\+\+REMOVE\+\_\+\+MESSAGE\+\_\+\+TOPIC}}(topic)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$remove\+Topic(topic);                                      \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a53402179cceb3a7397b2a344dfc1464c}{CGRAPH\+\_\+\+SEND\+\_\+\+MPARAM}}(Type,  topic,  value,  strategy)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template send\+Topic\+Value$<$Type$>$(topic, value, strategy);   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a39083fb62c17922313cdb46606c606b4}{CGRAPH\+\_\+\+RECV\+\_\+\+MPARAM}}(Type,  topic,  value)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template recv\+Topic\+Value$<$Type$>$(topic, value);             \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_ad04fc699c9c11b7c18fdedd9820797c2}{CGRAPH\+\_\+\+RECV\+\_\+\+MPARAM\+\_\+\+WITH\+\_\+\+TIMEOUT}}(Type,  topic,  value,  timeout)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template recv\+Topic\+Value$<$Type$>$(topic, value, timeout);    \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_aecb301cf66a4ebf047ff3f593399268a}{CGRAPH\+\_\+\+BIND\+\_\+\+MESSAGE\+\_\+\+TOPIC}}(Type,  topic,  size)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template bind\+Topic$<$Type$>$(topic, size);                   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a96cc0372a8ee22bb415a88e3c5c547f3}{CGRAPH\+\_\+\+PUB\+\_\+\+MPARAM}}(Type,  topic,  value,  strategy)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template pub\+Topic\+Value$<$Type$>$(topic, value, strategy);    \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a7a37f48c4a40f0e3dc3ec7f25a4265a9}{CGRAPH\+\_\+\+SUB\+\_\+\+MPARAM}}(Type,  conn\+Id,  value)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template sub\+Topic\+Value$<$Type$>$(conn\+Id, value);             \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a4b99e5aa4f0e8a311c8e73a9b945cc66}{CGRAPH\+\_\+\+SUB\+\_\+\+MPARAM\+\_\+\+WITH\+\_\+\+TIMEOUT}}(Type,  conn\+Id,  value,  timeout)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template sub\+Topic\+Value$<$Type$>$(conn\+Id, value, timeout);    \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a7c30f69fc863c4165ea08bfeaefa1db4}{CGRAPH\+\_\+\+DROP\+\_\+\+MESSAGE\+\_\+\+TOPIC}}(topic)~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$drop\+Topic(topic);                                        \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_g_message_utils_8h_a507e18514623b85c3e543bdf87879842}{CGRAPH\+\_\+\+CLEAR\+\_\+\+MESSAGES}}()~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$clear();                                                 \textbackslash{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_g_message_utils_8h_aecb301cf66a4ebf047ff3f593399268a}\label{_g_message_utils_8h_aecb301cf66a4ebf047ff3f593399268a}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_BIND\_MESSAGE\_TOPIC@{CGRAPH\_BIND\_MESSAGE\_TOPIC}}
+\index{CGRAPH\_BIND\_MESSAGE\_TOPIC@{CGRAPH\_BIND\_MESSAGE\_TOPIC}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_BIND\_MESSAGE\_TOPIC}{CGRAPH\_BIND\_MESSAGE\_TOPIC}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+BIND\+\_\+\+MESSAGE\+\_\+\+TOPIC(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{size }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template bind\+Topic$<$Type$>$(topic, size);                   \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a507e18514623b85c3e543bdf87879842}\label{_g_message_utils_8h_a507e18514623b85c3e543bdf87879842}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_CLEAR\_MESSAGES@{CGRAPH\_CLEAR\_MESSAGES}}
+\index{CGRAPH\_CLEAR\_MESSAGES@{CGRAPH\_CLEAR\_MESSAGES}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CLEAR\_MESSAGES}{CGRAPH\_CLEAR\_MESSAGES}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+CLEAR\+\_\+\+MESSAGES(\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$clear();                                                 \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a6775bcf3cbfceb032e89eec8ce92d646}\label{_g_message_utils_8h_a6775bcf3cbfceb032e89eec8ce92d646}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_CREATE\_MESSAGE\_TOPIC@{CGRAPH\_CREATE\_MESSAGE\_TOPIC}}
+\index{CGRAPH\_CREATE\_MESSAGE\_TOPIC@{CGRAPH\_CREATE\_MESSAGE\_TOPIC}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CREATE\_MESSAGE\_TOPIC}{CGRAPH\_CREATE\_MESSAGE\_TOPIC}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+CREATE\+\_\+\+MESSAGE\+\_\+\+TOPIC(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{size }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template create\+Topic$<$Type$>$(topic, size);                 \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a7c30f69fc863c4165ea08bfeaefa1db4}\label{_g_message_utils_8h_a7c30f69fc863c4165ea08bfeaefa1db4}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_DROP\_MESSAGE\_TOPIC@{CGRAPH\_DROP\_MESSAGE\_TOPIC}}
+\index{CGRAPH\_DROP\_MESSAGE\_TOPIC@{CGRAPH\_DROP\_MESSAGE\_TOPIC}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DROP\_MESSAGE\_TOPIC}{CGRAPH\_DROP\_MESSAGE\_TOPIC}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+DROP\+\_\+\+MESSAGE\+\_\+\+TOPIC(\begin{DoxyParamCaption}\item[{}]{topic }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$drop\+Topic(topic);                                        \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a96cc0372a8ee22bb415a88e3c5c547f3}\label{_g_message_utils_8h_a96cc0372a8ee22bb415a88e3c5c547f3}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_PUB\_MPARAM@{CGRAPH\_PUB\_MPARAM}}
+\index{CGRAPH\_PUB\_MPARAM@{CGRAPH\_PUB\_MPARAM}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PUB\_MPARAM}{CGRAPH\_PUB\_MPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+PUB\+\_\+\+MPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{value,  }\item[{}]{strategy }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template pub\+Topic\+Value$<$Type$>$(topic, value, strategy);    \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a39083fb62c17922313cdb46606c606b4}\label{_g_message_utils_8h_a39083fb62c17922313cdb46606c606b4}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_RECV\_MPARAM@{CGRAPH\_RECV\_MPARAM}}
+\index{CGRAPH\_RECV\_MPARAM@{CGRAPH\_RECV\_MPARAM}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_RECV\_MPARAM}{CGRAPH\_RECV\_MPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+RECV\+\_\+\+MPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{value }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template recv\+Topic\+Value$<$Type$>$(topic, value);             \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_ad04fc699c9c11b7c18fdedd9820797c2}\label{_g_message_utils_8h_ad04fc699c9c11b7c18fdedd9820797c2}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT@{CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT}}
+\index{CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT@{CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT}{CGRAPH\_RECV\_MPARAM\_WITH\_TIMEOUT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+RECV\+\_\+\+MPARAM\+\_\+\+WITH\+\_\+\+TIMEOUT(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{value,  }\item[{}]{timeout }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template recv\+Topic\+Value$<$Type$>$(topic, value, timeout);    \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a9b638c6d4fe14abc898df87f16b65194}\label{_g_message_utils_8h_a9b638c6d4fe14abc898df87f16b65194}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_REMOVE\_MESSAGE\_TOPIC@{CGRAPH\_REMOVE\_MESSAGE\_TOPIC}}
+\index{CGRAPH\_REMOVE\_MESSAGE\_TOPIC@{CGRAPH\_REMOVE\_MESSAGE\_TOPIC}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_REMOVE\_MESSAGE\_TOPIC}{CGRAPH\_REMOVE\_MESSAGE\_TOPIC}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+REMOVE\+\_\+\+MESSAGE\+\_\+\+TOPIC(\begin{DoxyParamCaption}\item[{}]{topic }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$remove\+Topic(topic);                                      \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a53402179cceb3a7397b2a344dfc1464c}\label{_g_message_utils_8h_a53402179cceb3a7397b2a344dfc1464c}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_SEND\_MPARAM@{CGRAPH\_SEND\_MPARAM}}
+\index{CGRAPH\_SEND\_MPARAM@{CGRAPH\_SEND\_MPARAM}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SEND\_MPARAM}{CGRAPH\_SEND\_MPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SEND\+\_\+\+MPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{topic,  }\item[{}]{value,  }\item[{}]{strategy }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template send\+Topic\+Value$<$Type$>$(topic, value, strategy);   \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a7a37f48c4a40f0e3dc3ec7f25a4265a9}\label{_g_message_utils_8h_a7a37f48c4a40f0e3dc3ec7f25a4265a9}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_SUB\_MPARAM@{CGRAPH\_SUB\_MPARAM}}
+\index{CGRAPH\_SUB\_MPARAM@{CGRAPH\_SUB\_MPARAM}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SUB\_MPARAM}{CGRAPH\_SUB\_MPARAM}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SUB\+\_\+\+MPARAM(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{conn\+Id,  }\item[{}]{value }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template sub\+Topic\+Value$<$Type$>$(conn\+Id, value);             \textbackslash{}}
+
+\mbox{\Hypertarget{_g_message_utils_8h_a4b99e5aa4f0e8a311c8e73a9b945cc66}\label{_g_message_utils_8h_a4b99e5aa4f0e8a311c8e73a9b945cc66}} 
+\index{GMessageUtils.h@{GMessageUtils.h}!CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT@{CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT}}
+\index{CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT@{CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT}!GMessageUtils.h@{GMessageUtils.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT}{CGRAPH\_SUB\_MPARAM\_WITH\_TIMEOUT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+SUB\+\_\+\+MPARAM\+\_\+\+WITH\+\_\+\+TIMEOUT(\begin{DoxyParamCaption}\item[{}]{Type,  }\item[{}]{conn\+Id,  }\item[{}]{value,  }\item[{}]{timeout }\end{DoxyParamCaption})~    CGraph\+::\+GMessage\+Manager\+Singleton\+::get()-\/$>$template sub\+Topic\+Value$<$Type$>$(conn\+Id, value, timeout);    \textbackslash{}}
+

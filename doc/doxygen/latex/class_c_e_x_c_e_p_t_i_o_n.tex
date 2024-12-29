@@ -1,0 +1,76 @@
+\hypertarget{class_c_e_x_c_e_p_t_i_o_n}{}\doxysection{CEXCEPTION Class Reference}
+\label{class_c_e_x_c_e_p_t_i_o_n}\index{CEXCEPTION@{CEXCEPTION}}
+
+
+{\ttfamily \#include $<$CException.\+h$>$}
+
+
+
+Inheritance diagram for CEXCEPTION\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_c_e_x_c_e_p_t_i_o_n__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for CEXCEPTION\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=166pt]{class_c_e_x_c_e_p_t_i_o_n__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_e_x_c_e_p_t_i_o_n_a7f09afdc48865e49f782c4cdfa7dc5b8}{CEXCEPTION}} (const std\+::string \&info, const std\+::string \&locate=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}})
+\item 
+const char $\ast$ \mbox{\hyperlink{class_c_e_x_c_e_p_t_i_o_n_ae85f8246b39d9355ec7e28e77d053947}{what}} () const noexcept override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{class_c_e_x_c_e_p_t_i_o_n_a1c189007120ef8e8d691530cd64c4caa}{exception\+\_\+info\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+std\+::exception的简单封装 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_e_x_c_e_p_t_i_o_n_a7f09afdc48865e49f782c4cdfa7dc5b8}\label{class_c_e_x_c_e_p_t_i_o_n_a7f09afdc48865e49f782c4cdfa7dc5b8}} 
+\index{CEXCEPTION@{CEXCEPTION}!CEXCEPTION@{CEXCEPTION}}
+\index{CEXCEPTION@{CEXCEPTION}!CEXCEPTION@{CEXCEPTION}}
+\doxysubsubsection{\texorpdfstring{CEXCEPTION()}{CEXCEPTION()}}
+{\footnotesize\ttfamily CEXCEPTION\+::\+CEXCEPTION (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{info,  }\item[{const std\+::string \&}]{locate = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+这里的设计，和\+CStatus有一个联动 如果不了解具体情况，不建议做任何修改
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_e_x_c_e_p_t_i_o_n_ae85f8246b39d9355ec7e28e77d053947}\label{class_c_e_x_c_e_p_t_i_o_n_ae85f8246b39d9355ec7e28e77d053947}} 
+\index{CEXCEPTION@{CEXCEPTION}!what@{what}}
+\index{what@{what}!CEXCEPTION@{CEXCEPTION}}
+\doxysubsubsection{\texorpdfstring{what()}{what()}}
+{\footnotesize\ttfamily const char$\ast$ CEXCEPTION\+::what (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [noexcept]}}
+
+获取异常信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_e_x_c_e_p_t_i_o_n_a1c189007120ef8e8d691530cd64c4caa}\label{class_c_e_x_c_e_p_t_i_o_n_a1c189007120ef8e8d691530cd64c4caa}} 
+\index{CEXCEPTION@{CEXCEPTION}!exception\_info\_@{exception\_info\_}}
+\index{exception\_info\_@{exception\_info\_}!CEXCEPTION@{CEXCEPTION}}
+\doxysubsubsection{\texorpdfstring{exception\_info\_}{exception\_info\_}}
+{\footnotesize\ttfamily std\+::string CEXCEPTION\+::exception\+\_\+info\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+CBasic/\mbox{\hyperlink{_c_exception_8h}{CException.\+h}}\end{DoxyCompactItemize}

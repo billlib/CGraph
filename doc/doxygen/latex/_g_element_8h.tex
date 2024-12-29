@@ -1,0 +1,94 @@
+\hypertarget{_g_element_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+GElement.h File Reference}
+\label{_g_element_8h}\index{src/GraphCtrl/GraphElement/GElement.h@{src/GraphCtrl/GraphElement/GElement.h}}
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}GElement\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GElement\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GElement\+Relation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GElement.\+inl\char`\"{}}\newline
+Include dependency graph for GElement.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_element_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_element_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_element}{GElement}}
+\begin{DoxyCompactList}\small\item\em CGraph所有广义\char`\"{}结点\char`\"{}的基类，可派生出\+GNode/\+GGroup/\+GAdapter类 public\+: 提供add\+GAspect加入切面/add\+Depend\+GElement加入前序依赖/remove\+Depend删除前序依赖的能力 提供set\+Name更新名称/set\+Loop设置循环次数/set\+Level设置优先级/set\+Visible隐藏当前元素/set\+Binding\+Index设置亲和线程等能力 提供set\+Timeout设置元素执行的超时时间/set\+Macro设置为微任务的能力 提供add\+EParam添加\+GElement内部参数(GElement\+Param，实际上就是\+GPassed\+Param) 还额外提供运算符重载：--(set\+Visible)、$>$(设置后继依赖)、\&(设置后继依赖)、$\ast$(set\+Loop) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}{GElement\+Ref}} = \mbox{\hyperlink{class_g_element}{GElement}} \&
+\item 
+using \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} = \mbox{\hyperlink{class_g_element}{GElement}} $\ast$
+\item 
+using \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} = const \mbox{\hyperlink{class_g_element}{GElement}} $\ast$
+\item 
+using \mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} = \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $\ast$
+\item 
+using \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} = std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$
+\item 
+using \mbox{\hyperlink{_g_element_8h_a3fc198095336295670b524eeb530dc79}{GElement\+Ptr\+Mat2D}} = std\+::vector$<$ \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} $>$
+\item 
+using \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} = std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}\label{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}} 
+\index{GElement.h@{GElement.h}!GElementCPtr@{GElementCPtr}}
+\index{GElementCPtr@{GElementCPtr}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementCPtr}{GElementCPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} =  const \mbox{\hyperlink{class_g_element}{GElement}} $\ast$}
+
+\mbox{\Hypertarget{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}\label{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}} 
+\index{GElement.h@{GElement.h}!GElementPPtr@{GElementPPtr}}
+\index{GElementPPtr@{GElementPPtr}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementPPtr}{GElementPPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} =  \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $\ast$}
+
+\mbox{\Hypertarget{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}\label{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}} 
+\index{GElement.h@{GElement.h}!GElementPtr@{GElementPtr}}
+\index{GElementPtr@{GElementPtr}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementPtr}{GElementPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} =  \mbox{\hyperlink{class_g_element}{GElement}} $\ast$}
+
+\mbox{\Hypertarget{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}\label{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}} 
+\index{GElement.h@{GElement.h}!GElementPtrArr@{GElementPtrArr}}
+\index{GElementPtrArr@{GElementPtrArr}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementPtrArr}{GElementPtrArr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} =  std\+::vector$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$}
+
+\mbox{\Hypertarget{_g_element_8h_a3fc198095336295670b524eeb530dc79}\label{_g_element_8h_a3fc198095336295670b524eeb530dc79}} 
+\index{GElement.h@{GElement.h}!GElementPtrMat2D@{GElementPtrMat2D}}
+\index{GElementPtrMat2D@{GElementPtrMat2D}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementPtrMat2D}{GElementPtrMat2D}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a3fc198095336295670b524eeb530dc79}{GElement\+Ptr\+Mat2D}} =  std\+::vector$<$\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}}$>$}
+
+\mbox{\Hypertarget{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}\label{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}} 
+\index{GElement.h@{GElement.h}!GElementPtrSet@{GElementPtrSet}}
+\index{GElementPtrSet@{GElementPtrSet}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementPtrSet}{GElementPtrSet}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_ae3b10c6e16025141ec640e2473be5e94}{GElement\+Ptr\+Set}} =  std\+::set$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$}
+
+\mbox{\Hypertarget{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}\label{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}} 
+\index{GElement.h@{GElement.h}!GElementRef@{GElementRef}}
+\index{GElementRef@{GElementRef}!GElement.h@{GElement.h}}
+\doxysubsubsection{\texorpdfstring{GElementRef}{GElementRef}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}{GElement\+Ref}} =  \mbox{\hyperlink{class_g_element}{GElement}} \&}
+

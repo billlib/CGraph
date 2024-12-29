@@ -1,0 +1,38 @@
+\hypertarget{_u_thread_secondary_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Thread/\+UThread\+Secondary.h File Reference}
+\label{_u_thread_secondary_8h}\index{src/UtilsCtrl/ThreadPool/Thread/UThreadSecondary.h@{src/UtilsCtrl/ThreadPool/Thread/UThreadSecondary.h}}
+{\ttfamily \#include \char`\"{}UThread\+Base.\+h\char`\"{}}\newline
+Include dependency graph for UThread\+Secondary.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_secondary_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_secondary_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}}
+\begin{DoxyCompactList}\small\item\em 和主线程\+UThread\+Primary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool\+\_\+task\+\_\+queue\+\_\+)和优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务 当然：主线程不会从优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务， 这个任务队列存储的一般是长时间任务，是辅助线程专用的 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_u_thread_secondary_8h_a9b0be7ec11ac6751dd48fd8e19f50f29}{UThread\+Secondary\+Ptr}} = \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}} $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_u_thread_secondary_8h_a9b0be7ec11ac6751dd48fd8e19f50f29}\label{_u_thread_secondary_8h_a9b0be7ec11ac6751dd48fd8e19f50f29}} 
+\index{UThreadSecondary.h@{UThreadSecondary.h}!UThreadSecondaryPtr@{UThreadSecondaryPtr}}
+\index{UThreadSecondaryPtr@{UThreadSecondaryPtr}!UThreadSecondary.h@{UThreadSecondary.h}}
+\doxysubsubsection{\texorpdfstring{UThreadSecondaryPtr}{UThreadSecondaryPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_thread_secondary_8h_a9b0be7ec11ac6751dd48fd8e19f50f29}{UThread\+Secondary\+Ptr}} =  \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}} $\ast$}
+

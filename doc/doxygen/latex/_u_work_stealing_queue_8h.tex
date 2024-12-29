@@ -1,0 +1,25 @@
+\hypertarget{_u_work_stealing_queue_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\+UWork\+Stealing\+Queue.h File Reference}
+\label{_u_work_stealing_queue_8h}\index{src/UtilsCtrl/ThreadPool/Queue/UWorkStealingQueue.h@{src/UtilsCtrl/ThreadPool/Queue/UWorkStealingQueue.h}}
+{\ttfamily \#include $<$deque$>$}\newline
+{\ttfamily \#include \char`\"{}UQueue\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UWork\+Stealing\+Queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_work_stealing_queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_work_stealing_queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 工作窃取队列，实现为双端队列(deque\+\_\+)； push在队尾发生，可以一次性写入一个或多个任务，也支持try\+Push和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持try\+Pop； try\+Steal在队尾发生，可以一次性窃取一个或多个任务； \end{DoxyCompactList}\end{DoxyCompactItemize}

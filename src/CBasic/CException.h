@@ -17,6 +17,9 @@
 CGRAPH_NAMESPACE_BEGIN
 CGRAPH_INTERNAL_NAMESPACE_BEGIN
 
+/**
+ * std::exception的简单封装
+ */
 class CEXCEPTION : public std::exception {
 public:
     explicit CEXCEPTION(const std::string& info,

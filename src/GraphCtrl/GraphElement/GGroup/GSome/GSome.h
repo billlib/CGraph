@@ -17,6 +17,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 对于插入的所有GElement，不管实际能不能并行，GSome都会把这些GElement提交到异步任务里面全并发执行(详见run)
+ * TriggerNum个GElement执行完成后就退出不再执行剩余的，剩余的置为TIMEOUT(在GElement的fatProcessor里面会不执行直接结束)
+ * @tparam TriggerNum 
+ */
 template<CInt TriggerNum = 1>
 class GSome : public GGroup {
 protected:

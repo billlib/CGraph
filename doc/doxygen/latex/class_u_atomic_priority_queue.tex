@@ -1,0 +1,150 @@
+\hypertarget{class_u_atomic_priority_queue}{}\doxysection{UAtomic\+Priority\+Queue$<$ T $>$ Class Template Reference}
+\label{class_u_atomic_priority_queue}\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+
+
+包含一个优先级队列成员，基于mutex\+\_\+封装成一个原子的优先级队列，支持原子的try\+Pop/push/empty  
+
+
+
+
+{\ttfamily \#include $<$UAtomic\+Priority\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for UAtomic\+Priority\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_u_atomic_priority_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UAtomic\+Priority\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{class_u_atomic_priority_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_atomic_priority_queue_a0409f44deb272caa110828aaff68a989}{UAtomic\+Priority\+Queue}} ()=default
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue_a687fc6285af7981c8cd6684b6dc75f20}{try\+Pop}} (T \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue_a909d60f630036b0142edc48ab71e8a6d}{try\+Pop}} (std\+::vector$<$ T $>$ \&values, int max\+Pool\+Batch\+Size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_priority_queue_a3a0f531dc1fb8d83f47957ff58ff9331}{push}} (T \&\&value, int priority)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue_a2a779cb749f7de75df9676541ceea915}{empty}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::priority\+\_\+queue$<$ std\+::unique\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{class_u_atomic_priority_queue_a6b81fa38ad1c230784a451b173fd0d9b}{priority\+\_\+queue\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class UAtomic\+Priority\+Queue$<$ T $>$}
+
+包含一个优先级队列成员，基于mutex\+\_\+封装成一个原子的优先级队列，支持原子的try\+Pop/push/empty 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a0409f44deb272caa110828aaff68a989}\label{class_u_atomic_priority_queue_a0409f44deb272caa110828aaff68a989}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!UAtomicPriorityQueue@{UAtomicPriorityQueue}}
+\index{UAtomicPriorityQueue@{UAtomicPriorityQueue}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UAtomicPriorityQueue()}{UAtomicPriorityQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a2a779cb749f7de75df9676541ceea915}\label{class_u_atomic_priority_queue_a2a779cb749f7de75df9676541ceea915}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+判定队列是否为空 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a3a0f531dc1fb8d83f47957ff58ff9331}\label{class_u_atomic_priority_queue_a3a0f531dc1fb8d83f47957ff58ff9331}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value,  }\item[{int}]{priority }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+传入数据 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em priority} & 任务优先级，数字排序 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a909d60f630036b0142edc48ab71e8a6d}\label{class_u_atomic_priority_queue_a909d60f630036b0142edc48ab71e8a6d}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{values,  }\item[{int}]{max\+Pool\+Batch\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试弹出多个任务 
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+{\em max\+Pool\+Batch\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a687fc6285af7981c8cd6684b6dc75f20}\label{class_u_atomic_priority_queue_a687fc6285af7981c8cd6684b6dc75f20}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试弹出 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_atomic_priority_queue_a6b81fa38ad1c230784a451b173fd0d9b}\label{class_u_atomic_priority_queue_a6b81fa38ad1c230784a451b173fd0d9b}} 
+\index{UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}!priority\_queue\_@{priority\_queue\_}}
+\index{priority\_queue\_@{priority\_queue\_}!UAtomicPriorityQueue$<$ T $>$@{UAtomicPriorityQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{priority\_queue\_}{priority\_queue\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::priority\+\_\+queue$<$std\+::unique\+\_\+ptr$<$T$>$ $>$ \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ T $>$\+::priority\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\mbox{\hyperlink{_u_atomic_priority_queue_8h}{UAtomic\+Priority\+Queue.\+h}}\end{DoxyCompactItemize}

@@ -16,6 +16,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 拓扑排序，并按照拓扑排序的顺序串行执行
+ * 
+ */
 class GTopoEngine : public GEngine {
 protected:
     explicit GTopoEngine() = default;

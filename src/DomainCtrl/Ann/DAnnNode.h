@@ -14,6 +14,20 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief ANN领域算子模型抽象，说人话，就是抽象了一套跑NN相关的范式
+ *        prepareParam准备要接下来要run的函数类型
+ *        函数类型和DAnnNode的成员函数一一对应，分别有
+ *        train/search/insert/update/remove/loadModel/saveModel/edition；
+ *        上述接口在DAnnNode这个基类都为空，由派生类自行实现，在run统一调用；
+ * 
+ *        run的调用逻辑：
+ *        prepareParam为纯虚函数，派生类必须重写，返回的是接下来run要跑的函数类型
+ *        接着run会调用这个函数类型在ann_func_arr_实际注册的函数
+ *        最后再调用一次refreshParam刷新参数
+ * 
+ *        P.S. 感觉用处不大，和目前常用的 前处理 -> NN -> 后处理 不太match，倒是比较契合算法的模型训练流程?
+ */
 class DAnnNode : public DAnnObject, public GNode {
 protected:
     /**

@@ -1,0 +1,27 @@
+\hypertarget{_u_atomic_ring_buffer_queue_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\+UAtomic\+Ring\+Buffer\+Queue.h File Reference}
+\label{_u_atomic_ring_buffer_queue_8h}\index{src/UtilsCtrl/ThreadPool/Queue/UAtomicRingBufferQueue.h@{src/UtilsCtrl/ThreadPool/Queue/UAtomicRingBufferQueue.h}}
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+{\ttfamily \#include \char`\"{}UQueue\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UAtomic\+Ring\+Buffer\+Queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_atomic_ring_buffer_queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_atomic_ring_buffer_queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$}}
+\begin{DoxyCompactList}\small\item\em 包含一个基于std\+::vector的环形队列，基于mutex\+\_\+实现原子的wait\+Pop\+With\+Timeout/push head\+\_\+/tail\+\_\+初始化为0，tail\+\_\+及tail\+\_\+之后一直到head\+\_\+之前的位置记为空 举例：head\+\_\+为0、tail\+\_\+为3、capaci\+\_\+为64的情况下，\mbox{[}3,63\mbox{]}范围内的位置都记为空 \end{DoxyCompactList}\end{DoxyCompactItemize}

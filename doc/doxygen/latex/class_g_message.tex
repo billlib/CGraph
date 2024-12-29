@@ -1,0 +1,200 @@
+\hypertarget{class_g_message}{}\doxysection{GMessage$<$ T, capacity, $>$ Class Template Reference}
+\label{class_g_message}\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+
+
+基于\+UAtomic\+Ring\+Buffer\+Queue队列实现，支持send/recv  
+
+
+
+
+{\ttfamily \#include $<$GMessage.\+h$>$}
+
+
+
+Inheritance diagram for GMessage$<$ T, capacity, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{class_g_message__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMessage$<$ T, capacity, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_message__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_message_a785e8b3ddc47b235f2c1a5ee467c690b}{GMessage}} (\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} size=capacity)
+\item 
+\mbox{\hyperlink{class_g_message_a5d9446d954545a510f4a89b7bfb81e06}{$\sim$\+GMessage}} () override
+\item 
+{\footnotesize template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_message_a54c12906e956a566d0024ba3ec2ec51a}{send}} (const TImpl \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_message_ab188eca9c9fe9f0654b9e698a42b1064}{send}} (std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_a00d698392cb0526d89ea7fa608df0c8b}{recv}} (TImpl \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout)
+\item 
+{\footnotesize template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_aebe016b79ebd3982d38c8e2868297a33}{recv}} (std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_g_message_a415379c2a276aadff4c0f979684c3c7c}{get\+Capacity}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$ T, capacity $>$ \mbox{\hyperlink{class_g_message_a6f9f739837cc3f4f3d8af84fae904dc4}{queue\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$ = 0$>$\newline
+class GMessage$<$ T, capacity, $>$}
+
+基于\+UAtomic\+Ring\+Buffer\+Queue队列实现，支持send/recv 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em capacity} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_message_a785e8b3ddc47b235f2c1a5ee467c690b}\label{class_g_message_a785e8b3ddc47b235f2c1a5ee467c690b}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!GMessage@{GMessage}}
+\index{GMessage@{GMessage}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{GMessage()}{GMessage()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::\mbox{\hyperlink{class_g_message}{GMessage}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}}}]{size = {\ttfamily capacity} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_g_message_a5d9446d954545a510f4a89b7bfb81e06}\label{class_g_message_a5d9446d954545a510f4a89b7bfb81e06}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!````~GMessage@{$\sim$GMessage}}
+\index{````~GMessage@{$\sim$GMessage}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GMessage()}{~GMessage()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::$\sim$\mbox{\hyperlink{class_g_message}{GMessage}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+析构函数。释放前，要先释放队列中所有的信息 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_message_a415379c2a276aadff4c0f979684c3c7c}\label{class_g_message_a415379c2a276aadff4c0f979684c3c7c}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取容量大小 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_aebe016b79ebd3982d38c8e2868297a33}\label{class_g_message_aebe016b79ebd3982d38c8e2868297a33}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!recv@{recv}}
+\index{recv@{recv}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{recv()}{recv()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::recv (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+通过智能指针的方式传递 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_a00d698392cb0526d89ea7fa608df0c8b}\label{class_g_message_a00d698392cb0526d89ea7fa608df0c8b}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!recv@{recv}}
+\index{recv@{recv}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{recv()}{recv()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::recv (\begin{DoxyParamCaption}\item[{TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取参数 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_a54c12906e956a566d0024ba3ec2ec51a}\label{class_g_message_a54c12906e956a566d0024ba3ec2ec51a}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!send@{send}}
+\index{send@{send}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::send (\begin{DoxyParamCaption}\item[{const TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+写入参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_ab188eca9c9fe9f0654b9e698a42b1064}\label{class_g_message_ab188eca9c9fe9f0654b9e698a42b1064}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!send@{send}}
+\index{send@{send}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{send()}{send()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$class TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::send (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+写入智能指针类型的参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_message_a6f9f739837cc3f4f3d8af84fae904dc4}\label{class_g_message_a6f9f739837cc3f4f3d8af84fae904dc4}} 
+\index{GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}!queue\_@{queue\_}}
+\index{queue\_@{queue\_}!GMessage$<$ T, capacity, $>$@{GMessage$<$ T, capacity, $>$}}
+\doxysubsubsection{\texorpdfstring{queue\_}{queue\_}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue}}$<$T, capacity$>$ \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity, $>$\+::queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Message/\mbox{\hyperlink{_g_message_8h}{GMessage.\+h}}\end{DoxyCompactItemize}

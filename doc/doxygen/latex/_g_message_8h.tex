@@ -1,0 +1,41 @@
+\hypertarget{_g_message_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Message/\+GMessage.h File Reference}
+\label{_g_message_8h}\index{src/GraphCtrl/GraphMessage/GMessage.h@{src/GraphCtrl/GraphMessage/GMessage.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}GMessage\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GMessage\+Define.\+h\char`\"{}}\newline
+Include dependency graph for GMessage.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_message_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_message}{GMessage$<$ T, capacity, $>$}}
+\begin{DoxyCompactList}\small\item\em 基于\+UAtomic\+Ring\+Buffer\+Queue队列实现，支持send/recv \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ }\\using \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}} = \mbox{\hyperlink{class_g_message}{GMessage}}$<$ T, capacity $>$ $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}\label{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}} 
+\index{GMessage.h@{GMessage.h}!GMessagePtr@{GMessagePtr}}
+\index{GMessagePtr@{GMessagePtr}!GMessage.h@{GMessage.h}}
+\doxysubsubsection{\texorpdfstring{GMessagePtr}{GMessagePtr}}
+{\footnotesize\ttfamily template$<$typename T , CUInt capacity = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+using \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}} =  \mbox{\hyperlink{class_g_message}{GMessage}}$<$T, capacity$>$ $\ast$}
+

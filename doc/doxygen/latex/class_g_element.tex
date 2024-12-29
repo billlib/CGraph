@@ -1,0 +1,1503 @@
+\hypertarget{class_g_element}{}\doxysection{GElement Class Reference}
+\label{class_g_element}\index{GElement@{GElement}}
+
+
+CGraph所有广义\char`\"{}结点\char`\"{}的基类，可派生出\+GNode/\+GGroup/\+GAdapter类 public\+: 提供add\+GAspect加入切面/add\+Depend\+GElement加入前序依赖/remove\+Depend删除前序依赖的能力 提供set\+Name更新名称/set\+Loop设置循环次数/set\+Level设置优先级/set\+Visible隐藏当前元素/set\+Binding\+Index设置亲和线程等能力 提供set\+Timeout设置元素执行的超时时间/set\+Macro设置为微任务的能力 提供add\+EParam添加\+GElement内部参数(GElement\+Param，实际上就是\+GPassed\+Param) 还额外提供运算符重载：--(set\+Visible)、$>$(设置后继依赖)、\&(设置后继依赖)、$\ast$(set\+Loop)  
+
+
+
+
+{\ttfamily \#include $<$GElement.\+h$>$}
+
+
+
+Inheritance diagram for GElement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GElement\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TAspect , typename TParam  = GAspect\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_aa05a9d85683ab89a2cd45cf1cbce18a9}{add\+GAspect}} (TParam $\ast$param=nullptr)
+\item 
+{\footnotesize template$<$typename TAspect , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Aspect$<$ Args... $>$, TAspect $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a6afc42976358e65068e9393106bd36fe}{add\+GAspect}} (Args... args)
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a75fd561c7ff8c94e4b2d8b2c6b16a5b5}{add\+EParam}} (const std\+::string \&key, T $\ast$param)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_a2e06b5cfe3cbfb9805b504bcd11df73f}{add\+Depend\+GElements}} (const std\+::set$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \&elements)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a85eff5770f77d4097f49e2d63bb3a78a}{set\+Name}} (const std\+::string \&name) override
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_ac21496ccef71417ee6b02e95e23eab78}{set\+Loop}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a754adbdef94eb0d8989647da121b74d6}{set\+Level}} (\mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}} level)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_ac55314fbfe5eab0d937754b95444ed21}{set\+Visible}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} visible)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_afd318b8fc06463ef718bcfbc9436f91c}{set\+Binding\+Index}} (\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} index)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_aa67511219890966ad28c6d7e91bf8c5a}{set\+Timeout}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout, \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}} strategy=\mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}{GElement\+Timeout\+Strategy\+::\+AS\+\_\+\+ERROR}})
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a1a1bc0fb9c92685e1b70ae10c93e00ef}{set\+Macro}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} macro)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a0b49dae5a3850c2eda2353736d57f332}{is\+GGroup}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a72e2aa386c1edc257f1e372e47a865c4}{is\+GAdaptor}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_afee51858ee7dd3e20f6ca94da6f01ffc}{is\+GNode}} () const
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} \mbox{\hyperlink{class_g_element_aa3974e12480ee72598d78c4490f8ce6d}{get\+Cur\+State}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_acffc7edb290f469f48b57d947eaaca0f}{remove\+Depend}} (\mbox{\hyperlink{class_g_element}{GElement}} $\ast$element)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} \& \mbox{\hyperlink{class_g_element_a2767f060c307458fcc09210ec4c9b550}{operator-\/-\/}} (int) noexcept
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} \& \mbox{\hyperlink{class_g_element_a009867427220f4edc4e911f6974fe065}{operator$>$}} (\mbox{\hyperlink{class_g_element}{GElement}} $\ast$element)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} \& \mbox{\hyperlink{class_g_element_a096bfd697de07c76645b5a43e1de1c43}{operator\&}} (\mbox{\hyperlink{class_g_element}{GElement}} $\ast$element)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} \& \mbox{\hyperlink{class_g_element_a65083069a71cdc5ab707b53c658dfedf}{operator$\ast$}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop) noexcept
+\item 
+{\footnotesize template$<$typename TAspect , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} \mbox{\hyperlink{class_g_element_a4010e33a5162d2220c86e0de1caa6357}{add\+GAspect}} (TParam $\ast$param)
+\item 
+{\footnotesize template$<$typename TAspect , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Aspect$<$ Args... $>$, TAspect $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} \mbox{\hyperlink{class_g_element_a87e5e8d6bee0530d492702ca75d4f7a5}{add\+GAspect}} (Args... args)
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} \mbox{\hyperlink{class_g_element_aaab5e4dce1c87233790ba18a3fb69568}{add\+EParam}} (const std\+::string \&key, T $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_element_ac99d7ce22bd9ed14f5d952b00dcd53aa}{GElement}} ()=default
+\item 
+\mbox{\hyperlink{class_g_element_aaf1bf3a91c10466a2151afd48983efb0}{$\sim$\+GElement}} () override
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_ad431db2fc19fc3601035f273d8d74a9b}{prepare\+Run}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_a1df8a70c890626856105f89ba274b63c}{check\+Run\+Result}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_acf3abb5e770a41a7123d678e471c2b74}{is\+Hold}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_aa1c351cf60db010a9fc1a01d101ddf32}{is\+Match}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_ae593ba6053d063d174fd684054b15c03}{crashed}} (const \mbox{\hyperlink{_c_val_type_8h_a0bf31180c2ed175def27060a21ccc65d}{CException}} \&ex)
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$  = 0$>$ }\\T $\ast$ \mbox{\hyperlink{class_g_element_a1150956c10e42de3ff437a99b705b19c}{get\+EParam}} (const std\+::string \&key)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_element_ab8cea46aed751f56acb484726b1b4480}{get\+Thread\+Index}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a1167755c9c2e03587395b6365c374229}{is\+Timeout}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_element_a19fe9de248338fefb8bcbda6a03f6c78}{get\+Binding\+Index}} () const
+\item 
+\mbox{\hyperlink{struct_g_element_relation}{GElement\+Relation}} \mbox{\hyperlink{class_g_element_a72ba2d2467bc3b84aaa2057bc2dfcb9b}{get\+Relation}} () const
+\item 
+\mbox{\hyperlink{class_g_element_ae3b774c6b6a9596fb60d443b970db442}{CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY}} (\mbox{\hyperlink{class_g_element}{GElement}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a5b5972644a91b972099e6d85cb75fd38}{refresh}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_ad9500e8fcb74e766a2143ba148c9b1cd}{is\+Async}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_afbecfb204b6c3836953816d84dd03911}{is\+Mutable}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a181d5cd8c9451b83789f4fdb177e33e9}{is\+Macro}} () const
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a73a421381a83fbf7a616827884450c53}{is\+Registered}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_adc48409c2e2a24c426f98621354ec849}{do\+Aspect}} (const \mbox{\hyperlink{_g_aspect_define_8h_aa266dc9f688b47469580f5f10b9239c2}{internal\+::\+GAspect\+Type}} \&aspect\+Type, const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&cur\+Status=\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}())
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_ad1c5491558db46192587e7f495e8c76a}{add\+Element\+Info}} (const std\+::set$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \&depends, const std\+::string \&name, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd}{add\+Managers}} (\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} param\+Manager, \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} event\+Manager, \mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}} stage\+Manager)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_afe0e080c4173a51f1dfb8792e57bf282}{fat\+Processor}} (const \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}} \&type)
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_a7e6f403593681f5b24cc40337aeea6fd}{set\+Thread\+Pool}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} ptr)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_aec443a823851fe901aefb704711a6072}{dump}} (std\+::ostream \&oss)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a36c6a96c835fd9f52bdc38cd95e2d3b2}{dump\+Edge}} (std\+::ostream \&oss, \mbox{\hyperlink{class_g_element}{GElement}} $\ast$src, \mbox{\hyperlink{class_g_element}{GElement}} $\ast$dst, const std\+::string \&label=\mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}})
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a1b9f3c0eabc3ce182a91403917aad796}{dump\+Element}} (std\+::ostream \&oss)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a1f15015a3362969087bd71057bcce592}{dump\+Element\+Header}} (std\+::ostream \&oss)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a272863f0edeac6f93870687086703f4b}{dump\+Perf\+Info}} (std\+::ostream \&oss)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_element_a2a89fb6ca210267092bbe6864b0753a4}{check\+Yield}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a0518bf2f7c7388f0835e01cd122923ea}{is\+Serializable}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_ada43f328431634b91750fd67bbdc3929}{pop\+Last\+Aspect}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_a4369a1a0dfe46d88c749870c6a7226db}{async\+Run}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_a461932571e690209b92ed996bbe158f5}{get\+Async\+Result}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}{check\+Suitable}} ()
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \mbox{\hyperlink{class_g_element_aa66a722a6a234d5be44e1aadb016aae9}{get\+Deep\+Path}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} reverse) const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a13b4e47f800554bc46ed1be6eaf8a1ca}{is\+Default\+Binding}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_ae3f0c0364abd3ad5e465f243b1d6f7af}{done\+\_\+}} \{ false \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a126a6c510aa49b11347287fe16c91db4}{visible\+\_\+}} \{ true \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_ae25d0123bd70a20eb5a65151a4528a89}{is\+\_\+init\+\_\+}} \{ false \}
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}{GElement\+Type}} \mbox{\hyperlink{class_g_element_a3520d65d0190112ed55c4bf5d9e7738a}{element\+\_\+type\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a88be69b0577a14f4fa3bbfa0ff17a41d}{GElement\+Type\+::\+ELEMENT}} \}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} $>$ \mbox{\hyperlink{class_g_element_ac1a302af73f8b74ba3dfaad2f366ce76}{cur\+\_\+state\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}{GElement\+State\+::\+CREATE}} \}
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}{internal\+::\+GElement\+Shape}} \mbox{\hyperlink{class_g_element_a8bf84e985d2365bd124d997ebb44dd40}{shape\+\_\+}} \{ internal\+::\+GElement\+Shape\+::\+NORMAL \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_element_a0215f8ac9d6016c2b518821990219238}{loop\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}} \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}} \mbox{\hyperlink{class_g_element_ab0d1e66eecb895ed4ad2ca018800b7b1}{level\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_abef6b87e75de5c7845e999c82144f0bc}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+LEVEL}} \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_element_a5c2a5d5b2600511dec0f4e4bbe3428c5}{binding\+\_\+index\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a098b5c4758285993c2076ecf7728c09c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+BINDING\+\_\+\+INDEX}} \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{class_g_element_a328a3ab5c260cb94a2b75354dff5e532}{timeout\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_ad6c1fd86b20cd6d0c1e77421798c15ea}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+TIMEOUT}} \}
+\item 
+\mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}} \mbox{\hyperlink{class_g_element_a6057c00043beb2a30cd4bd4a9f9645f6}{timeout\+\_\+strategy\+\_\+}} \{ \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}{GElement\+Timeout\+Strategy\+::\+AS\+\_\+\+ERROR}} \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_a326321e7f0f105f832930da0c1082e0a}{is\+\_\+marco\+\_\+}} \{ false \}
+\item 
+\mbox{\hyperlink{_g_passed_param_8h_a86cd3021263afbce746d56f5a1025e77}{GElement\+Param\+Map}} \mbox{\hyperlink{class_g_element_a2ceed692223f831fbd3e0650ca0bd7bc}{local\+\_\+params\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_aspect_manager_8h_a7b82a7d2cb627b1a268acf49f2aa8f5f}{GAspect\+Manager\+Ptr}} \mbox{\hyperlink{class_g_element_a93292c692851ed98425b4f97dc575cd9}{aspect\+\_\+manager\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_element_ae26f5168b63a4b588e2e60648f9f7b3e}{thread\+\_\+pool\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{struct_g_perf_info}{GPerf\+Info}} $\ast$ \mbox{\hyperlink{class_g_element_ac84c99ef5348a849782212208ecd5f16}{perf\+\_\+info\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_af9a906e22ee7ea53e26717c0752065f1}{is\+\_\+prepared\+\_\+}} \{ false \}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} $>$ \mbox{\hyperlink{class_g_element_a1c8e1d6c5df09b295bdf1a232d22e5f9}{left\+\_\+depend\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \mbox{\hyperlink{class_g_element_aa04f70ea5ab6c0348f1b8cb01bcd969f}{run\+\_\+before\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \mbox{\hyperlink{class_g_element_aee16759b154648c6afc92a48430b2d63}{dependence\+\_\+}}
+\item 
+\mbox{\hyperlink{class_g_element}{GElement}} $\ast$ \mbox{\hyperlink{class_g_element_af94415cffdc33a723575f7b4588a606f}{belong\+\_\+}} \{ nullptr \}
+\item 
+std\+::future$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} $>$ \mbox{\hyperlink{class_g_element_a675237b659b84a4c09601f2d14644b5b}{async\+\_\+result\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_element_a8d5e01cf4898f7fca2bea20f47470524}{yield\+\_\+mutex\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_g_element_a6544ffecfee11285931b30b42c6b08ef}{yield\+\_\+cv\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_element_ab6f6db8a60afd4f92b7fca07e922459e}{GNode}}
+\item 
+class \mbox{\hyperlink{class_g_element_a933600a76bf711b03879a74cad2065e2}{GGroup}}
+\item 
+class \mbox{\hyperlink{class_g_element_a8e6ba751c2d1abe312f8adeb58970d44}{GCluster}}
+\item 
+class \mbox{\hyperlink{class_g_element_a2ddf6b2a302039a39825b3613cd3e48c}{GRegion}}
+\item 
+class \mbox{\hyperlink{class_g_element_aca56fc53710b1f141174f24dc50e84ab}{GCondition}}
+\item 
+class \mbox{\hyperlink{class_g_element_a778dc925482add12356db0a08d591b18}{GMutable}}
+\item 
+{\footnotesize template$<$CInt $>$ }\\class \mbox{\hyperlink{class_g_element_a2b63c9503b760080d8480c98024324bb}{GSome}}
+\item 
+{\footnotesize template$<$GMulti\+Condition\+Type $>$ }\\class \mbox{\hyperlink{class_g_element_a16dc7c734f13ff32bdc0022b1b9cfbdf}{GMulti\+Condition}}
+\item 
+class \mbox{\hyperlink{class_g_element_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_element_affeeccde5245f99f2ee17a1a585064c3}{GElement\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_element_a1054809825cab7424ff060b4b747dc35}{GElement\+Sorter}}
+\item 
+class \mbox{\hyperlink{class_g_element_ad29e8b395428471261f88e4993140caf}{GAdapter}}
+\item 
+class \mbox{\hyperlink{class_g_element_ad0d46549d861858aaca0329a5b2f564a}{GFunction}}
+\item 
+class \mbox{\hyperlink{class_g_element_a0504735e44024b2532c5041cb440ceee}{GFence}}
+\item 
+{\footnotesize template$<$CInt $>$ }\\class \mbox{\hyperlink{class_g_element_a147328d877e5ce110d39efc8005538db}{GCoordinator}}
+\item 
+{\footnotesize template$<$typename T $>$ }\\class \mbox{\hyperlink{class_g_element_a2aad17ceda156fd27af30e153eca798f}{GSingleton}}
+\item 
+class \mbox{\hyperlink{class_g_element_a85672f4b95328931de4655db1be86149}{GEngine}}
+\item 
+class \mbox{\hyperlink{class_g_element_a68cfa23c068ba69587e80f64739fda70}{GDynamic\+Engine}}
+\item 
+class \mbox{\hyperlink{class_g_element_aa7a868f4fb9be2bd88e6de4d08fc111d}{GTopo\+Engine}}
+\item 
+class \mbox{\hyperlink{class_g_element_a086d3836dbc0eaed0914ea4a9023f017}{GStatic\+Engine}}
+\item 
+class \mbox{\hyperlink{class_g_element_a1ca26a5f8f8b1d94bc1988440d0d4de6}{GAspect\+Object}}
+\item 
+class \mbox{\hyperlink{class_g_element_a47f341b33d0ede03cbe2d16c48c8c3f9}{GOptimizer}}
+\item 
+class \mbox{\hyperlink{class_g_element_ada030c3924f1e57d6a2a23dcd73d6984}{GMax\+Para\+Optimizer}}
+\item 
+class \mbox{\hyperlink{class_g_element_a03be69fb3e7d890a505a197c55d4117c}{GTrim\+Optimizer}}
+\item 
+class \mbox{\hyperlink{class_g_element_abb516d5aebe770311206acd847ac7327}{GSeparate\+Optimizer}}
+\item 
+class \mbox{\hyperlink{class_g_element_a25b6142fb9b5941c6d85492137b74e3f}{GElement\+Repository}}
+\item 
+class \mbox{\hyperlink{class_g_element_a055afb5e5454b2ba7056f31bf09b49cd}{GPerf}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+CGraph所有广义\char`\"{}结点\char`\"{}的基类，可派生出\+GNode/\+GGroup/\+GAdapter类 public\+: 提供add\+GAspect加入切面/add\+Depend\+GElement加入前序依赖/remove\+Depend删除前序依赖的能力 提供set\+Name更新名称/set\+Loop设置循环次数/set\+Level设置优先级/set\+Visible隐藏当前元素/set\+Binding\+Index设置亲和线程等能力 提供set\+Timeout设置元素执行的超时时间/set\+Macro设置为微任务的能力 提供add\+EParam添加\+GElement内部参数(GElement\+Param，实际上就是\+GPassed\+Param) 还额外提供运算符重载：--(set\+Visible)、$>$(设置后继依赖)、\&(设置后继依赖)、$\ast$(set\+Loop) 
+
+protected\+: 支持设置\+GAspect\+Manager/\+GParam\+Manager/\+GEvent\+Manager(后两者通过宏来实现，doxygen分析不出来) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_element_ac99d7ce22bd9ed14f5d952b00dcd53aa}\label{class_g_element_ac99d7ce22bd9ed14f5d952b00dcd53aa}} 
+\index{GElement@{GElement}!GElement@{GElement}}
+\index{GElement@{GElement}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GElement()}{GElement()}}
+{\footnotesize\ttfamily GElement\+::\+GElement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+构造函数 \mbox{\Hypertarget{class_g_element_aaf1bf3a91c10466a2151afd48983efb0}\label{class_g_element_aaf1bf3a91c10466a2151afd48983efb0}} 
+\index{GElement@{GElement}!````~GElement@{$\sim$GElement}}
+\index{````~GElement@{$\sim$GElement}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{$\sim$GElement()}{~GElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GElement\+::$\sim$\+GElement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+析构函数 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_element_a2e06b5cfe3cbfb9805b504bcd11df73f}\label{class_g_element_a2e06b5cfe3cbfb9805b504bcd11df73f}} 
+\index{GElement@{GElement}!addDependGElements@{addDependGElements}}
+\index{addDependGElements@{addDependGElements}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addDependGElements()}{addDependGElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::add\+Depend\+GElements (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \&}]{elements }\end{DoxyParamCaption})}
+
+添加依赖节点信息 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a2e06b5cfe3cbfb9805b504bcd11df73f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ad1c5491558db46192587e7f495e8c76a}\label{class_g_element_ad1c5491558db46192587e7f495e8c76a}} 
+\index{GElement@{GElement}!addElementInfo@{addElementInfo}}
+\index{addElementInfo@{addElementInfo}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addElementInfo()}{addElementInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::add\+Element\+Info (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{class_g_element}{GElement}} $\ast$ $>$ \&}]{depends,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+设置element信息 
+\begin{DoxyParams}{Parameters}
+{\em depends} & \\
+\hline
+{\em name} & \\
+\hline
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_ad1c5491558db46192587e7f495e8c76a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a75fd561c7ff8c94e4b2d8b2c6b16a5b5}\label{class_g_element_a75fd561c7ff8c94e4b2d8b2c6b16a5b5}} 
+\index{GElement@{GElement}!addEParam@{addEParam}}
+\index{addEParam@{addEParam}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addEParam()}{addEParam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_element}{GElement}}$\ast$ GElement\+::add\+EParam (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T $\ast$}]{param }\end{DoxyParamCaption})}
+
+添加当前element内部参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_aaab5e4dce1c87233790ba18a3fb69568}\label{class_g_element_aaab5e4dce1c87233790ba18a3fb69568}} 
+\index{GElement@{GElement}!addEParam@{addEParam}}
+\index{addEParam@{addEParam}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addEParam()}{addEParam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::add\+EParam (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{T $\ast$}]{param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_element_a6afc42976358e65068e9393106bd36fe}\label{class_g_element_a6afc42976358e65068e9393106bd36fe}} 
+\index{GElement@{GElement}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Aspect$<$ Args... $>$, TAspect $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_element}{GElement}}$\ast$ GElement\+::add\+GAspect (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+实现添加模板切面的逻辑 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TAspect} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a87e5e8d6bee0530d492702ca75d4f7a5}\label{class_g_element_a87e5e8d6bee0530d492702ca75d4f7a5}} 
+\index{GElement@{GElement}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GTemplate\+Aspect$<$ Args... $>$, TAspect $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::add\+GAspect (\begin{DoxyParamCaption}\item[{Args...}]{args }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a87e5e8d6bee0530d492702ca75d4f7a5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a4010e33a5162d2220c86e0de1caa6357}\label{class_g_element_a4010e33a5162d2220c86e0de1caa6357}} 
+\index{GElement@{GElement}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename TParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::add\+GAspect (\begin{DoxyParamCaption}\item[{TParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+采用懒加载的方式执行，这里不会有并发问题，故不需要采用单例模式了Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a4010e33a5162d2220c86e0de1caa6357_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_aa05a9d85683ab89a2cd45cf1cbce18a9}\label{class_g_element_aa05a9d85683ab89a2cd45cf1cbce18a9}} 
+\index{GElement@{GElement}!addGAspect@{addGAspect}}
+\index{addGAspect@{addGAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addGAspect()}{addGAspect()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename TAspect , typename TParam  = GAspect\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect, TAspect $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GAspect\+Param, TParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_element}{GElement}}$\ast$ GElement\+::add\+GAspect (\begin{DoxyParamCaption}\item[{TParam $\ast$}]{param = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+实现添加切面的逻辑 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TAspect} & \\
+\hline
+{\em TParam} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd}\label{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd}} 
+\index{GElement@{GElement}!addManagers@{addManagers}}
+\index{addManagers@{addManagers}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{addManagers()}{addManagers()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::add\+Managers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}}}]{param\+Manager,  }\item[{\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}}}]{event\+Manager,  }\item[{\mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}}}]{stage\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+设置manager信息 
+\begin{DoxyParams}{Parameters}
+{\em param\+Manager} & \\
+\hline
+{\em event\+Manager} & \\
+\hline
+{\em stage\+Manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_group_a6d9e94508e489a337f5661c1d581089c}{GGroup}}, \mbox{\hyperlink{class_g_region_af68e8ce9800c8206a47402aba23806c7}{GRegion}}, and \mbox{\hyperlink{class_g_singleton_a288f0b0d13fb5115953c1c5f38269c26}{GSingleton$<$ T $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a4369a1a0dfe46d88c749870c6a7226db}\label{class_g_element_a4369a1a0dfe46d88c749870c6a7226db}} 
+\index{GElement@{GElement}!asyncRun@{asyncRun}}
+\index{asyncRun@{asyncRun}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{asyncRun()}{asyncRun()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::async\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+异步执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a4369a1a0dfe46d88c749870c6a7226db_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ae3b774c6b6a9596fb60d443b970db442}\label{class_g_element_ae3b774c6b6a9596fb60d443b970db442}} 
+\index{GElement@{GElement}!CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}}
+\index{CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_NO\_ALLOWED\_COPY()}{CGRAPH\_NO\_ALLOWED\_COPY()}}
+{\footnotesize\ttfamily GElement\+::\+CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element}{GElement}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_element_a1df8a70c890626856105f89ba274b63c}\label{class_g_element_a1df8a70c890626856105f89ba274b63c}} 
+\index{GElement@{GElement}!checkRunResult@{checkRunResult}}
+\index{checkRunResult@{checkRunResult}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{checkRunResult()}{checkRunResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::check\+Run\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{run()}} 方法完成之后（包含所有循环次数和 is\+Hold逻辑）的校验函数 \begin{DoxyReturn}{Returns}
+@notice 不建议在异步element中使用 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}\label{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}} 
+\index{GElement@{GElement}!checkSuitable@{checkSuitable}}
+\index{checkSuitable@{checkSuitable}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{checkSuitable()}{checkSuitable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::check\+Suitable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前节点，是否符合执行逻辑。主要用于init的早期阶段 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_some_ae2f0d3592c8d825c9c3c2eece5f828b1}{GSome$<$ Trigger\+Num $>$}}, \mbox{\hyperlink{class_g_fence_aef3db0dcf5e6e3e58bfb0ece97ad95ff}{GFence}}, and \mbox{\hyperlink{class_g_coordinator_a863a80fc08b145f0f31f633b82b8dc8f}{GCoordinator$<$ SIZE $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a2a89fb6ca210267092bbe6864b0753a4}\label{class_g_element_a2a89fb6ca210267092bbe6864b0753a4}} 
+\index{GElement@{GElement}!checkYield@{checkYield}}
+\index{checkYield@{checkYield}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{checkYield()}{checkYield()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::check\+Yield (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+判断是否进入 yield状态。如果是的话，则等待恢复。未进入yield状态，则继续运行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_ae593ba6053d063d174fd684054b15c03}\label{class_g_element_ae593ba6053d063d174fd684054b15c03}} 
+\index{GElement@{GElement}!crashed@{crashed}}
+\index{crashed@{crashed}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{crashed()}{crashed()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::crashed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_val_type_8h_a0bf31180c2ed175def27060a21ccc65d}{CException}} \&}]{ex }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+崩溃流程处理 
+\begin{DoxyParams}{Parameters}
+{\em ex} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_adc48409c2e2a24c426f98621354ec849}\label{class_g_element_adc48409c2e2a24c426f98621354ec849}} 
+\index{GElement@{GElement}!doAspect@{doAspect}}
+\index{doAspect@{doAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{doAspect()}{doAspect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::do\+Aspect (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_aspect_define_8h_aa266dc9f688b47469580f5f10b9239c2}{internal\+::\+GAspect\+Type}} \&}]{aspect\+Type,  }\item[{const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&}]{cur\+Status = {\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+执行切面逻辑 
+\begin{DoxyParams}{Parameters}
+{\em aspect\+Type} & \\
+\hline
+{\em cur\+Status} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_adc48409c2e2a24c426f98621354ec849_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_aec443a823851fe901aefb704711a6072}\label{class_g_element_aec443a823851fe901aefb704711a6072}} 
+\index{GElement@{GElement}!dump@{dump}}
+\index{dump@{dump}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dump()}{dump()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::dump (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+graphviz dump 逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_some_a8bcf65f6693d5fa8db59257aa68cfa76}{GSome$<$ Trigger\+Num $>$}}, \mbox{\hyperlink{class_g_region_a2c0fef1c744ae75bf2fd45a722e9a19c}{GRegion}}, \mbox{\hyperlink{class_g_condition_a452f5606542998af50a741f77fdec7e6}{GCondition}}, and \mbox{\hyperlink{class_g_cluster_ac649e0cb8146f05aaf931fffa3086025}{GCluster}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_aec443a823851fe901aefb704711a6072_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a36c6a96c835fd9f52bdc38cd95e2d3b2}\label{class_g_element_a36c6a96c835fd9f52bdc38cd95e2d3b2}} 
+\index{GElement@{GElement}!dumpEdge@{dumpEdge}}
+\index{dumpEdge@{dumpEdge}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dumpEdge()}{dumpEdge()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::dump\+Edge (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss,  }\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{src,  }\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{dst,  }\item[{const std\+::string \&}]{label = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_add4a9311f8d10069446f5061f1c0d6c7}{CGRAPH\+\_\+\+EMPTY}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+graphviz dump 边逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+{\em src} & 表示开始的元素 \\
+\hline
+{\em dst} & 表示结束的元素 \\
+\hline
+{\em label} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a36c6a96c835fd9f52bdc38cd95e2d3b2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a1b9f3c0eabc3ce182a91403917aad796}\label{class_g_element_a1b9f3c0eabc3ce182a91403917aad796}} 
+\index{GElement@{GElement}!dumpElement@{dumpElement}}
+\index{dumpElement@{dumpElement}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dumpElement()}{dumpElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::dump\+Element (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+graphviz dump 点逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_fence_a15005bd9d6ace598a73aef1d788a679d}{GFence}}, and \mbox{\hyperlink{class_g_coordinator_a14f7442e1911fa84b7c2d0ea841e0441}{GCoordinator$<$ SIZE $>$}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a1b9f3c0eabc3ce182a91403917aad796_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a1f15015a3362969087bd71057bcce592}\label{class_g_element_a1f15015a3362969087bd71057bcce592}} 
+\index{GElement@{GElement}!dumpElementHeader@{dumpElementHeader}}
+\index{dumpElementHeader@{dumpElementHeader}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dumpElementHeader()}{dumpElementHeader()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::dump\+Element\+Header (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+dump 当前element的header。主要就是为了代码 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a272863f0edeac6f93870687086703f4b}\label{class_g_element_a272863f0edeac6f93870687086703f4b}} 
+\index{GElement@{GElement}!dumpPerfInfo@{dumpPerfInfo}}
+\index{dumpPerfInfo@{dumpPerfInfo}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dumpPerfInfo()}{dumpPerfInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::dump\+Perf\+Info (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+graphviz dump perf逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_afe0e080c4173a51f1dfb8792e57bf282}\label{class_g_element_afe0e080c4173a51f1dfb8792e57bf282}} 
+\index{GElement@{GElement}!fatProcessor@{fatProcessor}}
+\index{fatProcessor@{fatProcessor}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{fatProcessor()}{fatProcessor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::fat\+Processor (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}} \&}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+包含切面相关功能的函数，fat取自fatjar的意思 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果当前的 element 因为被remove等原因，变成 不可见的状态 则不运行。但不是实际删除当前节点信息
+
+第一次执行的时候，预先执行一下 prepare\+Run方法
+
+执行带切面的run方法
+
+在实际run结束之后，首先需要判断一下是否进入yield状态了。 接下来，如果状态是ok的，并且被条件hold住，则循环执行 默认所有element的is\+Hold条件均为false，即不hold，即执行一次 可以根据需求，对任意element类型，添加特定的is\+Hold条件Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_afe0e080c4173a51f1dfb8792e57bf282_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a461932571e690209b92ed996bbe158f5}\label{class_g_element_a461932571e690209b92ed996bbe158f5}} 
+\index{GElement@{GElement}!getAsyncResult@{getAsyncResult}}
+\index{getAsyncResult@{getAsyncResult}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getAsyncResult()}{getAsyncResult()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::get\+Async\+Result (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+异步获取结果信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a19fe9de248338fefb8bcbda6a03f6c78}\label{class_g_element_a19fe9de248338fefb8bcbda6a03f6c78}} 
+\index{GElement@{GElement}!getBindingIndex@{getBindingIndex}}
+\index{getBindingIndex@{getBindingIndex}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getBindingIndex()}{getBindingIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} GElement\+::get\+Binding\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取绑定线程id信息 \begin{DoxyReturn}{Returns}
+@notice 不同的group类型，获取 binding index 的方式不同 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_aa3974e12480ee72598d78c4490f8ce6d}\label{class_g_element_aa3974e12480ee72598d78c4490f8ce6d}} 
+\index{GElement@{GElement}!getCurState@{getCurState}}
+\index{getCurState@{getCurState}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getCurState()}{getCurState()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}} GElement\+::get\+Cur\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+获取当前节点状态信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果有超时逻辑的话，优先判断 否则就是当前的状态Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_aa3974e12480ee72598d78c4490f8ce6d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_aa66a722a6a234d5be44e1aadb016aae9}\label{class_g_element_aa66a722a6a234d5be44e1aadb016aae9}} 
+\index{GElement@{GElement}!getDeepPath@{getDeepPath}}
+\index{getDeepPath@{getDeepPath}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getDeepPath()}{getDeepPath()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} GElement\+::get\+Deep\+Path (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{reverse }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+获取链路所有的 belong信息 
+\begin{DoxyParams}{Parameters}
+{\em reverse} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a1150956c10e42de3ff437a99b705b19c}\label{class_g_element_a1150956c10e42de3ff437a99b705b19c}} 
+\index{GElement@{GElement}!getEParam@{getEParam}}
+\index{getEParam@{getEParam}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getEParam()}{getEParam()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GElement\+Param, T $>$\+::value, int $>$ $>$ \\
+T $\ast$ GElement\+::get\+EParam (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取当前element内部参数 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a72ba2d2467bc3b84aaa2057bc2dfcb9b}\label{class_g_element_a72ba2d2467bc3b84aaa2057bc2dfcb9b}} 
+\index{GElement@{GElement}!getRelation@{getRelation}}
+\index{getRelation@{getRelation}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getRelation()}{getRelation()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_element_relation}{GElement\+Relation}} GElement\+::get\+Relation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取当前节点的相关关系信息，包含前驱、后继、从属关系 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a72ba2d2467bc3b84aaa2057bc2dfcb9b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ab8cea46aed751f56acb484726b1b4480}\label{class_g_element_ab8cea46aed751f56acb484726b1b4480}} 
+\index{GElement@{GElement}!getThreadIndex@{getThreadIndex}}
+\index{getThreadIndex@{getThreadIndex}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{getThreadIndex()}{getThreadIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} GElement\+::get\+Thread\+Index (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取执行线程对应的信息 \begin{DoxyReturn}{Returns}
+@notice 启动线程返回-\/1（\+CGRAPH\+\_\+\+MAIN\+\_\+\+THREAD\+\_\+\+ID），辅助线程返回-\/2（\+CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+COMMON\+\_\+\+ID），主线程返回 线程index 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_ab8cea46aed751f56acb484726b1b4480_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ad9500e8fcb74e766a2143ba148c9b1cd}\label{class_g_element_ad9500e8fcb74e766a2143ba148c9b1cd}} 
+\index{GElement@{GElement}!isAsync@{isAsync}}
+\index{isAsync@{isAsync}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isAsync()}{isAsync()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Async (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+判定当前的内容，是否需要异步执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a13b4e47f800554bc46ed1be6eaf8a1ca}\label{class_g_element_a13b4e47f800554bc46ed1be6eaf8a1ca}} 
+\index{GElement@{GElement}!isDefaultBinding@{isDefaultBinding}}
+\index{isDefaultBinding@{isDefaultBinding}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isDefaultBinding()}{isDefaultBinding()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Default\+Binding (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+判断是否是默认绑定策略 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a72e2aa386c1edc257f1e372e47a865c4}\label{class_g_element_a72e2aa386c1edc257f1e372e47a865c4}} 
+\index{GElement@{GElement}!isGAdaptor@{isGAdaptor}}
+\index{isGAdaptor@{isGAdaptor}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isGAdaptor()}{isGAdaptor()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+GAdaptor (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+当前element是否是一个 adaptor逻辑 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a0b49dae5a3850c2eda2353736d57f332}\label{class_g_element_a0b49dae5a3850c2eda2353736d57f332}} 
+\index{GElement@{GElement}!isGGroup@{isGGroup}}
+\index{isGGroup@{isGGroup}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isGGroup()}{isGGroup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+GGroup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+当前element是否是一个 group逻辑 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_afee51858ee7dd3e20f6ca94da6f01ffc}\label{class_g_element_afee51858ee7dd3e20f6ca94da6f01ffc}} 
+\index{GElement@{GElement}!isGNode@{isGNode}}
+\index{isGNode@{isGNode}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isGNode()}{isGNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+GNode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+当前element是否是一个 node逻辑 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_acf3abb5e770a41a7123d678e471c2b74}\label{class_g_element_acf3abb5e770a41a7123d678e471c2b74}} 
+\index{GElement@{GElement}!isHold@{isHold}}
+\index{isHold@{isHold}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isHold()}{isHold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Hold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+是否持续进行 默认为false，表示执行且仅执行一次 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+默认仅返回false 可以根据自己逻辑，来实现\char`\"{}持续循环执行，直到特定条件出现的时候停止\char`\"{}的逻辑
+
+Reimplemented in \mbox{\hyperlink{class_g_some_a1c77548dc66364dafd986f6749a8fc35}{GSome$<$ Trigger\+Num $>$}}, and \mbox{\hyperlink{class_g_singleton_a42aa940afa61af81c66b1289f2ff7c2f}{GSingleton$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_g_element_a181d5cd8c9451b83789f4fdb177e33e9}\label{class_g_element_a181d5cd8c9451b83789f4fdb177e33e9}} 
+\index{GElement@{GElement}!isMacro@{isMacro}}
+\index{isMacro@{isMacro}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isMacro()}{isMacro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Macro (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+判断当前是否是微节点 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_aa1c351cf60db010a9fc1a01d101ddf32}\label{class_g_element_aa1c351cf60db010a9fc1a01d101ddf32}} 
+\index{GElement@{GElement}!isMatch@{isMatch}}
+\index{isMatch@{isMatch}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isMatch()}{isMatch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Match (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+用于在\+Multi\+Condition中被判定，是否可以执行。 \begin{DoxyReturn}{Returns}
+@notice 默认返回false，不执行 
+\end{DoxyReturn}
+默认仅返回false 主要面对写入 Multi\+Condition 的时候，做判断当前element是否被执行
+
+Reimplemented in \mbox{\hyperlink{class_g_singleton_a85bb977f5508f2f82bd2183e56cb3e73}{GSingleton$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_g_element_afbecfb204b6c3836953816d84dd03911}\label{class_g_element_afbecfb204b6c3836953816d84dd03911}} 
+\index{GElement@{GElement}!isMutable@{isMutable}}
+\index{isMutable@{isMutable}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isMutable()}{isMutable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Mutable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}}
+
+判断当前是否可以在运行时更新图结构逻辑 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a73a421381a83fbf7a616827884450c53}\label{class_g_element_a73a421381a83fbf7a616827884450c53}} 
+\index{GElement@{GElement}!isRegistered@{isRegistered}}
+\index{isRegistered@{isRegistered}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isRegistered()}{isRegistered()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Registered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前element是否已经被注册到特定pipeline中了。避免反复注册的问题 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_singleton_a22f74ccf4f3c2cdd89bc7956820a7c85}{GSingleton$<$ T $>$}}.
+
+\mbox{\Hypertarget{class_g_element_a0518bf2f7c7388f0835e01cd122923ea}\label{class_g_element_a0518bf2f7c7388f0835e01cd122923ea}} 
+\index{GElement@{GElement}!isSerializable@{isSerializable}}
+\index{isSerializable@{isSerializable}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isSerializable()}{isSerializable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Serializable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前元素，是否可以线性执行。默认返回true \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_mutable_a5735ac1dc33e6fe232864136f99f936d}{GMutable}}, \mbox{\hyperlink{class_g_group_a468fa4cc1418a9636b787439174d3f04}{GGroup}}, \mbox{\hyperlink{class_g_multi_condition_a53dd39ded0442152cef1d770a3eb9554}{GMulti\+Condition$<$ type $>$}}, \mbox{\hyperlink{class_g_some_ac9bfdec6d03da3b841bab00a91876011}{GSome$<$ Trigger\+Num $>$}}, and \mbox{\hyperlink{class_g_region_a22f3f34d0351c36f86146a7ddc7bbc53}{GRegion}}.
+
+\mbox{\Hypertarget{class_g_element_a1167755c9c2e03587395b6365c374229}\label{class_g_element_a1167755c9c2e03587395b6365c374229}} 
+\index{GElement@{GElement}!isTimeout@{isTimeout}}
+\index{isTimeout@{isTimeout}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{isTimeout()}{isTimeout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+Timeout (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}}
+
+判断当前是否超时 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+判断的标准是：
+\begin{DoxyEnumerate}
+\item 如果当前节点超时，则认定为超时
+\item 如果当前节点所在的group超时，则也认定为超时
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_g_element_a096bfd697de07c76645b5a43e1de1c43}\label{class_g_element_a096bfd697de07c76645b5a43e1de1c43}} 
+\index{GElement@{GElement}!operator\&@{operator\&}}
+\index{operator\&@{operator\&}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{operator\&()}{operator\&()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}{GElement\+Ref}} GElement\+::operator\& (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{element }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a096bfd697de07c76645b5a43e1de1c43_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a65083069a71cdc5ab707b53c658dfedf}\label{class_g_element_a65083069a71cdc5ab707b53c658dfedf}} 
+\index{GElement@{GElement}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_element}{GElement}} \& GElement\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{class_g_element_a65083069a71cdc5ab707b53c658dfedf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a2767f060c307458fcc09210ec4c9b550}\label{class_g_element_a2767f060c307458fcc09210ec4c9b550}} 
+\index{GElement@{GElement}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}{GElement\+Ref}} GElement\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [noexcept]}}
+
+实现连续注册的语法糖，形如： ($\ast$a)-\/-\/$>$b ($\ast$b)-\/-\/$>$d; ($\ast$c)-\/-\/$>$d; ($\ast$b)$\ast$2; \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a2767f060c307458fcc09210ec4c9b550_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a009867427220f4edc4e911f6974fe065}\label{class_g_element_a009867427220f4edc4e911f6974fe065}} 
+\index{GElement@{GElement}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{operator$>$()}{operator>()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a0d20a4854133154ad4a204bf129d2a2d}{GElement\+Ref}} GElement\+::operator$>$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{element }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_a009867427220f4edc4e911f6974fe065_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ada43f328431634b91750fd67bbdc3929}\label{class_g_element_ada43f328431634b91750fd67bbdc3929}} 
+\index{GElement@{GElement}!popLastAspect@{popLastAspect}}
+\index{popLastAspect@{popLastAspect}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{popLastAspect()}{popLastAspect()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::pop\+Last\+Aspect (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+弹出一个最后一个切面 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_ada43f328431634b91750fd67bbdc3929_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_ad431db2fc19fc3601035f273d8d74a9b}\label{class_g_element_ad431db2fc19fc3601035f273d8d74a9b}} 
+\index{GElement@{GElement}!prepareRun@{prepareRun}}
+\index{prepareRun@{prepareRun}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{prepareRun()}{prepareRun()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::prepare\+Run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+\mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{init()}}后，第一次执行run之前，会执行的函数 \begin{DoxyReturn}{Returns}
+@notice 主要为了弥补init()方法，不是并发执行的缺陷。也属于单次执行的函数 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a5b5972644a91b972099e6d85cb75fd38}\label{class_g_element_a5b5972644a91b972099e6d85cb75fd38}} 
+\index{GElement@{GElement}!refresh@{refresh}}
+\index{refresh@{refresh}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GElement\+::refresh (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+使用者请勿复写private中的函数 恢复运行最初的信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{class_g_element_a5b5972644a91b972099e6d85cb75fd38_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_acffc7edb290f469f48b57d947eaaca0f}\label{class_g_element_acffc7edb290f469f48b57d947eaaca0f}} 
+\index{GElement@{GElement}!removeDepend@{removeDepend}}
+\index{removeDepend@{removeDepend}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{removeDepend()}{removeDepend()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+::remove\+Depend (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element}{GElement}} $\ast$}]{element }\end{DoxyParamCaption})}
+
+删除一个依赖的节点信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 删除依赖关系之后，可能会出现 dag 无法连通的情况 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_acffc7edb290f469f48b57d947eaaca0f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_afd318b8fc06463ef718bcfbc9436f91c}\label{class_g_element_afd318b8fc06463ef718bcfbc9436f91c}} 
+\index{GElement@{GElement}!setBindingIndex@{setBindingIndex}}
+\index{setBindingIndex@{setBindingIndex}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setBindingIndex()}{setBindingIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Binding\+Index (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{index }\end{DoxyParamCaption})}
+
+设定绑定的线程id 
+\begin{DoxyParams}{Parameters}
+{\em index，需要绑定的} & thread id 信息 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 本接口仅保证绑定线程优先调度，但不保证最终一定在绑定线程上执行。若不了解调度机制，不建议使用本接口，否则可能导致运行时阻塞。 
+\end{DoxyReturn}
+由于内部有调度机制，不保证绑定线程后，一定在固定线程上执行。 仅保证优先考虑使用绑定线程执行\mbox{\Hypertarget{class_g_element_a754adbdef94eb0d8989647da121b74d6}\label{class_g_element_a754adbdef94eb0d8989647da121b74d6}} 
+\index{GElement@{GElement}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Level (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}}}]{level }\end{DoxyParamCaption})}
+
+设置level信息，用于控制init和destroy方法的执行顺序 level值越低，函数越先执行 
+\begin{DoxyParams}{Parameters}
+{\em level} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_ac21496ccef71417ee6b02e95e23eab78}\label{class_g_element_ac21496ccef71417ee6b02e95e23eab78}} 
+\index{GElement@{GElement}!setLoop@{setLoop}}
+\index{setLoop@{setLoop}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setLoop()}{setLoop()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})}
+
+设置循环次数 
+\begin{DoxyParams}{Parameters}
+{\em loop} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_a1a1bc0fb9c92685e1b70ae10c93e00ef}\label{class_g_element_a1a1bc0fb9c92685e1b70ae10c93e00ef}} 
+\index{GElement@{GElement}!setMacro@{setMacro}}
+\index{setMacro@{setMacro}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setMacro()}{setMacro()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Macro (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{macro }\end{DoxyParamCaption})}
+
+设置为微任务 
+\begin{DoxyParams}{Parameters}
+{\em macro} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_g_element_a1a1bc0fb9c92685e1b70ae10c93e00ef_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_a85eff5770f77d4097f49e2d63bb3a78a}\label{class_g_element_a85eff5770f77d4097f49e2d63bb3a78a}} 
+\index{GElement@{GElement}!setName@{setName}}
+\index{setName@{setName}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+设置name信息 
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_desc_info_a2f98fabe390e00c1758cf648d2e98d7c}{CDesc\+Info}}.
+
+\mbox{\Hypertarget{class_g_element_a7e6f403593681f5b24cc40337aeea6fd}\label{class_g_element_a7e6f403593681f5b24cc40337aeea6fd}} 
+\index{GElement@{GElement}!setThreadPool@{setThreadPool}}
+\index{setThreadPool@{setThreadPool}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setThreadPool()}{setThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Thread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+设置线程池信息 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_aa67511219890966ad28c6d7e91bf8c5a}\label{class_g_element_aa67511219890966ad28c6d7e91bf8c5a}} 
+\index{GElement@{GElement}!setTimeout@{setTimeout}}
+\index{setTimeout@{setTimeout}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setTimeout()}{setTimeout()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Timeout (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout,  }\item[{\mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}}}]{strategy = {\ttfamily \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}{GElement\+Timeout\+Strategy\+::\+AS\+\_\+\+ERROR}}} }\end{DoxyParamCaption})}
+
+设定当前算子的超时时间 
+\begin{DoxyParams}{Parameters}
+{\em timeout} & 超时时间 \\
+\hline
+{\em strategy} & 当超时的时候，处理的策略 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_ac55314fbfe5eab0d937754b95444ed21}\label{class_g_element_ac55314fbfe5eab0d937754b95444ed21}} 
+\index{GElement@{GElement}!setVisible@{setVisible}}
+\index{setVisible@{setVisible}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{setVisible()}{setVisible()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GElement\+::set\+Visible (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{visible }\end{DoxyParamCaption})}
+
+设置visible信息。当 visible = false 的时候，算子实际不执行 
+\begin{DoxyParams}{Parameters}
+{\em visible} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_element_ad29e8b395428471261f88e4993140caf}\label{class_g_element_ad29e8b395428471261f88e4993140caf}} 
+\index{GElement@{GElement}!GAdapter@{GAdapter}}
+\index{GAdapter@{GAdapter}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GAdapter}{GAdapter}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_adapter}{GAdapter}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a1ca26a5f8f8b1d94bc1988440d0d4de6}\label{class_g_element_a1ca26a5f8f8b1d94bc1988440d0d4de6}} 
+\index{GElement@{GElement}!GAspectObject@{GAspectObject}}
+\index{GAspectObject@{GAspectObject}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GAspectObject}{GAspectObject}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_aspect_object}{GAspect\+Object}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a8e6ba751c2d1abe312f8adeb58970d44}\label{class_g_element_a8e6ba751c2d1abe312f8adeb58970d44}} 
+\index{GElement@{GElement}!GCluster@{GCluster}}
+\index{GCluster@{GCluster}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GCluster}{GCluster}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_cluster}{GCluster}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_aca56fc53710b1f141174f24dc50e84ab}\label{class_g_element_aca56fc53710b1f141174f24dc50e84ab}} 
+\index{GElement@{GElement}!GCondition@{GCondition}}
+\index{GCondition@{GCondition}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GCondition}{GCondition}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_condition}{GCondition}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a147328d877e5ce110d39efc8005538db}\label{class_g_element_a147328d877e5ce110d39efc8005538db}} 
+\index{GElement@{GElement}!GCoordinator@{GCoordinator}}
+\index{GCoordinator@{GCoordinator}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GCoordinator}{GCoordinator}}
+{\footnotesize\ttfamily template$<$CInt $>$ \\
+friend class \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a68cfa23c068ba69587e80f64739fda70}\label{class_g_element_a68cfa23c068ba69587e80f64739fda70}} 
+\index{GElement@{GElement}!GDynamicEngine@{GDynamicEngine}}
+\index{GDynamicEngine@{GDynamicEngine}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GDynamicEngine}{GDynamicEngine}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_dynamic_engine}{GDynamic\+Engine}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_affeeccde5245f99f2ee17a1a585064c3}\label{class_g_element_affeeccde5245f99f2ee17a1a585064c3}} 
+\index{GElement@{GElement}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GElementManager}{GElementManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a25b6142fb9b5941c6d85492137b74e3f}\label{class_g_element_a25b6142fb9b5941c6d85492137b74e3f}} 
+\index{GElement@{GElement}!GElementRepository@{GElementRepository}}
+\index{GElementRepository@{GElementRepository}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GElementRepository}{GElementRepository}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_repository}{GElement\+Repository}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a1054809825cab7424ff060b4b747dc35}\label{class_g_element_a1054809825cab7424ff060b4b747dc35}} 
+\index{GElement@{GElement}!GElementSorter@{GElementSorter}}
+\index{GElementSorter@{GElementSorter}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GElementSorter}{GElementSorter}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_sorter}{GElement\+Sorter}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a85672f4b95328931de4655db1be86149}\label{class_g_element_a85672f4b95328931de4655db1be86149}} 
+\index{GElement@{GElement}!GEngine@{GEngine}}
+\index{GEngine@{GEngine}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GEngine}{GEngine}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_engine}{GEngine}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a0504735e44024b2532c5041cb440ceee}\label{class_g_element_a0504735e44024b2532c5041cb440ceee}} 
+\index{GElement@{GElement}!GFence@{GFence}}
+\index{GFence@{GFence}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GFence}{GFence}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_fence}{GFence}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_ad0d46549d861858aaca0329a5b2f564a}\label{class_g_element_ad0d46549d861858aaca0329a5b2f564a}} 
+\index{GElement@{GElement}!GFunction@{GFunction}}
+\index{GFunction@{GFunction}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GFunction}{GFunction}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_function}{GFunction}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a933600a76bf711b03879a74cad2065e2}\label{class_g_element_a933600a76bf711b03879a74cad2065e2}} 
+\index{GElement@{GElement}!GGroup@{GGroup}}
+\index{GGroup@{GGroup}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GGroup}{GGroup}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_group}{GGroup}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_ada030c3924f1e57d6a2a23dcd73d6984}\label{class_g_element_ada030c3924f1e57d6a2a23dcd73d6984}} 
+\index{GElement@{GElement}!GMaxParaOptimizer@{GMaxParaOptimizer}}
+\index{GMaxParaOptimizer@{GMaxParaOptimizer}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GMaxParaOptimizer}{GMaxParaOptimizer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_max_para_optimizer}{GMax\+Para\+Optimizer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a16dc7c734f13ff32bdc0022b1b9cfbdf}\label{class_g_element_a16dc7c734f13ff32bdc0022b1b9cfbdf}} 
+\index{GElement@{GElement}!GMultiCondition@{GMultiCondition}}
+\index{GMultiCondition@{GMultiCondition}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GMultiCondition}{GMultiCondition}}
+{\footnotesize\ttfamily template$<$GMulti\+Condition\+Type $>$ \\
+friend class \mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a778dc925482add12356db0a08d591b18}\label{class_g_element_a778dc925482add12356db0a08d591b18}} 
+\index{GElement@{GElement}!GMutable@{GMutable}}
+\index{GMutable@{GMutable}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GMutable}{GMutable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_mutable}{GMutable}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_ab6f6db8a60afd4f92b7fca07e922459e}\label{class_g_element_ab6f6db8a60afd4f92b7fca07e922459e}} 
+\index{GElement@{GElement}!GNode@{GNode}}
+\index{GNode@{GNode}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GNode}{GNode}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_node}{GNode}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a47f341b33d0ede03cbe2d16c48c8c3f9}\label{class_g_element_a47f341b33d0ede03cbe2d16c48c8c3f9}} 
+\index{GElement@{GElement}!GOptimizer@{GOptimizer}}
+\index{GOptimizer@{GOptimizer}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GOptimizer}{GOptimizer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_optimizer}{GOptimizer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a055afb5e5454b2ba7056f31bf09b49cd}\label{class_g_element_a055afb5e5454b2ba7056f31bf09b49cd}} 
+\index{GElement@{GElement}!GPerf@{GPerf}}
+\index{GPerf@{GPerf}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GPerf}{GPerf}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_perf}{GPerf}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a4e007dc772c018d10373bf18b528f96d}\label{class_g_element_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GElement@{GElement}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a2ddf6b2a302039a39825b3613cd3e48c}\label{class_g_element_a2ddf6b2a302039a39825b3613cd3e48c}} 
+\index{GElement@{GElement}!GRegion@{GRegion}}
+\index{GRegion@{GRegion}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GRegion}{GRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_region}{GRegion}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_abb516d5aebe770311206acd847ac7327}\label{class_g_element_abb516d5aebe770311206acd847ac7327}} 
+\index{GElement@{GElement}!GSeparateOptimizer@{GSeparateOptimizer}}
+\index{GSeparateOptimizer@{GSeparateOptimizer}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GSeparateOptimizer}{GSeparateOptimizer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_separate_optimizer}{GSeparate\+Optimizer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a2aad17ceda156fd27af30e153eca798f}\label{class_g_element_a2aad17ceda156fd27af30e153eca798f}} 
+\index{GElement@{GElement}!GSingleton@{GSingleton}}
+\index{GSingleton@{GSingleton}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GSingleton}{GSingleton}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend class \mbox{\hyperlink{class_g_singleton}{GSingleton}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a2b63c9503b760080d8480c98024324bb}\label{class_g_element_a2b63c9503b760080d8480c98024324bb}} 
+\index{GElement@{GElement}!GSome@{GSome}}
+\index{GSome@{GSome}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GSome}{GSome}}
+{\footnotesize\ttfamily template$<$CInt $>$ \\
+friend class \mbox{\hyperlink{class_g_some}{GSome}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a086d3836dbc0eaed0914ea4a9023f017}\label{class_g_element_a086d3836dbc0eaed0914ea4a9023f017}} 
+\index{GElement@{GElement}!GStaticEngine@{GStaticEngine}}
+\index{GStaticEngine@{GStaticEngine}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GStaticEngine}{GStaticEngine}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_static_engine}{GStatic\+Engine}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_aa7a868f4fb9be2bd88e6de4d08fc111d}\label{class_g_element_aa7a868f4fb9be2bd88e6de4d08fc111d}} 
+\index{GElement@{GElement}!GTopoEngine@{GTopoEngine}}
+\index{GTopoEngine@{GTopoEngine}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GTopoEngine}{GTopoEngine}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_topo_engine}{GTopo\+Engine}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_a03be69fb3e7d890a505a197c55d4117c}\label{class_g_element_a03be69fb3e7d890a505a197c55d4117c}} 
+\index{GElement@{GElement}!GTrimOptimizer@{GTrimOptimizer}}
+\index{GTrimOptimizer@{GTrimOptimizer}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{GTrimOptimizer}{GTrimOptimizer}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_trim_optimizer}{GTrim\+Optimizer}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_element_a93292c692851ed98425b4f97dc575cd9}\label{class_g_element_a93292c692851ed98425b4f97dc575cd9}} 
+\index{GElement@{GElement}!aspect\_manager\_@{aspect\_manager\_}}
+\index{aspect\_manager\_@{aspect\_manager\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{aspect\_manager\_}{aspect\_manager\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_aspect_manager_8h_a7b82a7d2cb627b1a268acf49f2aa8f5f}{GAspect\+Manager\+Ptr}} GElement\+::aspect\+\_\+manager\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a675237b659b84a4c09601f2d14644b5b}\label{class_g_element_a675237b659b84a4c09601f2d14644b5b}} 
+\index{GElement@{GElement}!async\_result\_@{async\_result\_}}
+\index{async\_result\_@{async\_result\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{async\_result\_}{async\_result\_}}
+{\footnotesize\ttfamily std\+::future$<$\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}$>$ GElement\+::async\+\_\+result\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+异步执行相关信息 \mbox{\Hypertarget{class_g_element_af94415cffdc33a723575f7b4588a606f}\label{class_g_element_af94415cffdc33a723575f7b4588a606f}} 
+\index{GElement@{GElement}!belong\_@{belong\_}}
+\index{belong\_@{belong\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{belong\_}{belong\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_element}{GElement}}$\ast$ GElement\+::belong\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a5c2a5d5b2600511dec0f4e4bbe3428c5}\label{class_g_element_a5c2a5d5b2600511dec0f4e4bbe3428c5}} 
+\index{GElement@{GElement}!binding\_index\_@{binding\_index\_}}
+\index{binding\_index\_@{binding\_index\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{binding\_index\_}{binding\_index\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} GElement\+::binding\+\_\+index\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a098b5c4758285993c2076ecf7728c09c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+BINDING\+\_\+\+INDEX}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_ac1a302af73f8b74ba3dfaad2f366ce76}\label{class_g_element_ac1a302af73f8b74ba3dfaad2f366ce76}} 
+\index{GElement@{GElement}!cur\_state\_@{cur\_state\_}}
+\index{cur\_state\_@{cur\_state\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{cur\_state\_}{cur\_state\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802}{GElement\+State}}$>$ GElement\+::cur\+\_\+state\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a41faa59f3e170686fd177a21ac326802a294ce20cdefa29be3be0735cb62e715d}{GElement\+State\+::\+CREATE}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_aee16759b154648c6afc92a48430b2d63}\label{class_g_element_aee16759b154648c6afc92a48430b2d63}} 
+\index{GElement@{GElement}!dependence\_@{dependence\_}}
+\index{dependence\_@{dependence\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{dependence\_}{dependence\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$\mbox{\hyperlink{class_g_element}{GElement}} $\ast$$>$ GElement\+::dependence\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_ae3f0c0364abd3ad5e465f243b1d6f7af}\label{class_g_element_ae3f0c0364abd3ad5e465f243b1d6f7af}} 
+\index{GElement@{GElement}!done\_@{done\_}}
+\index{done\_@{done\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{done\_}{done\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::done\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+状态相关信息 \mbox{\Hypertarget{class_g_element_a3520d65d0190112ed55c4bf5d9e7738a}\label{class_g_element_a3520d65d0190112ed55c4bf5d9e7738a}} 
+\index{GElement@{GElement}!element\_type\_@{element\_type\_}}
+\index{element\_type\_@{element\_type\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{element\_type\_}{element\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1}{GElement\+Type}} GElement\+::element\+\_\+type\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a04ed498d222de6ba98d6d86964a796e1a88be69b0577a14f4fa3bbfa0ff17a41d}{GElement\+Type\+::\+ELEMENT}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_ae25d0123bd70a20eb5a65151a4528a89}\label{class_g_element_ae25d0123bd70a20eb5a65151a4528a89}} 
+\index{GElement@{GElement}!is\_init\_@{is\_init\_}}
+\index{is\_init\_@{is\_init\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{is\_init\_}{is\_init\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+\_\+init\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a326321e7f0f105f832930da0c1082e0a}\label{class_g_element_a326321e7f0f105f832930da0c1082e0a}} 
+\index{GElement@{GElement}!is\_marco\_@{is\_marco\_}}
+\index{is\_marco\_@{is\_marco\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{is\_marco\_}{is\_marco\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+\_\+marco\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_af9a906e22ee7ea53e26717c0752065f1}\label{class_g_element_af9a906e22ee7ea53e26717c0752065f1}} 
+\index{GElement@{GElement}!is\_prepared\_@{is\_prepared\_}}
+\index{is\_prepared\_@{is\_prepared\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{is\_prepared\_}{is\_prepared\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::is\+\_\+prepared\+\_\+ \{ false \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a1c8e1d6c5df09b295bdf1a232d22e5f9}\label{class_g_element_a1c8e1d6c5df09b295bdf1a232d22e5f9}} 
+\index{GElement@{GElement}!left\_depend\_@{left\_depend\_}}
+\index{left\_depend\_@{left\_depend\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{left\_depend\_}{left\_depend\_}}
+{\footnotesize\ttfamily std\+::atomic$<$\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}$>$ GElement\+::left\+\_\+depend\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+图相关信息 \mbox{\Hypertarget{class_g_element_ab0d1e66eecb895ed4ad2ca018800b7b1}\label{class_g_element_ab0d1e66eecb895ed4ad2ca018800b7b1}} 
+\index{GElement@{GElement}!level\_@{level\_}}
+\index{level\_@{level\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{level\_}{level\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a4691903ea5d79c5897d301dd9b1b5ff2}{CLevel}} GElement\+::level\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_abef6b87e75de5c7845e999c82144f0bc}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+LEVEL}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a2ceed692223f831fbd3e0650ca0bd7bc}\label{class_g_element_a2ceed692223f831fbd3e0650ca0bd7bc}} 
+\index{GElement@{GElement}!local\_params\_@{local\_params\_}}
+\index{local\_params\_@{local\_params\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{local\_params\_}{local\_params\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_passed_param_8h_a86cd3021263afbce746d56f5a1025e77}{GElement\+Param\+Map}} GElement\+::local\+\_\+params\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+执行期间相关信息 \mbox{\Hypertarget{class_g_element_a0215f8ac9d6016c2b518821990219238}\label{class_g_element_a0215f8ac9d6016c2b518821990219238}} 
+\index{GElement@{GElement}!loop\_@{loop\_}}
+\index{loop\_@{loop\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{loop\_}{loop\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GElement\+::loop\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a47dc03c4995a0f388cf89ebb6438bc21}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+LOOP\+\_\+\+TIMES}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+配置相关信息 \mbox{\Hypertarget{class_g_element_ac84c99ef5348a849782212208ecd5f16}\label{class_g_element_ac84c99ef5348a849782212208ecd5f16}} 
+\index{GElement@{GElement}!perf\_info\_@{perf\_info\_}}
+\index{perf\_info\_@{perf\_info\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{perf\_info\_}{perf\_info\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_g_perf_info}{GPerf\+Info}}$\ast$ GElement\+::perf\+\_\+info\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_aa04f70ea5ab6c0348f1b8cb01bcd969f}\label{class_g_element_aa04f70ea5ab6c0348f1b8cb01bcd969f}} 
+\index{GElement@{GElement}!run\_before\_@{run\_before\_}}
+\index{run\_before\_@{run\_before\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{run\_before\_}{run\_before\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$\mbox{\hyperlink{class_g_element}{GElement}} $\ast$$>$ GElement\+::run\+\_\+before\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a8bf84e985d2365bd124d997ebb44dd40}\label{class_g_element_a8bf84e985d2365bd124d997ebb44dd40}} 
+\index{GElement@{GElement}!shape\_@{shape\_}}
+\index{shape\_@{shape\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{shape\_}{shape\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a0e60ca1f7ae4c74ef7737e1782e2471d}{internal\+::\+GElement\+Shape}} GElement\+::shape\+\_\+ \{ internal\+::\+GElement\+Shape\+::\+NORMAL \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_ae26f5168b63a4b588e2e60648f9f7b3e}\label{class_g_element_ae26f5168b63a4b588e2e60648f9f7b3e}} 
+\index{GElement@{GElement}!thread\_pool\_@{thread\_pool\_}}
+\index{thread\_pool\_@{thread\_pool\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{thread\_pool\_}{thread\_pool\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GElement\+::thread\+\_\+pool\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a328a3ab5c260cb94a2b75354dff5e532}\label{class_g_element_a328a3ab5c260cb94a2b75354dff5e532}} 
+\index{GElement@{GElement}!timeout\_@{timeout\_}}
+\index{timeout\_@{timeout\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{timeout\_}{timeout\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} GElement\+::timeout\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_ad6c1fd86b20cd6d0c1e77421798c15ea}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+ELEMENT\+\_\+\+TIMEOUT}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a6057c00043beb2a30cd4bd4a9f9645f6}\label{class_g_element_a6057c00043beb2a30cd4bd4a9f9645f6}} 
+\index{GElement@{GElement}!timeout\_strategy\_@{timeout\_strategy\_}}
+\index{timeout\_strategy\_@{timeout\_strategy\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{timeout\_strategy\_}{timeout\_strategy\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90}{GElement\+Timeout\+Strategy}} GElement\+::timeout\+\_\+strategy\+\_\+ \{ \mbox{\hyperlink{_g_element_define_8h_a8f1378d412ad4217e08b8705c916fe90adb39a102b5ff968cf4806930005f7155}{GElement\+Timeout\+Strategy\+::\+AS\+\_\+\+ERROR}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a126a6c510aa49b11347287fe16c91db4}\label{class_g_element_a126a6c510aa49b11347287fe16c91db4}} 
+\index{GElement@{GElement}!visible\_@{visible\_}}
+\index{visible\_@{visible\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{visible\_}{visible\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+::visible\+\_\+ \{ true \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a6544ffecfee11285931b30b42c6b08ef}\label{class_g_element_a6544ffecfee11285931b30b42c6b08ef}} 
+\index{GElement@{GElement}!yield\_cv\_@{yield\_cv\_}}
+\index{yield\_cv\_@{yield\_cv\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{yield\_cv\_}{yield\_cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable GElement\+::yield\+\_\+cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_a8d5e01cf4898f7fca2bea20f47470524}\label{class_g_element_a8d5e01cf4898f7fca2bea20f47470524}} 
+\index{GElement@{GElement}!yield\_mutex\_@{yield\_mutex\_}}
+\index{yield\_mutex\_@{yield\_mutex\_}!GElement@{GElement}}
+\doxysubsubsection{\texorpdfstring{yield\_mutex\_}{yield\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex GElement\+::yield\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_8h}{GElement.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_8cpp}{GElement.\+cpp}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_8inl}{GElement.\+inl}}\end{DoxyCompactItemize}

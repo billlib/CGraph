@@ -1,0 +1,146 @@
+\hypertarget{class_g_separate_optimizer}{}\doxysection{GSeparate\+Optimizer Class Reference}
+\label{class_g_separate_optimizer}\index{GSeparateOptimizer@{GSeparateOptimizer}}
+
+
+判断两个element是否可以独立运行  
+
+
+
+
+{\ttfamily \#include $<$GSeparate\+Optimizer.\+h$>$}
+
+
+
+Inheritance diagram for GSeparate\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_g_separate_optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GSeparate\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_g_separate_optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_separate_optimizer_a4ad7548e30d8e26d6da1674d409f763b}{check\+Separate}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} fst, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} snd)
+\item 
+static \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} \mbox{\hyperlink{class_g_separate_optimizer_ad31e8f279981a55caa8bb789bafc8947}{get\+Nearest\+Ancestor}} (\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} fst, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} snd, \mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} fst\+Patch, \mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}} snd\+Patch)
+\item 
+static \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} \mbox{\hyperlink{class_g_separate_optimizer_aa205351400c1c1ddbd33311047909c95}{get\+Patch}} (const \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&path, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} ancestor, \mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}} element)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_separate_optimizer_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_separate_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}{GRegion}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+判断两个element是否可以独立运行 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_separate_optimizer_a4ad7548e30d8e26d6da1674d409f763b}\label{class_g_separate_optimizer_a4ad7548e30d8e26d6da1674d409f763b}} 
+\index{GSeparateOptimizer@{GSeparateOptimizer}!checkSeparate@{checkSeparate}}
+\index{checkSeparate@{checkSeparate}!GSeparateOptimizer@{GSeparateOptimizer}}
+\doxysubsubsection{\texorpdfstring{checkSeparate()}{checkSeparate()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GSeparate\+Optimizer\+::check\+Separate (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{fst,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{snd }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+判断两个 element 是否是独立运行的 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+{\em fst} & \\
+\hline
+{\em snd} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_separate_optimizer_a4ad7548e30d8e26d6da1674d409f763b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_separate_optimizer_ad31e8f279981a55caa8bb789bafc8947}\label{class_g_separate_optimizer_ad31e8f279981a55caa8bb789bafc8947}} 
+\index{GSeparateOptimizer@{GSeparateOptimizer}!getNearestAncestor@{getNearestAncestor}}
+\index{getNearestAncestor@{getNearestAncestor}!GSeparateOptimizer@{GSeparateOptimizer}}
+\doxysubsubsection{\texorpdfstring{getNearestAncestor()}{getNearestAncestor()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GSeparate\+Optimizer\+::get\+Nearest\+Ancestor (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{fst,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{snd,  }\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{fst\+Patch,  }\item[{\mbox{\hyperlink{_g_element_8h_a674f3a45e03c3d9e60e908e9637fda8b}{GElement\+PPtr}}}]{snd\+Patch }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+获取最近的从属节点信息 
+\begin{DoxyParams}{Parameters}
+{\em fst} & \\
+\hline
+{\em snd} & \\
+\hline
+{\em fst\+Patch} & \\
+\hline
+{\em snd\+Patch} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 如果没有最近从属节点，即不在同一个 group中，则返回 nullptr 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_separate_optimizer_ad31e8f279981a55caa8bb789bafc8947_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_separate_optimizer_aa205351400c1c1ddbd33311047909c95}\label{class_g_separate_optimizer_aa205351400c1c1ddbd33311047909c95}} 
+\index{GSeparateOptimizer@{GSeparateOptimizer}!getPatch@{getPatch}}
+\index{getPatch@{getPatch}!GSeparateOptimizer@{GSeparateOptimizer}}
+\doxysubsubsection{\texorpdfstring{getPatch()}{getPatch()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} GSeparate\+Optimizer\+::get\+Patch (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \&}]{path,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{ancestor,  }\item[{\mbox{\hyperlink{_g_element_8h_a9b4dbbd0eac97b295a59d07a276456f2}{GElement\+CPtr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [protected]}}
+
+根据 ancestor信息，获取对等同级的element信息 
+\begin{DoxyParams}{Parameters}
+{\em path} & \\
+\hline
+{\em ancestor} & \\
+\hline
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_separate_optimizer_a4e007dc772c018d10373bf18b528f96d}\label{class_g_separate_optimizer_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GSeparateOptimizer@{GSeparateOptimizer}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GSeparateOptimizer@{GSeparateOptimizer}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_separate_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}\label{class_g_separate_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}} 
+\index{GSeparateOptimizer@{GSeparateOptimizer}!GRegion@{GRegion}}
+\index{GRegion@{GRegion}!GSeparateOptimizer@{GSeparateOptimizer}}
+\doxysubsubsection{\texorpdfstring{GRegion}{GRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_region}{GRegion}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GOptimizer/\mbox{\hyperlink{_g_separate_optimizer_8h}{GSeparate\+Optimizer.\+h}}\end{DoxyCompactItemize}

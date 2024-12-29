@@ -1,0 +1,135 @@
+\doxysection{Class List}
+Here are the classes, structs, unions and interfaces with brief descriptions\+:\begin{DoxyCompactList}
+\item\contentsline{section}{\mbox{\hyperlink{class_action_g_node}{Action\+GNode}} }{\pageref{class_action_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_c_allocator}{CAllocator}} }{\pageref{class_c_allocator}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_camera_g_daemon}{Camera\+GDaemon}} }{\pageref{class_camera_g_daemon}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_car_detector_g_node}{Car\+Detector\+GNode}} }{\pageref{class_car_detector_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_c_desc_info}{CDesc\+Info}} }{\pageref{class_c_desc_info}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_c_e_x_c_e_p_t_i_o_n}{CEXCEPTION}} }{\pageref{class_c_e_x_c_e_p_t_i_o_n}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_c_object}{CObject}} }{\pageref{class_c_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} }{\pageref{class_c_s_t_a_t_u_s}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_c_struct}{CStruct}} }{\pageref{struct_c_struct}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_d_ann_node}{DAnn\+Node}} \\*ANN领域算子模型抽象，说人话，就是抽象了一套跑\+NN相关的范式 prepare\+Param准备要接下来要run的函数类型 函数类型和\+DAnn\+Node的成员函数一一对应，分别有 train/search/insert/update/remove/load\+Model/save\+Model/edition； 上述接口在\+DAnn\+Node这个基类都为空，由派生类自行实现，在run统一调用； }{\pageref{class_d_ann_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_d_ann_object}{DAnn\+Object}} \\*\mbox{\hyperlink{class_d_ann_object}{DAnn\+Object}} = \mbox{\hyperlink{class_domain_object}{Domain\+Object}}, run设置为\+CGRAPH\+\_\+\+NO\+\_\+\+SUPPORT }{\pageref{class_d_ann_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_d_ann_param}{DAnn\+Param}} }{\pageref{struct_d_ann_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_detect_result_g_param}{Detect\+Result\+GParam}} }{\pageref{struct_detect_result_g_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_domain_object}{Domain\+Object}} \\*\mbox{\hyperlink{class_d_ann_object}{DAnn\+Object}} = \mbox{\hyperlink{class_c_object}{CObject}} }{\pageref{class_domain_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_adapter}{GAdapter}} }{\pageref{class_g_adapter}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_aspect}{GAspect}} }{\pageref{class_g_aspect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_aspect_manager}{GAspect\+Manager}} }{\pageref{class_g_aspect_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_aspect_object}{GAspect\+Object}} \\*在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/belong\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GAspect\+Object来说是\+GAspect\+Param belong\+\_\+则是\+GAspect\+Object独有的，维护切面和\+GElement的从属关系 }{\pageref{class_g_aspect_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_cluster}{GCluster}} }{\pageref{class_g_cluster}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_condition}{GCondition}} }{\pageref{class_g_condition}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_coordinator}{GCoordinator$<$ SIZE $>$}} }{\pageref{class_g_coordinator}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_daemon}{GDaemon}} }{\pageref{class_g_daemon}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_daemon_manager}{GDaemon\+Manager}} \\*维护\+GDaemon实例的集合daemons\+\_\+ 支持批量init/批量destroy，在daemons\+\_\+里面add/destroy或者清空daemons\+\_\+等 }{\pageref{class_g_daemon_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_daemon_object}{GDaemon\+Object}} \\*在\+Graph\+Object和\+CDesc\+Info的基础上新增私有成员param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+/param\+\_\+/interval\+\_\+ param\+\_\+manager\+\_\+/event\+\_\+manager\+\_\+用于引入\+GParam\+Manager和\+GEvent\+Manager param\+\_\+用于引入\+GPassed\+Param，对于\+GDaemon\+Object来说是\+GDaemon\+Param interval\+\_\+则是\+GDaemon\+Object独有的，维护定时器的执行周期 }{\pageref{class_g_daemon_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_dynamic_engine}{GDynamic\+Engine}} \\*CGraph的核心引擎，提供\+DAG类型分析、拓扑分析、动态图运行、全并发执行、全串行执行等能力 }{\pageref{class_g_dynamic_engine}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_element}{GElement}} \\*CGraph所有广义\char`\"{}结点\char`\"{}的基类，可派生出\+GNode/\+GGroup/\+GAdapter类 public\+: 提供add\+GAspect加入切面/add\+Depend\+GElement加入前序依赖/remove\+Depend删除前序依赖的能力 提供set\+Name更新名称/set\+Loop设置循环次数/set\+Level设置优先级/set\+Visible隐藏当前元素/set\+Binding\+Index设置亲和线程等能力 提供set\+Timeout设置元素执行的超时时间/set\+Macro设置为微任务的能力 提供add\+EParam添加\+GElement内部参数(GElement\+Param，实际上就是\+GPassed\+Param) 还额外提供运算符重载：--(set\+Visible)、$>$(设置后继依赖)、\&(设置后继依赖)、$\ast$(set\+Loop) }{\pageref{class_g_element}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}} }{\pageref{class_g_element_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_element_object}{GElement\+Object}} \\*\mbox{\hyperlink{class_g_element_object}{GElement\+Object}} = \mbox{\hyperlink{class_graph_object}{Graph\+Object}} = CObject，没有新增或删除任何成员 }{\pageref{class_g_element_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_g_element_relation}{GElement\+Relation}} \\*CStruct的派生类，\+POD，维护\+GElement的前驱后继结点和所属关系 }{\pageref{struct_g_element_relation}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_element_repository}{GElement\+Repository}} }{\pageref{class_g_element_repository}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_element_sorter}{GElement\+Sorter}} }{\pageref{class_g_element_sorter}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_generate_g_node}{Generate\+GNode}} }{\pageref{class_generate_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_engine}{GEngine}} \\*CGraph的核心引擎，提供setup/link/get\+Topo/is\+Dag等核心能力 }{\pageref{class_g_engine}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_event}{GEvent}} \\*事件机制，add\+GEvent将事件注册到pipeline notify触发，process处理信号，trigger同步执行，async\+Process异步执行，async\+Wait等待异步任务结束 }{\pageref{class_g_event}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_event_manager}{GEvent\+Manager}} }{\pageref{class_g_event_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_event_object}{GEvent\+Object}} }{\pageref{class_g_event_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_fence}{GFence}} \\*默认的前序后继方式只能等待有连接关系的结点 GFence用于在没有依赖关系的情况下，强行等待一个或一组异步结点的运行结束 }{\pageref{class_g_fence}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_function}{GFunction}} \\*将一个函数注入成一个\+GElement，函数可以注入为这个新的\+GElement的init/run/destroy }{\pageref{class_g_function}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_group}{GGroup}} \\*所有节点组合的基类，所有节点组合功能，均继承自此类 }{\pageref{class_g_group}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_max_para_optimizer}{GMax\+Para\+Optimizer}} }{\pageref{class_g_max_para_optimizer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_message}{GMessage$<$ T, capacity, $>$}} \\*基于\+UAtomic\+Ring\+Buffer\+Queue队列实现，支持send/recv }{\pageref{class_g_message}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager$<$ T, $>$}} \\*基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bind\+Topic生成一个唯一的conn\+\_\+id\+\_\+，实际上是绑定到这个conn\+\_\+id\+\_\+对应的\+GMessage\+Object的消息队列 recv是一发一收则可以直接用topic作为入参 }{\pageref{class_g_message_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_message_manager_singleton}{GMessage\+Manager\+Singleton}} \\*默认的\+GMessage\+Object使用的参数类型是\+GMessage\+Param，是全局参数，用单例管理更合适 }{\pageref{class_g_message_manager_singleton}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_message_object}{GMessage\+Object}} \\*GMessage\+Object在继承\+Graph\+Object的基础上删除了run函数 (\mbox{\hyperlink{class_graph_object}{Graph\+Object}} = \mbox{\hyperlink{class_c_object}{CObject}}) }{\pageref{class_g_message_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_message_param}{GMessage\+Param}} \\*GMessage\+Param作用域为进程，\+GParam作用域为图(piepline) GPassed\+Param作用域为结点(GElement/\+GDaemon/\+GAspect/\+GEvent) }{\pageref{class_g_message_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_multi_condition}{GMulti\+Condition$<$ type $>$}} }{\pageref{class_g_multi_condition}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_mutable}{GMutable}} \\*常规的\+GGroup及其派生类在运行时是不允许再修改前序后继关系的，但是\+GMutable可以 具体做法是\+GMutable在每次run的时候会先调用setup初始化自己这张子图(实际上就是清空)，再调用reshape修改前序后继关系，最后才是正常运行子图 GMutable的reshape是纯虚函数，派生类必须实现，可以参考\+My\+Mutable示例 }{\pageref{class_g_mutable}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_node}{GNode}} \\*功能运行的最小单元(结点) }{\pageref{class_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_g_node_info}{GNode\+Info}} \\*功能节点信息 创建\+GCluster和\+GRegion的中的\+GNode的时候，使用到的信息 创建\+GCluster的时候，dependence为空 创建\+GRegion的时候，dependence不为空。若为空，则表示可直接执行 }{\pageref{struct_g_node_info}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_optimizer}{GOptimizer}} \\*GOptimizer是用来干嘛的? }{\pageref{class_g_optimizer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_param}{GParam}} }{\pageref{class_g_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_param_manager}{GParam\+Manager}} }{\pageref{class_g_param_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_param_object}{GParam\+Object}} }{\pageref{class_g_param_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_passed_default_param}{GPassed\+Default\+Param}} }{\pageref{class_g_passed_default_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_passed_param}{GPassed\+Param}} }{\pageref{class_g_passed_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_perf}{GPerf}} \\*Pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline， 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipeline }{\pageref{class_g_perf}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_perf_aspect}{GPerf\+Aspect$<$ Args $>$}} \\*预先写好的用于做性能分析的切面 }{\pageref{class_g_perf_aspect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_g_perf_info}{GPerf\+Info}} \\*性能分析数据，目前只支持耗时和最长连路分析 }{\pageref{struct_g_perf_info}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_pipeline}{GPipeline}} }{\pageref{class_g_pipeline}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_pipeline_factory}{GPipeline\+Factory}} }{\pageref{class_g_pipeline_factory}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_pipeline_manager}{GPipeline\+Manager}} }{\pageref{class_g_pipeline_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_pipeline_object}{GPipeline\+Object}} }{\pageref{class_g_pipeline_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_graph_manager}{Graph\+Manager$<$ T, $>$}} \\*所有以\+Graph\+Object为基类的对象（\+GAsepct/\+GDaemon/\+GEvent/\+GElement/\+GPipeline/\+GParam）的管理器的基类 }{\pageref{class_graph_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_graph_object}{Graph\+Object}} \\*\mbox{\hyperlink{class_graph_object}{Graph\+Object}} = CObject，没有新增或删除任何成员 }{\pageref{class_graph_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_region}{GRegion}} \\*多个\+Element的集合，一般非纯并行、也非纯串行(\+Gluster)时使用 }{\pageref{class_g_region}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_schedule}{GSchedule}} }{\pageref{class_g_schedule}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_separate_optimizer}{GSeparate\+Optimizer}} \\*判断两个element是否可以独立运行 }{\pageref{class_g_separate_optimizer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_singleton}{GSingleton$<$ T $>$}} \\*GAdapter的派生类，核心成员是static USingleton$<$\+T$>$ s\+\_\+singleton单例，可以方便地作为单例\+GElement使用 }{\pageref{class_g_singleton}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_some}{GSome$<$ Trigger\+Num $>$}} \\*对于插入的所有\+GElement，不管实际能不能并行，\+GSome都会把这些\+GElement提交到异步任务里面全并发执行(详见run) Trigger\+Num个\+GElement执行完成后就退出不再执行剩余的，剩余的置为\+TIMEOUT(在\+GElement的fat\+Processor里面会不执行直接结束) }{\pageref{class_g_some}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_stage}{GStage}} }{\pageref{class_g_stage}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_stage_manager}{GStage\+Manager}} }{\pageref{class_g_stage_manager}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_stage_object}{GStage\+Object}} }{\pageref{class_g_stage_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_static_engine}{GStatic\+Engine}} \\*将待执行的图中的所有结点进行拓扑排序(setup)，排序结果存储在element\+\_\+mat\+\_\+； 然后将element\+\_\+mat\+\_\+各个拓扑排序好的结点提交到微线程或者线程池，等待执行完成获取结果(run) }{\pageref{class_g_static_engine}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_template_aspect}{GTemplate\+Aspect$<$ Args $>$}} \\*\mbox{\hyperlink{class_g_template_aspect}{GTemplate\+Aspect}}(空) = GAspect，但是实现成模板类，可以自己用模板参数加以实现 }{\pageref{class_g_template_aspect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_template_daemon}{GTemplate\+Daemon$<$ Args $>$}} \\*\mbox{\hyperlink{class_g_template_daemon}{GTemplate\+Daemon}}(空) = GDaemon，但是实现成模板类，可以自己用模板参数加以实现 }{\pageref{class_g_template_daemon}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_template_node}{GTemplate\+Node$<$ Args $>$}} \\*\mbox{\hyperlink{class_g_template_node}{GTemplate\+Node}}(空) = GNode，但是实现成模板类，可以自己用模板参数加以实现 }{\pageref{class_g_template_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_topo_engine}{GTopo\+Engine}} \\*拓扑排序，并按照拓扑排序的顺序串行执行 }{\pageref{class_g_topo_engine}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_g_trim_optimizer}{GTrim\+Optimizer}} }{\pageref{class_g_trim_optimizer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_image_m_param}{Image\+MParam}} }{\pageref{struct_image_m_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_input_g_node}{Input\+GNode}} }{\pageref{class_input_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_input_m_param}{Input\+MParam}} }{\pageref{struct_input_m_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_lane_detector_g_node}{Lane\+Detector\+GNode}} }{\pageref{class_lane_detector_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_map_g_node}{Map\+GNode$<$ MAP\+\_\+\+TAG $>$}} }{\pageref{class_map_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_nums_g_param}{Nums\+GParam}} }{\pageref{struct_nums_g_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_process_g_node}{Process\+GNode}} }{\pageref{class_process_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_process_g_param}{Process\+GParam}} }{\pageref{struct_process_g_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_reduce_g_node}{Reduce\+GNode}} }{\pageref{class_reduce_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_result_g_node}{Result\+GNode}} }{\pageref{class_result_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_result_m_param}{Result\+MParam}} }{\pageref{struct_result_m_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_show_g_event}{Show\+GEvent}} }{\pageref{class_show_g_event}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_show_g_node}{Show\+GNode}} }{\pageref{class_show_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_switch_g_aspect}{Switch\+GAspect}} }{\pageref{class_switch_g_aspect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_u_task_1_1_task_based}{UTask\+::\+Task\+Based}} }{\pageref{struct_u_task_1_1_task_based}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_u_task_1_1_task_derided}{UTask\+::\+Task\+Derided$<$ F, T $>$}} }{\pageref{struct_u_task_1_1_task_derided}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_test_add1_g_node}{Test\+Add1\+GNode}} }{\pageref{class_test_add1_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_test_g_message_param}{Test\+GMessage\+Param}} }{\pageref{class_test_g_message_param}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_test_material_add1_g_aspect}{Test\+Material\+Add1\+GAspect}} }{\pageref{class_test_material_add1_g_aspect}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_test_recv_message_g_node}{Test\+Recv\+Message\+GNode}} }{\pageref{class_test_recv_message_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_test_return_error_g_node}{Test\+Return\+Error\+GNode}} }{\pageref{class_test_return_error_g_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue$<$ T $>$}} \\*包含一个优先级队列成员，基于mutex\+\_\+封装成一个原子的优先级队列，支持原子的try\+Pop/push/empty }{\pageref{class_u_atomic_priority_queue}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue$<$ T $>$}} \\*包含一个普通队列成员，基于mutex\+\_\+封装成一个原子的优先级队列， 支持原子的wait\+Pop/try\+Pop/pop\+With\+Timeout/push/empty 新增ready\+\_\+flag\+\_\+用于通知辅助线程快速退出 }{\pageref{class_u_atomic_queue}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_atomic_ring_buffer_queue}{UAtomic\+Ring\+Buffer\+Queue$<$ T, capacity $>$}} \\*包含一个基于std\+::vector的环形队列，基于mutex\+\_\+实现原子的wait\+Pop\+With\+Timeout/push head\+\_\+/tail\+\_\+初始化为0，tail\+\_\+及tail\+\_\+之后一直到head\+\_\+之前的位置记为空 举例：head\+\_\+为0、tail\+\_\+为3、capaci\+\_\+为64的情况下，\mbox{[}3,63\mbox{]}范围内的位置都记为空 }{\pageref{class_u_atomic_ring_buffer_queue}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_cosine_distance}{UCosine\+Distance$<$ TSrc, TRes $>$}} \\*计算v1和v2两个向量的cos距离 默认v1和v2的维度相同(dim1 == dim2)且非零 (此处calc实现未做检查，可能出现除零错误) }{\pageref{class_u_cosine_distance}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_u_cv_mutex}{UCv\+Mutex}} }{\pageref{struct_u_cv_mutex}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_distance}{UDistance$<$ TSrc, TRes $>$}} \\*距离计算类的基类，提供calc(计算向量距离)、check(检查向量)、normalize(向量归一化)三个虚函数 其中calc是纯虚函数，派生类必须重写 }{\pageref{class_u_distance}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator$<$ TSrc, TRes, UDist, need\+Check, $>$}} \\*对\+UDistance及其派生类\+UDist的进一步封装 UDist本身也是模板参数，通过另一个模板参数need\+Check指定在calc之前是否要check }{\pageref{class_u_distance_calculator}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_distance_object}{UDistance\+Object}} \\*\mbox{\hyperlink{class_u_distance_object}{UDistance\+Object}} = \mbox{\hyperlink{class_utils_object}{Utils\+Object}} }{\pageref{class_u_distance_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_euclidean_distance}{UEuclidean\+Distance$<$ TSrc, TRes, need\+Sqrt $>$}} \\*计算几何距离(欧氏距离) }{\pageref{class_u_euclidean_distance}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{USmall\+Vector$<$ T, CAPACITY $>$\+::\+UIter}} }{\pageref{class_u_small_vector_1_1_u_iter}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$}} \\*环形队列基于std\+::vector存储，head\+\_\+和tail\+\_\+通过std\+::atomic封装 号称是无锁的，但是从代码看起来push/try\+Pop操作并不能解决多线程的竞态条件问题，线程安全性存疑？ }{\pageref{class_u_lock_free_ring_buffer_queue}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_lru}{ULru$<$ K, V, Default\+Capacity $>$}} \\*LRU(\+Least Recently Used)，基于双链表(list)存储 最少被使用的结点放在表尾，最近/最多被使用的结点放在表头 }{\pageref{class_u_lru}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_u_lru_node}{ULru\+Node$<$ K, V $>$}} \\*ULru双链表nodes\+\_\+存储的结点类型 }{\pageref{struct_u_lru_node}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_metrics}{UMetrics}} \\*CGraph自带的线程池性能指标统计，主要包含 本地任务队列pop、全局任务队列pop、工作窃取、任务push、轻量级等待(yield)、深度等待(cv.\+wait)等相关的指标 }{\pageref{class_u_metrics}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_queue_object}{UQueue\+Object}} \\*UQueue\+Object单独继承\+UThread\+Object，只在此基础上新增了mutex\+\_\+和cv\+\_\+成员 }{\pageref{class_u_queue_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_random}{URandom$<$ T, SEED, TEngine $>$}} \\*随机数生成类，支持模板入参T(默认\+CFloat)、\+SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后\+Fibonacci/...) generate\+: 基于std\+::uniform\+\_\+real\+\_\+distribution生成指定\+T类型、一维或二维、指定个数的均匀分布的随机数存入data generate\+Session：生成随机session\+\_\+信息，常用于\+CDesc\+Info的成员，作为\+CDesc\+Info派生类(GNode/\+GAdapter/\+GElement等)的唯一标识 }{\pageref{class_u_random}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_semaphore}{USemaphore}} \\*基于mutex\+\_\+/cv\+\_\+和int计数器cnt\+\_\+封装的信号量 }{\pageref{class_u_semaphore}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array$<$ T $>$}} \\*内部基于std\+::vector存储，每次插入前进行检查，重复则不插入(unique\+Add)，保证对外表现为一个不重复数组 }{\pageref{class_u_serial_unique_array}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_singleton}{USingleton$<$ T, type, auto\+Init $>$}} \\*支持默认构造一个\+T类型的对象、封装成单例使用 目前实际上只支持\+CObject及其派生类作为单例要维护的对象类型，其他类型在init/destroy阶段啥都不做 }{\pageref{class_u_singleton}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector$<$ T, CAPACITY $>$}} \\*申请一块\+T类型的内存，封装为一个轻量级的std\+::vector使用 (主要为了减少内存占用?)， 内部的迭代器也使用自定义的\+UIter }{\pageref{class_u_small_vector}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_spin_lock}{USpin\+Lock}} \\*基于std\+::atomic\+\_\+flag实现的用户态自旋锁，std\+::atomic\+\_\+flag只有true/false两种状态； USpin\+Lock提供以下三个方法：lock为忙等，try\+Lock为单次尝试，unlock为解锁； (基于std\+::atomic\+\_\+flag实现的用户态自旋锁是一种采用的做法，) }{\pageref{class_u_spin_lock}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_task}{UTask}} \\*基于内嵌类\+Task\+Based和\+Task\+Derided，将传入的func完美转发成\+Task\+Derided的func\+\_\+成员； Task\+Derided是\+UTask的impl\+\_\+成员，运行\+UTask实际上就是调用impl\+\_\+-\/$>$run也就是调用func\+\_\+() }{\pageref{class_u_task}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \\*注意，并非基于\+UTask，实际维护的是\+CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION类型的函数数组(std\+::vector) 支持add\+Task将更多的函数加入task\+\_\+arr\+\_\+数组，支持指定任务组最大执行耗时ttl 以及对task\+\_\+arr\+\_\+数组内的全部函数执行完成(即这个\+UTask\+Group执行完成)指定后处理接口set\+On\+Finished }{\pageref{class_u_task_group}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_thread_base}{UThread\+Base}} \\*线程池中实际使用的线程的基类，有以下关键成员： \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+task\+\_\+queue\+\_\+：存储当前线程待执行的普通任务； \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue$<$\+UTask$>$}}$\ast$ pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+：优先级队列的任务，仅辅助线程可以执行； CInt type\+\_\+：表明当前线程是普通线程还是辅助线程 UThread\+Pool\+Config\+Ptr config\+\_\+：当前线程所属的线程池的配置 std\+::thread thread\+\_\+：标准线程对象，实际执行\+UTask任务的载体 }{\pageref{class_u_thread_base}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_thread_object}{UThread\+Object}} \\*\mbox{\hyperlink{class_u_thread_object}{UThread\+Object}} = Utils\+Object，将run置为\+CGRAPH\+\_\+\+NO\+\_\+\+SUPPORT }{\pageref{class_u_thread_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_thread_pool}{UThread\+Pool}} \\*线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等 }{\pageref{class_u_thread_pool}}{}
+\item\contentsline{section}{\mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} \\*具体值含义，参考\+UThread\+Pool\+Define.\+h文件；支持配置以下项目： default\+\_\+thread\+\_\+size\+\_\+\+: 默认开启主线程个数 secondary\+\_\+thread\+\_\+size\+\_\+\+: 默认开启辅助线程个数 max\+\_\+thread\+\_\+size\+\_\+\+: 最大线程个数 max\+\_\+task\+\_\+steal\+\_\+range\+\_\+\+: 盗取机制相邻范围 max\+\_\+local\+\_\+batch\+\_\+size\+\_\+\+: 批量执行本地任务最大值 max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+\+: 批量执行通用任务最大值 max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+\+: 批量盗取任务最大值 primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+\+: 主线程进入wait状态的轮数，数值越大，理论性能越高，但空转可能性也越大 primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+\+: 主线程进入休眠状态的默认时间 secondary\+\_\+thread\+\_\+ttl\+\_\+\+: 辅助线程ttl，单位为s monitor\+\_\+span\+\_\+\+: 监控线程执行间隔，单位为s queue\+\_\+emtpy\+\_\+interval\+\_\+\+: 队列为空时，等待的时间。仅针对辅助线程，单位为ms primary\+\_\+thread\+\_\+policy\+\_\+\+: 主线程调度策略 secondary\+\_\+thread\+\_\+policy\+\_\+\+: 辅助线程调度策略 primary\+\_\+thread\+\_\+priority\+\_\+\+: 主线程调度优先级（取值范围0$\sim$99，配合调度策略一起使用，不建议不了解相关内容的童鞋做修改） secondary\+\_\+thread\+\_\+priority\+\_\+\+: 辅助线程调度优先级（同上） bind\+\_\+cpu\+\_\+enable\+\_\+\+: 是否开启绑定cpu模式（仅针对主线程） batch\+\_\+task\+\_\+enable\+\_\+\+: 是否开启批量任务功能 monitor\+\_\+enable\+\_\+\+: 是否开启监控程序 }{\pageref{struct_u_thread_pool_config}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} \\*主线程类，核心成员是primary\+\_\+queue\+\_\+和secondary\+\_\+queue\+\_\+ 自身准备执行任务时，优先从primary\+\_\+queue\+\_\+取，其次从secondary\+\_\+queue\+\_\+取 自身准备窃取任务时，优先从secondary\+\_\+queue\+\_\+，其次从primary\+\_\+queue\+\_\+取 这样设计的好处是\+A线程的执行和\+B线程从\+A线程窃取这两个异步事件发生竞争的可能性大大减小，从而提高性能 主线程所属的主线程池pool\+\_\+threads\+\_\+的指针也记录在每个主线程对象里面，在窃取相邻线程任务、安全检查等会用到 }{\pageref{class_u_thread_primary}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}} \\*和主线程\+UThread\+Primary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool\+\_\+task\+\_\+queue\+\_\+)和优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务 当然：主线程不会从优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务， 这个任务队列存储的一般是长时间任务，是辅助线程专用的 }{\pageref{class_u_thread_secondary}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_utils_object}{Utils\+Object}} \\*Utils\+Object单独继承\+CObject，run()标记为\+CGRAPH\+\_\+\+NO\+\_\+\+SUPPORT }{\pageref{class_utils_object}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_time_counter}{UTime\+Counter}} \\*基于std\+::chrono\+::steady\+\_\+clock\+::time\+\_\+point封装的计时器； 构造的同时记录时间戳，析构的同时打印从构造到析构的间隔span }{\pageref{class_u_time_counter}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_timer}{UTimer}} \\*定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接口； 定时器的结束通过is\+\_\+stop\+\_\+这个std\+::atomic\+\_\+bool值和std\+::condition\+\_\+variable实现， start接口is\+\_\+stop\+\_\+ exchange为false，对exchange之前的值做检查也保证了不会重复start stop接口将is\+\_\+stop\+\_\+设置为true，并通知正在cv\+\_\+上等待的start直接退出，接着等待std\+::future对象返回 }{\pageref{class_u_timer}}{}
+\item\contentsline{section}{\mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue$<$ T $>$}} \\*工作窃取队列，实现为双端队列(deque\+\_\+)； push在队尾发生，可以一次性写入一个或多个任务，也支持try\+Push和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持try\+Pop； try\+Steal在队尾发生，可以一次性窃取一个或多个任务； }{\pageref{class_u_work_stealing_queue}}{}
+\end{DoxyCompactList}

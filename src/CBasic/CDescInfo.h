@@ -15,6 +15,15 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 广泛用于GAspect/GAspectManager/GDaemon/GDaemonManager/GEvent/GEventManager/GPipeline/GElement及其派生类
+ * 这些类及其派生类基本覆盖CGraph的绝大部分场景，因此CDescInfo可以看作是CGraph各个类的描述信息基座
+ * 具体：提供名称(name_)、描述(description_)、ID(session_)的set/get接口
+ * 比如：
+ * GElement又可派生出GAdapter/GGroup/GNode
+ * GAdapter又可派生出GCoordinator/GFence/GFunction/GSingleton
+ * GGroup又可派生出GCluster/GCondition/GMultiCondition/GMutable/GRegion/GSome
+ */
 class CDescInfo {
 public:
     /**

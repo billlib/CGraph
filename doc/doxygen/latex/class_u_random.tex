@@ -1,0 +1,135 @@
+\hypertarget{class_u_random}{}\doxysection{URandom$<$ T, SEED, TEngine $>$ Class Template Reference}
+\label{class_u_random}\index{URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}}
+
+
+随机数生成类，支持模板入参T(默认\+CFloat)、\+SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后\+Fibonacci/...) generate\+: 基于std\+::uniform\+\_\+real\+\_\+distribution生成指定\+T类型、一维或二维、指定个数的均匀分布的随机数存入data generate\+Session：生成随机session\+\_\+信息，常用于\+CDesc\+Info的成员，作为\+CDesc\+Info派生类(GNode/\+GAdapter/\+GElement等)的唯一标识  
+
+
+
+
+{\ttfamily \#include $<$URandom.\+h$>$}
+
+
+
+Inheritance diagram for URandom$<$ T, SEED, TEngine $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_u_random__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for URandom$<$ T, SEED, TEngine $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_u_random__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_random_af2f44206eb358c3e836af1d4222bdb52}{generate}} (std\+::vector$<$ T $>$ \&data, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim, const T \&min\+Value, const T \&max\+Value)
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_random_aaf9dc7fea23d69dec77b5176cee93413}{generate}} (std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&data, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} height, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} column, const T \&min\+Value, const T \&max\+Value)
+\item 
+static std\+::string \mbox{\hyperlink{class_u_random_a9975aa036439780ffdb027e4928035d9}{generate\+Session}} (const std\+::string \&key=\mbox{\hyperlink{_c_str_define_8h_a6e5f67132dd5571c8250e8fe53bac47c}{CGRAPH\+\_\+\+UNKNOWN}}, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} size=3)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = CFloat, CInt SEED = CGRAPH\+\_\+\+REAL\+\_\+\+RANDOM, typename TEngine = CGRAPH\+\_\+\+RANDOM\+\_\+\+MT19937$>$\newline
+class URandom$<$ T, SEED, TEngine $>$}
+
+随机数生成类，支持模板入参T(默认\+CFloat)、\+SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后\+Fibonacci/...) generate\+: 基于std\+::uniform\+\_\+real\+\_\+distribution生成指定\+T类型、一维或二维、指定个数的均匀分布的随机数存入data generate\+Session：生成随机session\+\_\+信息，常用于\+CDesc\+Info的成员，作为\+CDesc\+Info派生类(GNode/\+GAdapter/\+GElement等)的唯一标识 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 随机数类型，默认\+CFloat \\
+\hline
+{\em SEED} & 0为完全随机值，其他为固定随机值 \\
+\hline
+{\em TEngine} & 随机数的生成方式(梅森旋转法/线性同余法/滞后\+Fibonacci/...) \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_random_aaf9dc7fea23d69dec77b5176cee93413}\label{class_u_random_aaf9dc7fea23d69dec77b5176cee93413}} 
+\index{URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}!generate@{generate}}
+\index{generate@{generate}!URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = CFloat, CInt SEED = CGRAPH\+\_\+\+REAL\+\_\+\+RANDOM, typename TEngine  = CGRAPH\+\_\+\+RANDOM\+\_\+\+MT19937$>$ \\
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_random}{URandom}}$<$ T, SEED, TEngine $>$\+::generate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::vector$<$ T $>$ $>$ \&}]{data,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{height,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{column,  }\item[{const T \&}]{min\+Value,  }\item[{const T \&}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+构建随机二维向量 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em height} & \\
+\hline
+{\em column} & \\
+\hline
+{\em min\+Value} & \\
+\hline
+{\em max\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_random_af2f44206eb358c3e836af1d4222bdb52}\label{class_u_random_af2f44206eb358c3e836af1d4222bdb52}} 
+\index{URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}!generate@{generate}}
+\index{generate@{generate}!URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = CFloat, CInt SEED = CGRAPH\+\_\+\+REAL\+\_\+\+RANDOM, typename TEngine  = CGRAPH\+\_\+\+RANDOM\+\_\+\+MT19937$>$ \\
+static \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_random}{URandom}}$<$ T, SEED, TEngine $>$\+::generate (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{data,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim,  }\item[{const T \&}]{min\+Value,  }\item[{const T \&}]{max\+Value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+构建随机一维向量 
+\begin{DoxyParams}{Parameters}
+{\em data} & \\
+\hline
+{\em dim} & \\
+\hline
+{\em min\+Value} & \\
+\hline
+{\em max\+Value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 暂时不支持int类型的随机数生成 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_random_a9975aa036439780ffdb027e4928035d9}\label{class_u_random_a9975aa036439780ffdb027e4928035d9}} 
+\index{URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}!generateSession@{generateSession}}
+\index{generateSession@{generateSession}!URandom$<$ T, SEED, TEngine $>$@{URandom$<$ T, SEED, TEngine $>$}}
+\doxysubsubsection{\texorpdfstring{generateSession()}{generateSession()}}
+{\footnotesize\ttfamily template$<$typename T  = CFloat, CInt SEED = CGRAPH\+\_\+\+REAL\+\_\+\+RANDOM, typename TEngine  = CGRAPH\+\_\+\+RANDOM\+\_\+\+MT19937$>$ \\
+static std\+::string \mbox{\hyperlink{class_u_random}{URandom}}$<$ T, SEED, TEngine $>$\+::generate\+Session (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key = {\ttfamily \mbox{\hyperlink{_c_str_define_8h_a6e5f67132dd5571c8250e8fe53bac47c}{CGRAPH\+\_\+\+UNKNOWN}}},  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{size = {\ttfamily 3} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+生成随机session信息 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_random_a9975aa036439780ffdb027e4928035d9_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Random/\mbox{\hyperlink{_u_random_8h}{URandom.\+h}}\end{DoxyCompactItemize}

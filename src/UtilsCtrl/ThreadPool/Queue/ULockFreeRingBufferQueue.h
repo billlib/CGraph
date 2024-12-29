@@ -16,6 +16,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 环形队列基于std::vector存储，head_和tail_通过std::atomic封装
+ *        号称是无锁的，但是从代码看起来push/tryPop操作并不能解决多线程的竞态条件问题，线程安全性存疑？
+ * 
+ * @tparam T 
+ * @tparam CAPACITY 
+ */
 template<typename T, CInt CAPACITY = CGRAPH_DEFAULT_RINGBUFFER_SIZE>
 class ULockFreeRingBufferQueue : public UQueueObject {
 public:

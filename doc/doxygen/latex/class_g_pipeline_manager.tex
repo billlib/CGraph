@@ -1,0 +1,213 @@
+\hypertarget{class_g_pipeline_manager}{}\doxysection{GPipeline\+Manager Class Reference}
+\label{class_g_pipeline_manager}\index{GPipelineManager@{GPipelineManager}}
+
+
+{\ttfamily \#include $<$GPipeline\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GPipeline\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GPipeline\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_a7626219a82736f63d928557daccd217e}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_acc39bb172e1822139f1d98779ddbbf05}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_af8ceec6a5997bcd6c713a7f94775a4de}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_ad39735c2fdf8e71ad7e7f5c919b705bf}{add}} (\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} ptr) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_a2d1acf7bd6bfe84d96749011c790cb0e}{clear}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_pipeline_manager_a54037432819eb31e1676143784a37fcf}{find}} (\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} ptr) const final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_afe741882a78742057df0444fab84f418}{remove}} (\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} ptr) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_pipeline_manager_a4d9dcf024c2ca1ccc55c632533525bb3}{get\+Size}} () const final
+\item 
+\mbox{\hyperlink{class_g_pipeline_manager_a3c064dc3810612b3584352bf1215e1ff}{$\sim$\+GPipeline\+Manager}} () override
+\item 
+\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} \mbox{\hyperlink{class_g_pipeline_manager_a8c7451c8962eb6fdd6cfbe63f40e194f}{fetch}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_pipeline_manager_a068ff6d3975e8f07516a81c6a0adae23}{release}} (\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} \mbox{\hyperlink{class_g_pipeline_manager_afceaa46193d598d180dfc0d209b98438}{free\+\_\+list\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} \mbox{\hyperlink{class_g_pipeline_manager_a7057ff6323776ba8326346706a7b2f7f}{used\+\_\+list\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_pipeline_manager_aa12de6874969e6a28eb7a0b17de9199f}{mutex\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_pipeline_manager_a3c064dc3810612b3584352bf1215e1ff}\label{class_g_pipeline_manager_a3c064dc3810612b3584352bf1215e1ff}} 
+\index{GPipelineManager@{GPipelineManager}!````~GPipelineManager@{$\sim$GPipelineManager}}
+\index{````~GPipelineManager@{$\sim$GPipelineManager}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GPipelineManager()}{~GPipelineManager()}}
+{\footnotesize\ttfamily GPipeline\+Manager\+::$\sim$\+GPipeline\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_manager_a3c064dc3810612b3584352bf1215e1ff_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_pipeline_manager_ad39735c2fdf8e71ad7e7f5c919b705bf}\label{class_g_pipeline_manager_ad39735c2fdf8e71ad7e7f5c919b705bf}} 
+\index{GPipelineManager@{GPipelineManager}!add@{add}}
+\index{add@{add}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+\mbox{\Hypertarget{class_g_pipeline_manager_a2d1acf7bd6bfe84d96749011c790cb0e}\label{class_g_pipeline_manager_a2d1acf7bd6bfe84d96749011c790cb0e}} 
+\index{GPipelineManager@{GPipelineManager}!clear@{clear}}
+\index{clear@{clear}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+这里只是清空list中的信息，并不真正销毁 pipeline对象 因为pipeline 对象统一在 Factory中管控
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GPipeline $>$}}.
+
+\mbox{\Hypertarget{class_g_pipeline_manager_af8ceec6a5997bcd6c713a7f94775a4de}\label{class_g_pipeline_manager_af8ceec6a5997bcd6c713a7f94775a4de}} 
+\index{GPipelineManager@{GPipelineManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_pipeline_manager_a8c7451c8962eb6fdd6cfbe63f40e194f}\label{class_g_pipeline_manager_a8c7451c8962eb6fdd6cfbe63f40e194f}} 
+\index{GPipelineManager@{GPipelineManager}!fetch@{fetch}}
+\index{fetch@{fetch}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{fetch()}{fetch()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}} GPipeline\+Manager\+::fetch (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+获取一个可以运行的pipeline信息 没有可用的话，则返回 nullptr \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_manager_a54037432819eb31e1676143784a37fcf}\label{class_g_pipeline_manager_a54037432819eb31e1676143784a37fcf}} 
+\index{GPipelineManager@{GPipelineManager}!find@{find}}
+\index{find@{find}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GPipeline\+Manager\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}}}]{ptr }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}}
+
+如果在其中一个位置，找到了，就返回 true了 非线程安全，建议 init 之前使用\mbox{\Hypertarget{class_g_pipeline_manager_a4d9dcf024c2ca1ccc55c632533525bb3}\label{class_g_pipeline_manager_a4d9dcf024c2ca1ccc55c632533525bb3}} 
+\index{GPipelineManager@{GPipelineManager}!getSize@{getSize}}
+\index{getSize@{getSize}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GPipeline\+Manager\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+获取大小信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}{Graph\+Manager$<$ GPipeline $>$}}.
+
+\mbox{\Hypertarget{class_g_pipeline_manager_a7626219a82736f63d928557daccd217e}\label{class_g_pipeline_manager_a7626219a82736f63d928557daccd217e}} 
+\index{GPipelineManager@{GPipelineManager}!init@{init}}
+\index{init@{init}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_pipeline_manager_a068ff6d3975e8f07516a81c6a0adae23}\label{class_g_pipeline_manager_a068ff6d3975e8f07516a81c6a0adae23}} 
+\index{GPipelineManager@{GPipelineManager}!release@{release}}
+\index{release@{release}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{release()}{release()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::release (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}}}]{ptr }\end{DoxyParamCaption})}
+
+释放一个pipeline信息，重新放回 free list 中去 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_pipeline_manager_afe741882a78742057df0444fab84f418}\label{class_g_pipeline_manager_afe741882a78742057df0444fab84f418}} 
+\index{GPipelineManager@{GPipelineManager}!remove@{remove}}
+\index{remove@{remove}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_pipeline_8h_ace633ca4bca10aa3793657e101778a67}{GPipeline\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}}
+
+\mbox{\Hypertarget{class_g_pipeline_manager_acc39bb172e1822139f1d98779ddbbf05}\label{class_g_pipeline_manager_acc39bb172e1822139f1d98779ddbbf05}} 
+\index{GPipelineManager@{GPipelineManager}!run@{run}}
+\index{run@{run}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GPipeline\+Manager\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [virtual]}}
+
+流程处理函数 这里执行，是外部线程执行的。获取的status就是这个pipeline run的结果 无论如何，执行完成之后，都要将pipeline返回到 free\+\_\+list 中去
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_pipeline_manager_acc39bb172e1822139f1d98779ddbbf05_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_pipeline_manager_afceaa46193d598d180dfc0d209b98438}\label{class_g_pipeline_manager_afceaa46193d598d180dfc0d209b98438}} 
+\index{GPipelineManager@{GPipelineManager}!free\_list\_@{free\_list\_}}
+\index{free\_list\_@{free\_list\_}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{free\_list\_}{free\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} GPipeline\+Manager\+::free\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_manager_aa12de6874969e6a28eb7a0b17de9199f}\label{class_g_pipeline_manager_aa12de6874969e6a28eb7a0b17de9199f}} 
+\index{GPipelineManager@{GPipelineManager}!mutex\_@{mutex\_}}
+\index{mutex\_@{mutex\_}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{mutex\_}{mutex\_}}
+{\footnotesize\ttfamily std\+::mutex GPipeline\+Manager\+::mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_pipeline_manager_a7057ff6323776ba8326346706a7b2f7f}\label{class_g_pipeline_manager_a7057ff6323776ba8326346706a7b2f7f}} 
+\index{GPipelineManager@{GPipelineManager}!used\_list\_@{used\_list\_}}
+\index{used\_list\_@{used\_list\_}!GPipelineManager@{GPipelineManager}}
+\doxysubsubsection{\texorpdfstring{used\_list\_}{used\_list\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_pipeline_8h_aa92e24045750661d1b5e9d1a63f83fcd}{GPipeline\+Ptr\+List}} GPipeline\+Manager\+::used\+\_\+list\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_manager_8h}{GPipeline\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Pipeline/\mbox{\hyperlink{_g_pipeline_manager_8cpp}{GPipeline\+Manager.\+cpp}}\end{DoxyCompactItemize}

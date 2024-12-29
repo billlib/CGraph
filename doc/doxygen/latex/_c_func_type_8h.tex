@@ -1,0 +1,218 @@
+\hypertarget{_c_func_type_8h}{}\doxysection{src/\+CBasic/\+CFunc\+Type.h File Reference}
+\label{_c_func_type_8h}\index{src/CBasic/CFuncType.h@{src/CBasic/CFuncType.h}}
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include \char`\"{}CStr\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CVal\+Type.\+h\char`\"{}}\newline
+Include dependency graph for CFunc\+Type.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{_c_func_type_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_func_type_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a3cb451b8f16ac17373c8ca06e1714fca}{CGRAPH\+\_\+\+FUNCTION\+\_\+\+BEGIN}}~    \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} status;                                                     \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a78b273610547b7d00e58ee9222d352b2}{CGRAPH\+\_\+\+FUNCTION\+\_\+\+END}}~    return status;                                                      \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a1a2c204354a4c23930d9214fc04f6e61}{CGRAPH\+\_\+\+EMPTY\+\_\+\+FUNCTION}}~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}();                                                   \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_aa8ede07cbe04250f873d8856365e678f}{CGRAPH\+\_\+\+GET\+\_\+\+LOCATE}}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a135908410b10cb20342f11cc41cadeed}{CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS}}(info)~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(info);                                               \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_ac212267831190110937b98a5e60f42b7}{CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS\+\_\+\+BY\+\_\+\+CONDITION}}(cond,  info)~    if (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(cond)) \{ \mbox{\hyperlink{_c_func_type_8h_a135908410b10cb20342f11cc41cadeed}{CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS}}(info); \}           \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_af66a6df1f1eac86ba2324281ffcb9c91}{CGRAPH\+\_\+\+NO\+\_\+\+SUPPORT}}~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(\mbox{\hyperlink{_c_str_define_8h_a57afa1ce3e264aa5850d8c3a37d9db33}{CGRAPH\+\_\+\+FUNCTION\+\_\+\+NO\+\_\+\+SUPPORT}});                         \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a6132ada43b03411d9d45d2108c95f239}{CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY}}(CType)
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_a39b2ec8919d5cd46d5170cd1ab4d9a82}{CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION}}(info)~    throw \mbox{\hyperlink{_c_val_type_8h_a0bf31180c2ed175def27060a21ccc65d}{CException}}(info, \mbox{\hyperlink{_c_func_type_8h_aa8ede07cbe04250f873d8856365e678f}{CGRAPH\+\_\+\+GET\+\_\+\+LOCATE}});                          \textbackslash{}
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_ab2abfa94f29c4ae56256ed90eb357664}{CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION\+\_\+\+BY\+\_\+\+STATUS}}(status)
+\item 
+\#define \mbox{\hyperlink{_c_func_type_8h_afc48672693234949c3c03a25d74c6f76}{CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION\+\_\+\+BY\+\_\+\+CONDITION}}(cond,  info)~    if (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(cond)) \{ \mbox{\hyperlink{_c_func_type_8h_a39b2ec8919d5cd46d5170cd1ab4d9a82}{CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION}}(info); \}               \textbackslash{}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION}} = std\+::function$<$ void()$>$
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} = const std\+::function$<$ void()$>$ \&
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} = std\+::function$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()$>$
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} = const std\+::function$<$ \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()$>$ \&
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+FUNCTION}} = std\+::function$<$ void(\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}})$>$
+\item 
+using \mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} = const std\+::function$<$ void(\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}})$>$ \&
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}} \{ \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8afaee4ca3c30ee18148ce3ada37466498}{INIT}} = 1
+, \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8a855520d2a5b0b1a64b939e7e30889e2a}{RUN}} = 2
+, \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8ac39aa6dbe619bb8ef8187b00b686df6a}{DESTROY}} = 3
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_c_func_type_8h_a1a2c204354a4c23930d9214fc04f6e61}\label{_c_func_type_8h_a1a2c204354a4c23930d9214fc04f6e61}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_EMPTY\_FUNCTION@{CGRAPH\_EMPTY\_FUNCTION}}
+\index{CGRAPH\_EMPTY\_FUNCTION@{CGRAPH\_EMPTY\_FUNCTION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_EMPTY\_FUNCTION}{CGRAPH\_EMPTY\_FUNCTION}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+EMPTY\+\_\+\+FUNCTION~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}();                                                   \textbackslash{}}
+
+无任何功能函数 \mbox{\Hypertarget{_c_func_type_8h_a3cb451b8f16ac17373c8ca06e1714fca}\label{_c_func_type_8h_a3cb451b8f16ac17373c8ca06e1714fca}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_FUNCTION\_BEGIN@{CGRAPH\_FUNCTION\_BEGIN}}
+\index{CGRAPH\_FUNCTION\_BEGIN@{CGRAPH\_FUNCTION\_BEGIN}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_FUNCTION\_BEGIN}{CGRAPH\_FUNCTION\_BEGIN}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+FUNCTION\+\_\+\+BEGIN~    \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} status;                                                     \textbackslash{}}
+
+开启函数流程 \mbox{\Hypertarget{_c_func_type_8h_a78b273610547b7d00e58ee9222d352b2}\label{_c_func_type_8h_a78b273610547b7d00e58ee9222d352b2}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_FUNCTION\_END@{CGRAPH\_FUNCTION\_END}}
+\index{CGRAPH\_FUNCTION\_END@{CGRAPH\_FUNCTION\_END}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_FUNCTION\_END}{CGRAPH\_FUNCTION\_END}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+FUNCTION\+\_\+\+END~    return status;                                                      \textbackslash{}}
+
+结束函数流程 \mbox{\Hypertarget{_c_func_type_8h_aa8ede07cbe04250f873d8856365e678f}\label{_c_func_type_8h_aa8ede07cbe04250f873d8856365e678f}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_GET\_LOCATE@{CGRAPH\_GET\_LOCATE}}
+\index{CGRAPH\_GET\_LOCATE@{CGRAPH\_GET\_LOCATE}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_GET\_LOCATE}{CGRAPH\_GET\_LOCATE}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+GET\+\_\+\+LOCATE}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    (std::string(\_\_FILE\_\_) + \textcolor{stringliteral}{"{} | "{}} + std::string(\_\_FUNCTION\_\_)          \(\backslash\)}
+\DoxyCodeLine{    + \textcolor{stringliteral}{"{} | line = ["{}} + ::std::to\_string( \_\_LINE\_\_) + \textcolor{stringliteral}{"{}]"{}})}
+
+\end{DoxyCode}
+获取当前代码所在的位置信息 \mbox{\Hypertarget{_c_func_type_8h_a6132ada43b03411d9d45d2108c95f239}\label{_c_func_type_8h_a6132ada43b03411d9d45d2108c95f239}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}}
+\index{CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_NO\_ALLOWED\_COPY}{CGRAPH\_NO\_ALLOWED\_COPY}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY(\begin{DoxyParamCaption}\item[{}]{CType }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    CType(\textcolor{keyword}{const} CType \&) = \textcolor{keyword}{delete};                                      \(\backslash\)}
+\DoxyCodeLine{    const CType \&operator=(\textcolor{keyword}{const} CType \&) = \textcolor{keyword}{delete};                     \(\backslash\)}
+
+\end{DoxyCode}
+定义为不能赋值和拷贝的对象类型 \mbox{\Hypertarget{_c_func_type_8h_af66a6df1f1eac86ba2324281ffcb9c91}\label{_c_func_type_8h_af66a6df1f1eac86ba2324281ffcb9c91}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_NO\_SUPPORT@{CGRAPH\_NO\_SUPPORT}}
+\index{CGRAPH\_NO\_SUPPORT@{CGRAPH\_NO\_SUPPORT}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_NO\_SUPPORT}{CGRAPH\_NO\_SUPPORT}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+NO\+\_\+\+SUPPORT~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(\mbox{\hyperlink{_c_str_define_8h_a57afa1ce3e264aa5850d8c3a37d9db33}{CGRAPH\+\_\+\+FUNCTION\+\_\+\+NO\+\_\+\+SUPPORT}});                         \textbackslash{}}
+
+不支持当前功能 \mbox{\Hypertarget{_c_func_type_8h_a135908410b10cb20342f11cc41cadeed}\label{_c_func_type_8h_a135908410b10cb20342f11cc41cadeed}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_RETURN\_ERROR\_STATUS@{CGRAPH\_RETURN\_ERROR\_STATUS}}
+\index{CGRAPH\_RETURN\_ERROR\_STATUS@{CGRAPH\_RETURN\_ERROR\_STATUS}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_RETURN\_ERROR\_STATUS}{CGRAPH\_RETURN\_ERROR\_STATUS}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS(\begin{DoxyParamCaption}\item[{}]{info }\end{DoxyParamCaption})~    return \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}(info);                                               \textbackslash{}}
+
+返回异常信息和状态 \mbox{\Hypertarget{_c_func_type_8h_ac212267831190110937b98a5e60f42b7}\label{_c_func_type_8h_ac212267831190110937b98a5e60f42b7}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION@{CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION}}
+\index{CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION@{CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION}{CGRAPH\_RETURN\_ERROR\_STATUS\_BY\_CONDITION}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS\+\_\+\+BY\+\_\+\+CONDITION(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{info }\end{DoxyParamCaption})~    if (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(cond)) \{ \mbox{\hyperlink{_c_func_type_8h_a135908410b10cb20342f11cc41cadeed}{CGRAPH\+\_\+\+RETURN\+\_\+\+ERROR\+\_\+\+STATUS}}(info); \}           \textbackslash{}}
+
+根据条件判断是否返回错误状态 \mbox{\Hypertarget{_c_func_type_8h_a39b2ec8919d5cd46d5170cd1ab4d9a82}\label{_c_func_type_8h_a39b2ec8919d5cd46d5170cd1ab4d9a82}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_THROW\_EXCEPTION@{CGRAPH\_THROW\_EXCEPTION}}
+\index{CGRAPH\_THROW\_EXCEPTION@{CGRAPH\_THROW\_EXCEPTION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THROW\_EXCEPTION}{CGRAPH\_THROW\_EXCEPTION}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION(\begin{DoxyParamCaption}\item[{}]{info }\end{DoxyParamCaption})~    throw \mbox{\hyperlink{_c_val_type_8h_a0bf31180c2ed175def27060a21ccc65d}{CException}}(info, \mbox{\hyperlink{_c_func_type_8h_aa8ede07cbe04250f873d8856365e678f}{CGRAPH\+\_\+\+GET\+\_\+\+LOCATE}});                          \textbackslash{}}
+
+抛出异常 \mbox{\Hypertarget{_c_func_type_8h_afc48672693234949c3c03a25d74c6f76}\label{_c_func_type_8h_afc48672693234949c3c03a25d74c6f76}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION@{CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION}}
+\index{CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION@{CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION}{CGRAPH\_THROW\_EXCEPTION\_BY\_CONDITION}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION\+\_\+\+BY\+\_\+\+CONDITION(\begin{DoxyParamCaption}\item[{}]{cond,  }\item[{}]{info }\end{DoxyParamCaption})~    if (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}(cond)) \{ \mbox{\hyperlink{_c_func_type_8h_a39b2ec8919d5cd46d5170cd1ab4d9a82}{CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION}}(info); \}               \textbackslash{}}
+
+根据条件判断是否抛出异常 \mbox{\Hypertarget{_c_func_type_8h_ab2abfa94f29c4ae56256ed90eb357664}\label{_c_func_type_8h_ab2abfa94f29c4ae56256ed90eb357664}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS@{CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS}}
+\index{CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS@{CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS}{CGRAPH\_THROW\_EXCEPTION\_BY\_STATUS}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+THROW\+\_\+\+EXCEPTION\+\_\+\+BY\+\_\+\+STATUS(\begin{DoxyParamCaption}\item[{}]{status }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{    \textcolor{keywordflow}{if} (\mbox{\hyperlink{_utils_define_8h_a8aeff48085ffee92c9b70f7227b62925}{unlikely}}((status).isErr())) \{                                   \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_THROW\_EXCEPTION((status).getInfo()); \}                   \(\backslash\)}
+
+\end{DoxyCode}
+在异常状态的情况下，抛出异常 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}\label{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF@{CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF}}
+\index{CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF@{CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF}{CGRAPH\_CALLBACK\_CONST\_FUNCTION\_REF}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_a4d711a72637ea8555527f1ae29717e16}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} =  const std\+::function$<$void(\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}})$>$\&}
+
+\mbox{\Hypertarget{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}\label{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_CALLBACK\_FUNCTION@{CGRAPH\_CALLBACK\_FUNCTION}}
+\index{CGRAPH\_CALLBACK\_FUNCTION@{CGRAPH\_CALLBACK\_FUNCTION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CALLBACK\_FUNCTION}{CGRAPH\_CALLBACK\_FUNCTION}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_a7d6e37e579c903e10520192d014a5ece}{CGRAPH\+\_\+\+CALLBACK\+\_\+\+FUNCTION}} =  std\+::function$<$void(\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}})$>$}
+
+\mbox{\Hypertarget{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}\label{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF@{CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF}}
+\index{CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF@{CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF}{CGRAPH\_CSTATUS\_CONST\_FUNCTION\_REF}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} =  const std\+::function$<$\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()$>$\&}
+
+\mbox{\Hypertarget{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}\label{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_CSTATUS\_FUNCTION@{CGRAPH\_CSTATUS\_FUNCTION}}
+\index{CGRAPH\_CSTATUS\_FUNCTION@{CGRAPH\_CSTATUS\_FUNCTION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CSTATUS\_FUNCTION}{CGRAPH\_CSTATUS\_FUNCTION}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} =  std\+::function$<$\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}}()$>$}
+
+\mbox{\Hypertarget{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}\label{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF@{CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF}}
+\index{CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF@{CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF}{CGRAPH\_DEFAULT\_CONST\_FUNCTION\_REF}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_acf21c1bf5dfdfae828dd57b1e89dad24}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} =  const std\+::function$<$void()$>$\&}
+
+\mbox{\Hypertarget{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}\label{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}} 
+\index{CFuncType.h@{CFuncType.h}!CGRAPH\_DEFAULT\_FUNCTION@{CGRAPH\_DEFAULT\_FUNCTION}}
+\index{CGRAPH\_DEFAULT\_FUNCTION@{CGRAPH\_DEFAULT\_FUNCTION}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_FUNCTION}{CGRAPH\_DEFAULT\_FUNCTION}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_c_func_type_8h_af5cb1bffad3e7b4d4ccf942510f1b7c2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+FUNCTION}} =  std\+::function$<$void()$>$}
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}\label{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}} 
+\index{CFuncType.h@{CFuncType.h}!CFunctionType@{CFunctionType}}
+\index{CFunctionType@{CFunctionType}!CFuncType.h@{CFuncType.h}}
+\doxysubsubsection{\texorpdfstring{CFunctionType}{CFunctionType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+描述函数类型 \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INIT@{INIT}!CFuncType.h@{CFuncType.h}}\index{CFuncType.h@{CFuncType.h}!INIT@{INIT}}}\mbox{\Hypertarget{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8afaee4ca3c30ee18148ce3ada37466498}\label{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8afaee4ca3c30ee18148ce3ada37466498}} 
+INIT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUN@{RUN}!CFuncType.h@{CFuncType.h}}\index{CFuncType.h@{CFuncType.h}!RUN@{RUN}}}\mbox{\Hypertarget{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8a855520d2a5b0b1a64b939e7e30889e2a}\label{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8a855520d2a5b0b1a64b939e7e30889e2a}} 
+RUN&初始化函数 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DESTROY@{DESTROY}!CFuncType.h@{CFuncType.h}}\index{CFuncType.h@{CFuncType.h}!DESTROY@{DESTROY}}}\mbox{\Hypertarget{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8ac39aa6dbe619bb8ef8187b00b686df6a}\label{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8ac39aa6dbe619bb8ef8187b00b686df6a}} 
+DESTROY&执行函数 \\
+\hline
+
+\end{DoxyEnumFields}

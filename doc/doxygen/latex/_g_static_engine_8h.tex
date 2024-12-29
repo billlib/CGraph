@@ -1,0 +1,24 @@
+\hypertarget{_g_static_engine_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GStatic\+Engine/\+GStatic\+Engine.h File Reference}
+\label{_g_static_engine_8h}\index{src/GraphCtrl/GraphElement/\_GEngine/GStaticEngine/GStaticEngine.h@{src/GraphCtrl/GraphElement/\_GEngine/GStaticEngine/GStaticEngine.h}}
+{\ttfamily \#include \char`\"{}../\+GEngine.\+h\char`\"{}}\newline
+Include dependency graph for GStatic\+Engine.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_static_engine_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_static_engine_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_static_engine}{GStatic\+Engine}}
+\begin{DoxyCompactList}\small\item\em 将待执行的图中的所有结点进行拓扑排序(setup)，排序结果存储在element\+\_\+mat\+\_\+； 然后将element\+\_\+mat\+\_\+各个拓扑排序好的结点提交到微线程或者线程池，等待执行完成获取结果(run) \end{DoxyCompactList}\end{DoxyCompactItemize}

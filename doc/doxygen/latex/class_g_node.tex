@@ -1,0 +1,122 @@
+\hypertarget{class_g_node}{}\doxysection{GNode Class Reference}
+\label{class_g_node}\index{GNode@{GNode}}
+
+
+功能运行的最小单元(结点)  
+
+
+
+
+{\ttfamily \#include $<$GNode.\+h$>$}
+
+
+
+Inheritance diagram for GNode\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_node__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GNode\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_node__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_node_a98ab274fdda4159243b4901cbdc89356}{GNode}} ()
+\item 
+\mbox{\hyperlink{class_g_node}{GNode}} $\ast$ \mbox{\hyperlink{class_g_node_a809e7c253934814b0ad7571182b83b40}{set\+Type}} (const \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}} \&type)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_node_a3c75c336583b69c8900fbcd01992c944}{spawn}} (const \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&tasks, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ttl=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}} \mbox{\hyperlink{class_g_node_a26281c5d193c900bd3b7cc8c7f7225c8}{node\+\_\+type\+\_\+}} \{ \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95ae4ac03f6c9f00665644e868dd1fb9f1e}{GNode\+Type\+::\+BASIC}} \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+功能运行的最小单元(结点) 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_node_a98ab274fdda4159243b4901cbdc89356}\label{class_g_node_a98ab274fdda4159243b4901cbdc89356}} 
+\index{GNode@{GNode}!GNode@{GNode}}
+\index{GNode@{GNode}!GNode@{GNode}}
+\doxysubsubsection{\texorpdfstring{GNode()}{GNode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GNode\+::\+GNode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+构造函数 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_node_a98ab274fdda4159243b4901cbdc89356_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_node_a809e7c253934814b0ad7571182b83b40}\label{class_g_node_a809e7c253934814b0ad7571182b83b40}} 
+\index{GNode@{GNode}!setType@{setType}}
+\index{setType@{setType}!GNode@{GNode}}
+\doxysubsubsection{\texorpdfstring{setType()}{setType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_node_8h_ab5e2596300c60a0638bdf2a235a2a5a1}{GNode\+Ptr}} GNode\+::set\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}} \&}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置节点类型 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_node_a3c75c336583b69c8900fbcd01992c944}\label{class_g_node_a3c75c336583b69c8900fbcd01992c944}} 
+\index{GNode@{GNode}!spawn@{spawn}}
+\index{spawn@{spawn}!GNode@{GNode}}
+\doxysubsubsection{\texorpdfstring{spawn()}{spawn()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GNode\+::spawn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_u_task_group}{UTask\+Group}} \&}]{tasks,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ttl = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+并发执行所有的task信息 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+{\em ttl} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_node_a3c75c336583b69c8900fbcd01992c944_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_node_a26281c5d193c900bd3b7cc8c7f7225c8}\label{class_g_node_a26281c5d193c900bd3b7cc8c7f7225c8}} 
+\index{GNode@{GNode}!node\_type\_@{node\_type\_}}
+\index{node\_type\_@{node\_type\_}!GNode@{GNode}}
+\doxysubsubsection{\texorpdfstring{node\_type\_}{node\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95}{GNode\+Type}} GNode\+::node\+\_\+type\+\_\+ \{ \mbox{\hyperlink{_g_node_define_8h_afefdf249012de10d1aab399256ca6f95ae4ac03f6c9f00665644e868dd1fb9f1e}{GNode\+Type\+::\+BASIC}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GNode/\mbox{\hyperlink{_g_node_8h}{GNode.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GNode/\mbox{\hyperlink{_g_node_8cpp}{GNode.\+cpp}}\end{DoxyCompactItemize}

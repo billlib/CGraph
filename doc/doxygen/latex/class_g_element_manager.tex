@@ -1,0 +1,397 @@
+\hypertarget{class_g_element_manager}{}\doxysection{GElement\+Manager Class Reference}
+\label{class_g_element_manager}\index{GElementManager@{GElementManager}}
+
+
+{\ttfamily \#include $<$GElement\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GElement\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GElement\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_element_manager_a2a0ac4860912189e60a0c0b69f9e5ee6}{GElement\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_g_element_manager_a68db751fcacba3b95f280f649c909d37}{$\sim$\+GElement\+Manager}} () override
+\item 
+\mbox{\hyperlink{class_g_element_manager_ad9b35e65dfefb08820445cb28a972dc7}{CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY}} (\mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}})
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_a637a8cb1f25923dbd57b598f8baaed76}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_a5ce75aa2f4782ab424f33b77c71658ff}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_a7fd695c1141334ac73ca28440bc147dd}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_ad4123e288d25ba1f91a55ff9b88513ec}{add}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_ab0acdf2de3d8249248f9437998d78d67}{remove}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_manager_a77a1024cbc17b27e513d9bfb5bca95b7}{find}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element) const final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_a209fa4881fcd5009e4b4fbc9ac998639}{clear}} () final
+\item 
+\mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}} $\ast$ \mbox{\hyperlink{class_g_element_manager_ae2f32ca65169bf250af63a6a921a2fd4}{set\+Engine\+Type}} (\mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}} engine\+Type)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_ab2375fa59e82cf514e2380d8e91ed776}{init\+Engine}} ()
+\item 
+\mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}} $\ast$ \mbox{\hyperlink{class_g_element_manager_a33f40323ca604810c1e553adb75dcff4}{set\+Thread\+Pool}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} ptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_element_manager_a8cd5fee11d7f0459afa116f2c8df34c8}{calc\+Max\+Para\+Size}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_element_manager_aa8c24fef93d1b7fc38ab6bad94c4771f}{check\+Serializable}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_element_manager_adb8d54ad8ffe5c83063bf790fefbfbd0}{trim}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_element_manager_a520d2d1f4bf05edf6f6dd8d23530556f}{process}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \mbox{\hyperlink{class_g_element_manager_ae3678bc928e04115ab1e2256303fc3e3}{manager\+\_\+elements\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_engine_8h_add149a0597169be15f3018063326cc5e}{GEngine\+Ptr}} \mbox{\hyperlink{class_g_element_manager_aad3ed01f15ecd684a4f8df353ca27d54}{engine\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}} \mbox{\hyperlink{class_g_element_manager_a882092ac5682b7126be478dea2744262}{engine\+\_\+type\+\_\+}} \{ \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a0fcc90da4811c877ba9f9c12f7d60bc9}{GEngine\+Type\+::\+DYNAMIC}} \}
+\item 
+\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} \mbox{\hyperlink{class_g_element_manager_ae2bf41f30a34428b925e251b4408d458}{thread\+\_\+pool\+\_\+}} \{ nullptr \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_element_manager_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_element_manager_a2ddf6b2a302039a39825b3613cd3e48c}{GRegion}}
+\item 
+class \mbox{\hyperlink{class_g_element_manager_a778dc925482add12356db0a08d591b18}{GMutable}}
+\item 
+class \mbox{\hyperlink{class_g_element_manager_a055afb5e5454b2ba7056f31bf09b49cd}{GPerf}}
+\item 
+class \mbox{\hyperlink{class_g_element_manager_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_element_manager_a2a0ac4860912189e60a0c0b69f9e5ee6}\label{class_g_element_manager_a2a0ac4860912189e60a0c0b69f9e5ee6}} 
+\index{GElementManager@{GElementManager}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{GElementManager()}{GElementManager()}}
+{\footnotesize\ttfamily GElement\+Manager\+::\+GElement\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a68db751fcacba3b95f280f649c909d37}\label{class_g_element_manager_a68db751fcacba3b95f280f649c909d37}} 
+\index{GElementManager@{GElementManager}!````~GElementManager@{$\sim$GElementManager}}
+\index{````~GElementManager@{$\sim$GElementManager}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GElementManager()}{~GElementManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GElement\+Manager\+::$\sim$\+GElement\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+manager中的节点，在析构的时候不需要释放。 所有的节点信息在\+GPipe\+Line类中统一申请和释放
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_element_manager_ad4123e288d25ba1f91a55ff9b88513ec}\label{class_g_element_manager_ad4123e288d25ba1f91a55ff9b88513ec}} 
+\index{GElementManager@{GElementManager}!add@{add}}
+\index{add@{add}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+添加一个元素信息 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_manager_a8cd5fee11d7f0459afa116f2c8df34c8}\label{class_g_element_manager_a8cd5fee11d7f0459afa116f2c8df34c8}} 
+\index{GElementManager@{GElementManager}!calcMaxParaSize@{calcMaxParaSize}}
+\index{calcMaxParaSize@{calcMaxParaSize}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{calcMaxParaSize()}{calcMaxParaSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GElement\+Manager\+::calc\+Max\+Para\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+获取最大的并发数 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager_a8cd5fee11d7f0459afa116f2c8df34c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_manager_ad9b35e65dfefb08820445cb28a972dc7}\label{class_g_element_manager_ad9b35e65dfefb08820445cb28a972dc7}} 
+\index{GElementManager@{GElementManager}!CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}}
+\index{CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_NO\_ALLOWED\_COPY()}{CGRAPH\_NO\_ALLOWED\_COPY()}}
+{\footnotesize\ttfamily GElement\+Manager\+::\+CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_element_manager_aa8c24fef93d1b7fc38ab6bad94c4771f}\label{class_g_element_manager_aa8c24fef93d1b7fc38ab6bad94c4771f}} 
+\index{GElementManager@{GElementManager}!checkSerializable@{checkSerializable}}
+\index{checkSerializable@{checkSerializable}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{checkSerializable()}{checkSerializable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+Manager\+::check\+Serializable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+查看是否可以串行执行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+判定思路：
+\begin{DoxyEnumerate}
+\item 内部的element，均为可串行执行的
+\item 当前element，不超过1个前驱或者后继
+\item 有且仅有一个起点，一个终点
+\item 有超时逻辑
+\end{DoxyEnumerate}\mbox{\Hypertarget{class_g_element_manager_a209fa4881fcd5009e4b4fbc9ac998639}\label{class_g_element_manager_a209fa4881fcd5009e4b4fbc9ac998639}} 
+\index{GElementManager@{GElementManager}!clear@{clear}}
+\index{clear@{clear}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GElement $>$}}.
+
+\mbox{\Hypertarget{class_g_element_manager_a7fd695c1141334ac73ca28440bc147dd}\label{class_g_element_manager_a7fd695c1141334ac73ca28440bc147dd}} 
+\index{GElementManager@{GElementManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_element_manager_a77a1024cbc17b27e513d9bfb5bca95b7}\label{class_g_element_manager_a77a1024cbc17b27e513d9bfb5bca95b7}} 
+\index{GElementManager@{GElementManager}!find@{find}}
+\index{find@{find}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GElement\+Manager\+::find (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+查找传入元素 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_manager_a637a8cb1f25923dbd57b598f8baaed76}\label{class_g_element_manager_a637a8cb1f25923dbd57b598f8baaed76}} 
+\index{GElementManager@{GElementManager}!init@{init}}
+\index{init@{init}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 首先判定，注册的element全部不为空
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager_a637a8cb1f25923dbd57b598f8baaed76_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_manager_ab2375fa59e82cf514e2380d8e91ed776}\label{class_g_element_manager_ab2375fa59e82cf514e2380d8e91ed776}} 
+\index{GElementManager@{GElementManager}!initEngine@{initEngine}}
+\index{initEngine@{initEngine}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{initEngine()}{initEngine()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::init\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+构造执行引擎 
+\begin{DoxyParams}{Parameters}
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager_ab2375fa59e82cf514e2380d8e91ed776_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_manager_a520d2d1f4bf05edf6f6dd8d23530556f}\label{class_g_element_manager_a520d2d1f4bf05edf6f6dd8d23530556f}} 
+\index{GElementManager@{GElementManager}!process@{process}}
+\index{process@{process}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::process (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+加入数据，并且执行 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager_a520d2d1f4bf05edf6f6dd8d23530556f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_manager_ab0acdf2de3d8249248f9437998d78d67}\label{class_g_element_manager_ab0acdf2de3d8249248f9437998d78d67}} 
+\index{GElementManager@{GElementManager}!remove@{remove}}
+\index{remove@{remove}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+删除传入元素 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_g_element_manager_a5ce75aa2f4782ab424f33b77c71658ff}\label{class_g_element_manager_a5ce75aa2f4782ab424f33b77c71658ff}} 
+\index{GElementManager@{GElementManager}!run@{run}}
+\index{run@{run}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GElement\+Manager\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{class_g_element_manager_a5ce75aa2f4782ab424f33b77c71658ff_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_element_manager_ae2f32ca65169bf250af63a6a921a2fd4}\label{class_g_element_manager_ae2f32ca65169bf250af63a6a921a2fd4}} 
+\index{GElementManager@{GElementManager}!setEngineType@{setEngineType}}
+\index{setEngineType@{setEngineType}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{setEngineType()}{setEngineType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} GElement\+Manager\+::set\+Engine\+Type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}}}]{engine\+Type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置图引擎运行模式 
+\begin{DoxyParams}{Parameters}
+{\em engine\+Type} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_manager_a33f40323ca604810c1e553adb75dcff4}\label{class_g_element_manager_a33f40323ca604810c1e553adb75dcff4}} 
+\index{GElementManager@{GElementManager}!setThreadPool@{setThreadPool}}
+\index{setThreadPool@{setThreadPool}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{setThreadPool()}{setThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_manager_8h_a3bb7f9bbc660616257956ba2363e96dc}{GElement\+Manager\+Ptr}} GElement\+Manager\+::set\+Thread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+设置线程池 
+\begin{DoxyParams}{Parameters}
+{\em ptr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_element_manager_adb8d54ad8ffe5c83063bf790fefbfbd0}\label{class_g_element_manager_adb8d54ad8ffe5c83063bf790fefbfbd0}} 
+\index{GElementManager@{GElementManager}!trim@{trim}}
+\index{trim@{trim}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GElement\+Manager\+::trim (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+剪裁多余的连边信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_element_manager_adb8d54ad8ffe5c83063bf790fefbfbd0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_element_manager_a17a0077689f477d78437264108a1577c}\label{class_g_element_manager_a17a0077689f477d78437264108a1577c}} 
+\index{GElementManager@{GElementManager}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a778dc925482add12356db0a08d591b18}\label{class_g_element_manager_a778dc925482add12356db0a08d591b18}} 
+\index{GElementManager@{GElementManager}!GMutable@{GMutable}}
+\index{GMutable@{GMutable}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{GMutable}{GMutable}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_mutable}{GMutable}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a055afb5e5454b2ba7056f31bf09b49cd}\label{class_g_element_manager_a055afb5e5454b2ba7056f31bf09b49cd}} 
+\index{GElementManager@{GElementManager}!GPerf@{GPerf}}
+\index{GPerf@{GPerf}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{GPerf}{GPerf}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_perf}{GPerf}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a4e007dc772c018d10373bf18b528f96d}\label{class_g_element_manager_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GElementManager@{GElementManager}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a2ddf6b2a302039a39825b3613cd3e48c}\label{class_g_element_manager_a2ddf6b2a302039a39825b3613cd3e48c}} 
+\index{GElementManager@{GElementManager}!GRegion@{GRegion}}
+\index{GRegion@{GRegion}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{GRegion}{GRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_region}{GRegion}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_element_manager_aad3ed01f15ecd684a4f8df353ca27d54}\label{class_g_element_manager_aad3ed01f15ecd684a4f8df353ca27d54}} 
+\index{GElementManager@{GElementManager}!engine\_@{engine\_}}
+\index{engine\_@{engine\_}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{engine\_}{engine\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_engine_8h_add149a0597169be15f3018063326cc5e}{GEngine\+Ptr}} GElement\+Manager\+::engine\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_manager_a882092ac5682b7126be478dea2744262}\label{class_g_element_manager_a882092ac5682b7126be478dea2744262}} 
+\index{GElementManager@{GElementManager}!engine\_type\_@{engine\_type\_}}
+\index{engine\_type\_@{engine\_type\_}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{engine\_type\_}{engine\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}} GElement\+Manager\+::engine\+\_\+type\+\_\+ \{ \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a0fcc90da4811c877ba9f9c12f7d60bc9}{GEngine\+Type\+::\+DYNAMIC}} \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_manager_ae3678bc928e04115ab1e2256303fc3e3}\label{class_g_element_manager_ae3678bc928e04115ab1e2256303fc3e3}} 
+\index{GElementManager@{GElementManager}!manager\_elements\_@{manager\_elements\_}}
+\index{manager\_elements\_@{manager\_elements\_}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{manager\_elements\_}{manager\_elements\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} GElement\+Manager\+::manager\+\_\+elements\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_element_manager_ae2bf41f30a34428b925e251b4408d458}\label{class_g_element_manager_ae2bf41f30a34428b925e251b4408d458}} 
+\index{GElementManager@{GElementManager}!thread\_pool\_@{thread\_pool\_}}
+\index{thread\_pool\_@{thread\_pool\_}!GElementManager@{GElementManager}}
+\doxysubsubsection{\texorpdfstring{thread\_pool\_}{thread\_pool\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} GElement\+Manager\+::thread\+\_\+pool\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_manager_8h}{GElement\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\mbox{\hyperlink{_g_element_manager_8cpp}{GElement\+Manager.\+cpp}}\end{DoxyCompactItemize}

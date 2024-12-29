@@ -16,6 +16,9 @@ CGRAPH_NAMESPACE_BEGIN
 
 #include "../UThreadObject.h"
 
+/**
+ * @brief 基于mutex_/cv_和int计数器cnt_封装的信号量 
+ */
 class USemaphore : public UThreadObject {
 public:
     /**

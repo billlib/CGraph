@@ -1,0 +1,469 @@
+\hypertarget{class_g_message_manager}{}\doxysection{GMessage\+Manager$<$ T, $>$ Class Template Reference}
+\label{class_g_message_manager}\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+
+
+基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bind\+Topic生成一个唯一的conn\+\_\+id\+\_\+，实际上是绑定到这个conn\+\_\+id\+\_\+对应的\+GMessage\+Object的消息队列 recv是一发一收则可以直接用topic作为入参  
+
+
+
+
+{\ttfamily \#include $<$GMessage\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GMessage\+Manager$<$ T, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_g_message_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMessage\+Manager$<$ T, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_g_message_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a9173a4d488e37cd6e3292b31a60ad213}{create\+Topic}} (const std\+::string \&topic, \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a9d5cbb64a7c1f80359365764e99168bb}{remove\+Topic}} (const std\+::string \&topic)
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a93eb0782aa435d73c8eea1ed28ea6f58}{recv\+Topic\+Value}} (const std\+::string \&topic, TImpl \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a9818419543c913909e8ab593778e0bce}{recv\+Topic\+Value}} (const std\+::string \&topic, std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_af6ef325ee3eb92443cc06979976d8a56}{send\+Topic\+Value}} (const std\+::string \&topic, const TImpl \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a2bc150bc4b2b15550a16b11a27e70a70}{send\+Topic\+Value}} (const std\+::string \&topic, std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_message_manager_a922877fcb9dc785c90120b0fa80a3276}{bind\+Topic}} (const std\+::string \&topic, \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} size)
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a10141ee04bcaf62cc04d15755c8a9583}{pub\+Topic\+Value}} (const std\+::string \&topic, const TImpl \&value, \mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a05c79a080b3a574ca2c2064e7bdde65b}{sub\+Topic\+Value}} (\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} conn\+Id, TImpl \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\item 
+{\footnotesize template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_ae1577170912f0c43d8fa9ab1ed8ed343}{sub\+Topic\+Value}} (\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} conn\+Id, std\+::unique\+\_\+ptr$<$ TImpl $>$ \&value, \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} timeout=\mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}})
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_afcea43235a99643c3ad07b3d118f9e30}{drop\+Topic}} (const std\+::string \&topic)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a85a1d0b04d778241857e292d2405ea69}{clear}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a5a76d9001e03a95b4be1be64a67a2d56}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager_a0a5c548adde4e8b5ccc0d6bd7ea01b83}{destroy}} () final
+\item 
+\mbox{\hyperlink{class_g_message_manager_ab65ea794749a274ff5687fbf4d931d80}{$\sim$\+GMessage\+Manager}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$ T $>$ $>$ \mbox{\hyperlink{class_g_message_manager_a4894fb44fb267ee681f620f2a5513593}{send\+\_\+recv\+\_\+message\+\_\+map\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, std\+::set$<$ \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$ T $>$ $>$ $>$ \mbox{\hyperlink{class_g_message_manager_a164a5a0f333cdc60bcd53e8cab6fad2e}{pub\+\_\+sub\+\_\+message\+\_\+map\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}, \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$ T $>$ $>$ \mbox{\hyperlink{class_g_message_manager_a7bd9e8f02a663c5ab738006a9de665a7}{conn\+\_\+message\+\_\+map\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_message_manager_ab4b9f56b1d281c050451c3e102bc69c5}{cur\+\_\+conn\+\_\+id\+\_\+}} = 0
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_message_manager_a16fd1394d1853b1114b9087cc7976ccc}{pub\+\_\+sub\+\_\+mutex\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_message_manager_a7b84b756afd1c1ffecbaf2e197132bc4}{send\+\_\+recv\+\_\+mutex\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename U , USingleton\+Type , CBool $>$ }\\class \mbox{\hyperlink{class_g_message_manager_a3b89342cde26d1c33f9cf18e72f1432a}{USingleton}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$ = 0$>$\newline
+class GMessage\+Manager$<$ T, $>$}
+
+基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bind\+Topic生成一个唯一的conn\+\_\+id\+\_\+，实际上是绑定到这个conn\+\_\+id\+\_\+对应的\+GMessage\+Object的消息队列 recv是一发一收则可以直接用topic作为入参 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_message_manager_ab65ea794749a274ff5687fbf4d931d80}\label{class_g_message_manager_ab65ea794749a274ff5687fbf4d931d80}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!````~GMessageManager@{$\sim$GMessageManager}}
+\index{````~GMessageManager@{$\sim$GMessageManager}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$GMessageManager()}{~GMessageManager()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::$\sim$\mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_message_manager_ab65ea794749a274ff5687fbf4d931d80_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_message_manager_a922877fcb9dc785c90120b0fa80a3276}\label{class_g_message_manager_a922877fcb9dc785c90120b0fa80a3276}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!bindTopic@{bindTopic}}
+\index{bindTopic@{bindTopic}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{bindTopic()}{bindTopic()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::bind\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+绑定对应的topic信息，并且获取 conn\+\_\+id 信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a85a1d0b04d778241857e292d2405ea69}\label{class_g_message_manager_a85a1d0b04d778241857e292d2405ea69}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!clear@{clear}}
+\index{clear@{clear}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [virtual]}}
+
+清空数据 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GMessage$<$ GMessage\+Param $>$ $>$}}.
+
+\mbox{\Hypertarget{class_g_message_manager_a9173a4d488e37cd6e3292b31a60ad213}\label{class_g_message_manager_a9173a4d488e37cd6e3292b31a60ad213}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!createTopic@{createTopic}}
+\index{createTopic@{createTopic}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{createTopic()}{createTopic()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::create\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+创建 topic 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a0a5c548adde4e8b5ccc0d6bd7ea01b83}\label{class_g_message_manager_a0a5c548adde4e8b5ccc0d6bd7ea01b83}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_message_manager_afcea43235a99643c3ad07b3d118f9e30}\label{class_g_message_manager_afcea43235a99643c3ad07b3d118f9e30}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!dropTopic@{dropTopic}}
+\index{dropTopic@{dropTopic}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{dropTopic()}{dropTopic()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::drop\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+删除对应的topic信息 
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a5a76d9001e03a95b4be1be64a67a2d56}\label{class_g_message_manager_a5a76d9001e03a95b4be1be64a67a2d56}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!init@{init}}
+\index{init@{init}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 仅可能被 \mbox{\hyperlink{class_u_singleton}{USingleton}} 类调用，自动构造时候使用 防止菱形引用的奇异
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_message_manager_a10141ee04bcaf62cc04d15755c8a9583}\label{class_g_message_manager_a10141ee04bcaf62cc04d15755c8a9583}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!pubTopicValue@{pubTopicValue}}
+\index{pubTopicValue@{pubTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{pubTopicValue()}{pubTopicValue()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::pub\+Topic\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{const TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+开始发送对应topic的信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a9818419543c913909e8ab593778e0bce}\label{class_g_message_manager_a9818419543c913909e8ab593778e0bce}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!recvTopicValue@{recvTopicValue}}
+\index{recvTopicValue@{recvTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{recvTopicValue()}{recvTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::recv\+Topic\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的topic，获得信息。仅针对传入智能指针的情况 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 这里的逻辑，跟上面的函数一致。里面调用了底层\+Ring\+Buffer的同名不同入参的接口。 本人暂时没有能力完成接口的统一。如果有了解这一块内容的朋友，欢迎交流指正。 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a93eb0782aa435d73c8eea1ed28ea6f58}\label{class_g_message_manager_a93eb0782aa435d73c8eea1ed28ea6f58}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!recvTopicValue@{recvTopicValue}}
+\index{recvTopicValue@{recvTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{recvTopicValue()}{recvTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::recv\+Topic\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的topic，获得信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a9d5cbb64a7c1f80359365764e99168bb}\label{class_g_message_manager_a9d5cbb64a7c1f80359365764e99168bb}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!removeTopic@{removeTopic}}
+\index{removeTopic@{removeTopic}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{removeTopic()}{removeTopic()}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::remove\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+删除 topic 
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_af6ef325ee3eb92443cc06979976d8a56}\label{class_g_message_manager_af6ef325ee3eb92443cc06979976d8a56}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!sendTopicValue@{sendTopicValue}}
+\index{sendTopicValue@{sendTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{sendTopicValue()}{sendTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::send\+Topic\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{const TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的topic，输入信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a2bc150bc4b2b15550a16b11a27e70a70}\label{class_g_message_manager_a2bc150bc4b2b15550a16b11a27e70a70}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!sendTopicValue@{sendTopicValue}}
+\index{sendTopicValue@{sendTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{sendTopicValue()}{sendTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::send\+Topic\+Value (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{topic,  }\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_u_queue_define_8h_a2532c672f7be90a87fca5739b7f7de93}{GMessage\+Push\+Strategy}}}]{strategy }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的topic，输入智能指针类型的信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em topic} & \\
+\hline
+{\em value} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_ae1577170912f0c43d8fa9ab1ed8ed343}\label{class_g_message_manager_ae1577170912f0c43d8fa9ab1ed8ed343}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!subTopicValue@{subTopicValue}}
+\index{subTopicValue@{subTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{subTopicValue()}{subTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::sub\+Topic\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{conn\+Id,  }\item[{std\+::unique\+\_\+ptr$<$ TImpl $>$ \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的 conn\+Id信息，来获取对应的message信息。仅针对传入智能指针的情况 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em conn\+Id} & \\
+\hline
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_message_manager_a05c79a080b3a574ca2c2064e7bdde65b}\label{class_g_message_manager_a05c79a080b3a574ca2c2064e7bdde65b}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!subTopicValue@{subTopicValue}}
+\index{subTopicValue@{subTopicValue}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{subTopicValue()}{subTopicValue()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename TImpl , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ T, TImpl $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::sub\+Topic\+Value (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}}]{conn\+Id,  }\item[{TImpl \&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{timeout = {\ttfamily \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}}} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+根据传入的 conn\+Id信息，来获取对应的message信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TImpl} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em conn\+Id} & \\
+\hline
+{\em value} & \\
+\hline
+{\em timeout} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_message_manager_a3b89342cde26d1c33f9cf18e72f1432a}\label{class_g_message_manager_a3b89342cde26d1c33f9cf18e72f1432a}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!USingleton@{USingleton}}
+\index{USingleton@{USingleton}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{USingleton}{USingleton}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+template$<$typename U , USingleton\+Type , CBool $>$ \\
+friend class \mbox{\hyperlink{class_u_singleton}{USingleton}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_message_manager_a7bd9e8f02a663c5ab738006a9de665a7}\label{class_g_message_manager_a7bd9e8f02a663c5ab738006a9de665a7}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!conn\_message\_map\_@{conn\_message\_map\_}}
+\index{conn\_message\_map\_@{conn\_message\_map\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{conn\_message\_map\_}{conn\_message\_map\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+std\+::unordered\+\_\+map$<$\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}}, \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$T$>$ $>$ \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::conn\+\_\+message\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_message_manager_ab4b9f56b1d281c050451c3e102bc69c5}\label{class_g_message_manager_ab4b9f56b1d281c050451c3e102bc69c5}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!cur\_conn\_id\_@{cur\_conn\_id\_}}
+\index{cur\_conn\_id\_@{cur\_conn\_id\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{cur\_conn\_id\_}{cur\_conn\_id\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::cur\+\_\+conn\+\_\+id\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_message_manager_a164a5a0f333cdc60bcd53e8cab6fad2e}\label{class_g_message_manager_a164a5a0f333cdc60bcd53e8cab6fad2e}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!pub\_sub\_message\_map\_@{pub\_sub\_message\_map\_}}
+\index{pub\_sub\_message\_map\_@{pub\_sub\_message\_map\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{pub\_sub\_message\_map\_}{pub\_sub\_message\_map\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, std\+::set$<$\mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$T$>$ $>$ $>$ \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::pub\+\_\+sub\+\_\+message\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_message_manager_a16fd1394d1853b1114b9087cc7976ccc}\label{class_g_message_manager_a16fd1394d1853b1114b9087cc7976ccc}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!pub\_sub\_mutex\_@{pub\_sub\_mutex\_}}
+\index{pub\_sub\_mutex\_@{pub\_sub\_mutex\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{pub\_sub\_mutex\_}{pub\_sub\_mutex\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+std\+::mutex \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::pub\+\_\+sub\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_message_manager_a4894fb44fb267ee681f620f2a5513593}\label{class_g_message_manager_a4894fb44fb267ee681f620f2a5513593}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!send\_recv\_message\_map\_@{send\_recv\_message\_map\_}}
+\index{send\_recv\_message\_map\_@{send\_recv\_message\_map\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{send\_recv\_message\_map\_}{send\_recv\_message\_map\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{_g_message_8h_a93745c024508ffa22b3c722f48b97c84}{GMessage\+Ptr}}$<$T$>$ $>$ \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::send\+\_\+recv\+\_\+message\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_message_manager_a7b84b756afd1c1ffecbaf2e197132bc4}\label{class_g_message_manager_a7b84b756afd1c1ffecbaf2e197132bc4}} 
+\index{GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}!send\_recv\_mutex\_@{send\_recv\_mutex\_}}
+\index{send\_recv\_mutex\_@{send\_recv\_mutex\_}!GMessageManager$<$ T, $>$@{GMessageManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{send\_recv\_mutex\_}{send\_recv\_mutex\_}}
+{\footnotesize\ttfamily template$<$typename T  = GMessage\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GMessage\+Param, T $>$\+::value, int $>$  = 0$>$ \\
+std\+::mutex \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$ T, $>$\+::send\+\_\+recv\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Message/\mbox{\hyperlink{_g_message_manager_8h}{GMessage\+Manager.\+h}}\end{DoxyCompactItemize}

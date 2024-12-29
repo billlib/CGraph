@@ -16,6 +16,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 基于UAtomicRingBufferQueue队列实现，支持send/recv
+ * 
+ * @tparam T 
+ * @tparam capacity 
+ */
 template<typename T, CUInt capacity = CGRAPH_DEFAULT_RINGBUFFER_SIZE,
         c_enable_if_t<std::is_base_of<GMessageParam, T>::value, int> = 0>
 class GMessage : public GMessageObject {

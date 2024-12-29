@@ -1,0 +1,166 @@
+\hypertarget{class_g_stage_manager}{}\doxysection{GStage\+Manager Class Reference}
+\label{class_g_stage_manager}\index{GStageManager@{GStageManager}}
+
+
+{\ttfamily \#include $<$GStage\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GStage\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_g_stage_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GStage\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_g_stage_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_stage_manager_a6c4f60e9467f5e64dc10b410a96dfd9a}{$\sim$\+GStage\+Manager}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_stage_manager_a6236b8c29e63d8b247d3f5d864f9b6f5}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_stage_manager_aa3d661190f557a19ce63d7afec82aa62}{destroy}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_stage_manager_a0804cfc22850bc1717743195870a336f}{clear}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_stage_manager_a25d33f03b4befc41e16f6c9d48d75ea7}{create}} (const std\+::string \&key, \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} threshold)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_stage_manager_a01c7290f4c83b450bc4cdc92e5584486}{wait\+For\+Ready}} (const std\+::string \&key)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{_g_stage_8h_a3089460b4075e1f3eef0b99a91f867d8}{GStage\+Ptr}} $>$ \mbox{\hyperlink{class_g_stage_manager_a8c408aeace6ce2638f9f80d1e2ff31d3}{stage\+\_\+map\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_stage_manager_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_stage_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}{GElement}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_stage_manager_a6c4f60e9467f5e64dc10b410a96dfd9a}\label{class_g_stage_manager_a6c4f60e9467f5e64dc10b410a96dfd9a}} 
+\index{GStageManager@{GStageManager}!````~GStageManager@{$\sim$GStageManager}}
+\index{````~GStageManager@{$\sim$GStageManager}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GStageManager()}{~GStageManager()}}
+{\footnotesize\ttfamily GStage\+Manager\+::$\sim$\+GStage\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_stage_manager_a6c4f60e9467f5e64dc10b410a96dfd9a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_stage_manager_a0804cfc22850bc1717743195870a336f}\label{class_g_stage_manager_a0804cfc22850bc1717743195870a336f}} 
+\index{GStageManager@{GStageManager}!clear@{clear}}
+\index{clear@{clear}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStage\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GStage $>$}}.
+
+\mbox{\Hypertarget{class_g_stage_manager_a25d33f03b4befc41e16f6c9d48d75ea7}\label{class_g_stage_manager_a25d33f03b4befc41e16f6c9d48d75ea7}} 
+\index{GStageManager@{GStageManager}!create@{create}}
+\index{create@{create}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStage\+Manager\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+创建 stage 信息 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em threshold} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_stage_manager_aa3d661190f557a19ce63d7afec82aa62}\label{class_g_stage_manager_aa3d661190f557a19ce63d7afec82aa62}} 
+\index{GStageManager@{GStageManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStage\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_stage_manager_a6236b8c29e63d8b247d3f5d864f9b6f5}\label{class_g_stage_manager_a6236b8c29e63d8b247d3f5d864f9b6f5}} 
+\index{GStageManager@{GStageManager}!init@{init}}
+\index{init@{init}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStage\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_stage_manager_a01c7290f4c83b450bc4cdc92e5584486}\label{class_g_stage_manager_a01c7290f4c83b450bc4cdc92e5584486}} 
+\index{GStageManager@{GStageManager}!waitForReady@{waitForReady}}
+\index{waitForReady@{waitForReady}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{waitForReady()}{waitForReady()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GStage\+Manager\+::wait\+For\+Ready (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+进入等待区 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_stage_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}\label{class_g_stage_manager_a3b499f78a14d7b84a9574b2e5fb0b2e1}} 
+\index{GStageManager@{GStageManager}!GElement@{GElement}}
+\index{GElement@{GElement}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{GElement}{GElement}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element}{GElement}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_stage_manager_a4e007dc772c018d10373bf18b528f96d}\label{class_g_stage_manager_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GStageManager@{GStageManager}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_stage_manager_a8c408aeace6ce2638f9f80d1e2ff31d3}\label{class_g_stage_manager_a8c408aeace6ce2638f9f80d1e2ff31d3}} 
+\index{GStageManager@{GStageManager}!stage\_map\_@{stage\_map\_}}
+\index{stage\_map\_@{stage\_map\_}!GStageManager@{GStageManager}}
+\doxysubsubsection{\texorpdfstring{stage\_map\_}{stage\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{_g_stage_8h_a3089460b4075e1f3eef0b99a91f867d8}{GStage\+Ptr}}$>$ GStage\+Manager\+::stage\+\_\+map\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Stage/\mbox{\hyperlink{_g_stage_manager_8h}{GStage\+Manager.\+h}}\end{DoxyCompactItemize}

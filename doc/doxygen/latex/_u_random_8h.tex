@@ -1,0 +1,26 @@
+\hypertarget{_u_random_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Random/\+URandom.h File Reference}
+\label{_u_random_8h}\index{src/UtilsCtrl/Random/URandom.h@{src/UtilsCtrl/Random/URandom.h}}
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Utils\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}URandom\+Define.\+h\char`\"{}}\newline
+Include dependency graph for URandom.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_random_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_random_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_random}{URandom$<$ T, SEED, TEngine $>$}}
+\begin{DoxyCompactList}\small\item\em 随机数生成类，支持模板入参T(默认\+CFloat)、\+SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后\+Fibonacci/...) generate\+: 基于std\+::uniform\+\_\+real\+\_\+distribution生成指定\+T类型、一维或二维、指定个数的均匀分布的随机数存入data generate\+Session：生成随机session\+\_\+信息，常用于\+CDesc\+Info的成员，作为\+CDesc\+Info派生类(GNode/\+GAdapter/\+GElement等)的唯一标识 \end{DoxyCompactList}\end{DoxyCompactItemize}

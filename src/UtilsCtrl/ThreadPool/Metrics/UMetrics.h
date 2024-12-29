@@ -16,6 +16,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief CGraph自带的线程池性能指标统计，主要包含
+ *        本地任务队列pop、全局任务队列pop、工作窃取、任务push、轻量级等待(yield)、深度等待(cv.wait)等相关的指标
+ */
 class UMetrics : public CStruct {
 protected:
     explicit UMetrics() = default;
@@ -38,6 +42,7 @@ protected:
 
     /**
      * 计算thread 在全局队列中抓取的信息
+     * 更新pool_pop_times_(尝试pop的次数)和pool_pop_real_num_(实际pop出来的任务数量)
      * @param result
      * @param size
      * @return

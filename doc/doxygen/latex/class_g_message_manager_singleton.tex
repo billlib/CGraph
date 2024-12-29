@@ -1,0 +1,80 @@
+\hypertarget{class_g_message_manager_singleton}{}\doxysection{GMessage\+Manager\+Singleton Class Reference}
+\label{class_g_message_manager_singleton}\index{GMessageManagerSingleton@{GMessageManagerSingleton}}
+
+
+默认的\+GMessage\+Object使用的参数类型是\+GMessage\+Param，是全局参数，用单例管理更合适  
+
+
+
+
+{\ttfamily \#include $<$GMessage\+Manager\+Singleton.\+h$>$}
+
+
+
+Inheritance diagram for GMessage\+Manager\+Singleton\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{class_g_message_manager_singleton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GMessage\+Manager\+Singleton\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_message_manager_singleton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}} $\ast$ \mbox{\hyperlink{class_g_message_manager_singleton_abb98768c0b4cc3013e749e21e66973b8}{get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$$>$, \mbox{\hyperlink{_u_singleton_define_8h_a7dee279c682aefbde739661293f636ada6a8a3c94520fb08ece01af05181f1545}{USingleton\+Type\+::\+LAZY}}, false $>$ \mbox{\hyperlink{class_g_message_manager_singleton_ae5b666e16f9749ce25e5b00894e1d71f}{singleton\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+默认的\+GMessage\+Object使用的参数类型是\+GMessage\+Param，是全局参数，用单例管理更合适 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_message_manager_singleton_abb98768c0b4cc3013e749e21e66973b8}\label{class_g_message_manager_singleton_abb98768c0b4cc3013e749e21e66973b8}} 
+\index{GMessageManagerSingleton@{GMessageManagerSingleton}!get@{get}}
+\index{get@{get}!GMessageManagerSingleton@{GMessageManagerSingleton}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$\ast$ GMessage\+Manager\+Singleton\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+获取 GMessage\+Manager单例的句柄信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_message_manager_singleton_abb98768c0b4cc3013e749e21e66973b8_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_message_manager_singleton_ae5b666e16f9749ce25e5b00894e1d71f}\label{class_g_message_manager_singleton_ae5b666e16f9749ce25e5b00894e1d71f}} 
+\index{GMessageManagerSingleton@{GMessageManagerSingleton}!singleton\_@{singleton\_}}
+\index{singleton\_@{singleton\_}!GMessageManagerSingleton@{GMessageManagerSingleton}}
+\doxysubsubsection{\texorpdfstring{singleton\_}{singleton\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ \mbox{\hyperlink{class_g_message_manager}{GMessage\+Manager}}$<$$>$, \mbox{\hyperlink{_u_singleton_define_8h_a7dee279c682aefbde739661293f636ada6a8a3c94520fb08ece01af05181f1545}{USingleton\+Type\+::\+LAZY}}, false $>$ GMessage\+Manager\+Singleton\+::singleton\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+GMessage\+Manager单例的句柄信息 message管理类，必须在这里实现。 如果是放在 \mbox{\hyperlink{_g_message_manager_8h}{GMessage\+Manager.\+h}} 文件中，以外部申明static变量的形式存在 在cpp文件中引用的时候，会出现被多次构造的情况 参考：https\+://github.com/\+Chunel\+Feng/\+CGraph/issues/221 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Message/\mbox{\hyperlink{_g_message_manager_singleton_8h}{GMessage\+Manager\+Singleton.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Message/\mbox{\hyperlink{_g_message_manager_singleton_8cpp}{GMessage\+Manager\+Singleton.\+cpp}}\end{DoxyCompactItemize}

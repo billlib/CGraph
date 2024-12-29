@@ -14,6 +14,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 常规的GGroup及其派生类在运行时是不允许再修改前序后继关系的，但是GMutable可以
+ * 具体做法是GMutable在每次run的时候会先调用setup初始化自己这张子图(实际上就是清空)，再调用reshape修改前序后继关系，最后才是正常运行子图
+ * GMutable的reshape是纯虚函数，派生类必须实现，可以参考MyMutable示例
+ */
 class GMutable : public GGroup {
 protected:
     /**

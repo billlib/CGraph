@@ -19,6 +19,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收)
+ * sub端每次订阅特定的topic之前都要先bindTopic生成一个唯一的conn_id_，实际上是绑定到这个conn_id_对应的GMessageObject的消息队列
+ * recv是一发一收则可以直接用topic作为入参
+ * @tparam T 
+ */
 template<typename T = GMessageParam,
         c_enable_if_t<std::is_base_of<GMessageParam, T>::value, int> = 0>
 class GMessageManager : public GMessageObject,

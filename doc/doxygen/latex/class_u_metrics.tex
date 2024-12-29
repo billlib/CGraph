@@ -1,0 +1,262 @@
+\hypertarget{class_u_metrics}{}\doxysection{UMetrics Class Reference}
+\label{class_u_metrics}\index{UMetrics@{UMetrics}}
+
+
+CGraph自带的线程池性能指标统计，主要包含 本地任务队列pop、全局任务队列pop、工作窃取、任务push、轻量级等待(yield)、深度等待(cv.\+wait)等相关的指标  
+
+
+
+
+{\ttfamily \#include $<$UMetrics.\+h$>$}
+
+
+
+Inheritance diagram for UMetrics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_u_metrics__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UMetrics\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=140pt]{class_u_metrics__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_metrics_a1ae61ff024865d24a4b7d2f8dcfd370a}{UMetrics}} ()=default
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_metrics_a6b9be52d86b1d6af689d1caab3c8d40c}{calc\+Local}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} result, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_metrics_ace0fb8491cdf14824e40d0af5b3aaccd}{calc\+Pool}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} result, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_metrics_a98f9dc37c8915c8e8c540cb2fc1fa99e}{calc\+Steal}} (\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} result, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_metrics_ad83b6d912aee2709c370ab3d57576470}{show}} (const std\+::string \&tag) const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_metrics_a47acaaaee226599f15aa49dff027189c}{reset}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_a261ceb7838759b7479c526b006c98a8b}{local\+\_\+pop\+\_\+real\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_a2ccec7c7e4eecc1a6658a89a4a5db586}{local\+\_\+pop\+\_\+times\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_a327fccd055a4bb5d469c2e70c15dd7d6}{pool\+\_\+pop\+\_\+real\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_a4b004022647d2e9b1342ac9b38abf437}{pool\+\_\+pop\+\_\+times\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_afc1183f961ea8aad8926a7c9918fe745}{steal\+\_\+pop\+\_\+real\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_aa920e03aa4b0f5e5de33cebdf7af89f1}{steal\+\_\+pop\+\_\+times\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_ad4e7dd64fd90b33918c98475ac6af7dc}{local\+\_\+push\+\_\+real\+\_\+num\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_afa937b568be700ccf7c209ee288b444d}{local\+\_\+push\+\_\+yield\+\_\+times\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_aa04ff4027bda14eff25278d9dbcaa809}{fleet\+\_\+wait\+\_\+times\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_metrics_a34a95cc4b17fa2595263fa2594f3a873}{deep\+\_\+wait\+\_\+times\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_metrics_ad2404359ac6f37491582726546104963}{UThread\+Base}}
+\item 
+class \mbox{\hyperlink{class_u_metrics_a3f934ef6375b614c6b41b9cb718c904c}{UThread\+Primary}}
+\item 
+class \mbox{\hyperlink{class_u_metrics_a411af2b6e3c0eb714cd787b9c2cb381f}{UThread\+Secondary}}
+\item 
+class \mbox{\hyperlink{class_u_metrics_ae7586d1a5baa7d0f65aee7c2f2041a43}{UThread\+Pool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+CGraph自带的线程池性能指标统计，主要包含 本地任务队列pop、全局任务队列pop、工作窃取、任务push、轻量级等待(yield)、深度等待(cv.\+wait)等相关的指标 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_metrics_a1ae61ff024865d24a4b7d2f8dcfd370a}\label{class_u_metrics_a1ae61ff024865d24a4b7d2f8dcfd370a}} 
+\index{UMetrics@{UMetrics}!UMetrics@{UMetrics}}
+\index{UMetrics@{UMetrics}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{UMetrics()}{UMetrics()}}
+{\footnotesize\ttfamily UMetrics\+::\+UMetrics (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_metrics_a6b9be52d86b1d6af689d1caab3c8d40c}\label{class_u_metrics_a6b9be52d86b1d6af689d1caab3c8d40c}} 
+\index{UMetrics@{UMetrics}!calcLocal@{calcLocal}}
+\index{calcLocal@{calcLocal}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{calcLocal()}{calcLocal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UMetrics\+::calc\+Local (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+计算thread 本地抓取的信息 
+\begin{DoxyParams}{Parameters}
+{\em result} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_metrics_ace0fb8491cdf14824e40d0af5b3aaccd}\label{class_u_metrics_ace0fb8491cdf14824e40d0af5b3aaccd}} 
+\index{UMetrics@{UMetrics}!calcPool@{calcPool}}
+\index{calcPool@{calcPool}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{calcPool()}{calcPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UMetrics\+::calc\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+计算thread 在全局队列中抓取的信息 更新pool\+\_\+pop\+\_\+times\+\_\+(尝试pop的次数)和pool\+\_\+pop\+\_\+real\+\_\+num\+\_\+(实际pop出来的任务数量) 
+\begin{DoxyParams}{Parameters}
+{\em result} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_metrics_a98f9dc37c8915c8e8c540cb2fc1fa99e}\label{class_u_metrics_a98f9dc37c8915c8e8c540cb2fc1fa99e}} 
+\index{UMetrics@{UMetrics}!calcSteal@{calcSteal}}
+\index{calcSteal@{calcSteal}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{calcSteal()}{calcSteal()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UMetrics\+::calc\+Steal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+计算thread 在偷盗的信息 
+\begin{DoxyParams}{Parameters}
+{\em result} & \\
+\hline
+{\em size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_metrics_a47acaaaee226599f15aa49dff027189c}\label{class_u_metrics_a47acaaaee226599f15aa49dff027189c}} 
+\index{UMetrics@{UMetrics}!reset@{reset}}
+\index{reset@{reset}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UMetrics\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+恢复所有的数据信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_metrics_ad83b6d912aee2709c370ab3d57576470}\label{class_u_metrics_ad83b6d912aee2709c370ab3d57576470}} 
+\index{UMetrics@{UMetrics}!show@{show}}
+\index{show@{show}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UMetrics\+::show (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{tag }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+展示对应的结果信息 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 不确保所有数据完全正确，主要是本人做性能调优分析和使用 
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_u_metrics_ad2404359ac6f37491582726546104963}\label{class_u_metrics_ad2404359ac6f37491582726546104963}} 
+\index{UMetrics@{UMetrics}!UThreadBase@{UThreadBase}}
+\index{UThreadBase@{UThreadBase}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{UThreadBase}{UThreadBase}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_base}{UThread\+Base}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_u_metrics_ae7586d1a5baa7d0f65aee7c2f2041a43}\label{class_u_metrics_ae7586d1a5baa7d0f65aee7c2f2041a43}} 
+\index{UMetrics@{UMetrics}!UThreadPool@{UThreadPool}}
+\index{UThreadPool@{UThreadPool}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{UThreadPool}{UThreadPool}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_pool}{UThread\+Pool}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_u_metrics_a3f934ef6375b614c6b41b9cb718c904c}\label{class_u_metrics_a3f934ef6375b614c6b41b9cb718c904c}} 
+\index{UMetrics@{UMetrics}!UThreadPrimary@{UThreadPrimary}}
+\index{UThreadPrimary@{UThreadPrimary}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{UThreadPrimary}{UThreadPrimary}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_u_metrics_a411af2b6e3c0eb714cd787b9c2cb381f}\label{class_u_metrics_a411af2b6e3c0eb714cd787b9c2cb381f}} 
+\index{UMetrics@{UMetrics}!UThreadSecondary@{UThreadSecondary}}
+\index{UThreadSecondary@{UThreadSecondary}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{UThreadSecondary}{UThreadSecondary}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_metrics_a34a95cc4b17fa2595263fa2594f3a873}\label{class_u_metrics_a34a95cc4b17fa2595263fa2594f3a873}} 
+\index{UMetrics@{UMetrics}!deep\_wait\_times\_@{deep\_wait\_times\_}}
+\index{deep\_wait\_times\_@{deep\_wait\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{deep\_wait\_times\_}{deep\_wait\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::deep\+\_\+wait\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_aa04ff4027bda14eff25278d9dbcaa809}\label{class_u_metrics_aa04ff4027bda14eff25278d9dbcaa809}} 
+\index{UMetrics@{UMetrics}!fleet\_wait\_times\_@{fleet\_wait\_times\_}}
+\index{fleet\_wait\_times\_@{fleet\_wait\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{fleet\_wait\_times\_}{fleet\_wait\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::fleet\+\_\+wait\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_a261ceb7838759b7479c526b006c98a8b}\label{class_u_metrics_a261ceb7838759b7479c526b006c98a8b}} 
+\index{UMetrics@{UMetrics}!local\_pop\_real\_num\_@{local\_pop\_real\_num\_}}
+\index{local\_pop\_real\_num\_@{local\_pop\_real\_num\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{local\_pop\_real\_num\_}{local\_pop\_real\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::local\+\_\+pop\+\_\+real\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_a2ccec7c7e4eecc1a6658a89a4a5db586}\label{class_u_metrics_a2ccec7c7e4eecc1a6658a89a4a5db586}} 
+\index{UMetrics@{UMetrics}!local\_pop\_times\_@{local\_pop\_times\_}}
+\index{local\_pop\_times\_@{local\_pop\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{local\_pop\_times\_}{local\_pop\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::local\+\_\+pop\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_ad4e7dd64fd90b33918c98475ac6af7dc}\label{class_u_metrics_ad4e7dd64fd90b33918c98475ac6af7dc}} 
+\index{UMetrics@{UMetrics}!local\_push\_real\_num\_@{local\_push\_real\_num\_}}
+\index{local\_push\_real\_num\_@{local\_push\_real\_num\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{local\_push\_real\_num\_}{local\_push\_real\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::local\+\_\+push\+\_\+real\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_afa937b568be700ccf7c209ee288b444d}\label{class_u_metrics_afa937b568be700ccf7c209ee288b444d}} 
+\index{UMetrics@{UMetrics}!local\_push\_yield\_times\_@{local\_push\_yield\_times\_}}
+\index{local\_push\_yield\_times\_@{local\_push\_yield\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{local\_push\_yield\_times\_}{local\_push\_yield\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::local\+\_\+push\+\_\+yield\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_a327fccd055a4bb5d469c2e70c15dd7d6}\label{class_u_metrics_a327fccd055a4bb5d469c2e70c15dd7d6}} 
+\index{UMetrics@{UMetrics}!pool\_pop\_real\_num\_@{pool\_pop\_real\_num\_}}
+\index{pool\_pop\_real\_num\_@{pool\_pop\_real\_num\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{pool\_pop\_real\_num\_}{pool\_pop\_real\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::pool\+\_\+pop\+\_\+real\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_a4b004022647d2e9b1342ac9b38abf437}\label{class_u_metrics_a4b004022647d2e9b1342ac9b38abf437}} 
+\index{UMetrics@{UMetrics}!pool\_pop\_times\_@{pool\_pop\_times\_}}
+\index{pool\_pop\_times\_@{pool\_pop\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{pool\_pop\_times\_}{pool\_pop\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::pool\+\_\+pop\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_afc1183f961ea8aad8926a7c9918fe745}\label{class_u_metrics_afc1183f961ea8aad8926a7c9918fe745}} 
+\index{UMetrics@{UMetrics}!steal\_pop\_real\_num\_@{steal\_pop\_real\_num\_}}
+\index{steal\_pop\_real\_num\_@{steal\_pop\_real\_num\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{steal\_pop\_real\_num\_}{steal\_pop\_real\_num\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::steal\+\_\+pop\+\_\+real\+\_\+num\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_metrics_aa920e03aa4b0f5e5de33cebdf7af89f1}\label{class_u_metrics_aa920e03aa4b0f5e5de33cebdf7af89f1}} 
+\index{UMetrics@{UMetrics}!steal\_pop\_times\_@{steal\_pop\_times\_}}
+\index{steal\_pop\_times\_@{steal\_pop\_times\_}!UMetrics@{UMetrics}}
+\doxysubsubsection{\texorpdfstring{steal\_pop\_times\_}{steal\_pop\_times\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} UMetrics\+::steal\+\_\+pop\+\_\+times\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Metrics/\mbox{\hyperlink{_u_metrics_8h}{UMetrics.\+h}}\end{DoxyCompactItemize}

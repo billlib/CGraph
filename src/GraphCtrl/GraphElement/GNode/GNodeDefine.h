@@ -17,6 +17,7 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/* TODO(bill.lee): 这个GNodeType具体起什么作用? */
 enum class GNodeType {
     BASIC = 0,          // 默认情况
     IO = 1,             // IO节点
@@ -25,7 +26,7 @@ enum class GNodeType {
 };
 
 /**
- * 功能节点信息
+ * @brief 功能节点信息
  * 创建GCluster和GRegion的中的GNode的时候，使用到的信息
  * 创建GCluster的时候，dependence为空
  * 创建GRegion的时候，dependence不为空。若为空，则表示可直接执行

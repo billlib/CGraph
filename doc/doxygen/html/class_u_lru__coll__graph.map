@@ -1,0 +1,5 @@
+<map id="ULru&lt; K, V, DefaultCapacity &gt;" name="ULru&lt; K, V, DefaultCapacity &gt;">
+<area shape="rect" id="node1" title="LRU(Least Recently Used)，基于双链表(list)存储 最少被使用的结点放在表尾，最近/最多被使用的结点放在表头" alt="" coords="5,155,227,181"/>
+<area shape="rect" id="node2" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="69,80,163,107"/>
+<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="79,5,153,32"/>
+</map>

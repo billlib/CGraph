@@ -1,0 +1,208 @@
+\hypertarget{class_g_fence}{}\doxysection{GFence Class Reference}
+\label{class_g_fence}\index{GFence@{GFence}}
+
+
+默认的前序后继方式只能等待有连接关系的结点 GFence用于在没有依赖关系的情况下，强行等待一个或一组异步结点的运行结束  
+
+
+
+
+{\ttfamily \#include $<$GFence.\+h$>$}
+
+
+
+Inheritance diagram for GFence\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_fence__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GFence\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_fence__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_fence}{GFence}} $\ast$ \mbox{\hyperlink{class_g_fence_a3d9798a0806aeadf56b2ab367268944b}{wait\+GElement}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element)
+\item 
+\mbox{\hyperlink{class_g_fence}{GFence}} $\ast$ \mbox{\hyperlink{class_g_fence_a0c8e263663168da062338910b2e3680e}{wait\+GElements}} (const std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&elements)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_fence_a47b282f9becc92086a4ae567e9c3d9ae}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_fence_a756ab7035e913411a3032a0bf608ff97}{GFence}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_fence_aef3db0dcf5e6e3e58bfb0ece97ad95ff}{check\+Suitable}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_fence_a15005bd9d6ace598a73aef1d788a679d}{dump\+Element}} (std\+::ostream \&oss) final
+\item 
+\mbox{\hyperlink{_g_param_manager_wrapper_8h_aab7301b7313ba7a47f166e3366485af3}{CGRAPH\+\_\+\+DECLARE\+\_\+\+GPARAM\+\_\+\+MANAGER\+\_\+\+WRAPPER}} \mbox{\hyperlink{_g_event_manager_wrapper_8h_a21f1f06014ba27281bf0a2002a460b94}{CGRAPH\+\_\+\+DECLARE\+\_\+\+GEVENT\+\_\+\+MANAGER\+\_\+\+WRAPPER}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_fence_a28f326e02861b36b705634646508dbb9}{run}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \mbox{\hyperlink{class_g_fence_ae98cb14babfaafd6c15907715d9bc514}{fence\+\_\+elements\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_fence_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+默认的前序后继方式只能等待有连接关系的结点 GFence用于在没有依赖关系的情况下，强行等待一个或一组异步结点的运行结束 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_fence_a756ab7035e913411a3032a0bf608ff97}\label{class_g_fence_a756ab7035e913411a3032a0bf608ff97}} 
+\index{GFence@{GFence}!GFence@{GFence}}
+\index{GFence@{GFence}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{GFence()}{GFence()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GFence\+::\+GFence (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_fence_a756ab7035e913411a3032a0bf608ff97_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_fence_aef3db0dcf5e6e3e58bfb0ece97ad95ff}\label{class_g_fence_aef3db0dcf5e6e3e58bfb0ece97ad95ff}} 
+\index{GFence@{GFence}!checkSuitable@{checkSuitable}}
+\index{checkSuitable@{checkSuitable}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{checkSuitable()}{checkSuitable()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GFence\+::check\+Suitable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+判断当前节点，是否符合执行逻辑。主要用于init的早期阶段 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}{GElement}}.
+
+\mbox{\Hypertarget{class_g_fence_a47b282f9becc92086a4ae567e9c3d9ae}\label{class_g_fence_a47b282f9becc92086a4ae567e9c3d9ae}} 
+\index{GFence@{GFence}!clear@{clear}}
+\index{clear@{clear}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GFence\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+清空所有的elements信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_fence_a15005bd9d6ace598a73aef1d788a679d}\label{class_g_fence_a15005bd9d6ace598a73aef1d788a679d}} 
+\index{GFence@{GFence}!dumpElement@{dumpElement}}
+\index{dumpElement@{dumpElement}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{dumpElement()}{dumpElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GFence\+::dump\+Element (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+graphviz dump 点逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a1b9f3c0eabc3ce182a91403917aad796}{GElement}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_fence_a15005bd9d6ace598a73aef1d788a679d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_fence_a28f326e02861b36b705634646508dbb9}\label{class_g_fence_a28f326e02861b36b705634646508dbb9}} 
+\index{GFence@{GFence}!run@{run}}
+\index{run@{run}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GFence\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+\mbox{\Hypertarget{class_g_fence_a3d9798a0806aeadf56b2ab367268944b}\label{class_g_fence_a3d9798a0806aeadf56b2ab367268944b}} 
+\index{GFence@{GFence}!waitGElement@{waitGElement}}
+\index{waitGElement@{waitGElement}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{waitGElement()}{waitGElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_fence_8h_ab13ba155d55140b90c450603ae70beb7}{GFence\+Ptr}} GFence\+::wait\+GElement (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})}
+
+添加需要等待的element（必须是异步的） 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 对外仅可以添加异步节点（设置了timeout的节点） 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_fence_a3d9798a0806aeadf56b2ab367268944b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_fence_a0c8e263663168da062338910b2e3680e}\label{class_g_fence_a0c8e263663168da062338910b2e3680e}} 
+\index{GFence@{GFence}!waitGElements@{waitGElements}}
+\index{waitGElements@{waitGElements}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{waitGElements()}{waitGElements()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_fence_8h_ab13ba155d55140b90c450603ae70beb7}{GFence\+Ptr}} GFence\+::wait\+GElements (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&}]{elements }\end{DoxyParamCaption})}
+
+添加需要等待的一组element 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 对外仅可以添加异步节点（设置了timeout的节点） 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_fence_a0c8e263663168da062338910b2e3680e_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_fence_a4e007dc772c018d10373bf18b528f96d}\label{class_g_fence_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GFence@{GFence}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_fence_ae98cb14babfaafd6c15907715d9bc514}\label{class_g_fence_ae98cb14babfaafd6c15907715d9bc514}} 
+\index{GFence@{GFence}!fence\_elements\_@{fence\_elements\_}}
+\index{fence\_elements\_@{fence\_elements\_}!GFence@{GFence}}
+\doxysubsubsection{\texorpdfstring{fence\_elements\_}{fence\_elements\_}}
+{\footnotesize\ttfamily std\+::set$<$\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}$>$ GFence\+::fence\+\_\+elements\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GFence/\mbox{\hyperlink{_g_fence_8h}{GFence.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GFence/\mbox{\hyperlink{_g_fence_8cpp}{GFence.\+cpp}}\end{DoxyCompactItemize}

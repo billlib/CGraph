@@ -1,0 +1,445 @@
+\hypertarget{class_u_thread_primary}{}\doxysection{UThread\+Primary Class Reference}
+\label{class_u_thread_primary}\index{UThreadPrimary@{UThreadPrimary}}
+
+
+主线程类，核心成员是primary\+\_\+queue\+\_\+和secondary\+\_\+queue\+\_\+ 自身准备执行任务时，优先从primary\+\_\+queue\+\_\+取，其次从secondary\+\_\+queue\+\_\+取 自身准备窃取任务时，优先从secondary\+\_\+queue\+\_\+，其次从primary\+\_\+queue\+\_\+取 这样设计的好处是\+A线程的执行和\+B线程从\+A线程窃取这两个异步事件发生竞争的可能性大大减小，从而提高性能 主线程所属的主线程池pool\+\_\+threads\+\_\+的指针也记录在每个主线程对象里面，在窃取相邻线程任务、安全检查等会用到  
+
+
+
+
+{\ttfamily \#include $<$UThread\+Primary.\+h$>$}
+
+
+
+Inheritance diagram for UThread\+Primary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_u_thread_primary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UThread\+Primary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_thread_primary_aa64367fd5895af7cb9102a8a202d6913}{UThread\+Primary}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_primary_a1d79ecd04972506d51f8ab5ec9c2f798}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_primary_a9bfa1a16dd2b8c22f2c88025895d04e8}{set\+Thread\+Pool\+Info}} (int index, \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$pool\+Task\+Queue, std\+::vector$<$ \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$ $>$ $\ast$pool\+Threads, \mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} config)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_primary_a03f953753d546a9aa6168c504790a6c2}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a81b27fd2d854491e45967eb70c08e1f2}{process\+Task}} () override
+\begin{DoxyCompactList}\small\item\em 按照以下顺序拿任务到本线程执行(如果都没拿到就fat\+Wait一直等着)： 本地任务(优先primary\+\_\+queue\+\_\+，其次secondary\+\_\+queue\+\_\+) -\/$>$ 偷任务(相邻一定范围内的其他主线程，优先secondary\+\_\+queue\+\_\+，其次primary\+\_\+queue\+\_\+) -\/$>$ 公共任务队列(pool\+\_\+task\+\_\+queue\+\_\+) -\/$>$ 优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+，只有辅助线程会走到这个分支) \end{DoxyCompactList}\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a3c34865e8238620cd9b3e59db9178d0c}{process\+Tasks}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a6ecdb5570cfa79daf82b7dce4b633e05}{fat\+Wait}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a80fe1a3f4ba2cd5e831f363fb9afc720}{push\+Task}} (\mbox{\hyperlink{class_u_task}{UTask}} \&\&task)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a3484570622f963409175adcf371c1113}{push\+Task}} (\mbox{\hyperlink{class_u_task}{UTask}} \&\&task, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} enable, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} lockable)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_primary_a1aecd7d19f2deb7be2e65004e1a9a583}{pop\+Task}} (\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}} task)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_primary_aff8154a6bd72f3cf335a4e2126e8d4c8}{pop\+Task}} (\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}} tasks)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_primary_a5bd91c4c32835c3cf2e4700925ea5843}{steal\+Task}} (\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}} task)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_thread_primary_ab636d2d5cd80ec928df2c445b4a4c2f6}{steal\+Task}} (\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}} tasks)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_primary_a0bfbb784a0336ecf8e48607c0c13d474}{build\+Steal\+Targets}} ()
+\item 
+\mbox{\hyperlink{class_u_thread_primary_aaf44f179d5cab65047fa172f32294f19}{$\sim$\+UThread\+Primary}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_primary_a35e6fdc50fa253cca6eeac5751e85f67}{index\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_u_thread_primary_a1a038911f7367354446d05d10bdadfe2}{cur\+\_\+empty\+\_\+epoch\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ \mbox{\hyperlink{class_u_thread_primary_a67e22d6b1b8c4658a82bf2b7615d83c4}{primary\+\_\+queue\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ \mbox{\hyperlink{class_u_thread_primary_ae00b4f6f8b33a9c296c13a2b6d656508}{secondary\+\_\+queue\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$ $>$ $\ast$ \mbox{\hyperlink{class_u_thread_primary_a1baf788570524d2fb6d8837e66c10d6b}{pool\+\_\+threads\+\_\+}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} $>$ \mbox{\hyperlink{class_u_thread_primary_a33b0b4f4ba68e60e23c141824b8530a1}{steal\+\_\+targets\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_thread_primary_ae7586d1a5baa7d0f65aee7c2f2041a43}{UThread\+Pool}}
+\item 
+class \mbox{\hyperlink{class_u_thread_primary_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+主线程类，核心成员是primary\+\_\+queue\+\_\+和secondary\+\_\+queue\+\_\+ 自身准备执行任务时，优先从primary\+\_\+queue\+\_\+取，其次从secondary\+\_\+queue\+\_\+取 自身准备窃取任务时，优先从secondary\+\_\+queue\+\_\+，其次从primary\+\_\+queue\+\_\+取 这样设计的好处是\+A线程的执行和\+B线程从\+A线程窃取这两个异步事件发生竞争的可能性大大减小，从而提高性能 主线程所属的主线程池pool\+\_\+threads\+\_\+的指针也记录在每个主线程对象里面，在窃取相邻线程任务、安全检查等会用到 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_thread_primary_aa64367fd5895af7cb9102a8a202d6913}\label{class_u_thread_primary_aa64367fd5895af7cb9102a8a202d6913}} 
+\index{UThreadPrimary@{UThreadPrimary}!UThreadPrimary@{UThreadPrimary}}
+\index{UThreadPrimary@{UThreadPrimary}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{UThreadPrimary()}{UThreadPrimary()}}
+{\footnotesize\ttfamily UThread\+Primary\+::\+UThread\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_aaf44f179d5cab65047fa172f32294f19}\label{class_u_thread_primary_aaf44f179d5cab65047fa172f32294f19}} 
+\index{UThreadPrimary@{UThreadPrimary}!````~UThreadPrimary@{$\sim$UThreadPrimary}}
+\index{````~UThreadPrimary@{$\sim$UThreadPrimary}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{$\sim$UThreadPrimary()}{~UThreadPrimary()}}
+{\footnotesize\ttfamily UThread\+Primary\+::$\sim$\+UThread\+Primary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}}
+
+在开启展示宏的时候，会在主线程退出的时候，打印相关内容 默认情况下，不会开启Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_aaf44f179d5cab65047fa172f32294f19_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_thread_primary_a0bfbb784a0336ecf8e48607c0c13d474}\label{class_u_thread_primary_a0bfbb784a0336ecf8e48607c0c13d474}} 
+\index{UThreadPrimary@{UThreadPrimary}!buildStealTargets@{buildStealTargets}}
+\index{buildStealTargets@{buildStealTargets}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{buildStealTargets()}{buildStealTargets()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::build\+Steal\+Targets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+构造 steal 范围的 target，避免每次盗取的时候，重复计算 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a0bfbb784a0336ecf8e48607c0c13d474_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a6ecdb5570cfa79daf82b7dce4b633e05}\label{class_u_thread_primary_a6ecdb5570cfa79daf82b7dce4b633e05}} 
+\index{UThreadPrimary@{UThreadPrimary}!fatWait@{fatWait}}
+\index{fatWait@{fatWait}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{fatWait()}{fatWait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::fat\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+如果总是进入无task的状态，则开始休眠 休眠一定时间后，然后恢复执行状态，避免出现异常情况导致无法唤醒 Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{class_u_thread_primary_a6ecdb5570cfa79daf82b7dce4b633e05_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a1d79ecd04972506d51f8ab5ec9c2f798}\label{class_u_thread_primary_a1d79ecd04972506d51f8ab5ec9c2f798}} 
+\index{UThreadPrimary@{UThreadPrimary}!init@{init}}
+\index{init@{init}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Primary\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a1d79ecd04972506d51f8ab5ec9c2f798_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_aff8154a6bd72f3cf335a4e2126e8d4c8}\label{class_u_thread_primary_aff8154a6bd72f3cf335a4e2126e8d4c8}} 
+\index{UThreadPrimary@{UThreadPrimary}!popTask@{popTask}}
+\index{popTask@{popTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{popTask()}{popTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Primary\+::pop\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}}}]{tasks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+从本地弹出一批任务 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_aff8154a6bd72f3cf335a4e2126e8d4c8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a1aecd7d19f2deb7be2e65004e1a9a583}\label{class_u_thread_primary_a1aecd7d19f2deb7be2e65004e1a9a583}} 
+\index{UThreadPrimary@{UThreadPrimary}!popTask@{popTask}}
+\index{popTask@{popTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{popTask()}{popTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Primary\+::pop\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+从本地弹出一个任务 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a1aecd7d19f2deb7be2e65004e1a9a583_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a81b27fd2d854491e45967eb70c08e1f2}\label{class_u_thread_primary_a81b27fd2d854491e45967eb70c08e1f2}} 
+\index{UThreadPrimary@{UThreadPrimary}!processTask@{processTask}}
+\index{processTask@{processTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{processTask()}{processTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::process\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+按照以下顺序拿任务到本线程执行(如果都没拿到就fat\+Wait一直等着)： 本地任务(优先primary\+\_\+queue\+\_\+，其次secondary\+\_\+queue\+\_\+) -\/$>$ 偷任务(相邻一定范围内的其他主线程，优先secondary\+\_\+queue\+\_\+，其次primary\+\_\+queue\+\_\+) -\/$>$ 公共任务队列(pool\+\_\+task\+\_\+queue\+\_\+) -\/$>$ 优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+，只有辅助线程会走到这个分支) 
+
+\begin{DoxyReturn}{Returns}
+CVoid 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_thread_base_a1cb1daeabcc24165364c3ddda824b40b}{UThread\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a81b27fd2d854491e45967eb70c08e1f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a3c34865e8238620cd9b3e59db9178d0c}\label{class_u_thread_primary_a3c34865e8238620cd9b3e59db9178d0c}} 
+\index{UThreadPrimary@{UThreadPrimary}!processTasks@{processTasks}}
+\index{processTasks@{processTasks}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{processTasks()}{processTasks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::process\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取批量执行task信息 
+
+Implements \mbox{\hyperlink{class_u_thread_base_ad080dc8122f15d38ab5b09c0f9499c8c}{UThread\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a3c34865e8238620cd9b3e59db9178d0c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a80fe1a3f4ba2cd5e831f363fb9afc720}\label{class_u_thread_primary_a80fe1a3f4ba2cd5e831f363fb9afc720}} 
+\index{UThreadPrimary@{UThreadPrimary}!pushTask@{pushTask}}
+\index{pushTask@{pushTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{pushTask()}{pushTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::push\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_task}{UTask}} \&\&}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+依次push到任一队列里。如果都失败，则yield，然后重新push 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a80fe1a3f4ba2cd5e831f363fb9afc720_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a3484570622f963409175adcf371c1113}\label{class_u_thread_primary_a3484570622f963409175adcf371c1113}} 
+\index{UThreadPrimary@{UThreadPrimary}!pushTask@{pushTask}}
+\index{pushTask@{pushTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{pushTask()}{pushTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Primary\+::push\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_task}{UTask}} \&\&}]{task,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{enable,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{lockable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+写入 task信息，是否上锁由入参enable和lockable决定 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+{\em enable} & 确认是否有锁 \\
+\hline
+{\em lockable} & true 的时候需要上锁，false 的时候会解锁 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a3484570622f963409175adcf371c1113_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a03f953753d546a9aa6168c504790a6c2}\label{class_u_thread_primary_a03f953753d546a9aa6168c504790a6c2}} 
+\index{UThreadPrimary@{UThreadPrimary}!run@{run}}
+\index{run@{run}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Primary\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+线程执行函数 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+线程池中任何一个primary线程为null都不可以执行 防止线程初始化失败的情况，导致的崩溃 理论不会走到这个判断逻辑里面
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a03f953753d546a9aa6168c504790a6c2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a9bfa1a16dd2b8c22f2c88025895d04e8}\label{class_u_thread_primary_a9bfa1a16dd2b8c22f2c88025895d04e8}} 
+\index{UThreadPrimary@{UThreadPrimary}!setThreadPoolInfo@{setThreadPoolInfo}}
+\index{setThreadPoolInfo@{setThreadPoolInfo}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{setThreadPoolInfo()}{setThreadPoolInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Primary\+::set\+Thread\+Pool\+Info (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$}]{pool\+Task\+Queue,  }\item[{std\+::vector$<$ \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$ $>$ $\ast$}]{pool\+Threads,  }\item[{\mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}}}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+注册线程池相关内容，需要在init之前使用 
+\begin{DoxyParams}{Parameters}
+{\em index} & \\
+\hline
+{\em pool\+Task\+Queue} & \\
+\hline
+{\em pool\+Threads} & \\
+\hline
+{\em config} & \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_thread_primary_ab636d2d5cd80ec928df2c445b4a4c2f6}\label{class_u_thread_primary_ab636d2d5cd80ec928df2c445b4a4c2f6}} 
+\index{UThreadPrimary@{UThreadPrimary}!stealTask@{stealTask}}
+\index{stealTask@{stealTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{stealTask()}{stealTask()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Primary\+::steal\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_adee1dc93386a6eb64037d668582f6e6a}{UTask\+Arr\+Ref}}}]{tasks }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+从其他线程盗取一批任务 
+\begin{DoxyParams}{Parameters}
+{\em tasks} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+在这里，我们对模型进行了简化。实现的思路是： 尝试从邻居主线程(先secondary，再primary)中，获取 x(=max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+) 个task， 如果从某一个邻居中，获取了 y($<$=x) 个task，则也终止steal的流程 且如果如果有一次批量steal成功，就认定成功Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_ab636d2d5cd80ec928df2c445b4a4c2f6_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_primary_a5bd91c4c32835c3cf2e4700925ea5843}\label{class_u_thread_primary_a5bd91c4c32835c3cf2e4700925ea5843}} 
+\index{UThreadPrimary@{UThreadPrimary}!stealTask@{stealTask}}
+\index{stealTask@{stealTask}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{stealTask()}{stealTask()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Primary\+::steal\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_task_8h_a71950279b6577d35733e21094666d0db}{UTask\+Ref}}}]{task }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+从其他线程窃取一个任务 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+线程池还未初始化完毕的时候，无法进行steal。 确保程序安全运行。
+
+窃取的时候，仅从相邻的primary线程中窃取 待窃取相邻的数量，不能超过默认primary线程数 steal\+\_\+targets\+\_\+在init的时候就已经计算好了
+
+从线程中周围的thread中，窃取任务。 如果成功，则返回true，并且执行任务。 steal 的时候，先从第二个队列里偷，从而降低触碰锁的概率Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_primary_a5bd91c4c32835c3cf2e4700925ea5843_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_u_thread_primary_a17a0077689f477d78437264108a1577c}\label{class_u_thread_primary_a17a0077689f477d78437264108a1577c}} 
+\index{UThreadPrimary@{UThreadPrimary}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_ae7586d1a5baa7d0f65aee7c2f2041a43}\label{class_u_thread_primary_ae7586d1a5baa7d0f65aee7c2f2041a43}} 
+\index{UThreadPrimary@{UThreadPrimary}!UThreadPool@{UThreadPool}}
+\index{UThreadPool@{UThreadPool}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{UThreadPool}{UThreadPool}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_pool}{UThread\+Pool}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_thread_primary_a1a038911f7367354446d05d10bdadfe2}\label{class_u_thread_primary_a1a038911f7367354446d05d10bdadfe2}} 
+\index{UThreadPrimary@{UThreadPrimary}!cur\_empty\_epoch\_@{cur\_empty\_epoch\_}}
+\index{cur\_empty\_epoch\_@{cur\_empty\_epoch\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{cur\_empty\_epoch\_}{cur\_empty\_epoch\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Primary\+::cur\+\_\+empty\+\_\+epoch\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_a35e6fdc50fa253cca6eeac5751e85f67}\label{class_u_thread_primary_a35e6fdc50fa253cca6eeac5751e85f67}} 
+\index{UThreadPrimary@{UThreadPrimary}!index\_@{index\_}}
+\index{index\_@{index\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{index\_}{index\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Primary\+::index\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_a1baf788570524d2fb6d8837e66c10d6b}\label{class_u_thread_primary_a1baf788570524d2fb6d8837e66c10d6b}} 
+\index{UThreadPrimary@{UThreadPrimary}!pool\_threads\_@{pool\_threads\_}}
+\index{pool\_threads\_@{pool\_threads\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{pool\_threads\_}{pool\_threads\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}} $\ast$$>$$\ast$ UThread\+Primary\+::pool\+\_\+threads\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_a67e22d6b1b8c4658a82bf2b7615d83c4}\label{class_u_thread_primary_a67e22d6b1b8c4658a82bf2b7615d83c4}} 
+\index{UThreadPrimary@{UThreadPrimary}!primary\_queue\_@{primary\_queue\_}}
+\index{primary\_queue\_@{primary\_queue\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{primary\_queue\_}{primary\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$ UThread\+Primary\+::primary\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_ae00b4f6f8b33a9c296c13a2b6d656508}\label{class_u_thread_primary_ae00b4f6f8b33a9c296c13a2b6d656508}} 
+\index{UThreadPrimary@{UThreadPrimary}!secondary\_queue\_@{secondary\_queue\_}}
+\index{secondary\_queue\_@{secondary\_queue\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{secondary\_queue\_}{secondary\_queue\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$\mbox{\hyperlink{class_u_task}{UTask}}$>$ UThread\+Primary\+::secondary\+\_\+queue\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_thread_primary_a33b0b4f4ba68e60e23c141824b8530a1}\label{class_u_thread_primary_a33b0b4f4ba68e60e23c141824b8530a1}} 
+\index{UThreadPrimary@{UThreadPrimary}!steal\_targets\_@{steal\_targets\_}}
+\index{steal\_targets\_@{steal\_targets\_}!UThreadPrimary@{UThreadPrimary}}
+\doxysubsubsection{\texorpdfstring{steal\_targets\_}{steal\_targets\_}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}$>$ UThread\+Primary\+::steal\+\_\+targets\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Thread/\mbox{\hyperlink{_u_thread_primary_8h}{UThread\+Primary.\+h}}\end{DoxyCompactItemize}

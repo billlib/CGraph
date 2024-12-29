@@ -15,6 +15,14 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 各类功能单元的最底层的基类，包含虚函数init/destroy和纯虚函数run
+ * 派生类如果不支持run也要显式写NO_SUPPORT(比如UtilsObject)
+ * 具体可派生出GElementManager/GAsptectManager/GEventManager/GDaemonManager/
+ * GPipelineManager/GMessageManager/GParamManager等manager类、GEngine/GAspect/
+ * GPerf/GDaemon/GSchedule/GElement/GElementRepository/DAnnNode/DAnnParam等结点类
+ * 以及UtilsObject的派生类等
+ */
 class CObject {
 public:
     /**

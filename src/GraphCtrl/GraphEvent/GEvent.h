@@ -18,6 +18,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 事件机制，addGEvent将事件注册到pipeline
+ * notify触发，process处理信号，trigger同步执行，asyncProcess异步执行，asyncWait等待异步任务结束
+ */
 class GEvent : public GEventObject {
 protected:
     /**

@@ -1,0 +1,121 @@
+\hypertarget{class_g_coordinator}{}\doxysection{GCoordinator$<$ SIZE $>$ Class Template Reference}
+\label{class_g_coordinator}\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+
+
+{\ttfamily \#include $<$GCoordinator.\+h$>$}
+
+
+
+Inheritance diagram for GCoordinator$<$ SIZE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_coordinator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GCoordinator$<$ SIZE $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_coordinator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_coordinator_aca08e46d5e26f1b50dcd083d29da4ff5}{GCoordinator}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_coordinator_a786c85398270faed189b379bc240b0ae}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_coordinator_a14f7442e1911fa84b7c2d0ea841e0441}{dump\+Element}} (std\+::ostream \&oss) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_coordinator_a863a80fc08b145f0f31f633b82b8dc8f}{check\+Suitable}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_coordinator_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_coordinator_aca08e46d5e26f1b50dcd083d29da4ff5}\label{class_g_coordinator_aca08e46d5e26f1b50dcd083d29da4ff5}} 
+\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}!GCoordinator@{GCoordinator}}
+\index{GCoordinator@{GCoordinator}!GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{GCoordinator()}{GCoordinator()}}
+{\footnotesize\ttfamily template$<$CInt SIZE$>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}$<$ SIZE $>$\+::\mbox{\hyperlink{class_g_coordinator}{GCoordinator}}\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_coordinator_aca08e46d5e26f1b50dcd083d29da4ff5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_coordinator_a863a80fc08b145f0f31f633b82b8dc8f}\label{class_g_coordinator_a863a80fc08b145f0f31f633b82b8dc8f}} 
+\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}!checkSuitable@{checkSuitable}}
+\index{checkSuitable@{checkSuitable}!GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{checkSuitable()}{checkSuitable()}}
+{\footnotesize\ttfamily template$<$CInt SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}$<$ SIZE $>$\+::check\+Suitable\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+判断当前节点，是否符合执行逻辑。主要用于init的早期阶段 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_ad6ef41f9b4b035b7685f4885e7e5e75e}{GElement}}.
+
+\mbox{\Hypertarget{class_g_coordinator_a14f7442e1911fa84b7c2d0ea841e0441}\label{class_g_coordinator_a14f7442e1911fa84b7c2d0ea841e0441}} 
+\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}!dumpElement@{dumpElement}}
+\index{dumpElement@{dumpElement}!GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{dumpElement()}{dumpElement()}}
+{\footnotesize\ttfamily template$<$CInt SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}$<$ SIZE $>$\+::dump\+Element (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{oss }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+graphviz dump 点逻辑 
+\begin{DoxyParams}{Parameters}
+{\em oss} & \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a1b9f3c0eabc3ce182a91403917aad796}{GElement}}.
+
+\mbox{\Hypertarget{class_g_coordinator_a786c85398270faed189b379bc240b0ae}\label{class_g_coordinator_a786c85398270faed189b379bc240b0ae}} 
+\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}!run@{run}}
+\index{run@{run}!GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$CInt SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_coordinator}{GCoordinator}}$<$ SIZE $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_coordinator_a4e007dc772c018d10373bf18b528f96d}\label{class_g_coordinator_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GCoordinator$<$ SIZE $>$@{GCoordinator$<$ SIZE $>$}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily template$<$CInt SIZE$>$ \\
+friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GCoordinator/\mbox{\hyperlink{_g_coordinator_8h}{GCoordinator.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GCoordinator/\mbox{\hyperlink{_g_coordinator_8inl}{GCoordinator.\+inl}}\end{DoxyCompactItemize}

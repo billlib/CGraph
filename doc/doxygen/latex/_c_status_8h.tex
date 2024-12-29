@@ -1,0 +1,57 @@
+\hypertarget{_c_status_8h}{}\doxysection{src/\+CBasic/\+CStatus.h File Reference}
+\label{_c_status_8h}\index{src/CBasic/CStatus.h@{src/CBasic/CStatus.h}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}CBasic\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}CStr\+Define.\+h\char`\"{}}\newline
+Include dependency graph for CStatus.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{_c_status_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_status_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} static \mbox{\hyperlink{_c_basic_define_8h_a3088cc164511d1e5cd943db41e3434fc}{CGRAPH\+\_\+\+INTERNAL\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} const int \mbox{\hyperlink{_c_status_8h_a5d1f2a573f44d83ef292e9d6582b4333}{STATUS\+\_\+\+OK}} = 0
+\item 
+static const int \mbox{\hyperlink{_c_status_8h_a0dacdce7f63cb2e381dc271e8ccedc1f}{STATUS\+\_\+\+ERR}} = -\/1
+\item 
+static const int \mbox{\hyperlink{_c_status_8h_abf7984226d24487ced7858cdbb9c61d3}{STATUS\+\_\+\+CRASH}} = -\/996
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_c_status_8h_abf7984226d24487ced7858cdbb9c61d3}\label{_c_status_8h_abf7984226d24487ced7858cdbb9c61d3}} 
+\index{CStatus.h@{CStatus.h}!STATUS\_CRASH@{STATUS\_CRASH}}
+\index{STATUS\_CRASH@{STATUS\_CRASH}!CStatus.h@{CStatus.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_CRASH}{STATUS\_CRASH}}
+{\footnotesize\ttfamily const int STATUS\+\_\+\+CRASH = -\/996\hspace{0.3cm}{\ttfamily [static]}}
+
+异常流程返回值 \mbox{\Hypertarget{_c_status_8h_a0dacdce7f63cb2e381dc271e8ccedc1f}\label{_c_status_8h_a0dacdce7f63cb2e381dc271e8ccedc1f}} 
+\index{CStatus.h@{CStatus.h}!STATUS\_ERR@{STATUS\_ERR}}
+\index{STATUS\_ERR@{STATUS\_ERR}!CStatus.h@{CStatus.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_ERR}{STATUS\_ERR}}
+{\footnotesize\ttfamily const int STATUS\+\_\+\+ERR = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+正常流程返回值 \mbox{\Hypertarget{_c_status_8h_a5d1f2a573f44d83ef292e9d6582b4333}\label{_c_status_8h_a5d1f2a573f44d83ef292e9d6582b4333}} 
+\index{CStatus.h@{CStatus.h}!STATUS\_OK@{STATUS\_OK}}
+\index{STATUS\_OK@{STATUS\_OK}!CStatus.h@{CStatus.h}}
+\doxysubsubsection{\texorpdfstring{STATUS\_OK}{STATUS\_OK}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} static \mbox{\hyperlink{_c_basic_define_8h_a3088cc164511d1e5cd943db41e3434fc}{CGRAPH\+\_\+\+INTERNAL\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} const int STATUS\+\_\+\+OK = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+说明： 返回值为0，表示正常逻辑 返回值为负整数，表示error逻辑，程序终止执行 自定义返回值，请务必遵守以上约定 

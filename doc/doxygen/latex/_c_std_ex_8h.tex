@@ -1,0 +1,50 @@
+\hypertarget{_c_std_ex_8h}{}\doxysection{src/\+CBasic/\+CStd\+Ex.h File Reference}
+\label{_c_std_ex_8h}\index{src/CBasic/CStdEx.h@{src/CBasic/CStdEx.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$type\+\_\+traits$>$}\newline
+Include dependency graph for CStd\+Ex.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{_c_std_ex_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_c_std_ex_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$bool B, typename T  = void$>$ }\\using \mbox{\hyperlink{_c_std_ex_8h_a07b1277b5e900a352a3bd63eea94cf4f}{c\+\_\+enable\+\_\+if\+\_\+t}} = typename std\+::enable\+\_\+if$<$ B, T $>$\+::type
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , typename... Args$>$ }\\std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{_c_std_ex_8h_a4f59572904e2cf11df904dc13921a2bd}{c\+\_\+make\+\_\+unique}} (Args \&\&... args)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_c_std_ex_8h_a07b1277b5e900a352a3bd63eea94cf4f}\label{_c_std_ex_8h_a07b1277b5e900a352a3bd63eea94cf4f}} 
+\index{CStdEx.h@{CStdEx.h}!c\_enable\_if\_t@{c\_enable\_if\_t}}
+\index{c\_enable\_if\_t@{c\_enable\_if\_t}!CStdEx.h@{CStdEx.h}}
+\doxysubsubsection{\texorpdfstring{c\_enable\_if\_t}{c\_enable\_if\_t}}
+{\footnotesize\ttfamily template$<$bool B, typename T  = void$>$ \\
+using \mbox{\hyperlink{_c_std_ex_8h_a07b1277b5e900a352a3bd63eea94cf4f}{c\+\_\+enable\+\_\+if\+\_\+t}} =  typename std\+::enable\+\_\+if$<$B, T$>$\+::type}
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_c_std_ex_8h_a4f59572904e2cf11df904dc13921a2bd}\label{_c_std_ex_8h_a4f59572904e2cf11df904dc13921a2bd}} 
+\index{CStdEx.h@{CStdEx.h}!c\_make\_unique@{c\_make\_unique}}
+\index{c\_make\_unique@{c\_make\_unique}!CStdEx.h@{CStdEx.h}}
+\doxysubsubsection{\texorpdfstring{c\_make\_unique()}{c\_make\_unique()}}
+{\footnotesize\ttfamily template$<$typename T , typename... Args$>$ \\
+std\+::unique\+\_\+ptr$<$T$>$ c\+\_\+make\+\_\+unique (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})}
+

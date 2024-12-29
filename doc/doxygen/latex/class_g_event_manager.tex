@@ -1,0 +1,245 @@
+\hypertarget{class_g_event_manager}{}\doxysection{GEvent\+Manager Class Reference}
+\label{class_g_event_manager}\index{GEventManager@{GEventManager}}
+
+
+{\ttfamily \#include $<$GEvent\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GEvent\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=343pt]{class_g_event_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GEvent\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_event_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename TEvent , typename TEParam  = GEvent\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TEParam $>$\+::value, int $>$  = 0$>$ }\\\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_ad38df0d7417b1c79303a615d76905818}{create\+With\+Param}} (const std\+::string \&key, TEParam $\ast$param=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_a9e6aa7bc6d117c1f43c5e1921c05a4a2}{trigger}} (const std\+::string \&key, \mbox{\hyperlink{_g_event_define_8h_ae1cc796a710ea3bebdbe048dd3ba6d52}{GEvent\+Type}} type, \mbox{\hyperlink{_g_event_define_8h_ae82b345289dc33f3baec0d4045600e31}{GEvent\+Async\+Strategy}} strategy)
+\item 
+std\+::shared\+\_\+future$<$ \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} $>$ \mbox{\hyperlink{class_g_event_manager_a982b162618671b3dea403244bb113ef5}{async\+Trigger}} (const std\+::string \&key, \mbox{\hyperlink{_g_event_define_8h_ae82b345289dc33f3baec0d4045600e31}{GEvent\+Async\+Strategy}} strategy)
+\item 
+{\footnotesize template$<$typename TEvent , typename TEParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TEParam $>$\+::value, int $>$ $>$ }\\\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_a29f193a6b4cff37291b27033ec527681}{create\+With\+Param}} (const std\+::string \&key, TEParam $\ast$param)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_a23d7d9c8f3b519f4daa4508fb2d5f41e}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_a6f60945d7398bee8e3b9c57517f7f78e}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_a32480744976d3b1f9f12538e68acc543}{clear}} () final
+\item 
+\mbox{\hyperlink{_g_event_object_8h_a361b8fc08662721ecb4595d3809b9331}{GEvent\+Object\+Ptr}} \mbox{\hyperlink{class_g_event_manager_a09e543ca2f6fe787875c5a74b5de92a8}{set\+Thread\+Pool}} (\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}} ptr) final
+\item 
+\mbox{\hyperlink{class_g_event_manager_a9afc85237dc063ee99b6cbe4fd0a573d}{GEvent\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_g_event_manager_a5a4febef543a5bf136984b203e6d91b0}{$\sim$\+GEvent\+Manager}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_event_manager_abbf21342e1a633b43c0c71b9b1cf2c3d}{reset}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unordered\+\_\+map$<$ std\+::string, \mbox{\hyperlink{_g_event_8h_a3c8330bf17ab51595cfb20099bead6e2}{GEvent\+Ptr}} $>$ \mbox{\hyperlink{class_g_event_manager_aa40ab79e9aca0a87314627056b1fd94f}{events\+\_\+map\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_event_manager_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\item 
+class \mbox{\hyperlink{class_g_event_manager_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_event_manager_a9afc85237dc063ee99b6cbe4fd0a573d}\label{class_g_event_manager_a9afc85237dc063ee99b6cbe4fd0a573d}} 
+\index{GEventManager@{GEventManager}!GEventManager@{GEventManager}}
+\index{GEventManager@{GEventManager}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{GEventManager()}{GEventManager()}}
+{\footnotesize\ttfamily GEvent\+Manager\+::\+GEvent\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_g_event_manager_a5a4febef543a5bf136984b203e6d91b0}\label{class_g_event_manager_a5a4febef543a5bf136984b203e6d91b0}} 
+\index{GEventManager@{GEventManager}!````~GEventManager@{$\sim$GEventManager}}
+\index{````~GEventManager@{$\sim$GEventManager}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GEventManager()}{~GEventManager()}}
+{\footnotesize\ttfamily GEvent\+Manager\+::$\sim$\+GEvent\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_event_manager_a5a4febef543a5bf136984b203e6d91b0_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_event_manager_a982b162618671b3dea403244bb113ef5}\label{class_g_event_manager_a982b162618671b3dea403244bb113ef5}} 
+\index{GEventManager@{GEventManager}!asyncTrigger@{asyncTrigger}}
+\index{asyncTrigger@{asyncTrigger}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{asyncTrigger()}{asyncTrigger()}}
+{\footnotesize\ttfamily std\+::shared\+\_\+future$<$ \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} $>$ GEvent\+Manager\+::async\+Trigger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_g_event_define_8h_ae82b345289dc33f3baec0d4045600e31}{GEvent\+Async\+Strategy}}}]{strategy }\end{DoxyParamCaption})}
+
+异步事件触发 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em strategy} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_event_manager_a32480744976d3b1f9f12538e68acc543}\label{class_g_event_manager_a32480744976d3b1f9f12538e68acc543}} 
+\index{GEventManager@{GEventManager}!clear@{clear}}
+\index{clear@{clear}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GEvent $>$}}.
+
+\mbox{\Hypertarget{class_g_event_manager_a29f193a6b4cff37291b27033ec527681}\label{class_g_event_manager_a29f193a6b4cff37291b27033ec527681}} 
+\index{GEventManager@{GEventManager}!createWithParam@{createWithParam}}
+\index{createWithParam@{createWithParam}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{createWithParam()}{createWithParam()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TEvent , typename TEParam , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$ , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TEParam $>$\+::value, int $>$ $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::create\+With\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{TEParam $\ast$}]{param }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_g_event_manager_ad38df0d7417b1c79303a615d76905818}\label{class_g_event_manager_ad38df0d7417b1c79303a615d76905818}} 
+\index{GEventManager@{GEventManager}!createWithParam@{createWithParam}}
+\index{createWithParam@{createWithParam}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{createWithParam()}{createWithParam()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TEvent , typename TEParam  = GEvent\+Default\+Param, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent, TEvent $>$\+::value, int $>$  = 0, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ GEvent\+Param, TEParam $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::create\+With\+Param (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{TEParam $\ast$}]{param = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+创建一个特定类型的事件，并且通过参数赋值 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TEvent} & \\
+\hline
+{\em TEParam} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em param} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_event_manager_a6f60945d7398bee8e3b9c57517f7f78e}\label{class_g_event_manager_a6f60945d7398bee8e3b9c57517f7f78e}} 
+\index{GEventManager@{GEventManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_event_manager_a23d7d9c8f3b519f4daa4508fb2d5f41e}\label{class_g_event_manager_a23d7d9c8f3b519f4daa4508fb2d5f41e}} 
+\index{GEventManager@{GEventManager}!init@{init}}
+\index{init@{init}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_event_manager_abbf21342e1a633b43c0c71b9b1cf2c3d}\label{class_g_event_manager_abbf21342e1a633b43c0c71b9b1cf2c3d}} 
+\index{GEventManager@{GEventManager}!reset@{reset}}
+\index{reset@{reset}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+重置所有object \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_graph_manager_a2bfcb8c1c7595de12b1b4ddfee64d87f}{Graph\+Manager$<$ GEvent $>$}}.
+
+\mbox{\Hypertarget{class_g_event_manager_a09e543ca2f6fe787875c5a74b5de92a8}\label{class_g_event_manager_a09e543ca2f6fe787875c5a74b5de92a8}} 
+\index{GEventManager@{GEventManager}!setThreadPool@{setThreadPool}}
+\index{setThreadPool@{setThreadPool}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{setThreadPool()}{setThreadPool()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_event_object_8h_a361b8fc08662721ecb4595d3809b9331}{GEvent\+Object\+Ptr}} GEvent\+Manager\+::set\+Thread\+Pool (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_u_thread_pool_8h_a480b2fe3f04d2c20f15d3fbacbac3f75}{UThread\+Pool\+Ptr}}}]{ptr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{class_g_event_object_a4e03fe823368e41513af7310ae4b7542}{GEvent\+Object}}.
+
+\mbox{\Hypertarget{class_g_event_manager_a9e6aa7bc6d117c1f43c5e1921c05a4a2}\label{class_g_event_manager_a9e6aa7bc6d117c1f43c5e1921c05a4a2}} 
+\index{GEventManager@{GEventManager}!trigger@{trigger}}
+\index{trigger@{trigger}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{trigger()}{trigger()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GEvent\+Manager\+::trigger (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key,  }\item[{\mbox{\hyperlink{_g_event_define_8h_ae1cc796a710ea3bebdbe048dd3ba6d52}{GEvent\+Type}}}]{type,  }\item[{\mbox{\hyperlink{_g_event_define_8h_ae82b345289dc33f3baec0d4045600e31}{GEvent\+Async\+Strategy}}}]{strategy }\end{DoxyParamCaption})}
+
+触发事件 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em type} & \\
+\hline
+{\em strategy,仅当异步的时候生效} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_event_manager_a17a0077689f477d78437264108a1577c}\label{class_g_event_manager_a17a0077689f477d78437264108a1577c}} 
+\index{GEventManager@{GEventManager}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_event_manager_a4e007dc772c018d10373bf18b528f96d}\label{class_g_event_manager_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GEventManager@{GEventManager}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_event_manager_aa40ab79e9aca0a87314627056b1fd94f}\label{class_g_event_manager_aa40ab79e9aca0a87314627056b1fd94f}} 
+\index{GEventManager@{GEventManager}!events\_map\_@{events\_map\_}}
+\index{events\_map\_@{events\_map\_}!GEventManager@{GEventManager}}
+\doxysubsubsection{\texorpdfstring{events\_map\_}{events\_map\_}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$std\+::string, \mbox{\hyperlink{_g_event_8h_a3c8330bf17ab51595cfb20099bead6e2}{GEvent\+Ptr}}$>$ GEvent\+Manager\+::events\+\_\+map\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Event/\mbox{\hyperlink{_g_event_manager_8h}{GEvent\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Event/\mbox{\hyperlink{_g_event_manager_8cpp}{GEvent\+Manager.\+cpp}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Event/\mbox{\hyperlink{_g_event_manager_8inl}{GEvent\+Manager.\+inl}}\end{DoxyCompactItemize}

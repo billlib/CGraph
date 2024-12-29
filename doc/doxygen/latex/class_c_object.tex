@@ -1,0 +1,85 @@
+\hypertarget{class_c_object}{}\doxysection{CObject Class Reference}
+\label{class_c_object}\index{CObject@{CObject}}
+
+
+{\ttfamily \#include $<$CObject.\+h$>$}
+
+
+
+Inheritance diagram for CObject\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_c_object__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_object_ae30ce05f6bf916caaba7db2913c47bd7}{CObject}} ()=default
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{init}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{run}} ()=0
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{destroy}} ()
+\item 
+virtual \mbox{\hyperlink{class_c_object_a75fc8a71d266f635f42955a16361036d}{$\sim$\+CObject}} ()=default
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+各类功能单元的最底层的基类，包含虚函数init/destroy和纯虚函数run 派生类如果不支持run也要显式写\+NO\+\_\+\+SUPPORT(比如\+Utils\+Object) 具体可派生出\+GElement\+Manager/\+GAsptect\+Manager/\+GEvent\+Manager/\+GDaemon\+Manager/ GPipeline\+Manager/\+GMessage\+Manager/\+GParam\+Manager等manager类、\+GEngine/\+GAspect/ GPerf/\+GDaemon/\+GSchedule/\+GElement/\+GElement\+Repository/\+DAnn\+Node/\+DAnn\+Param等结点类 以及\+Utils\+Object的派生类等 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_object_ae30ce05f6bf916caaba7db2913c47bd7}\label{class_c_object_ae30ce05f6bf916caaba7db2913c47bd7}} 
+\index{CObject@{CObject}!CObject@{CObject}}
+\index{CObject@{CObject}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{CObject()}{CObject()}}
+{\footnotesize\ttfamily CObject\+::\+CObject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+默认构造函数 \mbox{\Hypertarget{class_c_object_a75fc8a71d266f635f42955a16361036d}\label{class_c_object_a75fc8a71d266f635f42955a16361036d}} 
+\index{CObject@{CObject}!````~CObject@{$\sim$CObject}}
+\index{````~CObject@{$\sim$CObject}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{$\sim$CObject()}{~CObject()}}
+{\footnotesize\ttfamily virtual CObject\+::$\sim$\+CObject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+默认析构函数 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_object_a8248fa50905f3339e7b98563987567c7}\label{class_c_object_a8248fa50905f3339e7b98563987567c7}} 
+\index{CObject@{CObject}!destroy@{destroy}}
+\index{destroy@{destroy}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} CObject\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented in \mbox{\hyperlink{class_u_thread_base_a56f1b10bb175d42238347130c66f173a}{UThread\+Base}}, \mbox{\hyperlink{class_u_singleton_aaf802853afa432321458605a02e20d6f}{USingleton$<$ T, type, auto\+Init $>$}}, \mbox{\hyperlink{class_u_singleton_aaf802853afa432321458605a02e20d6f}{USingleton$<$ GMessage\+Manager$<$$>$, USingleton\+Type\+::\+LAZY, false $>$}}, \mbox{\hyperlink{class_g_stage_manager_aa3d661190f557a19ce63d7afec82aa62}{GStage\+Manager}}, \mbox{\hyperlink{class_g_pipeline_aac0c00d6fc7723eefd0872e657c395ee}{GPipeline}}, \mbox{\hyperlink{class_g_group_a448d258b7e3c0dbbadfbcd1c206f3caa}{GGroup}}, \mbox{\hyperlink{class_g_element_repository_a6699d4b398407177f5d5ee852a39522a}{GElement\+Repository}}, \mbox{\hyperlink{class_u_thread_pool_a220dbebf17eeeebcb75742e7a4fa82d3}{UThread\+Pool}}, \mbox{\hyperlink{class_g_pipeline_manager_af8ceec6a5997bcd6c713a7f94775a4de}{GPipeline\+Manager}}, \mbox{\hyperlink{class_g_schedule_ac267b986abc6bfbaad066b072ce1112c}{GSchedule}}, \mbox{\hyperlink{class_g_param_manager_ae2a3ab71c8fa9dd680c989302f5f1984}{GParam\+Manager}}, \mbox{\hyperlink{class_g_message_manager_a0a5c548adde4e8b5ccc0d6bd7ea01b83}{GMessage\+Manager$<$ T, $>$}}, \mbox{\hyperlink{class_g_event_manager_a6f60945d7398bee8e3b9c57517f7f78e}{GEvent\+Manager}}, \mbox{\hyperlink{class_g_event_af56f6963b355367adb870312ae04a183}{GEvent}}, \mbox{\hyperlink{class_g_region_a533c3fa06477672267d37d75081b079c}{GRegion}}, \mbox{\hyperlink{class_g_mutable_a24a61d9cfec8d119d7469cc9a1cc5d22}{GMutable}}, \mbox{\hyperlink{class_g_element_manager_a7fd695c1141334ac73ca28440bc147dd}{GElement\+Manager}}, \mbox{\hyperlink{class_g_singleton_a97c2dc3832e63ec100a010f75e04cf0c}{GSingleton$<$ T $>$}}, \mbox{\hyperlink{class_g_function_ae2d1dd5fbdac9daa07ce6605c3ea8ae5}{GFunction}}, \mbox{\hyperlink{class_g_daemon_manager_a89ab6476a9dec5007c40098176bbd647}{GDaemon\+Manager}}, and \mbox{\hyperlink{class_g_daemon_a855879b5255582e1be8f87f95b554fb6}{GDaemon}}.
+
+\mbox{\Hypertarget{class_c_object_a9ac160b3def9267b8bffc6149d425735}\label{class_c_object_a9ac160b3def9267b8bffc6149d425735}} 
+\index{CObject@{CObject}!init@{init}}
+\index{init@{init}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} CObject\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented in \mbox{\hyperlink{class_u_thread_secondary_a0d4e8fe0975f9a7a82005f610e99ffe8}{UThread\+Secondary}}, \mbox{\hyperlink{class_u_thread_primary_a1d79ecd04972506d51f8ab5ec9c2f798}{UThread\+Primary}}, \mbox{\hyperlink{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a}{USingleton$<$ T, type, auto\+Init $>$}}, \mbox{\hyperlink{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a}{USingleton$<$ GMessage\+Manager$<$$>$, USingleton\+Type\+::\+LAZY, false $>$}}, \mbox{\hyperlink{class_g_stage_manager_a6236b8c29e63d8b247d3f5d864f9b6f5}{GStage\+Manager}}, \mbox{\hyperlink{class_g_pipeline_aa4c4f1e8bef18c55ce77df9ae4092e81}{GPipeline}}, \mbox{\hyperlink{class_g_group_a9ad2ee258dddebf191f37f0b79896559}{GGroup}}, \mbox{\hyperlink{class_g_element_repository_aa984aa68d082f2566da1f1c2a718c5cf}{GElement\+Repository}}, \mbox{\hyperlink{class_generate_g_node_a2b7b307ebb1d5217aeeb73d978cfee54}{Generate\+GNode}}, \mbox{\hyperlink{class_car_detector_g_node_a9d2c1d40c0b3d5c52c9f8adcdd504f00}{Car\+Detector\+GNode}}, \mbox{\hyperlink{class_lane_detector_g_node_a19e77d8a61c659bfdc02e84bbdcc0280}{Lane\+Detector\+GNode}}, \mbox{\hyperlink{class_u_thread_pool_adcc62b9d24c92881b13e745dedba58a3}{UThread\+Pool}}, \mbox{\hyperlink{class_g_pipeline_manager_a7626219a82736f63d928557daccd217e}{GPipeline\+Manager}}, \mbox{\hyperlink{class_g_schedule_a4223060858214d3df79395fec4dc42a4}{GSchedule}}, \mbox{\hyperlink{class_g_param_manager_a1c84546f05a06b126a42b10897065503}{GParam\+Manager}}, \mbox{\hyperlink{class_g_message_manager_a5a76d9001e03a95b4be1be64a67a2d56}{GMessage\+Manager$<$ T, $>$}}, \mbox{\hyperlink{class_g_event_manager_a23d7d9c8f3b519f4daa4508fb2d5f41e}{GEvent\+Manager}}, \mbox{\hyperlink{class_g_event_aa83c1e6ff9c4ebb40e111e1ebc617d82}{GEvent}}, \mbox{\hyperlink{class_g_region_a6aa354202effbde2d368a59516c78e7d}{GRegion}}, \mbox{\hyperlink{class_g_mutable_a1744634dc9a231d3f788645f420557f2}{GMutable}}, \mbox{\hyperlink{class_g_element_manager_a637a8cb1f25923dbd57b598f8baaed76}{GElement\+Manager}}, \mbox{\hyperlink{class_g_singleton_a996e5677bb36534d46d69414c2b17fb3}{GSingleton$<$ T $>$}}, \mbox{\hyperlink{class_g_function_a14362ca58841789f2a613c171fbb8148}{GFunction}}, \mbox{\hyperlink{class_g_daemon_manager_ab618de08e0431ef578360db9442bd7da}{GDaemon\+Manager}}, and \mbox{\hyperlink{class_g_daemon_af2ef765d77365cdff4e2e055e5fa19b8}{GDaemon}}.
+
+\mbox{\Hypertarget{class_c_object_aed3636663d62bb308b6eeda4837496d1}\label{class_c_object_aed3636663d62bb308b6eeda4837496d1}} 
+\index{CObject@{CObject}!run@{run}}
+\index{run@{run}!CObject@{CObject}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} CObject\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+流程处理函数 
+
+Implemented in \mbox{\hyperlink{class_utils_object_a4790f5cc5d43529b9d7e8a02371813d3}{Utils\+Object}}, \mbox{\hyperlink{class_u_thread_object_a5d8c62bc2e92a1653a756d44c166c0a0}{UThread\+Object}}, \mbox{\hyperlink{class_g_pipeline_aad85bc43324bad2609f5b683e281a371}{GPipeline}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ T, $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GStage $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GElement $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GEvent $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GDaemon $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GParam $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GMessage$<$ GMessage\+Param $>$ $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GAspect $>$}}, \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{Graph\+Manager$<$ GPipeline $>$}}, \mbox{\hyperlink{class_g_condition_a082335bbb4780045538d7bce5da34c73}{GCondition}}, \mbox{\hyperlink{class_g_topo_engine_ad6bf39bb373689800f3cbdaf944b5fb9}{GTopo\+Engine}}, \mbox{\hyperlink{class_g_static_engine_a8034a728da240903879824939870035a}{GStatic\+Engine}}, \mbox{\hyperlink{class_g_dynamic_engine_af90b3763ce7bf5af99e3af8a9dfbc946}{GDynamic\+Engine}}, \mbox{\hyperlink{class_d_ann_object_ad808211e9b9f97d222c08f1b298a9c45}{DAnn\+Object}}, \mbox{\hyperlink{class_d_ann_node_a1e4ecc67278b40c6bdd41705e3aa5fea}{DAnn\+Node}}, \mbox{\hyperlink{class_reduce_g_node_accbb4d5e85ce004c6bc2aeb398f48d86}{Reduce\+GNode}}, \mbox{\hyperlink{class_map_g_node_a027f8243262d59d83771179ee1ab6b27}{Map\+GNode$<$ MAP\+\_\+\+TAG $>$}}, \mbox{\hyperlink{class_generate_g_node_a94d0f1e2fac51040727e4382500a3508}{Generate\+GNode}}, \mbox{\hyperlink{class_result_g_node_a5ecc7d0400f628b55526402b740b1189}{Result\+GNode}}, \mbox{\hyperlink{class_process_g_node_ac756de741da90d1895aa9d50df922bc1}{Process\+GNode}}, \mbox{\hyperlink{class_input_g_node_a519e9aa4e5237dc4a14df52f4d921276}{Input\+GNode}}, \mbox{\hyperlink{class_action_g_node_ab1e6b302a1bd1432956387ddcf5ece23}{Action\+GNode}}, \mbox{\hyperlink{class_show_g_node_a16271d0587cea5eec487501f90b2a847}{Show\+GNode}}, \mbox{\hyperlink{class_car_detector_g_node_a780ff63632f1d32f5d53e317b86e5bf3}{Car\+Detector\+GNode}}, \mbox{\hyperlink{class_lane_detector_g_node_a63f11d00a818ca775e99f0b2871b6c2f}{Lane\+Detector\+GNode}}, \mbox{\hyperlink{class_u_thread_secondary_a3e19b16e321327eea1ae7e2d45a331b8}{UThread\+Secondary}}, \mbox{\hyperlink{class_u_thread_primary_a03f953753d546a9aa6168c504790a6c2}{UThread\+Primary}}, \mbox{\hyperlink{class_g_stage_object_ac3876c78663ddcdc993178e97f7c894f}{GStage\+Object}}, \mbox{\hyperlink{class_g_pipeline_manager_acc39bb172e1822139f1d98779ddbbf05}{GPipeline\+Manager}}, \mbox{\hyperlink{class_g_schedule_a906672e51e9d60c40a0ad72d2ec2152a}{GSchedule}}, \mbox{\hyperlink{class_g_param_object_ae2d8fa41dd71a5064feb77488b1115db}{GParam\+Object}}, \mbox{\hyperlink{class_g_message_object_a2d72cfec6b8f0fc67e3f8ac9e57587a6}{GMessage\+Object}}, \mbox{\hyperlink{class_g_event_object_a9e1e42fb999b89c0d32ef14fcc6c6004}{GEvent\+Object}}, \mbox{\hyperlink{class_g_some_aab3f67f031b41033292346a93c586796}{GSome$<$ Trigger\+Num $>$}}, \mbox{\hyperlink{class_g_region_a1c2d51215cad55879d61d5b3c3da8b1e}{GRegion}}, \mbox{\hyperlink{class_g_mutable_ae9a7c3a88eb08e574f60d40582344809}{GMutable}}, \mbox{\hyperlink{class_g_multi_condition_ac25309690cfd1e3ebca75cd316dfcf08}{GMulti\+Condition$<$ type $>$}}, \mbox{\hyperlink{class_g_cluster_a22ca734e72a995c0dc1dd32aa8ceb6ad}{GCluster}}, \mbox{\hyperlink{class_g_element_repository_a78d2c4c697919322320c0f61e0dfb98f}{GElement\+Repository}}, \mbox{\hyperlink{class_g_element_manager_a5ce75aa2f4782ab424f33b77c71658ff}{GElement\+Manager}}, \mbox{\hyperlink{class_g_singleton_a762c4a7c9dbe837569f90f89a6bd195d}{GSingleton$<$ T $>$}}, \mbox{\hyperlink{class_g_function_abb3d8a7fab3dbbcc45274b8ecd61b746}{GFunction}}, \mbox{\hyperlink{class_g_fence_a28f326e02861b36b705634646508dbb9}{GFence}}, \mbox{\hyperlink{class_g_coordinator_a786c85398270faed189b379bc240b0ae}{GCoordinator$<$ SIZE $>$}}, \mbox{\hyperlink{class_g_daemon_object_a8e754bb7885e3c80f82433c5842aacca}{GDaemon\+Object}}, and \mbox{\hyperlink{class_g_aspect_object_a1bac3cc253c06f369633a1287e66c445}{GAspect\+Object}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+CBasic/\mbox{\hyperlink{_c_object_8h}{CObject.\+h}}\end{DoxyCompactItemize}

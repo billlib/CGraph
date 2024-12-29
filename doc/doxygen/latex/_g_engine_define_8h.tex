@@ -1,0 +1,75 @@
+\hypertarget{_g_engine_define_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GEngine\+Define.h File Reference}
+\label{_g_engine_define_8h}\index{src/GraphCtrl/GraphElement/\_GEngine/GEngineDefine.h@{src/GraphCtrl/GraphElement/\_GEngine/GEngineDefine.h}}
+{\ttfamily \#include \char`\"{}../\+GElement\+Define.\+h\char`\"{}}\newline
+Include dependency graph for GEngine\+Define.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_engine_define_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_engine_define_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}} \{ \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a0fcc90da4811c877ba9f9c12f7d60bc9}{DYNAMIC}} = 0
+, \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a06e58d803f5e2d624590f00bb05758ba}{TOPO}} = 1
+, \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1afe6f99ef1ec99efbdc19a9786cf1facc}{STATIC}} = 2
+ \}
+\item 
+enum class \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}{GEngine\+Dag\+Type}} \{ \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6adda4b7de10e14445366494f0a76e1435}{COMMON}} = 0
+, \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6a96b098ca3151e7b0638726e59116de0f}{ALL\+\_\+\+SERIAL}} = 1
+, \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6ad1b5f9ab0424bd2c98e3d951cc43e849}{ALL\+\_\+\+PARALLEL}} = 2
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}\label{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}} 
+\index{GEngineDefine.h@{GEngineDefine.h}!GEngineDagType@{GEngineDagType}}
+\index{GEngineDagType@{GEngineDagType}!GEngineDefine.h@{GEngineDefine.h}}
+\doxysubsubsection{\texorpdfstring{GEngineDagType}{GEngineDagType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}{GEngine\+Dag\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMMON@{COMMON}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!COMMON@{COMMON}}}\mbox{\Hypertarget{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6adda4b7de10e14445366494f0a76e1435}\label{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6adda4b7de10e14445366494f0a76e1435}} 
+COMMON&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL\_SERIAL@{ALL\_SERIAL}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!ALL\_SERIAL@{ALL\_SERIAL}}}\mbox{\Hypertarget{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6a96b098ca3151e7b0638726e59116de0f}\label{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6a96b098ca3151e7b0638726e59116de0f}} 
+ALL\+\_\+\+SERIAL&传统的dag类型 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ALL\_PARALLEL@{ALL\_PARALLEL}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!ALL\_PARALLEL@{ALL\_PARALLEL}}}\mbox{\Hypertarget{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6ad1b5f9ab0424bd2c98e3d951cc43e849}\label{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6ad1b5f9ab0424bd2c98e3d951cc43e849}} 
+ALL\+\_\+\+PARALLEL&所有的element都是串行的 \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}\label{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}} 
+\index{GEngineDefine.h@{GEngineDefine.h}!GEngineType@{GEngineType}}
+\index{GEngineType@{GEngineType}!GEngineDefine.h@{GEngineDefine.h}}
+\doxysubsubsection{\texorpdfstring{GEngineType}{GEngineType}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1}{GEngine\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DYNAMIC@{DYNAMIC}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!DYNAMIC@{DYNAMIC}}}\mbox{\Hypertarget{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a0fcc90da4811c877ba9f9c12f7d60bc9}\label{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a0fcc90da4811c877ba9f9c12f7d60bc9}} 
+DYNAMIC&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOPO@{TOPO}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!TOPO@{TOPO}}}\mbox{\Hypertarget{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a06e58d803f5e2d624590f00bb05758ba}\label{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1a06e58d803f5e2d624590f00bb05758ba}} 
+TOPO&动态图运行 \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STATIC@{STATIC}!GEngineDefine.h@{GEngineDefine.h}}\index{GEngineDefine.h@{GEngineDefine.h}!STATIC@{STATIC}}}\mbox{\Hypertarget{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1afe6f99ef1ec99efbdc19a9786cf1facc}\label{_g_engine_define_8h_a4f1d9d5b256a57059f5e7c125a3a7da1afe6f99ef1ec99efbdc19a9786cf1facc}} 
+STATIC&拓扑运行 \\
+\hline
+
+\end{DoxyEnumFields}

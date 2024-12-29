@@ -13,6 +13,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief UDistanceObject = UtilsObject
+ * 
+ */
 class UDistanceObject : public UtilsObject {
 };
 

@@ -16,6 +16,16 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 随机数生成类，支持模板入参T(默认CFloat)、SEED(0为完全随机值，其他为固定随机值)、
+ *        TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后Fibonacci/...)
+ *        generate: 基于std::uniform_real_distribution生成指定T类型、一维或二维、指定个数的均匀分布的随机数存入data
+ *        generateSession：生成随机session_信息，常用于CDescInfo的成员，作为CDescInfo派生类(GNode/GAdapter/GElement等)的唯一标识
+ * 
+ * @tparam T 随机数类型，默认CFloat
+ * @tparam SEED 0为完全随机值，其他为固定随机值
+ * @tparam TEngine 随机数的生成方式(梅森旋转法/线性同余法/滞后Fibonacci/...)
+ */
 template<typename T = CFloat,
         CInt SEED = CGRAPH_REAL_RANDOM,    /** 当传入的seed为 CGRAPH_REAL_RANDOM 的时候，表示完全随机。其他值为固定随机值 */
         typename TEngine = CGRAPH_RANDOM_MT19937>

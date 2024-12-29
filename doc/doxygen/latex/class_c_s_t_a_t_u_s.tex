@@ -1,0 +1,206 @@
+\hypertarget{class_c_s_t_a_t_u_s}{}\doxysection{CSTATUS Class Reference}
+\label{class_c_s_t_a_t_u_s}\index{CSTATUS@{CSTATUS}}
+
+
+{\ttfamily \#include $<$CStatus.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s_a8a0579423fc253b87cc935c2ba577e07}{CSTATUS}} ()=default
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s_acf745830e3e73b10c8bd48de9ffe615e}{CSTATUS}} (const std\+::string \&error\+Info)
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s_a25e5ddfdc3975c067695a92c2a572891}{CSTATUS}} (int error\+Code, const std\+::string \&error\+Info)
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s_add43b39d51f2ac9bf6e5a30d88e055a3}{CSTATUS}} (const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&status)
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s_a9bb0b6b9e0de3aa4c35b9b8d29f1bc23}{CSTATUS}} (const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&\&status) noexcept
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \& \mbox{\hyperlink{class_c_s_t_a_t_u_s_a80a16b4d5ec0a25ddf936c398eb032d8}{operator=}} (const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&status)
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \& \mbox{\hyperlink{class_c_s_t_a_t_u_s_aafb2bd53c64bf4f7a3bf27deeff784df}{operator+=}} (const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&cur)
+\item 
+void \mbox{\hyperlink{class_c_s_t_a_t_u_s_aee96d3422bdc84b2bb5fd5463d799043}{reset}} ()
+\item 
+int \mbox{\hyperlink{class_c_s_t_a_t_u_s_a7bc857173bc6b525987ca236d2f4e35c}{get\+Code}} () const
+\item 
+const std\+::string \& \mbox{\hyperlink{class_c_s_t_a_t_u_s_aabd9c971b94bd7c9ffffe2a6f04f04b4}{get\+Info}} () const
+\item 
+bool \mbox{\hyperlink{class_c_s_t_a_t_u_s_ae72eab0c05f7a99dba03fbbc82504405}{is\+OK}} () const
+\item 
+bool \mbox{\hyperlink{class_c_s_t_a_t_u_s_a1332ad7568496835cc28277848391293}{is\+Err}} () const
+\item 
+bool \mbox{\hyperlink{class_c_s_t_a_t_u_s_aa5c12a8710b23d5edb78f11e2cfe0d86}{is\+Crash}} () const
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} $\ast$ \mbox{\hyperlink{class_c_s_t_a_t_u_s_a929947e16a1a93f0b55c359a818b6ff2}{set\+Info}} (int code, const std\+::string \&info)
+\item 
+\mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} $\ast$ \mbox{\hyperlink{class_c_s_t_a_t_u_s_a37f2b73c31d7113ec2accab913c9ac70}{set\+Error\+Info}} (const std\+::string \&info)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_s_t_a_t_u_s_ae6f1587bc993dc8692804cd59752fde2}{error\+\_\+code\+\_\+}} = \mbox{\hyperlink{_c_status_8h_a5d1f2a573f44d83ef292e9d6582b4333}{STATUS\+\_\+\+OK}}
+\item 
+std\+::string \mbox{\hyperlink{class_c_s_t_a_t_u_s_aed8249f63b40fa6d0a0e6914dd11b3dd}{error\+\_\+info\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+异常流程返回值 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a8a0579423fc253b87cc935c2ba577e07}\label{class_c_s_t_a_t_u_s_a8a0579423fc253b87cc935c2ba577e07}} 
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{CSTATUS()}{CSTATUS()}\hspace{0.1cm}{\footnotesize\ttfamily [1/5]}}
+{\footnotesize\ttfamily CSTATUS\+::\+CSTATUS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_acf745830e3e73b10c8bd48de9ffe615e}\label{class_c_s_t_a_t_u_s_acf745830e3e73b10c8bd48de9ffe615e}} 
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{CSTATUS()}{CSTATUS()}\hspace{0.1cm}{\footnotesize\ttfamily [2/5]}}
+{\footnotesize\ttfamily CSTATUS\+::\+CSTATUS (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{error\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a25e5ddfdc3975c067695a92c2a572891}\label{class_c_s_t_a_t_u_s_a25e5ddfdc3975c067695a92c2a572891}} 
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{CSTATUS()}{CSTATUS()}\hspace{0.1cm}{\footnotesize\ttfamily [3/5]}}
+{\footnotesize\ttfamily CSTATUS\+::\+CSTATUS (\begin{DoxyParamCaption}\item[{int}]{error\+Code,  }\item[{const std\+::string \&}]{error\+Info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_add43b39d51f2ac9bf6e5a30d88e055a3}\label{class_c_s_t_a_t_u_s_add43b39d51f2ac9bf6e5a30d88e055a3}} 
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{CSTATUS()}{CSTATUS()}\hspace{0.1cm}{\footnotesize\ttfamily [4/5]}}
+{\footnotesize\ttfamily CSTATUS\+::\+CSTATUS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a9bb0b6b9e0de3aa4c35b9b8d29f1bc23}\label{class_c_s_t_a_t_u_s_a9bb0b6b9e0de3aa4c35b9b8d29f1bc23}} 
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\index{CSTATUS@{CSTATUS}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{CSTATUS()}{CSTATUS()}\hspace{0.1cm}{\footnotesize\ttfamily [5/5]}}
+{\footnotesize\ttfamily CSTATUS\+::\+CSTATUS (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&\&}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [noexcept]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a7bc857173bc6b525987ca236d2f4e35c}\label{class_c_s_t_a_t_u_s_a7bc857173bc6b525987ca236d2f4e35c}} 
+\index{CSTATUS@{CSTATUS}!getCode@{getCode}}
+\index{getCode@{getCode}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily int CSTATUS\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取异常值信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_aabd9c971b94bd7c9ffffe2a6f04f04b4}\label{class_c_s_t_a_t_u_s_aabd9c971b94bd7c9ffffe2a6f04f04b4}} 
+\index{CSTATUS@{CSTATUS}!getInfo@{getInfo}}
+\index{getInfo@{getInfo}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{getInfo()}{getInfo()}}
+{\footnotesize\ttfamily const std\+::string\& CSTATUS\+::get\+Info (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取异常信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_aa5c12a8710b23d5edb78f11e2cfe0d86}\label{class_c_s_t_a_t_u_s_aa5c12a8710b23d5edb78f11e2cfe0d86}} 
+\index{CSTATUS@{CSTATUS}!isCrash@{isCrash}}
+\index{isCrash@{isCrash}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{isCrash()}{isCrash()}}
+{\footnotesize\ttfamily bool CSTATUS\+::is\+Crash (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+判断当前状态是否是崩溃了 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a1332ad7568496835cc28277848391293}\label{class_c_s_t_a_t_u_s_a1332ad7568496835cc28277848391293}} 
+\index{CSTATUS@{CSTATUS}!isErr@{isErr}}
+\index{isErr@{isErr}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{isErr()}{isErr()}}
+{\footnotesize\ttfamily bool CSTATUS\+::is\+Err (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+判断当前状态是否可行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_ae72eab0c05f7a99dba03fbbc82504405}\label{class_c_s_t_a_t_u_s_ae72eab0c05f7a99dba03fbbc82504405}} 
+\index{CSTATUS@{CSTATUS}!isOK@{isOK}}
+\index{isOK@{isOK}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{isOK()}{isOK()}}
+{\footnotesize\ttfamily bool CSTATUS\+::is\+OK (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+判断当前状态是否可行 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_aafb2bd53c64bf4f7a3bf27deeff784df}\label{class_c_s_t_a_t_u_s_aafb2bd53c64bf4f7a3bf27deeff784df}} 
+\index{CSTATUS@{CSTATUS}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{operator+=()}{operator+=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}}\& CSTATUS\+::operator+= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&}]{cur }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+如果当前状态已经异常，则不做改动 如果当前状态正常，并且传入的状态是异常的话，则返回异常Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=328pt]{class_c_s_t_a_t_u_s_aafb2bd53c64bf4f7a3bf27deeff784df_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a80a16b4d5ec0a25ddf936c398eb032d8}\label{class_c_s_t_a_t_u_s_a80a16b4d5ec0a25ddf936c398eb032d8}} 
+\index{CSTATUS@{CSTATUS}!operator=@{operator=}}
+\index{operator=@{operator=}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}}\& CSTATUS\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}} \&}]{status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_aee96d3422bdc84b2bb5fd5463d799043}\label{class_c_s_t_a_t_u_s_aee96d3422bdc84b2bb5fd5463d799043}} 
+\index{CSTATUS@{CSTATUS}!reset@{reset}}
+\index{reset@{reset}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void CSTATUS\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+恢复状态信息 \mbox{\Hypertarget{class_c_s_t_a_t_u_s_a37f2b73c31d7113ec2accab913c9ac70}\label{class_c_s_t_a_t_u_s_a37f2b73c31d7113ec2accab913c9ac70}} 
+\index{CSTATUS@{CSTATUS}!setErrorInfo@{setErrorInfo}}
+\index{setErrorInfo@{setErrorInfo}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{setErrorInfo()}{setErrorInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}}$\ast$ CSTATUS\+::set\+Error\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+设置异常信息 
+\begin{DoxyParams}{Parameters}
+{\em info} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_a929947e16a1a93f0b55c359a818b6ff2}\label{class_c_s_t_a_t_u_s_a929947e16a1a93f0b55c359a818b6ff2}} 
+\index{CSTATUS@{CSTATUS}!setInfo@{setInfo}}
+\index{setInfo@{setInfo}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{setInfo()}{setInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_s_t_a_t_u_s}{CSTATUS}}$\ast$ CSTATUS\+::set\+Info (\begin{DoxyParamCaption}\item[{int}]{code,  }\item[{const std\+::string \&}]{info }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+设置异常信息 
+\begin{DoxyParams}{Parameters}
+{\em code} & \\
+\hline
+{\em info} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_ae6f1587bc993dc8692804cd59752fde2}\label{class_c_s_t_a_t_u_s_ae6f1587bc993dc8692804cd59752fde2}} 
+\index{CSTATUS@{CSTATUS}!error\_code\_@{error\_code\_}}
+\index{error\_code\_@{error\_code\_}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{error\_code\_}{error\_code\_}}
+{\footnotesize\ttfamily int CSTATUS\+::error\+\_\+code\+\_\+ = \mbox{\hyperlink{_c_status_8h_a5d1f2a573f44d83ef292e9d6582b4333}{STATUS\+\_\+\+OK}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_c_s_t_a_t_u_s_aed8249f63b40fa6d0a0e6914dd11b3dd}\label{class_c_s_t_a_t_u_s_aed8249f63b40fa6d0a0e6914dd11b3dd}} 
+\index{CSTATUS@{CSTATUS}!error\_info\_@{error\_info\_}}
+\index{error\_info\_@{error\_info\_}!CSTATUS@{CSTATUS}}
+\doxysubsubsection{\texorpdfstring{error\_info\_}{error\_info\_}}
+{\footnotesize\ttfamily std\+::string CSTATUS\+::error\+\_\+info\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+CBasic/\mbox{\hyperlink{_c_status_8h}{CStatus.\+h}}\end{DoxyCompactItemize}

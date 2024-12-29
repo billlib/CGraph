@@ -13,8 +13,16 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT
+ * 
+ */
 class UtilsObject : public CObject {
 protected:
+    /**
+     * 将基类CObject的run设置为不支持
+     * 继承为一个只支持init/destroy的工具类
+     */
     CStatus run() override {
         CGRAPH_NO_SUPPORT
     }

@@ -13,6 +13,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GTemplateNode(空) = GNode，但是实现成模板类，可以自己用模板参数加以实现
+ * 
+ * @tparam Args 
+ */
 template<typename ...Args>
 class GTemplateNode : public GNode {
 };

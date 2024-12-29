@@ -1,0 +1,146 @@
+\hypertarget{class_u_serial_unique_array}{}\doxysection{USerial\+Unique\+Array$<$ T $>$ Class Template Reference}
+\label{class_u_serial_unique_array}\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+
+
+内部基于std\+::vector存储，每次插入前进行检查，重复则不插入(unique\+Add)，保证对外表现为一个不重复数组  
+
+
+
+
+{\ttfamily \#include $<$USerial\+Unique\+Array.\+h$>$}
+
+
+
+Inheritance diagram for USerial\+Unique\+Array$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_serial_unique_array__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USerial\+Unique\+Array$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_serial_unique_array__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array_a9560924d4b1fa19e08d0efe9c2c20252}{unique\+Add}} (const T \&val)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array_aee339bbf1257519c1371672df18cadb6}{get\+Unique\+Array}} (std\+::vector$<$ T $>$ \&arr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array_ac1e3e860b46d4f54d2179acb0add86c4}{clear}} ()
+\item 
+\mbox{\hyperlink{class_u_serial_unique_array_a122851482a28eb32e00221078a4b2eb9}{$\sim$\+USerial\+Unique\+Array}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::set$<$ T $>$ \mbox{\hyperlink{class_u_serial_unique_array_a88b0c23dbc38c4df2e12e503d5ad77e3}{inner\+\_\+set\+\_\+}}
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_u_serial_unique_array_a8271960771f925f42738a377b5b90225}{inner\+\_\+array\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T$>$\newline
+class USerial\+Unique\+Array$<$ T $>$}
+
+内部基于std\+::vector存储，每次插入前进行检查，重复则不插入(unique\+Add)，保证对外表现为一个不重复数组 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_serial_unique_array_a122851482a28eb32e00221078a4b2eb9}\label{class_u_serial_unique_array_a122851482a28eb32e00221078a4b2eb9}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!````~USerialUniqueArray@{$\sim$USerialUniqueArray}}
+\index{````~USerialUniqueArray@{$\sim$USerialUniqueArray}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$USerialUniqueArray()}{~USerialUniqueArray()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_serial_unique_array_a122851482a28eb32e00221078a4b2eb9_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_serial_unique_array_ac1e3e860b46d4f54d2179acb0add86c4}\label{class_u_serial_unique_array_ac1e3e860b46d4f54d2179acb0add86c4}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+清空所有内部信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_serial_unique_array_aee339bbf1257519c1371672df18cadb6}\label{class_u_serial_unique_array_aee339bbf1257519c1371672df18cadb6}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!getUniqueArray@{getUniqueArray}}
+\index{getUniqueArray@{getUniqueArray}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getUniqueArray()}{getUniqueArray()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::get\+Unique\+Array (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{arr }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取不重复的有序array信息 
+\begin{DoxyParams}{Parameters}
+{\em arr} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_serial_unique_array_a9560924d4b1fa19e08d0efe9c2c20252}\label{class_u_serial_unique_array_a9560924d4b1fa19e08d0efe9c2c20252}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!uniqueAdd@{uniqueAdd}}
+\index{uniqueAdd@{uniqueAdd}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{uniqueAdd()}{uniqueAdd()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::unique\+Add (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+不重复的插入顺序容器中 
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_serial_unique_array_a8271960771f925f42738a377b5b90225}\label{class_u_serial_unique_array_a8271960771f925f42738a377b5b90225}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!inner\_array\_@{inner\_array\_}}
+\index{inner\_array\_@{inner\_array\_}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_array\_}{inner\_array\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::inner\+\_\+array\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_serial_unique_array_a88b0c23dbc38c4df2e12e503d5ad77e3}\label{class_u_serial_unique_array_a88b0c23dbc38c4df2e12e503d5ad77e3}} 
+\index{USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}!inner\_set\_@{inner\_set\_}}
+\index{inner\_set\_@{inner\_set\_}!USerialUniqueArray$<$ T $>$@{USerialUniqueArray$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{inner\_set\_}{inner\_set\_}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+std\+::set$<$T$>$ \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ T $>$\+::inner\+\_\+set\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Container/\mbox{\hyperlink{_u_serial_unique_array_8h}{USerial\+Unique\+Array.\+h}}\end{DoxyCompactItemize}

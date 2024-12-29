@@ -1,0 +1,40 @@
+\hypertarget{_u_thread_pool_config_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+UThread\+Pool\+Config.h File Reference}
+\label{_u_thread_pool_config_8h}\index{src/UtilsCtrl/ThreadPool/UThreadPoolConfig.h@{src/UtilsCtrl/ThreadPool/UThreadPoolConfig.h}}
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include \char`\"{}UThread\+Object.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}UThread\+Pool\+Define.\+h\char`\"{}}\newline
+Include dependency graph for UThread\+Pool\+Config.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_pool_config_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_pool_config_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}}
+\begin{DoxyCompactList}\small\item\em 具体值含义，参考\+UThread\+Pool\+Define.\+h文件；支持配置以下项目： default\+\_\+thread\+\_\+size\+\_\+\+: 默认开启主线程个数 secondary\+\_\+thread\+\_\+size\+\_\+\+: 默认开启辅助线程个数 max\+\_\+thread\+\_\+size\+\_\+\+: 最大线程个数 max\+\_\+task\+\_\+steal\+\_\+range\+\_\+\+: 盗取机制相邻范围 max\+\_\+local\+\_\+batch\+\_\+size\+\_\+\+: 批量执行本地任务最大值 max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+\+: 批量执行通用任务最大值 max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+\+: 批量盗取任务最大值 primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+\+: 主线程进入wait状态的轮数，数值越大，理论性能越高，但空转可能性也越大 primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+\+: 主线程进入休眠状态的默认时间 secondary\+\_\+thread\+\_\+ttl\+\_\+\+: 辅助线程ttl，单位为s monitor\+\_\+span\+\_\+\+: 监控线程执行间隔，单位为s queue\+\_\+emtpy\+\_\+interval\+\_\+\+: 队列为空时，等待的时间。仅针对辅助线程，单位为ms primary\+\_\+thread\+\_\+policy\+\_\+\+: 主线程调度策略 secondary\+\_\+thread\+\_\+policy\+\_\+\+: 辅助线程调度策略 primary\+\_\+thread\+\_\+priority\+\_\+\+: 主线程调度优先级（取值范围0$\sim$99，配合调度策略一起使用，不建议不了解相关内容的童鞋做修改） secondary\+\_\+thread\+\_\+priority\+\_\+\+: 辅助线程调度优先级（同上） bind\+\_\+cpu\+\_\+enable\+\_\+\+: 是否开启绑定cpu模式（仅针对主线程） batch\+\_\+task\+\_\+enable\+\_\+\+: 是否开启批量任务功能 monitor\+\_\+enable\+\_\+\+: 是否开启监控程序 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} = \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}\label{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}} 
+\index{UThreadPoolConfig.h@{UThreadPoolConfig.h}!UThreadPoolConfigPtr@{UThreadPoolConfigPtr}}
+\index{UThreadPoolConfigPtr@{UThreadPoolConfigPtr}!UThreadPoolConfig.h@{UThreadPoolConfig.h}}
+\doxysubsubsection{\texorpdfstring{UThreadPoolConfigPtr}{UThreadPoolConfigPtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} =  \mbox{\hyperlink{struct_u_thread_pool_config}{UThread\+Pool\+Config}} $\ast$}
+

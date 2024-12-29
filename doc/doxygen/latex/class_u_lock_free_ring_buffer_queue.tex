@@ -1,0 +1,151 @@
+\hypertarget{class_u_lock_free_ring_buffer_queue}{}\doxysection{ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$ Class Template Reference}
+\label{class_u_lock_free_ring_buffer_queue}\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+
+
+环形队列基于std\+::vector存储，head\+\_\+和tail\+\_\+通过std\+::atomic封装 号称是无锁的，但是从代码看起来push/try\+Pop操作并不能解决多线程的竞态条件问题，线程安全性存疑？  
+
+
+
+
+{\ttfamily \#include $<$ULock\+Free\+Ring\+Buffer\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_u_lock_free_ring_buffer_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{class_u_lock_free_ring_buffer_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_ad382c61c0b3badbd5f71c8c02a0ee06c}{ULock\+Free\+Ring\+Buffer\+Queue}} ()
+\item 
+\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_a267ace55858390b1c3f11aa655444007}{$\sim$\+ULock\+Free\+Ring\+Buffer\+Queue}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_ab1f3877bdb9066f4c449fbbccb6b5d54}{push}} (T \&\&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_a757a9b428b6aafd8643dd21dd8369c9c}{try\+Pop}} (T \&value)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} $>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_a3a94715ff36dcab4c680e952c3dd2344}{head\+\_\+}}
+\item 
+std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} $>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_adcc53bb7ede9a3dbc23769bb75554eac}{tail\+\_\+}}
+\item 
+std\+::vector$<$ std\+::unique\+\_\+ptr$<$ T $>$ $>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue_a4a95e73a1b6f3baa333daac4f25a93b2}{ring\+\_\+buffer\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$\newline
+class ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$}
+
+环形队列基于std\+::vector存储，head\+\_\+和tail\+\_\+通过std\+::atomic封装 号称是无锁的，但是从代码看起来push/try\+Pop操作并不能解决多线程的竞态条件问题，线程安全性存疑？ 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em CAPACITY} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_ad382c61c0b3badbd5f71c8c02a0ee06c}\label{class_u_lock_free_ring_buffer_queue_ad382c61c0b3badbd5f71c8c02a0ee06c}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!ULockFreeRingBufferQueue@{ULockFreeRingBufferQueue}}
+\index{ULockFreeRingBufferQueue@{ULockFreeRingBufferQueue}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{ULockFreeRingBufferQueue()}{ULockFreeRingBufferQueue()}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_a267ace55858390b1c3f11aa655444007}\label{class_u_lock_free_ring_buffer_queue_a267ace55858390b1c3f11aa655444007}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!````~ULockFreeRingBufferQueue@{$\sim$ULockFreeRingBufferQueue}}
+\index{````~ULockFreeRingBufferQueue@{$\sim$ULockFreeRingBufferQueue}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ULockFreeRingBufferQueue()}{~ULockFreeRingBufferQueue()}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::$\sim$\mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_ab1f3877bdb9066f4c449fbbccb6b5d54}\label{class_u_lock_free_ring_buffer_queue_ab1f3877bdb9066f4c449fbbccb6b5d54}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!push@{push}}
+\index{push@{push}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+写入一个任务 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_lock_free_ring_buffer_queue_ab1f3877bdb9066f4c449fbbccb6b5d54_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_a757a9b428b6aafd8643dd21dd8369c9c}\label{class_u_lock_free_ring_buffer_queue_a757a9b428b6aafd8643dd21dd8369c9c}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试弹出一个任务 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_a3a94715ff36dcab4c680e952c3dd2344}\label{class_u_lock_free_ring_buffer_queue_a3a94715ff36dcab4c680e952c3dd2344}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!head\_@{head\_}}
+\index{head\_@{head\_}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{head\_}{head\_}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::atomic$<$\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}$>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::head\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_a4a95e73a1b6f3baa333daac4f25a93b2}\label{class_u_lock_free_ring_buffer_queue_a4a95e73a1b6f3baa333daac4f25a93b2}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!ring\_buffer\_@{ring\_buffer\_}}
+\index{ring\_buffer\_@{ring\_buffer\_}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{ring\_buffer\_}{ring\_buffer\_}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::vector$<$std\+::unique\+\_\+ptr$<$T$>$ $>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::ring\+\_\+buffer\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_lock_free_ring_buffer_queue_adcc53bb7ede9a3dbc23769bb75554eac}\label{class_u_lock_free_ring_buffer_queue_adcc53bb7ede9a3dbc23769bb75554eac}} 
+\index{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}!tail\_@{tail\_}}
+\index{tail\_@{tail\_}!ULockFreeRingBufferQueue$<$ T, CAPACITY $>$@{ULockFreeRingBufferQueue$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{tail\_}{tail\_}}
+{\footnotesize\ttfamily template$<$typename T , CInt CAPACITY = CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE$>$ \\
+std\+::atomic$<$\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}$>$ \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue}}$<$ T, CAPACITY $>$\+::tail\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\mbox{\hyperlink{_u_lock_free_ring_buffer_queue_8h}{ULock\+Free\+Ring\+Buffer\+Queue.\+h}}\end{DoxyCompactItemize}

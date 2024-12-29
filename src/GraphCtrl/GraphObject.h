@@ -15,6 +15,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GraphObject = CObject，没有新增或删除任何成员
+ * 
+ */
 class GraphObject : public CObject {
 };
 

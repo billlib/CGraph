@@ -1,0 +1,214 @@
+\hypertarget{class_u_distance_calculator}{}\doxysection{UDistance\+Calculator$<$ TSrc, TRes, UDist, need\+Check, $>$ Class Template Reference}
+\label{class_u_distance_calculator}\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+
+
+对\+UDistance及其派生类\+UDist的进一步封装 UDist本身也是模板参数，通过另一个模板参数need\+Check指定在calc之前是否要check  
+
+
+
+
+{\ttfamily \#include $<$UDistance\+Calculator.\+h$>$}
+
+
+
+Inheritance diagram for UDistance\+Calculator$<$ TSrc, TRes, UDist, need\+Check, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_u_distance_calculator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UDistance\+Calculator$<$ TSrc, TRes, UDist, need\+Check, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=196pt]{class_u_distance_calculator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator_a1adbdc10af25909cdc02528b0d259f34}{calculate}} (const TSrc $\ast$v1, const TSrc $\ast$v2, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim1, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim2, TRes \&result, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator_ac36ab4b138ba646b9e5b05e8b7effb2f}{calculate}} (const std\+::vector$<$ TSrc $>$ \&v1, const std\+::vector$<$ TSrc $>$ \&v2, TRes \&result, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator_a2de392a5c83dc3d01bfd0de775b7f898}{calculate}} (const std\+::vector$<$ TSrc $>$ \&query, const std\+::vector$<$ std\+::vector$<$ TSrc $>$ $>$ \&nodes, std\+::vector$<$ TRes $>$ \&results, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator_a031d2d666b714130ab9e252c82213d2c}{normalize}} (TSrc $\ast$v, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext=nullptr)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator_af7f58fca4bf70ce38f95d393a5b7e5c0}{normalize}} (std\+::vector$<$ TSrc $>$ \&v, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext=nullptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+UDist \mbox{\hyperlink{class_u_distance_calculator_a90cb3877e8eb880f733a49c59d374819}{distance\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSrc, typename TRes, typename UDist, const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$ = 0$>$\newline
+class UDistance\+Calculator$<$ TSrc, TRes, UDist, need\+Check, $>$}
+
+对\+UDistance及其派生类\+UDist的进一步封装 UDist本身也是模板参数，通过另一个模板参数need\+Check指定在calc之前是否要check 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em TSrc} & \\
+\hline
+{\em TRes} & \\
+\hline
+{\em UDist} & \\
+\hline
+{\em need\+Check} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_distance_calculator_a2de392a5c83dc3d01bfd0de775b7f898}\label{class_u_distance_calculator_a2de392a5c83dc3d01bfd0de775b7f898}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!calculate@{calculate}}
+\index{calculate@{calculate}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ TSrc $>$ \&}]{query,  }\item[{const std\+::vector$<$ std\+::vector$<$ TSrc $>$ $>$ \&}]{nodes,  }\item[{std\+::vector$<$ TRes $>$ \&}]{results,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+批量计算距离信息 
+\begin{DoxyParams}{Parameters}
+{\em query} & \\
+\hline
+{\em nodes} & \\
+\hline
+{\em results} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_u_distance_calculator_a2de392a5c83dc3d01bfd0de775b7f898_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_distance_calculator_ac36ab4b138ba646b9e5b05e8b7effb2f}\label{class_u_distance_calculator_ac36ab4b138ba646b9e5b05e8b7effb2f}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!calculate@{calculate}}
+\index{calculate@{calculate}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::calculate (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ TSrc $>$ \&}]{v1,  }\item[{const std\+::vector$<$ TSrc $>$ \&}]{v2,  }\item[{TRes \&}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+计算距离信息 
+\begin{DoxyParams}{Parameters}
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+{\em result} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_u_distance_calculator_ac36ab4b138ba646b9e5b05e8b7effb2f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_distance_calculator_a1adbdc10af25909cdc02528b0d259f34}\label{class_u_distance_calculator_a1adbdc10af25909cdc02528b0d259f34}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!calculate@{calculate}}
+\index{calculate@{calculate}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{calculate()}{calculate()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::calculate (\begin{DoxyParamCaption}\item[{const TSrc $\ast$}]{v1,  }\item[{const TSrc $\ast$}]{v2,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim1,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim2,  }\item[{TRes \&}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+计算距离信息 
+\begin{DoxyParams}{Parameters}
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+{\em dim1} & \\
+\hline
+{\em dim2} & \\
+\hline
+{\em result} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_distance_calculator_af7f58fca4bf70ce38f95d393a5b7e5c0}\label{class_u_distance_calculator_af7f58fca4bf70ce38f95d393a5b7e5c0}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::normalize (\begin{DoxyParamCaption}\item[{std\+::vector$<$ TSrc $>$ \&}]{v,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+数据归一化 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=348pt]{class_u_distance_calculator_af7f58fca4bf70ce38f95d393a5b7e5c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_distance_calculator_a031d2d666b714130ab9e252c82213d2c}\label{class_u_distance_calculator_a031d2d666b714130ab9e252c82213d2c}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::normalize (\begin{DoxyParamCaption}\item[{TSrc $\ast$}]{v,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext = {\ttfamily nullptr} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+将数据归一化 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em dim} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_distance_calculator_a90cb3877e8eb880f733a49c59d374819}\label{class_u_distance_calculator_a90cb3877e8eb880f733a49c59d374819}} 
+\index{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}!distance\_@{distance\_}}
+\index{distance\_@{distance\_}!UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$@{UDistanceCalculator$<$ TSrc, TRes, UDist, needCheck, $>$}}
+\doxysubsubsection{\texorpdfstring{distance\_}{distance\_}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes , typename UDist , const CBool need\+Check = false, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ UDistance$<$ TSrc, TRes $>$, UDist $>$\+::value, int $>$  = 0$>$ \\
+UDist \mbox{\hyperlink{class_u_distance_calculator}{UDistance\+Calculator}}$<$ TSrc, TRes, UDist, need\+Check, $>$\+::distance\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Distance/\mbox{\hyperlink{_u_distance_calculator_8h}{UDistance\+Calculator.\+h}}\end{DoxyCompactItemize}

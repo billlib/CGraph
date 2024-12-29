@@ -1,0 +1,253 @@
+\hypertarget{class_g_singleton}{}\doxysection{GSingleton$<$ T $>$ Class Template Reference}
+\label{class_g_singleton}\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+
+
+GAdapter的派生类，核心成员是static USingleton$<$\+T$>$ s\+\_\+singleton单例，可以方便地作为单例\+GElement使用  
+
+
+
+
+{\ttfamily \#include $<$GSingleton.\+h$>$}
+
+
+
+Inheritance diagram for GSingleton$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_singleton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GSingleton$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_singleton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_singleton_ae75fbaecc92a1268e616794c2085ec47}{GSingleton}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton_a996e5677bb36534d46d69414c2b17fb3}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton_a762c4a7c9dbe837569f90f89a6bd195d}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton_a97c2dc3832e63ec100a010f75e04cf0c}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton_afad69291ab484e0cca6511e9bee89309}{add\+Element\+Info}} (const std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&depends, const std\+::string \&name, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} loop) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton_a288f0b0d13fb5115953c1c5f38269c26}{add\+Managers}} (\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}} param\+Manager, \mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}} event\+Manager, \mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}} stage\+Manager) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton_a42aa940afa61af81c66b1289f2ff7c2f}{is\+Hold}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton_a85bb977f5508f2f82bd2183e56cb3e73}{is\+Match}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton_a22f74ccf4f3c2cdd89bc7956820a7c85}{is\+Registered}} () const final
+\item 
+const std\+::string \& \mbox{\hyperlink{class_g_singleton_a0112c79c77bb7d86b99b5f6c316fdfe9}{get\+Name}} () const final
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T $>$ \mbox{\hyperlink{class_g_singleton_a6e736ab7a087337e66b11ab3db2530a5}{s\+\_\+singleton\+\_\+}}
+\item 
+static std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} $>$ \mbox{\hyperlink{class_g_singleton_aea8104dc67de767499ca491179d46bee}{s\+\_\+is\+\_\+init\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_singleton_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class GSingleton$<$ T $>$}
+
+GAdapter的派生类，核心成员是static USingleton$<$\+T$>$ s\+\_\+singleton单例，可以方便地作为单例\+GElement使用 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_singleton_ae75fbaecc92a1268e616794c2085ec47}\label{class_g_singleton_ae75fbaecc92a1268e616794c2085ec47}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!GSingleton@{GSingleton}}
+\index{GSingleton@{GSingleton}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GSingleton()}{GSingleton()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::\mbox{\hyperlink{class_g_singleton}{GSingleton}}\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_singleton_ae75fbaecc92a1268e616794c2085ec47_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_singleton_afad69291ab484e0cca6511e9bee89309}\label{class_g_singleton_afad69291ab484e0cca6511e9bee89309}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!addElementInfo@{addElementInfo}}
+\index{addElementInfo@{addElementInfo}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addElementInfo()}{addElementInfo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::add\+Element\+Info (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} $>$ \&}]{depends,  }\item[{const std\+::string \&}]{name,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{loop }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_singleton_a288f0b0d13fb5115953c1c5f38269c26}\label{class_g_singleton_a288f0b0d13fb5115953c1c5f38269c26}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!addManagers@{addManagers}}
+\index{addManagers@{addManagers}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{addManagers()}{addManagers()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::add\+Managers (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_param_manager_8h_a615d20404f6fe572ee0c70ed125a32ab}{GParam\+Manager\+Ptr}}}]{param\+Manager,  }\item[{\mbox{\hyperlink{_g_event_manager_8h_a34383968a952bb82aaae31504a9ba095}{GEvent\+Manager\+Ptr}}}]{event\+Manager,  }\item[{\mbox{\hyperlink{_g_stage_manager_8h_a13272f6a59d4db41d4d493c4dc53fed4}{GStage\+Manager\+Ptr}}}]{stage\+Manager }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+设置manager信息 
+\begin{DoxyParams}{Parameters}
+{\em param\+Manager} & \\
+\hline
+{\em event\+Manager} & \\
+\hline
+{\em stage\+Manager} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a9a7fdad0f8954e1c6f6e14b5f66e76bd}{GElement}}.
+
+\mbox{\Hypertarget{class_g_singleton_a97c2dc3832e63ec100a010f75e04cf0c}\label{class_g_singleton_a97c2dc3832e63ec100a010f75e04cf0c}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::destroy\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_singleton_a0112c79c77bb7d86b99b5f6c316fdfe9}\label{class_g_singleton_a0112c79c77bb7d86b99b5f6c316fdfe9}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!getName@{getName}}
+\index{getName@{getName}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+const std\+::string \& \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::get\+Name\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+获取名称信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_c_desc_info_ab3acfc8742c1ceeb1d650febdf92e3f1}{CDesc\+Info}}.
+
+\mbox{\Hypertarget{class_g_singleton_a996e5677bb36534d46d69414c2b17fb3}\label{class_g_singleton_a996e5677bb36534d46d69414c2b17fb3}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!init@{init}}
+\index{init@{init}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::init\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_singleton_a42aa940afa61af81c66b1289f2ff7c2f}\label{class_g_singleton_a42aa940afa61af81c66b1289f2ff7c2f}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!isHold@{isHold}}
+\index{isHold@{isHold}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isHold()}{isHold()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::is\+Hold\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+是否持续进行 默认为false，表示执行且仅执行一次 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+默认仅返回false 可以根据自己逻辑，来实现\char`\"{}持续循环执行，直到特定条件出现的时候停止\char`\"{}的逻辑
+
+Reimplemented from \mbox{\hyperlink{class_g_element_acf3abb5e770a41a7123d678e471c2b74}{GElement}}.
+
+\mbox{\Hypertarget{class_g_singleton_a85bb977f5508f2f82bd2183e56cb3e73}\label{class_g_singleton_a85bb977f5508f2f82bd2183e56cb3e73}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!isMatch@{isMatch}}
+\index{isMatch@{isMatch}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isMatch()}{isMatch()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::is\+Match\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+用于在\+Multi\+Condition中被判定，是否可以执行。 \begin{DoxyReturn}{Returns}
+@notice 默认返回false，不执行 
+\end{DoxyReturn}
+默认仅返回false 主要面对写入 Multi\+Condition 的时候，做判断当前element是否被执行
+
+Reimplemented from \mbox{\hyperlink{class_g_element_aa1c351cf60db010a9fc1a01d101ddf32}{GElement}}.
+
+\mbox{\Hypertarget{class_g_singleton_a22f74ccf4f3c2cdd89bc7956820a7c85}\label{class_g_singleton_a22f74ccf4f3c2cdd89bc7956820a7c85}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!isRegistered@{isRegistered}}
+\index{isRegistered@{isRegistered}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isRegistered()}{isRegistered()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::is\+Registered\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+判断当前element是否已经被注册到特定pipeline中了。避免反复注册的问题 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_g_element_a73a421381a83fbf7a616827884450c53}{GElement}}.
+
+\mbox{\Hypertarget{class_g_singleton_a762c4a7c9dbe837569f90f89a6bd195d}\label{class_g_singleton_a762c4a7c9dbe837569f90f89a6bd195d}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!run@{run}}
+\index{run@{run}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_singleton_a4e007dc772c018d10373bf18b528f96d}\label{class_g_singleton_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_singleton_aea8104dc67de767499ca491179d46bee}\label{class_g_singleton_aea8104dc67de767499ca491179d46bee}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!s\_is\_init\_@{s\_is\_init\_}}
+\index{s\_is\_init\_@{s\_is\_init\_}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{s\_is\_init\_}{s\_is\_init\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::atomic$<$ \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} $>$ \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::s\+\_\+is\+\_\+init\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_singleton_a6e736ab7a087337e66b11ab3db2530a5}\label{class_g_singleton_a6e736ab7a087337e66b11ab3db2530a5}} 
+\index{GSingleton$<$ T $>$@{GSingleton$<$ T $>$}!s\_singleton\_@{s\_singleton\_}}
+\index{s\_singleton\_@{s\_singleton\_}!GSingleton$<$ T $>$@{GSingleton$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{s\_singleton\_}{s\_singleton\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T $>$ \mbox{\hyperlink{class_g_singleton}{GSingleton}}$<$ T $>$\+::s\+\_\+singleton\+\_\+\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GSingleton/\mbox{\hyperlink{_g_singleton_8h}{GSingleton.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GSingleton/\mbox{\hyperlink{_g_singleton_8inl}{GSingleton.\+inl}}\end{DoxyCompactItemize}

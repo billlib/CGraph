@@ -1,0 +1,26 @@
+\hypertarget{_u_lock_free_ring_buffer_queue_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\+ULock\+Free\+Ring\+Buffer\+Queue.h File Reference}
+\label{_u_lock_free_ring_buffer_queue_8h}\index{src/UtilsCtrl/ThreadPool/Queue/ULockFreeRingBufferQueue.h@{src/UtilsCtrl/ThreadPool/Queue/ULockFreeRingBufferQueue.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}UQueue\+Object.\+h\char`\"{}}\newline
+Include dependency graph for ULock\+Free\+Ring\+Buffer\+Queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_lock_free_ring_buffer_queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_lock_free_ring_buffer_queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_lock_free_ring_buffer_queue}{ULock\+Free\+Ring\+Buffer\+Queue$<$ T, CAPACITY $>$}}
+\begin{DoxyCompactList}\small\item\em 环形队列基于std\+::vector存储，head\+\_\+和tail\+\_\+通过std\+::atomic封装 号称是无锁的，但是从代码看起来push/try\+Pop操作并不能解决多线程的竞态条件问题，线程安全性存疑？ \end{DoxyCompactList}\end{DoxyCompactItemize}

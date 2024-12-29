@@ -13,6 +13,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief DAnnObject = CObject
+ */
 class DomainObject : public CObject {
 };
 

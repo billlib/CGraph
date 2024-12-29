@@ -17,6 +17,10 @@ CGRAPH_NAMESPACE_BEGIN
 
 class GElement;
 
+/**
+ * @brief CStruct的派生类，POD，维护GElement的前驱后继结点和所属关系
+ * 
+ */
 struct GElementRelation : public CStruct {
 public:
     std::vector<GElement *> predecessors_ {};       // 前驱信息

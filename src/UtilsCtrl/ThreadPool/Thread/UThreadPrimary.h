@@ -16,6 +16,13 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 主线程类，核心成员是primary_queue_和secondary_queue_
+ * 自身准备执行任务时，优先从primary_queue_取，其次从secondary_queue_取
+ * 自身准备窃取任务时，优先从secondary_queue_，其次从primary_queue_取
+ * 这样设计的好处是A线程的执行和B线程从A线程窃取这两个异步事件发生竞争的可能性大大减小，从而提高性能
+ * 主线程所属的主线程池pool_threads_的指针也记录在每个主线程对象里面，在窃取相邻线程任务、安全检查等会用到
+ */
 class UThreadPrimary : public UThreadBase {
 protected:
     explicit UThreadPrimary() {
@@ -35,6 +42,8 @@ protected:
         buildStealTargets();
         thread_ = std::thread(&UThreadPrimary::run, this);
         setSchedParam();
+        // 在设置线程对CPU亲和性的基础上，再结合work stealing调度算法，
+        // 达到线程在CPU相对均匀分配、任务在线程级别充分调度的效果，最终达到任务在CPU充分调度的效果
         setAffinity(index_);
         CGRAPH_FUNCTION_END
     }
@@ -89,6 +98,16 @@ protected:
     }
 
 
+    /**
+     * @brief 按照以下顺序拿任务到本线程执行(如果都没拿到就fatWait一直等着)：
+     *        本地任务(优先primary_queue_，其次secondary_queue_)
+     *        -> 偷任务(相邻一定范围内的其他主线程，优先secondary_queue_，其次primary_queue_)
+     *        -> 公共任务队列(pool_task_queue_)
+     *        -> 优先级任务队列(pool_priority_task_queue_，只有辅助线程会走到这个分支)
+     *        
+     * 
+     * @return CVoid 
+     */
     CVoid processTask() override {
         UTask task;
         if (popTask(task) || stealTask(task) || popPoolTask(task)) {
@@ -105,6 +124,7 @@ protected:
             // 尝试从主线程中获取/盗取批量task，如果成功，则依次执行
             runTasks(tasks);
         } else {
+            // 如果失败，则进入轻量级等待(YIELD)或深度等待(cv_.wait_for)
             fatWait();
         }
     }
@@ -118,6 +138,8 @@ protected:
         cur_empty_epoch_++;
         metrics_.fleet_wait_times_++;
         CGRAPH_YIELD();
+        // 如果轻量级等待的次数超过primary_thread_busy_epoch_，则进入深度等待，
+        // 深度等待次数+1，进入cv_的wait，轻量级等待次数cur_empty_epoch_清零
         if (cur_empty_epoch_ >= config_->primary_thread_busy_epoch_) {
             CGRAPH_UNIQUE_LOCK lk(mutex_);
             cv_.wait_for(lk, std::chrono::milliseconds(config_->primary_thread_empty_interval_));
@@ -145,9 +167,9 @@ protected:
 
 
     /**
-     * 写入 task信息，是否上锁由
+     * 写入 task信息，是否上锁由入参enable和lockable决定
      * @param task
-     * @param enable 确认是否有
+     * @param enable 确认是否有锁
      * @param lockable true 的时候需要上锁，false 的时候会解锁
      * @return
      */
@@ -208,6 +230,7 @@ protected:
         /**
          * 窃取的时候，仅从相邻的primary线程中窃取
          * 待窃取相邻的数量，不能超过默认primary线程数
+         * steal_targets_在init的时候就已经计算好了
          */
         CBool result = false;
         for (auto& target : steal_targets_) {
@@ -275,6 +298,8 @@ protected:
             auto target = (index_ + i + 1) % config_->default_thread_size_;
             steal_targets_.push_back(target);
         }
+        // std::vector实际上可能分配多于当前所需元素的内存；在确定未来不存在增加元素的需求
+        // 的情况下(否则会导致扩容造成额外的性能损耗)，可以调用shrink_to_fit()释放多余内存
         steal_targets_.shrink_to_fit();
     }
 

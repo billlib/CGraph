@@ -15,6 +15,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 判断两个element是否可以独立运行
+ */
 class GSeparateOptimizer : public GOptimizer {
 protected:
     /**

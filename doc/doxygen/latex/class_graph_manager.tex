@@ -1,0 +1,209 @@
+\hypertarget{class_graph_manager}{}\doxysection{Graph\+Manager$<$ T, $>$ Class Template Reference}
+\label{class_graph_manager}\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+
+
+所有以\+Graph\+Object为基类的对象（\+GAsepct/\+GDaemon/\+GEvent/\+GElement/\+GPipeline/\+GParam）的管理器的基类  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for Graph\+Manager$<$ T, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_graph_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Graph\+Manager$<$ T, $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=200pt]{class_graph_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_a76deb242f75b2702a217ebd51cf10794}{add}} (T $\ast$object)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_a58630952c6e9a3d97bb4b94986417de1}{remove}} (T $\ast$object)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_graph_manager_ae36c85792ca678380132970f6c968d65}{find}} (T $\ast$object) const
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_a3c3e75c4275a85b1ff87c90c22f84f4d}{create}} (const std\+::string \&key)
+\item 
+virtual T $\ast$ \mbox{\hyperlink{class_graph_manager_aae0ea42b1609163e4188212410b0fc39}{get}} (const std\+::string \&key)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_a2bfcb8c1c7595de12b1b4ddfee64d87f}{reset}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}{get\+Size}} () const
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{clear}} ()=0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}{run}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$ = 0$>$\newline
+class Graph\+Manager$<$ T, $>$}
+
+所有以\+Graph\+Object为基类的对象（\+GAsepct/\+GDaemon/\+GEvent/\+GElement/\+GPipeline/\+GParam）的管理器的基类 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_manager_a76deb242f75b2702a217ebd51cf10794}\label{class_graph_manager_a76deb242f75b2702a217ebd51cf10794}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!add@{add}}
+\index{add@{add}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::add (\begin{DoxyParamCaption}\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+添加一个object 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}\label{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!clear@{clear}}
+\index{clear@{clear}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_g_stage_manager_a0804cfc22850bc1717743195870a336f}{GStage\+Manager}}, \mbox{\hyperlink{class_g_pipeline_manager_a2d1acf7bd6bfe84d96749011c790cb0e}{GPipeline\+Manager}}, \mbox{\hyperlink{class_g_param_manager_abd19bdc5f1ec4a45ffea6b284f1921e4}{GParam\+Manager}}, \mbox{\hyperlink{class_g_message_manager_a85a1d0b04d778241857e292d2405ea69}{GMessage\+Manager$<$ T, $>$}}, \mbox{\hyperlink{class_g_event_manager_a32480744976d3b1f9f12538e68acc543}{GEvent\+Manager}}, \mbox{\hyperlink{class_g_element_manager_a209fa4881fcd5009e4b4fbc9ac998639}{GElement\+Manager}}, \mbox{\hyperlink{class_g_daemon_manager_a5085714f92b6c854d721c8525c9673c2}{GDaemon\+Manager}}, and \mbox{\hyperlink{class_g_aspect_manager_a1732f5645720f075148549a8a836c5d9}{GAspect\+Manager}}.
+
+\mbox{\Hypertarget{class_graph_manager_a3c3e75c4275a85b1ff87c90c22f84f4d}\label{class_graph_manager_a3c3e75c4275a85b1ff87c90c22f84f4d}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!create@{create}}
+\index{create@{create}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::create (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+创建一个object 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_manager_ae36c85792ca678380132970f6c968d65}\label{class_graph_manager_ae36c85792ca678380132970f6c968d65}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!find@{find}}
+\index{find@{find}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{find()}{find()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::find (\begin{DoxyParamCaption}\item[{T $\ast$}]{object }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+查找一个object 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_manager_aae0ea42b1609163e4188212410b0fc39}\label{class_graph_manager_aae0ea42b1609163e4188212410b0fc39}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!get@{get}}
+\index{get@{get}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual T$\ast$ \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::get (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{key }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取一个object 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_param_manager_adecc01c6a77b4c8194300e66279e2405}{GParam\+Manager}}.
+
+\mbox{\Hypertarget{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}\label{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!getSize@{getSize}}
+\index{getSize@{getSize}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取大小信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_pipeline_manager_a4d9dcf024c2ca1ccc55c632533525bb3}{GPipeline\+Manager}}, \mbox{\hyperlink{class_g_daemon_manager_a0bf274a2cb21e6a10fc94a7dd84b14fd}{GDaemon\+Manager}}, and \mbox{\hyperlink{class_g_aspect_manager_ac45e42bba5897f71c46ff88c53289099}{GAspect\+Manager}}.
+
+\mbox{\Hypertarget{class_graph_manager_a58630952c6e9a3d97bb4b94986417de1}\label{class_graph_manager_a58630952c6e9a3d97bb4b94986417de1}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!remove@{remove}}
+\index{remove@{remove}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::remove (\begin{DoxyParamCaption}\item[{T $\ast$}]{object }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+删除一个object 
+\begin{DoxyParams}{Parameters}
+{\em object} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_graph_manager_a2bfcb8c1c7595de12b1b4ddfee64d87f}\label{class_graph_manager_a2bfcb8c1c7595de12b1b4ddfee64d87f}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!reset@{reset}}
+\index{reset@{reset}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+重置所有object \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_g_event_manager_abbf21342e1a633b43c0c71b9b1cf2c3d}{GEvent\+Manager}}.
+
+\mbox{\Hypertarget{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}\label{class_graph_manager_a4fdd238e036fa252a734856d1abe7b83}} 
+\index{GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}!run@{run}}
+\index{run@{run}!GraphManager$<$ T, $>$@{GraphManager$<$ T, $>$}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ Graph\+Object, T $>$\+::value, int $>$  = 0$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_graph_manager}{Graph\+Manager}}$<$ T, $>$\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+执行函数，默认为执行失败 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\mbox{\hyperlink{_graph_manager_8h}{Graph\+Manager.\+h}}\end{DoxyCompactItemize}

@@ -15,6 +15,12 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 注意，并非基于UTask，实际维护的是CGRAPH_DEFAULT_FUNCTION类型的函数数组(std::vector)
+ *        支持addTask将更多的函数加入task_arr_数组，支持指定任务组最大执行耗时ttl
+ *        以及对task_arr_数组内的全部函数执行完成(即这个UTaskGroup执行完成)指定后处理接口setOnFinished
+ * 
+ */
 class UTaskGroup : public UThreadObject {
 public:
     explicit UTaskGroup() = default;

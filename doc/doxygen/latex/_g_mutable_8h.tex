@@ -1,0 +1,39 @@
+\hypertarget{_g_mutable_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Element/\+GGroup/\+GMutable/\+GMutable.h File Reference}
+\label{_g_mutable_8h}\index{src/GraphCtrl/GraphElement/GGroup/GMutable/GMutable.h@{src/GraphCtrl/GraphElement/GGroup/GMutable/GMutable.h}}
+{\ttfamily \#include \char`\"{}../\+GGroup.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../\+GElement\+Manager.\+h\char`\"{}}\newline
+Include dependency graph for GMutable.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_mutable_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_mutable_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_mutable}{GMutable}}
+\begin{DoxyCompactList}\small\item\em 常规的\+GGroup及其派生类在运行时是不允许再修改前序后继关系的，但是\+GMutable可以 具体做法是\+GMutable在每次run的时候会先调用setup初始化自己这张子图(实际上就是清空)，再调用reshape修改前序后继关系，最后才是正常运行子图 GMutable的reshape是纯虚函数，派生类必须实现，可以参考\+My\+Mutable示例 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+using \mbox{\hyperlink{_g_mutable_8h_a8d69e0fc3b3ec584495e2d592ce045b2}{GMutable\+Ptr}} = \mbox{\hyperlink{class_g_mutable}{GMutable}} $\ast$
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{_g_mutable_8h_a8d69e0fc3b3ec584495e2d592ce045b2}\label{_g_mutable_8h_a8d69e0fc3b3ec584495e2d592ce045b2}} 
+\index{GMutable.h@{GMutable.h}!GMutablePtr@{GMutablePtr}}
+\index{GMutablePtr@{GMutablePtr}!GMutable.h@{GMutable.h}}
+\doxysubsubsection{\texorpdfstring{GMutablePtr}{GMutablePtr}}
+{\footnotesize\ttfamily using \mbox{\hyperlink{_g_mutable_8h_a8d69e0fc3b3ec584495e2d592ce045b2}{GMutable\+Ptr}} =  \mbox{\hyperlink{class_g_mutable}{GMutable}} $\ast$}
+

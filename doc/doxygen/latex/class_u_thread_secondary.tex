@@ -1,0 +1,226 @@
+\hypertarget{class_u_thread_secondary}{}\doxysection{UThread\+Secondary Class Reference}
+\label{class_u_thread_secondary}\index{UThreadSecondary@{UThreadSecondary}}
+
+
+和主线程\+UThread\+Primary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool\+\_\+task\+\_\+queue\+\_\+)和优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务 当然：主线程不会从优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务， 这个任务队列存储的一般是长时间任务，是辅助线程专用的  
+
+
+
+
+{\ttfamily \#include $<$UThread\+Secondary.\+h$>$}
+
+
+
+Inheritance diagram for UThread\+Secondary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{class_u_thread_secondary__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UThread\+Secondary\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_thread_secondary_a1781361b5a14c96ad024a6cb38590e65}{UThread\+Secondary}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_secondary_a0d4e8fe0975f9a7a82005f610e99ffe8}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_secondary_a38ec85aacb804c636988d4e5b6aae8ec}{set\+Thread\+Pool\+Info}} (\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$pool\+Task\+Queue, \mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$pool\+Priority\+Task\+Queue, \mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}} config)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_thread_secondary_a3e19b16e321327eea1ae7e2d45a331b8}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_secondary_a2eb9cfbedf52354d14c891e8c9885e1a}{process\+Task}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_secondary_a9891a73382ad1f14194b2bb6cda716d4}{process\+Tasks}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_thread_secondary_a0dda499cfed3ce4267e37d829e5c8dc4}{wait\+Run\+Task}} (\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} ms)
+\item 
+bool \mbox{\hyperlink{class_u_thread_secondary_a3d89723182d88fd40002f8a801f7f658}{freeze}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} \mbox{\hyperlink{class_u_thread_secondary_a0dffa4e81d1aee0f0876f6678bfe54f8}{cur\+\_\+ttl\+\_\+}} = 0
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_thread_secondary_ae7586d1a5baa7d0f65aee7c2f2041a43}{UThread\+Pool}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+和主线程\+UThread\+Primary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool\+\_\+task\+\_\+queue\+\_\+)和优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务 当然：主线程不会从优先级任务队列(pool\+\_\+priority\+\_\+task\+\_\+queue\+\_\+)取任务， 这个任务队列存储的一般是长时间任务，是辅助线程专用的 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_thread_secondary_a1781361b5a14c96ad024a6cb38590e65}\label{class_u_thread_secondary_a1781361b5a14c96ad024a6cb38590e65}} 
+\index{UThreadSecondary@{UThreadSecondary}!UThreadSecondary@{UThreadSecondary}}
+\index{UThreadSecondary@{UThreadSecondary}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{UThreadSecondary()}{UThreadSecondary()}}
+{\footnotesize\ttfamily UThread\+Secondary\+::\+UThread\+Secondary (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_thread_secondary_a3d89723182d88fd40002f8a801f7f658}\label{class_u_thread_secondary_a3d89723182d88fd40002f8a801f7f658}} 
+\index{UThreadSecondary@{UThreadSecondary}!freeze@{freeze}}
+\index{freeze@{freeze}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{freeze()}{freeze()}}
+{\footnotesize\ttfamily bool UThread\+Secondary\+::freeze (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+判断本线程是否需要被自动释放 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_secondary_a0d4e8fe0975f9a7a82005f610e99ffe8}\label{class_u_thread_secondary_a0d4e8fe0975f9a7a82005f610e99ffe8}} 
+\index{UThreadSecondary@{UThreadSecondary}!init@{init}}
+\index{init@{init}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Secondary\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary_a0d4e8fe0975f9a7a82005f610e99ffe8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_secondary_a2eb9cfbedf52354d14c891e8c9885e1a}\label{class_u_thread_secondary_a2eb9cfbedf52354d14c891e8c9885e1a}} 
+\index{UThreadSecondary@{UThreadSecondary}!processTask@{processTask}}
+\index{processTask@{processTask}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{processTask()}{processTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Secondary\+::process\+Task (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+执行单个消息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_u_thread_base_a1cb1daeabcc24165364c3ddda824b40b}{UThread\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary_a2eb9cfbedf52354d14c891e8c9885e1a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_secondary_a9891a73382ad1f14194b2bb6cda716d4}\label{class_u_thread_secondary_a9891a73382ad1f14194b2bb6cda716d4}} 
+\index{UThreadSecondary@{UThreadSecondary}!processTasks@{processTasks}}
+\index{processTasks@{processTasks}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{processTasks()}{processTasks()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Secondary\+::process\+Tasks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取批量执行task信息 
+
+Implements \mbox{\hyperlink{class_u_thread_base_ad080dc8122f15d38ab5b09c0f9499c8c}{UThread\+Base}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary_a9891a73382ad1f14194b2bb6cda716d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_secondary_a3e19b16e321327eea1ae7e2d45a331b8}\label{class_u_thread_secondary_a3e19b16e321327eea1ae7e2d45a331b8}} 
+\index{UThreadSecondary@{UThreadSecondary}!run@{run}}
+\index{run@{run}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Secondary\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary_a3e19b16e321327eea1ae7e2d45a331b8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_thread_secondary_a38ec85aacb804c636988d4e5b6aae8ec}\label{class_u_thread_secondary_a38ec85aacb804c636988d4e5b6aae8ec}} 
+\index{UThreadSecondary@{UThreadSecondary}!setThreadPoolInfo@{setThreadPoolInfo}}
+\index{setThreadPoolInfo@{setThreadPoolInfo}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{setThreadPoolInfo()}{setThreadPoolInfo()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Secondary\+::set\+Thread\+Pool\+Info (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$}]{pool\+Task\+Queue,  }\item[{\mbox{\hyperlink{class_u_atomic_priority_queue}{UAtomic\+Priority\+Queue}}$<$ \mbox{\hyperlink{class_u_task}{UTask}} $>$ $\ast$}]{pool\+Priority\+Task\+Queue,  }\item[{\mbox{\hyperlink{_u_thread_pool_config_8h_aa8c0ba07c39d56d92c395f67d753895c}{UThread\+Pool\+Config\+Ptr}}}]{config }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+设置pool的信息 
+\begin{DoxyParams}{Parameters}
+{\em pool\+Task\+Queue} & \\
+\hline
+{\em pool\+Priority\+Task\+Queue} & \\
+\hline
+{\em config} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_thread_secondary_a0dda499cfed3ce4267e37d829e5c8dc4}\label{class_u_thread_secondary_a0dda499cfed3ce4267e37d829e5c8dc4}} 
+\index{UThreadSecondary@{UThreadSecondary}!waitRunTask@{waitRunTask}}
+\index{waitRunTask@{waitRunTask}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{waitRunTask()}{waitRunTask()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} UThread\+Secondary\+::wait\+Run\+Task (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}}}]{ms }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+有等待的执行任务 
+\begin{DoxyParams}{Parameters}
+{\em ms} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 目的是降低cpu的占用率 
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_thread_secondary_a0dda499cfed3ce4267e37d829e5c8dc4_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_u_thread_secondary_ae7586d1a5baa7d0f65aee7c2f2041a43}\label{class_u_thread_secondary_ae7586d1a5baa7d0f65aee7c2f2041a43}} 
+\index{UThreadSecondary@{UThreadSecondary}!UThreadPool@{UThreadPool}}
+\index{UThreadPool@{UThreadPool}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{UThreadPool}{UThreadPool}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_pool}{UThread\+Pool}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_thread_secondary_a0dffa4e81d1aee0f0876f6678bfe54f8}\label{class_u_thread_secondary_a0dffa4e81d1aee0f0876f6678bfe54f8}} 
+\index{UThreadSecondary@{UThreadSecondary}!cur\_ttl\_@{cur\_ttl\_}}
+\index{cur\_ttl\_@{cur\_ttl\_}!UThreadSecondary@{UThreadSecondary}}
+\doxysubsubsection{\texorpdfstring{cur\_ttl\_}{cur\_ttl\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} UThread\+Secondary\+::cur\+\_\+ttl\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Thread/\mbox{\hyperlink{_u_thread_secondary_8h}{UThread\+Secondary.\+h}}\end{DoxyCompactItemize}

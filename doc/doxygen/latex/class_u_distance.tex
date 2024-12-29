@@ -1,0 +1,129 @@
+\hypertarget{class_u_distance}{}\doxysection{UDistance$<$ TSrc, TRes $>$ Class Template Reference}
+\label{class_u_distance}\index{UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}}
+
+
+距离计算类的基类，提供calc(计算向量距离)、check(检查向量)、normalize(向量归一化)三个虚函数 其中calc是纯虚函数，派生类必须重写  
+
+
+
+
+{\ttfamily \#include $<$UDistance.\+h$>$}
+
+
+
+Inheritance diagram for UDistance$<$ TSrc, TRes $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_u_distance__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UDistance$<$ TSrc, TRes $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{class_u_distance__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_a35744fd8075afcebfbefeedc13b01433}{calc}} (const TSrc $\ast$v1, const TSrc $\ast$v2, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim1, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim2, TRes \&result, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext)=0
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_a7467ebe937d9c997492b6e38f5327091}{check}} (const TSrc $\ast$v1, const TSrc $\ast$v2, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim1, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim2, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext)
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance_a0f890065541c52d76ecdd4b3739f8e7f}{normalize}} (TSrc $\ast$v, \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} dim, \mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}} ext)
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename TSrc, typename TRes = TSrc$>$\newline
+class UDistance$<$ TSrc, TRes $>$}
+
+距离计算类的基类，提供calc(计算向量距离)、check(检查向量)、normalize(向量归一化)三个虚函数 其中calc是纯虚函数，派生类必须重写 
+
+传入的类型和计算结果的类型，可能不同。一般默认相同 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_distance_a35744fd8075afcebfbefeedc13b01433}\label{class_u_distance_a35744fd8075afcebfbefeedc13b01433}} 
+\index{UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}!calc@{calc}}
+\index{calc@{calc}!UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}}
+\doxysubsubsection{\texorpdfstring{calc()}{calc()}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes  = TSrc$>$ \\
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance}{UDistance}}$<$ TSrc, TRes $>$\+::calc (\begin{DoxyParamCaption}\item[{const TSrc $\ast$}]{v1,  }\item[{const TSrc $\ast$}]{v2,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim1,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim2,  }\item[{TRes \&}]{result,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+计算距离信息，纯虚函数，派生类必须重写 
+\begin{DoxyParams}{Parameters}
+{\em v1} & 向量1 \\
+\hline
+{\em v2} & 向量2 \\
+\hline
+{\em dim1} & 向量1的维度 \\
+\hline
+{\em dim2} & 向量2的维度 \\
+\hline
+{\em result} & 结果信息 \\
+\hline
+{\em ext} & 可扩展信息 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_distance_a7467ebe937d9c997492b6e38f5327091}\label{class_u_distance_a7467ebe937d9c997492b6e38f5327091}} 
+\index{UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}!check@{check}}
+\index{check@{check}!UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes $>$ \\
+\mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance}{UDistance}}$<$ TSrc, TRes $>$\+::check (\begin{DoxyParamCaption}\item[{const TSrc $\ast$}]{v1,  }\item[{const TSrc $\ast$}]{v2,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim1,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim2,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+判断入参信息是否符合 
+\begin{DoxyParams}{Parameters}
+{\em v1} & \\
+\hline
+{\em v2} & \\
+\hline
+{\em dim1} & \\
+\hline
+{\em dim2} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{class_u_euclidean_distance_ae7e2be180e988a16a3868096ab8a0910}{UEuclidean\+Distance$<$ TSrc, TRes, need\+Sqrt $>$}}.
+
+\mbox{\Hypertarget{class_u_distance_a0f890065541c52d76ecdd4b3739f8e7f}\label{class_u_distance_a0f890065541c52d76ecdd4b3739f8e7f}} 
+\index{UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!UDistance$<$ TSrc, TRes $>$@{UDistance$<$ TSrc, TRes $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename TSrc , typename TRes $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_distance}{UDistance}}$<$ TSrc, TRes $>$\+::normalize (\begin{DoxyParamCaption}\item[{TSrc $\ast$}]{v,  }\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{dim,  }\item[{\mbox{\hyperlink{_c_val_type_8h_a78c4c7a5b2053fbde96f51ca52d1f4d6}{CVoid\+Ptr}}}]{ext }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+将数据归一化 
+\begin{DoxyParams}{Parameters}
+{\em v} & \\
+\hline
+{\em dim} & \\
+\hline
+{\em ext} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+这里不需要判定v为空的情况，需要的话可以通过开启 need\+Check 逻辑来判断
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Distance/\mbox{\hyperlink{_u_distance_8h}{UDistance.\+h}}\item 
+src/\+Utils\+Ctrl/\+Distance/\mbox{\hyperlink{_u_distance_8inl}{UDistance.\+inl}}\end{DoxyCompactItemize}

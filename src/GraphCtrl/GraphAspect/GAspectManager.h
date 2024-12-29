@@ -15,6 +15,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 继承GraphManager<T>的add/remove/find/create/get/reset/run等针对具体T类型对象的管理能力
+ * 继承GAspectObject的GetAParam/setAParam获取GAspectParam的能力，以及setBelong设置所属GElement的能力
+ */
 class GAspectManager : public GAspectObject,
                        public GraphManager<GAspect> {
 protected:

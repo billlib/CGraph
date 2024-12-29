@@ -16,6 +16,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief UQueueObject单独继承UThreadObject，只在此基础上新增了mutex_和cv_成员
+ * 
+ */
 class UQueueObject : public UThreadObject {
 protected:
     std::mutex mutex_;

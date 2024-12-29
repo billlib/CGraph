@@ -1,0 +1,25 @@
+\hypertarget{_u_spin_lock_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Lock/\+USpin\+Lock.h File Reference}
+\label{_u_spin_lock_8h}\index{src/UtilsCtrl/ThreadPool/Lock/USpinLock.h@{src/UtilsCtrl/ThreadPool/Lock/USpinLock.h}}
+{\ttfamily \#include $<$atomic$>$}\newline
+{\ttfamily \#include \char`\"{}../\+UThread\+Object.\+h\char`\"{}}\newline
+Include dependency graph for USpin\+Lock.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_spin_lock_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_spin_lock_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_spin_lock}{USpin\+Lock}}
+\begin{DoxyCompactList}\small\item\em 基于std\+::atomic\+\_\+flag实现的用户态自旋锁，std\+::atomic\+\_\+flag只有true/false两种状态； USpin\+Lock提供以下三个方法：lock为忙等，try\+Lock为单次尝试，unlock为解锁； (基于std\+::atomic\+\_\+flag实现的用户态自旋锁是一种采用的做法，) \end{DoxyCompactList}\end{DoxyCompactItemize}

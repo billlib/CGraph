@@ -1,0 +1,180 @@
+\hypertarget{class_g_daemon_manager}{}\doxysection{GDaemon\+Manager Class Reference}
+\label{class_g_daemon_manager}\index{GDaemonManager@{GDaemonManager}}
+
+
+维护\+GDaemon实例的集合daemons\+\_\+ 支持批量init/批量destroy，在daemons\+\_\+里面add/destroy或者清空daemons\+\_\+等  
+
+
+
+
+{\ttfamily \#include $<$GDaemon\+Manager.\+h$>$}
+
+
+
+Inheritance diagram for GDaemon\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_manager__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GDaemon\+Manager\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_manager__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_daemon_manager_afd7c470b12ff1cca1743e94432b1e339}{GDaemon\+Manager}} ()=default
+\item 
+\mbox{\hyperlink{class_g_daemon_manager_a023ce2d9b59f3b45dd46865829212e29}{$\sim$\+GDaemon\+Manager}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_manager_ab618de08e0431ef578360db9442bd7da}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_manager_a89ab6476a9dec5007c40098176bbd647}{destroy}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_manager_a91beb387f4f2f6632a8e39542035df8e}{add}} (\mbox{\hyperlink{_g_daemon_8h_ab3bf22139a3b116a8388082a067603ee}{GDaemon\+Ptr}} daemon) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_manager_a07ce8a8ab1d4581bc48d9ec9dc8a7932}{remove}} (\mbox{\hyperlink{_g_daemon_8h_ab3bf22139a3b116a8388082a067603ee}{GDaemon\+Ptr}} daemon) final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_daemon_manager_a5085714f92b6c854d721c8525c9673c2}{clear}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_daemon_manager_a0bf274a2cb21e6a10fc94a7dd84b14fd}{get\+Size}} () const final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_daemon_8h_ac725ea0e17dc1c7beb72fdfc99aa4ae4}{GDaemon\+Set}} \mbox{\hyperlink{class_g_daemon_manager_a7a0e107825b0e01378b24ca8bf318257}{daemons\+\_\+}} \{\}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_daemon_manager_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\item 
+class \mbox{\hyperlink{class_g_daemon_manager_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+维护\+GDaemon实例的集合daemons\+\_\+ 支持批量init/批量destroy，在daemons\+\_\+里面add/destroy或者清空daemons\+\_\+等 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_daemon_manager_afd7c470b12ff1cca1743e94432b1e339}\label{class_g_daemon_manager_afd7c470b12ff1cca1743e94432b1e339}} 
+\index{GDaemonManager@{GDaemonManager}!GDaemonManager@{GDaemonManager}}
+\index{GDaemonManager@{GDaemonManager}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{GDaemonManager()}{GDaemonManager()}}
+{\footnotesize\ttfamily GDaemon\+Manager\+::\+GDaemon\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_g_daemon_manager_a023ce2d9b59f3b45dd46865829212e29}\label{class_g_daemon_manager_a023ce2d9b59f3b45dd46865829212e29}} 
+\index{GDaemonManager@{GDaemonManager}!````~GDaemonManager@{$\sim$GDaemonManager}}
+\index{````~GDaemonManager@{$\sim$GDaemonManager}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{$\sim$GDaemonManager()}{~GDaemonManager()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} GDaemon\+Manager\+::$\sim$\+GDaemon\+Manager (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_daemon_manager_a023ce2d9b59f3b45dd46865829212e29_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_manager_a91beb387f4f2f6632a8e39542035df8e}\label{class_g_daemon_manager_a91beb387f4f2f6632a8e39542035df8e}} 
+\index{GDaemonManager@{GDaemonManager}!add@{add}}
+\index{add@{add}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Manager\+::add (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_daemon_8h_ab3bf22139a3b116a8388082a067603ee}{GDaemon\+Ptr}}}]{daemon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_g_daemon_manager_a5085714f92b6c854d721c8525c9673c2}\label{class_g_daemon_manager_a5085714f92b6c854d721c8525c9673c2}} 
+\index{GDaemonManager@{GDaemonManager}!clear@{clear}}
+\index{clear@{clear}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Manager\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+清空所有object，必须实现的内容 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{class_graph_manager_aecd2582c5d9f4632580fb38ab051e139}{Graph\+Manager$<$ GDaemon $>$}}.
+
+\mbox{\Hypertarget{class_g_daemon_manager_a89ab6476a9dec5007c40098176bbd647}\label{class_g_daemon_manager_a89ab6476a9dec5007c40098176bbd647}} 
+\index{GDaemonManager@{GDaemonManager}!destroy@{destroy}}
+\index{destroy@{destroy}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Manager\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_daemon_manager_a0bf274a2cb21e6a10fc94a7dd84b14fd}\label{class_g_daemon_manager_a0bf274a2cb21e6a10fc94a7dd84b14fd}} 
+\index{GDaemonManager@{GDaemonManager}!getSize@{getSize}}
+\index{getSize@{getSize}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{getSize()}{getSize()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GDaemon\+Manager\+::get\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+获取大小信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{class_graph_manager_a4d659e58ab6d03621aa745c83558071d}{Graph\+Manager$<$ GDaemon $>$}}.
+
+\mbox{\Hypertarget{class_g_daemon_manager_ab618de08e0431ef578360db9442bd7da}\label{class_g_daemon_manager_ab618de08e0431ef578360db9442bd7da}} 
+\index{GDaemonManager@{GDaemonManager}!init@{init}}
+\index{init@{init}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Manager\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_daemon_manager_a07ce8a8ab1d4581bc48d9ec9dc8a7932}\label{class_g_daemon_manager_a07ce8a8ab1d4581bc48d9ec9dc8a7932}} 
+\index{GDaemonManager@{GDaemonManager}!remove@{remove}}
+\index{remove@{remove}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDaemon\+Manager\+::remove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_daemon_8h_ab3bf22139a3b116a8388082a067603ee}{GDaemon\+Ptr}}}]{daemon }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [protected]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_daemon_manager_a17a0077689f477d78437264108a1577c}\label{class_g_daemon_manager_a17a0077689f477d78437264108a1577c}} 
+\index{GDaemonManager@{GDaemonManager}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_daemon_manager_a4e007dc772c018d10373bf18b528f96d}\label{class_g_daemon_manager_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GDaemonManager@{GDaemonManager}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_daemon_manager_a7a0e107825b0e01378b24ca8bf318257}\label{class_g_daemon_manager_a7a0e107825b0e01378b24ca8bf318257}} 
+\index{GDaemonManager@{GDaemonManager}!daemons\_@{daemons\_}}
+\index{daemons\_@{daemons\_}!GDaemonManager@{GDaemonManager}}
+\doxysubsubsection{\texorpdfstring{daemons\_}{daemons\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_daemon_8h_ac725ea0e17dc1c7beb72fdfc99aa4ae4}{GDaemon\+Set}} GDaemon\+Manager\+::daemons\+\_\+ \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_manager_8h}{GDaemon\+Manager.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Daemon/\mbox{\hyperlink{_g_daemon_manager_8cpp}{GDaemon\+Manager.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,195 @@
+\hypertarget{class_u_lru}{}\doxysection{ULru$<$ K, V, Default\+Capacity $>$ Class Template Reference}
+\label{class_u_lru}\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+
+
+LRU(\+Least Recently Used)，基于双链表(list)存储 最少被使用的结点放在表尾，最近/最多被使用的结点放在表头  
+
+
+
+
+{\ttfamily \#include $<$ULru.\+h$>$}
+
+
+
+Inheritance diagram for ULru$<$ K, V, Default\+Capacity $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_u_lru__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ULru$<$ K, V, Default\+Capacity $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{class_u_lru__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_lru_acaf42c9556556fde02db6cbc55d8955f}{ULru}} ()
+\item 
+\mbox{\hyperlink{class_u_lru_af73b970af989f79beb7814980774b28c}{$\sim$\+ULru}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lru_af1ce7b2874d13b5088788a96d44cdaa1}{put}} (const K \&key, const V \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_lru_ad4b71c8db4e6abf610ef20858a41a51c}{get}} (const K \&key, V \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru_a080b3fabed4723690dbcb6f05b61c236}{get\+Capacity}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lru_a231d3bfda1bf39750db012819b88235d}{clear}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru_a6b4b7ad24631024e0d17a3f2e3851fba}{cur\+\_\+size\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru_a4463b7008f52406399b551283c315bbd}{capacity\+\_\+}}
+\item 
+std\+::unordered\+\_\+map$<$ K, typename std\+::list$<$ \mbox{\hyperlink{struct_u_lru_node}{ULru\+Node}}$<$ K, V $>$ $>$\+::iterator $>$ \mbox{\hyperlink{class_u_lru_a5d72aed27ef0182fdfbdf3e4dd560e28}{cache\+\_\+}}
+\item 
+std\+::list$<$ \mbox{\hyperlink{struct_u_lru_node}{ULru\+Node}}$<$ K, V $>$ $>$ \mbox{\hyperlink{class_u_lru_af1bf636fdc78401ab42917932972eaa1}{nodes\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename K, typename V, CSize Default\+Capacity = 16$>$\newline
+class ULru$<$ K, V, Default\+Capacity $>$}
+
+LRU(\+Least Recently Used)，基于双链表(list)存储 最少被使用的结点放在表尾，最近/最多被使用的结点放在表头 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em K} & \\
+\hline
+{\em V} & \\
+\hline
+{\em Default\+Capacity} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_lru_acaf42c9556556fde02db6cbc55d8955f}\label{class_u_lru_acaf42c9556556fde02db6cbc55d8955f}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!ULru@{ULru}}
+\index{ULru@{ULru}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{ULru()}{ULru()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::\mbox{\hyperlink{class_u_lru}{ULru}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_lru_af73b970af989f79beb7814980774b28c}\label{class_u_lru_af73b970af989f79beb7814980774b28c}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!````~ULru@{$\sim$ULru}}
+\index{````~ULru@{$\sim$ULru}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$ULru()}{~ULru()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::$\sim$\mbox{\hyperlink{class_u_lru}{ULru}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{class_u_lru_af73b970af989f79beb7814980774b28c_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_lru_a231d3bfda1bf39750db012819b88235d}\label{class_u_lru_a231d3bfda1bf39750db012819b88235d}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!clear@{clear}}
+\index{clear@{clear}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+清空\+Lru中的信息 \mbox{\Hypertarget{class_u_lru_ad4b71c8db4e6abf610ef20858a41a51c}\label{class_u_lru_ad4b71c8db4e6abf610ef20858a41a51c}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!get@{get}}
+\index{get@{get}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::get (\begin{DoxyParamCaption}\item[{const K \&}]{key,  }\item[{V \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+从\+Lru中获取节点信息 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=238pt]{class_u_lru_ad4b71c8db4e6abf610ef20858a41a51c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_lru_a080b3fabed4723690dbcb6f05b61c236}\label{class_u_lru_a080b3fabed4723690dbcb6f05b61c236}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!getCapacity@{getCapacity}}
+\index{getCapacity@{getCapacity}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{getCapacity()}{getCapacity()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::get\+Capacity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取capacity信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_lru_af1ce7b2874d13b5088788a96d44cdaa1}\label{class_u_lru_af1ce7b2874d13b5088788a96d44cdaa1}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!put@{put}}
+\index{put@{put}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{put()}{put()}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::put (\begin{DoxyParamCaption}\item[{const K \&}]{key,  }\item[{const V \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+信息插入\+Lru 
+\begin{DoxyParams}{Parameters}
+{\em key} & \\
+\hline
+{\em value} & \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_lru_a5d72aed27ef0182fdfbdf3e4dd560e28}\label{class_u_lru_a5d72aed27ef0182fdfbdf3e4dd560e28}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!cache\_@{cache\_}}
+\index{cache\_@{cache\_}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{cache\_}{cache\_}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+std\+::unordered\+\_\+map$<$K, typename std\+::list$<$\mbox{\hyperlink{struct_u_lru_node}{ULru\+Node}}$<$K, V$>$ $>$\+::iterator$>$ \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::cache\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_lru_a4463b7008f52406399b551283c315bbd}\label{class_u_lru_a4463b7008f52406399b551283c315bbd}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::capacity\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_lru_a6b4b7ad24631024e0d17a3f2e3851fba}\label{class_u_lru_a6b4b7ad24631024e0d17a3f2e3851fba}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!cur\_size\_@{cur\_size\_}}
+\index{cur\_size\_@{cur\_size\_}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{cur\_size\_}{cur\_size\_}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::cur\+\_\+size\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_lru_af1bf636fdc78401ab42917932972eaa1}\label{class_u_lru_af1bf636fdc78401ab42917932972eaa1}} 
+\index{ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}!nodes\_@{nodes\_}}
+\index{nodes\_@{nodes\_}!ULru$<$ K, V, DefaultCapacity $>$@{ULru$<$ K, V, DefaultCapacity $>$}}
+\doxysubsubsection{\texorpdfstring{nodes\_}{nodes\_}}
+{\footnotesize\ttfamily template$<$typename K , typename V , CSize Default\+Capacity = 16$>$ \\
+std\+::list$<$\mbox{\hyperlink{struct_u_lru_node}{ULru\+Node}}$<$K, V$>$ $>$ \mbox{\hyperlink{class_u_lru}{ULru}}$<$ K, V, Default\+Capacity $>$\+::nodes\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Lru/\mbox{\hyperlink{_u_lru_8h}{ULru.\+h}}\end{DoxyCompactItemize}

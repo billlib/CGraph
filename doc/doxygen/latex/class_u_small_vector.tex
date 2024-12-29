@@ -1,0 +1,263 @@
+\hypertarget{class_u_small_vector}{}\doxysection{USmall\+Vector$<$ T, CAPACITY $>$ Class Template Reference}
+\label{class_u_small_vector}\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+
+
+申请一块\+T类型的内存，封装为一个轻量级的std\+::vector使用 (主要为了减少内存占用?)， 内部的迭代器也使用自定义的\+UIter  
+
+
+
+
+{\ttfamily \#include $<$USmall\+Vector.\+h$>$}
+
+
+
+Inheritance diagram for USmall\+Vector$<$ T, CAPACITY $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_u_small_vector__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USmall\+Vector$<$ T, CAPACITY $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{class_u_small_vector__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{UIter}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_small_vector_a0659d80e865e51c0fbb9b40735aec238}{USmall\+Vector}} ()
+\item 
+\mbox{\hyperlink{class_u_small_vector_a1548a7f3b83e0d690287ed93a1bde909}{$\sim$\+USmall\+Vector}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_small_vector_a736e4c5138dd04d4ab1caa01103af1cb}{insert}} (const T \&val, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} is\+Unique=true)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector_a2e31104238427bf8eb244bdbe81215c6}{size}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector_a2b3482ac22f58e2df57f1feecad96f8e}{empty}} () const
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_small_vector_a435dd0ab1ef425ace2df101ce6fd9402}{clear}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector_a3dc65c54de4fe1a852e852ab43b94d06}{remove}} (const T \&val)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector_aa1e037777d5a303e60b986749078a69e}{has\+Value}} (const T \&val) const
+\item 
+std\+::vector$<$ T $>$ \mbox{\hyperlink{class_u_small_vector_a0814f7af1b5257a742e3efcd071f0626}{as\+Vector}} () const
+\item 
+\mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{UIter}} \mbox{\hyperlink{class_u_small_vector_a51871347fb02478e38eb819885cdb592}{begin}} () const
+\item 
+\mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{UIter}} \mbox{\hyperlink{class_u_small_vector_a6351d089f4d93cfce742670fe5990ff6}{end}} () const
+\item 
+T \mbox{\hyperlink{class_u_small_vector_a8203478e0e42a8716dd4197c79fdd447}{front}} () const
+\item 
+T \mbox{\hyperlink{class_u_small_vector_a2bfdfa4a7c5be54252ebbfd318450a92}{back}} () const
+\item 
+T \& \mbox{\hyperlink{class_u_small_vector_a791a4a9ad878442f1164312db359833b}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} index)
+\item 
+const T \& \mbox{\hyperlink{class_u_small_vector_ac6765c84752d84e14fcb30a0cf0fe9ee}{operator\mbox{[}$\,$\mbox{]}}} (\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} index) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{class_u_small_vector_adc19f0ca489313a1d334a640c8745463}{data\+\_\+}} \{ nullptr \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector_a65efdc62fc8ac66e93f4240ec95c87b5}{cur\+\_\+index\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector_a741a322e57c4498617aa3e5386bfb181}{capacity\+\_\+}} \{ 0 \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$class T, CSize CAPACITY = 8$>$\newline
+class USmall\+Vector$<$ T, CAPACITY $>$}
+
+申请一块\+T类型的内存，封装为一个轻量级的std\+::vector使用 (主要为了减少内存占用?)， 内部的迭代器也使用自定义的\+UIter 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em CAPACITY} & \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_small_vector_a0659d80e865e51c0fbb9b40735aec238}\label{class_u_small_vector_a0659d80e865e51c0fbb9b40735aec238}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!USmallVector@{USmallVector}}
+\index{USmallVector@{USmallVector}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{USmallVector()}{USmallVector()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a1548a7f3b83e0d690287ed93a1bde909}\label{class_u_small_vector_a1548a7f3b83e0d690287ed93a1bde909}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!````~USmallVector@{$\sim$USmallVector}}
+\index{````~USmallVector@{$\sim$USmallVector}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$USmallVector()}{~USmallVector()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::$\sim$\mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_small_vector_a0814f7af1b5257a742e3efcd071f0626}\label{class_u_small_vector_a0814f7af1b5257a742e3efcd071f0626}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!asVector@{asVector}}
+\index{asVector@{asVector}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{asVector()}{asVector()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+std\+::vector$<$T$>$ \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::as\+Vector (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+给vector赋值 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_small_vector_a2bfdfa4a7c5be54252ebbfd318450a92}\label{class_u_small_vector_a2bfdfa4a7c5be54252ebbfd318450a92}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!back@{back}}
+\index{back@{back}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+T \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::back (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a51871347fb02478e38eb819885cdb592}\label{class_u_small_vector_a51871347fb02478e38eb819885cdb592}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!begin@{begin}}
+\index{begin@{begin}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{begin()}{begin()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{UIter}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::begin (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a435dd0ab1ef425ace2df101ce6fd9402}\label{class_u_small_vector_a435dd0ab1ef425ace2df101ce6fd9402}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!clear@{clear}}
+\index{clear@{clear}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a2b3482ac22f58e2df57f1feecad96f8e}\label{class_u_small_vector_a2b3482ac22f58e2df57f1feecad96f8e}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!empty@{empty}}
+\index{empty@{empty}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a6351d089f4d93cfce742670fe5990ff6}\label{class_u_small_vector_a6351d089f4d93cfce742670fe5990ff6}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!end@{end}}
+\index{end@{end}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{end()}{end()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{class_u_small_vector_1_1_u_iter}{UIter}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::end (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a8203478e0e42a8716dd4197c79fdd447}\label{class_u_small_vector_a8203478e0e42a8716dd4197c79fdd447}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!front@{front}}
+\index{front@{front}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+T \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::front (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_aa1e037777d5a303e60b986749078a69e}\label{class_u_small_vector_aa1e037777d5a303e60b986749078a69e}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!hasValue@{hasValue}}
+\index{hasValue@{hasValue}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{hasValue()}{hasValue()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::has\+Value (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+判断内部是否包含该值 
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_small_vector_a736e4c5138dd04d4ab1caa01103af1cb}\label{class_u_small_vector_a736e4c5138dd04d4ab1caa01103af1cb}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!insert@{insert}}
+\index{insert@{insert}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{val,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{is\+Unique = {\ttfamily true} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+插入具体内容 
+\begin{DoxyParams}{Parameters}
+{\em val} & \\
+\hline
+{\em is\+Unique} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_small_vector_a736e4c5138dd04d4ab1caa01103af1cb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_small_vector_a791a4a9ad878442f1164312db359833b}\label{class_u_small_vector_a791a4a9ad878442f1164312db359833b}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+T\& \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_ac6765c84752d84e14fcb30a0cf0fe9ee}\label{class_u_small_vector_ac6765c84752d84e14fcb30a0cf0fe9ee}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+const T\& \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}}}]{index }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a3dc65c54de4fe1a852e852ab43b94d06}\label{class_u_small_vector_a3dc65c54de4fe1a852e852ab43b94d06}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!remove@{remove}}
+\index{remove@{remove}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::remove (\begin{DoxyParamCaption}\item[{const T \&}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a2e31104238427bf8eb244bdbe81215c6}\label{class_u_small_vector_a2e31104238427bf8eb244bdbe81215c6}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!size@{size}}
+\index{size@{size}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_small_vector_a741a322e57c4498617aa3e5386bfb181}\label{class_u_small_vector_a741a322e57c4498617aa3e5386bfb181}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::capacity\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_small_vector_a65efdc62fc8ac66e93f4240ec95c87b5}\label{class_u_small_vector_a65efdc62fc8ac66e93f4240ec95c87b5}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!cur\_index\_@{cur\_index\_}}
+\index{cur\_index\_@{cur\_index\_}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{cur\_index\_}{cur\_index\_}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::cur\+\_\+index\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_small_vector_adc19f0ca489313a1d334a640c8745463}\label{class_u_small_vector_adc19f0ca489313a1d334a640c8745463}} 
+\index{USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}!data\_@{data\_}}
+\index{data\_@{data\_}!USmallVector$<$ T, CAPACITY $>$@{USmallVector$<$ T, CAPACITY $>$}}
+\doxysubsubsection{\texorpdfstring{data\_}{data\_}}
+{\footnotesize\ttfamily template$<$class T , CSize CAPACITY = 8$>$ \\
+T$\ast$ \mbox{\hyperlink{class_u_small_vector}{USmall\+Vector}}$<$ T, CAPACITY $>$\+::data\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Container/\mbox{\hyperlink{_u_small_vector_8h}{USmall\+Vector.\+h}}\end{DoxyCompactItemize}

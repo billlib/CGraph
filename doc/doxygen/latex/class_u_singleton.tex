@@ -1,0 +1,218 @@
+\hypertarget{class_u_singleton}{}\doxysection{USingleton$<$ T, type, auto\+Init $>$ Class Template Reference}
+\label{class_u_singleton}\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+
+
+支持默认构造一个\+T类型的对象、封装成单例使用 目前实际上只支持\+CObject及其派生类作为单例要维护的对象类型，其他类型在init/destroy阶段啥都不做  
+
+
+
+
+{\ttfamily \#include $<$USingleton.\+h$>$}
+
+
+
+Inheritance diagram for USingleton$<$ T, type, auto\+Init $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_u_singleton__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for USingleton$<$ T, type, auto\+Init $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{class_u_singleton__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_singleton_a608e209d1fa9f4c3ffcac2368a1ed27d}{USingleton}} () noexcept
+\item 
+\mbox{\hyperlink{class_u_singleton_ab8ca5ea5a5984df28d4e39d39d2f64ec}{$\sim$\+USingleton}} () override
+\item 
+T $\ast$ \mbox{\hyperlink{class_u_singleton_ad08f4adf55f7cd0f4f04d1b5b46bf4f2}{get}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a}{init}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton_aaf802853afa432321458605a02e20d6f}{destroy}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_singleton_a13249321364600afdfce30da5dfcaec7}{create}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton_a4ad0548e2b3baf5bca3f6b24153daf39}{clear}} ()
+\item 
+\mbox{\hyperlink{class_u_singleton_a4e6130b0f45f47e8d94edbb5e849d8d8}{CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY}} (\mbox{\hyperlink{class_u_singleton}{USingleton}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+T $\ast$ \mbox{\hyperlink{class_u_singleton_a5cdfd52432800c5dd844f12f9a99bd7b}{handle\+\_\+}} \{ nullptr \}
+\item 
+std\+::mutex \mbox{\hyperlink{class_u_singleton_a610cd55f41dcddb5013c286084444e54}{lock\+\_\+}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T, USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$\newline
+class USingleton$<$ T, type, auto\+Init $>$}
+
+支持默认构造一个\+T类型的对象、封装成单例使用 目前实际上只支持\+CObject及其派生类作为单例要维护的对象类型，其他类型在init/destroy阶段啥都不做 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & 单例实际维护的对象类型，在\+USingleton内部维护为T $\ast$句柄 \\
+\hline
+{\em type} & 单例模式，支持懒汉(\+LAZY)和饿汉(\+HUNGRY)模式，默认\+HUNGRY \\
+\hline
+{\em auto\+Init} & 是否在构造时自动初始化，默认false \\
+\hline
+\end{DoxyTemplParams}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_singleton_a608e209d1fa9f4c3ffcac2368a1ed27d}\label{class_u_singleton_a608e209d1fa9f4c3ffcac2368a1ed27d}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!USingleton@{USingleton}}
+\index{USingleton@{USingleton}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{USingleton()}{USingleton()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::\mbox{\hyperlink{class_u_singleton}{USingleton}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}, {\ttfamily [noexcept]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_singleton_a608e209d1fa9f4c3ffcac2368a1ed27d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_singleton_ab8ca5ea5a5984df28d4e39d39d2f64ec}\label{class_u_singleton_ab8ca5ea5a5984df28d4e39d39d2f64ec}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!````~USingleton@{$\sim$USingleton}}
+\index{````~USingleton@{$\sim$USingleton}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$USingleton()}{~USingleton()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::$\sim$\mbox{\hyperlink{class_u_singleton}{USingleton}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_singleton_ab8ca5ea5a5984df28d4e39d39d2f64ec_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_singleton_a4e6130b0f45f47e8d94edbb5e849d8d8}\label{class_u_singleton_a4e6130b0f45f47e8d94edbb5e849d8d8}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}}
+\index{CGRAPH\_NO\_ALLOWED\_COPY@{CGRAPH\_NO\_ALLOWED\_COPY}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_NO\_ALLOWED\_COPY()}{CGRAPH\_NO\_ALLOWED\_COPY()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::CGRAPH\+\_\+\+NO\+\_\+\+ALLOWED\+\_\+\+COPY (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+\mbox{\Hypertarget{class_u_singleton_a4ad0548e2b3baf5bca3f6b24153daf39}\label{class_u_singleton_a4ad0548e2b3baf5bca3f6b24153daf39}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!clear@{clear}}
+\index{clear@{clear}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::clear (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+销毁单例句柄 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_singleton_a13249321364600afdfce30da5dfcaec7}\label{class_u_singleton_a13249321364600afdfce30da5dfcaec7}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!create@{create}}
+\index{create@{create}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{create()}{create()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::create (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+单例的创建一个句柄 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_singleton_aaf802853afa432321458605a02e20d6f}\label{class_u_singleton_aaf802853afa432321458605a02e20d6f}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!destroy@{destroy}}
+\index{destroy@{destroy}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_singleton_aaf802853afa432321458605a02e20d6f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_singleton_ad08f4adf55f7cd0f4f04d1b5b46bf4f2}\label{class_u_singleton_ad08f4adf55f7cd0f4f04d1b5b46bf4f2}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!get@{get}}
+\index{get@{get}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+T$\ast$ \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::get (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+获取singleton句柄信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{class_u_singleton_ad08f4adf55f7cd0f4f04d1b5b46bf4f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a}\label{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!init@{init}}
+\index{init@{init}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_u_singleton_a66bb3561b677fe933dd9999c2371fa2a_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_singleton_a5cdfd52432800c5dd844f12f9a99bd7b}\label{class_u_singleton_a5cdfd52432800c5dd844f12f9a99bd7b}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!handle\_@{handle\_}}
+\index{handle\_@{handle\_}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{handle\_}{handle\_}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+T$\ast$ \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::handle\+\_\+ \{ nullptr \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_u_singleton_a610cd55f41dcddb5013c286084444e54}\label{class_u_singleton_a610cd55f41dcddb5013c286084444e54}} 
+\index{USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!USingleton$<$ T, type, autoInit $>$@{USingleton$<$ T, type, autoInit $>$}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily template$<$typename T , USingleton\+Type type = USingleton\+Type\+::\+HUNGRY, CBool auto\+Init = false$>$ \\
+std\+::mutex \mbox{\hyperlink{class_u_singleton}{USingleton}}$<$ T, type, auto\+Init $>$\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Singleton/\mbox{\hyperlink{_u_singleton_8h}{USingleton.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,204 @@
+\hypertarget{class_g_param}{}\doxysection{GParam Class Reference}
+\label{class_g_param}\index{GParam@{GParam}}
+
+
+{\ttfamily \#include $<$GParam.\+h$>$}
+
+
+
+Inheritance diagram for GParam\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GParam\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{class_g_param__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_g_param_aa186c63397007de07d0a1781498a4197}{get\+Backtrace}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_a6d6258e381c5041cb00491b9befa4902}{add\+Backtrace}} (const std\+::string \&trace)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_param_a4d9dd1a3fc2b4e00a2d5096b003d7e79}{clean\+Backtrace}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_g_param_a493816efcde3a2e6744aded4cf1529e2}{get\+Key}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::recursive\+\_\+mutex \mbox{\hyperlink{class_g_param_a33bb087fd35d5eaab17fc23b2bf54df2}{\+\_\+param\+\_\+shared\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_param_a3050a999108a466cea335fe278236f4d}{setup}} ()
+\item 
+virtual \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_param_a44e3c8ded335b8f4d7b83f79b7ce2e7d}{reset}} (const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&cur\+Status)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_g_param_abf42ef90131c080af8043ff733dc12c6}{backtrace\+\_\+enable\+\_\+}} = false
+\item 
+std\+::string \mbox{\hyperlink{class_g_param_ae53994930e5574c4731dcb156c19c8bf}{key\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$ std\+::string $>$ \mbox{\hyperlink{class_g_param_af326c7568410583291e3b1e1761cfc30}{backtrace\+\_\+}}
+\item 
+\mbox{\hyperlink{class_u_spin_lock}{USpin\+Lock}} \mbox{\hyperlink{class_g_param_a0c83a98b55dfa180917d9f2f158652a5}{backtrace\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_param_a377c0074f466d1f23b87e6b4163ca457}{GParam\+Manager}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_param_a6d6258e381c5041cb00491b9befa4902}\label{class_g_param_a6d6258e381c5041cb00491b9befa4902}} 
+\index{GParam@{GParam}!addBacktrace@{addBacktrace}}
+\index{addBacktrace@{addBacktrace}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{addBacktrace()}{addBacktrace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+::add\+Backtrace (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{trace }\end{DoxyParamCaption})}
+
+添加trace信息 
+\begin{DoxyParams}{Parameters}
+{\em trace} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param_a6d6258e381c5041cb00491b9befa4902_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_param_a4d9dd1a3fc2b4e00a2d5096b003d7e79}\label{class_g_param_a4d9dd1a3fc2b4e00a2d5096b003d7e79}} 
+\index{GParam@{GParam}!cleanBacktrace@{cleanBacktrace}}
+\index{cleanBacktrace@{cleanBacktrace}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{cleanBacktrace()}{cleanBacktrace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GParam\+::clean\+Backtrace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+清空trace信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param_a4d9dd1a3fc2b4e00a2d5096b003d7e79_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_param_aa186c63397007de07d0a1781498a4197}\label{class_g_param_aa186c63397007de07d0a1781498a4197}} 
+\index{GParam@{GParam}!getBacktrace@{getBacktrace}}
+\index{getBacktrace@{getBacktrace}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{getBacktrace()}{getBacktrace()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} std\+::vector$<$ std\+::string $>$ GParam\+::get\+Backtrace (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+获取参数的调用栈信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_param_aa186c63397007de07d0a1781498a4197_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_param_a493816efcde3a2e6744aded4cf1529e2}\label{class_g_param_a493816efcde3a2e6744aded4cf1529e2}} 
+\index{GParam@{GParam}!getKey@{getKey}}
+\index{getKey@{getKey}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{getKey()}{getKey()}}
+{\footnotesize\ttfamily std\+::string GParam\+::get\+Key (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+获取key信息 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_a44e3c8ded335b8f4d7b83f79b7ce2e7d}\label{class_g_param_a44e3c8ded335b8f4d7b83f79b7ce2e7d}} 
+\index{GParam@{GParam}!reset@{reset}}
+\index{reset@{reset}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GParam\+::reset (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \&}]{cur\+Status }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+每次pipeline执行结束，会调用一次reset 
+\begin{DoxyParams}{Parameters}
+{\em cur\+Status} & 本次pipeline执行的状态 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+@notice 为丰富功能和简化操作，v2.4.\+0 版本中添加了cur\+Status作为入参，且取消纯虚函数设定。 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_param_a3050a999108a466cea335fe278236f4d}\label{class_g_param_a3050a999108a466cea335fe278236f4d}} 
+\index{GParam@{GParam}!setup@{setup}}
+\index{setup@{setup}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GParam\+::setup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+每次pipeline执行前，会调用一次setup，可以不实现 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_param_a377c0074f466d1f23b87e6b4163ca457}\label{class_g_param_a377c0074f466d1f23b87e6b4163ca457}} 
+\index{GParam@{GParam}!GParamManager@{GParamManager}}
+\index{GParamManager@{GParamManager}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{GParamManager}{GParamManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_param_manager}{GParam\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_param_a33bb087fd35d5eaab17fc23b2bf54df2}\label{class_g_param_a33bb087fd35d5eaab17fc23b2bf54df2}} 
+\index{GParam@{GParam}!\_param\_shared\_lock\_@{\_param\_shared\_lock\_}}
+\index{\_param\_shared\_lock\_@{\_param\_shared\_lock\_}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{\_param\_shared\_lock\_}{\_param\_shared\_lock\_}}
+{\footnotesize\ttfamily std\+::recursive\+\_\+mutex GParam\+::\+\_\+param\+\_\+shared\+\_\+lock\+\_\+}
+
+\mbox{\Hypertarget{class_g_param_af326c7568410583291e3b1e1761cfc30}\label{class_g_param_af326c7568410583291e3b1e1761cfc30}} 
+\index{GParam@{GParam}!backtrace\_@{backtrace\_}}
+\index{backtrace\_@{backtrace\_}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{backtrace\_}{backtrace\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_serial_unique_array}{USerial\+Unique\+Array}}$<$std\+::string$>$ GParam\+::backtrace\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_param_abf42ef90131c080af8043ff733dc12c6}\label{class_g_param_abf42ef90131c080af8043ff733dc12c6}} 
+\index{GParam@{GParam}!backtrace\_enable\_@{backtrace\_enable\_}}
+\index{backtrace\_enable\_@{backtrace\_enable\_}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{backtrace\_enable\_}{backtrace\_enable\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} GParam\+::backtrace\+\_\+enable\+\_\+ = false\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_param_a0c83a98b55dfa180917d9f2f158652a5}\label{class_g_param_a0c83a98b55dfa180917d9f2f158652a5}} 
+\index{GParam@{GParam}!backtrace\_lock\_@{backtrace\_lock\_}}
+\index{backtrace\_lock\_@{backtrace\_lock\_}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{backtrace\_lock\_}{backtrace\_lock\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_u_spin_lock}{USpin\+Lock}} GParam\+::backtrace\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_param_ae53994930e5574c4731dcb156c19c8bf}\label{class_g_param_ae53994930e5574c4731dcb156c19c8bf}} 
+\index{GParam@{GParam}!key\_@{key\_}}
+\index{key\_@{key\_}!GParam@{GParam}}
+\doxysubsubsection{\texorpdfstring{key\_}{key\_}}
+{\footnotesize\ttfamily std\+::string GParam\+::key\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Param/\mbox{\hyperlink{_g_param_8h}{GParam.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Param/\mbox{\hyperlink{_g_param_8cpp}{GParam.\+cpp}}\end{DoxyCompactItemize}

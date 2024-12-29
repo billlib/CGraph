@@ -13,6 +13,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GTemplateDaemon(空) = GDaemon，但是实现成模板类，可以自己用模板参数加以实现
+ * 
+ * @tparam Args 
+ */
 template<class ...Args>
 class GTemplateDaemon : public GDaemon {
 };

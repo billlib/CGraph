@@ -1,0 +1,358 @@
+\hypertarget{class_g_dynamic_engine}{}\doxysection{GDynamic\+Engine Class Reference}
+\label{class_g_dynamic_engine}\index{GDynamicEngine@{GDynamicEngine}}
+
+
+CGraph的核心引擎，提供\+DAG类型分析、拓扑分析、动态图运行、全并发执行、全串行执行等能力  
+
+
+
+
+{\ttfamily \#include $<$GDynamic\+Engine.\+h$>$}
+
+
+
+Inheritance diagram for GDynamic\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=181pt]{class_g_dynamic_engine__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GDynamic\+Engine\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_dynamic_engine_a283fd531362ff6a94d2e31fa32614465}{GDynamic\+Engine}} ()=default
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_dynamic_engine_a17a1c3861917e7fc69f32f7ec97ffbc5}{setup}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements) override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_dynamic_engine_af90b3763ce7bf5af99e3af8a9dfbc946}{run}} () override
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_a58d993371f9cfa441804d65703e18cac}{mark}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_acbe200165be8053865682e379edc0435}{analysis\+Dag\+Type}} (const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_a7320986f3bb0671dce8c6c21c41ace40}{common\+Run\+All}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_ad450af41552d30de42c7e73f36cea736}{process}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} affinity)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_a4de50b4ef0496b4129e8b8cab091218f}{after\+Element\+Run}} (\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}} element)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_a61699aa1447c890549075f23b1e66314}{fat\+Wait}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_ae090aabeebbdd2e598819757b2de07ab}{parallel\+Run\+All}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_dynamic_engine_adde434bd2029d4ea4b58b0aa600d8c66}{serial\+Run\+All}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \mbox{\hyperlink{class_g_dynamic_engine_a285279554f8a621ca639cdbd01ef126d}{total\+\_\+element\+\_\+arr\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} \mbox{\hyperlink{class_g_dynamic_engine_ac53bcad8889a72de62449117efc223d9}{front\+\_\+element\+\_\+arr\+\_\+}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_dynamic_engine_adbcbdfff5412282322e5c728b2307662}{total\+\_\+end\+\_\+size\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_dynamic_engine_a276b3a883935e24d91cf5c30c1b93fd5}{finished\+\_\+end\+\_\+size\+\_\+}} = 0
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_dynamic_engine_ad4acc0a737884954b93b717c497b624c}{cur\+\_\+status\+\_\+}}
+\item 
+\mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}{internal\+::\+GEngine\+Dag\+Type}} \mbox{\hyperlink{class_g_dynamic_engine_abc8e3818bc6d127821ef9c36d0b65bc8}{dag\+\_\+type\+\_\+}} = \{ internal\+::\+GEngine\+Dag\+Type\+::\+COMMON \}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_dynamic_engine_a1bd2225c0bb99b05f1f10ae35c40ac00}{lock\+\_\+}}
+\item 
+std\+::condition\+\_\+variable \mbox{\hyperlink{class_g_dynamic_engine_a1879260f7fec96d9e771fb8628720363}{cv\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_dynamic_engine_aa211ec731ce82d3235af8461b05c2f32}{status\+\_\+lock\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_dynamic_engine_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+CGraph的核心引擎，提供\+DAG类型分析、拓扑分析、动态图运行、全并发执行、全串行执行等能力 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_dynamic_engine_a283fd531362ff6a94d2e31fa32614465}\label{class_g_dynamic_engine_a283fd531362ff6a94d2e31fa32614465}} 
+\index{GDynamicEngine@{GDynamicEngine}!GDynamicEngine@{GDynamicEngine}}
+\index{GDynamicEngine@{GDynamicEngine}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{GDynamicEngine()}{GDynamicEngine()}}
+{\footnotesize\ttfamily GDynamic\+Engine\+::\+GDynamic\+Engine (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [protected]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_dynamic_engine_a4de50b4ef0496b4129e8b8cab091218f}\label{class_g_dynamic_engine_a4de50b4ef0496b4129e8b8cab091218f}} 
+\index{GDynamicEngine@{GDynamicEngine}!afterElementRun@{afterElementRun}}
+\index{afterElementRun@{afterElementRun}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{afterElementRun()}{afterElementRun()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::after\+Element\+Run (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+element 运行完成处理 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+满足一下条件之一，则通知wait函数停止等待 1，无后缀节点全部执行完毕(在运行正常的情况下，只有无后缀节点执行完成的时候，才可能整体运行结束) 2，有节点执行状态异常Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_a4de50b4ef0496b4129e8b8cab091218f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_acbe200165be8053865682e379edc0435}\label{class_g_dynamic_engine_acbe200165be8053865682e379edc0435}} 
+\index{GDynamicEngine@{GDynamicEngine}!analysisDagType@{analysisDagType}}
+\index{analysisDagType@{analysisDagType}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{analysisDagType()}{analysisDagType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::analysis\+Dag\+Type (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+分析当前的信息，主要用于区分dag的类型 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果所有的信息中，只有一个是非linkable。则说明只有最后的那个是的，且只有一个开头 故，这里将其认定为一条 lineal 的情况 ps\+: 只有一个或者没有 element的情况，也会被算到 ALL\+\_\+\+SERIAL 中去\mbox{\Hypertarget{class_g_dynamic_engine_a7320986f3bb0671dce8c6c21c41ace40}\label{class_g_dynamic_engine_a7320986f3bb0671dce8c6c21c41ace40}} 
+\index{GDynamicEngine@{GDynamicEngine}!commonRunAll@{commonRunAll}}
+\index{commonRunAll@{commonRunAll}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{commonRunAll()}{commonRunAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::common\+Run\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+动态图运行 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyEnumerate}
+\item 执行没有任何依赖的element
+\item 在element执行完成之后，进行裂变，直到所有的element执行完成
+\item 等待异步执行结束
+\end{DoxyEnumerate}Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_a7320986f3bb0671dce8c6c21c41ace40_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_a61699aa1447c890549075f23b1e66314}\label{class_g_dynamic_engine_a61699aa1447c890549075f23b1e66314}} 
+\index{GDynamicEngine@{GDynamicEngine}!fatWait@{fatWait}}
+\index{fatWait@{fatWait}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{fatWait()}{fatWait()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::fat\+Wait (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+动态图运行等待 
+\begin{DoxyParams}{Parameters}
+{\em } & \\
+\hline
+\end{DoxyParams}
+遇到以下条件之一，结束执行： 1，执行结束 2，状态异常\mbox{\Hypertarget{class_g_dynamic_engine_a58d993371f9cfa441804d65703e18cac}\label{class_g_dynamic_engine_a58d993371f9cfa441804d65703e18cac}} 
+\index{GDynamicEngine@{GDynamicEngine}!mark@{mark}}
+\index{mark@{mark}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{mark()}{mark()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::mark (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+记录当前 elements 数据信息 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_dynamic_engine_ae090aabeebbdd2e598819757b2de07ab}\label{class_g_dynamic_engine_ae090aabeebbdd2e598819757b2de07ab}} 
+\index{GDynamicEngine@{GDynamicEngine}!parallelRunAll@{parallelRunAll}}
+\index{parallelRunAll@{parallelRunAll}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{parallelRunAll()}{parallelRunAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::parallel\+Run\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+并发的执行所有的element \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+主要适用于dag是纯并发逻辑的情况 直接并发的执行所有的流程，从而减少调度损耗 实测效果，在32路纯并行的情况下，整体耗时从 21.\+5s降低到 12.\+5s 非纯并行逻辑，不走此函数Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_ae090aabeebbdd2e598819757b2de07ab_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_ad450af41552d30de42c7e73f36cea736}\label{class_g_dynamic_engine_ad450af41552d30de42c7e73f36cea736}} 
+\index{GDynamicEngine@{GDynamicEngine}!process@{process}}
+\index{process@{process}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{process()}{process()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::process (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_8h_a6cd5198c54130d3012faba1f0e60ace5}{GElement\+Ptr}}}]{element,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{affinity }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+element 运行element 
+\begin{DoxyParams}{Parameters}
+{\em element} & \\
+\hline
+{\em affinity} & 是否本地执行 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_ad450af41552d30de42c7e73f36cea736_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_af90b3763ce7bf5af99e3af8a9dfbc946}\label{class_g_dynamic_engine_af90b3763ce7bf5af99e3af8a9dfbc946}} 
+\index{GDynamicEngine@{GDynamicEngine}!run@{run}}
+\index{run@{run}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDynamic\+Engine\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_af90b3763ce7bf5af99e3af8a9dfbc946_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_adde434bd2029d4ea4b58b0aa600d8c66}\label{class_g_dynamic_engine_adde434bd2029d4ea4b58b0aa600d8c66}} 
+\index{GDynamicEngine@{GDynamicEngine}!serialRunAll@{serialRunAll}}
+\index{serialRunAll@{serialRunAll}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{serialRunAll()}{serialRunAll()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GDynamic\+Engine\+::serial\+Run\+All (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+串行的执行所有element \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+如果分析出来 dag是一个链式的，则直接依次执行element 直到所有element都执行完成，或者有出现错误的返回值Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_adde434bd2029d4ea4b58b0aa600d8c66_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_g_dynamic_engine_a17a1c3861917e7fc69f32f7ec97ffbc5}\label{class_g_dynamic_engine_a17a1c3861917e7fc69f32f7ec97ffbc5}} 
+\index{GDynamicEngine@{GDynamicEngine}!setup@{setup}}
+\index{setup@{setup}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{setup()}{setup()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDynamic\+Engine\+::setup (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+将所有注册进入 pipeline的内容，进行分析和解构 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+\begin{DoxyEnumerate}
+\item 判断是否是 dag 结构
+\item 标记数据，比如有多少个结束element等
+\item 标记哪些数据，是linkable 的
+\item 分析当前dag类型信息
+\end{DoxyEnumerate}
+
+Implements \mbox{\hyperlink{class_g_engine_a3546d352c68f08255b57c75a2c92d3d5}{GEngine}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_dynamic_engine_a17a1c3861917e7fc69f32f7ec97ffbc5_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_dynamic_engine_a17a0077689f477d78437264108a1577c}\label{class_g_dynamic_engine_a17a0077689f477d78437264108a1577c}} 
+\index{GDynamicEngine@{GDynamicEngine}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_dynamic_engine_ad4acc0a737884954b93b717c497b624c}\label{class_g_dynamic_engine_ad4acc0a737884954b93b717c497b624c}} 
+\index{GDynamicEngine@{GDynamicEngine}!cur\_status\_@{cur\_status\_}}
+\index{cur\_status\_@{cur\_status\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{cur\_status\_}{cur\_status\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GDynamic\+Engine\+::cur\+\_\+status\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_a1879260f7fec96d9e771fb8628720363}\label{class_g_dynamic_engine_a1879260f7fec96d9e771fb8628720363}} 
+\index{GDynamicEngine@{GDynamicEngine}!cv\_@{cv\_}}
+\index{cv\_@{cv\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{cv\_}{cv\_}}
+{\footnotesize\ttfamily std\+::condition\+\_\+variable GDynamic\+Engine\+::cv\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_abc8e3818bc6d127821ef9c36d0b65bc8}\label{class_g_dynamic_engine_abc8e3818bc6d127821ef9c36d0b65bc8}} 
+\index{GDynamicEngine@{GDynamicEngine}!dag\_type\_@{dag\_type\_}}
+\index{dag\_type\_@{dag\_type\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{dag\_type\_}{dag\_type\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_engine_define_8h_a2cb98b3cc58cd5875bd7df33b9587dc6}{internal\+::\+GEngine\+Dag\+Type}} GDynamic\+Engine\+::dag\+\_\+type\+\_\+ = \{ internal\+::\+GEngine\+Dag\+Type\+::\+COMMON \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_a276b3a883935e24d91cf5c30c1b93fd5}\label{class_g_dynamic_engine_a276b3a883935e24d91cf5c30c1b93fd5}} 
+\index{GDynamicEngine@{GDynamicEngine}!finished\_end\_size\_@{finished\_end\_size\_}}
+\index{finished\_end\_size\_@{finished\_end\_size\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{finished\_end\_size\_}{finished\_end\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GDynamic\+Engine\+::finished\+\_\+end\+\_\+size\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_ac53bcad8889a72de62449117efc223d9}\label{class_g_dynamic_engine_ac53bcad8889a72de62449117efc223d9}} 
+\index{GDynamicEngine@{GDynamicEngine}!front\_element\_arr\_@{front\_element\_arr\_}}
+\index{front\_element\_arr\_@{front\_element\_arr\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{front\_element\_arr\_}{front\_element\_arr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} GDynamic\+Engine\+::front\+\_\+element\+\_\+arr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_a1bd2225c0bb99b05f1f10ae35c40ac00}\label{class_g_dynamic_engine_a1bd2225c0bb99b05f1f10ae35c40ac00}} 
+\index{GDynamicEngine@{GDynamicEngine}!lock\_@{lock\_}}
+\index{lock\_@{lock\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{lock\_}{lock\_}}
+{\footnotesize\ttfamily std\+::mutex GDynamic\+Engine\+::lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_aa211ec731ce82d3235af8461b05c2f32}\label{class_g_dynamic_engine_aa211ec731ce82d3235af8461b05c2f32}} 
+\index{GDynamicEngine@{GDynamicEngine}!status\_lock\_@{status\_lock\_}}
+\index{status\_lock\_@{status\_lock\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{status\_lock\_}{status\_lock\_}}
+{\footnotesize\ttfamily std\+::mutex GDynamic\+Engine\+::status\+\_\+lock\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_a285279554f8a621ca639cdbd01ef126d}\label{class_g_dynamic_engine_a285279554f8a621ca639cdbd01ef126d}} 
+\index{GDynamicEngine@{GDynamicEngine}!total\_element\_arr\_@{total\_element\_arr\_}}
+\index{total\_element\_arr\_@{total\_element\_arr\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{total\_element\_arr\_}{total\_element\_arr\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_g_element_8h_a8cbe38ca982711fa6b6b6708794503c4}{GElement\+Ptr\+Arr}} GDynamic\+Engine\+::total\+\_\+element\+\_\+arr\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_dynamic_engine_adbcbdfff5412282322e5c728b2307662}\label{class_g_dynamic_engine_adbcbdfff5412282322e5c728b2307662}} 
+\index{GDynamicEngine@{GDynamicEngine}!total\_end\_size\_@{total\_end\_size\_}}
+\index{total\_end\_size\_@{total\_end\_size\_}!GDynamicEngine@{GDynamicEngine}}
+\doxysubsubsection{\texorpdfstring{total\_end\_size\_}{total\_end\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GDynamic\+Engine\+::total\+\_\+end\+\_\+size\+\_\+ = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GDynamic\+Engine/\mbox{\hyperlink{_g_dynamic_engine_8h}{GDynamic\+Engine.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GEngine/\+GDynamic\+Engine/\mbox{\hyperlink{_g_dynamic_engine_8cpp}{GDynamic\+Engine.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,84 @@
+\hypertarget{class_g_trim_optimizer}{}\doxysection{GTrim\+Optimizer Class Reference}
+\label{class_g_trim_optimizer}\index{GTrimOptimizer@{GTrimOptimizer}}
+
+
+{\ttfamily \#include $<$GTrim\+Optimizer.\+h$>$}
+
+
+
+Inheritance diagram for GTrim\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_g_trim_optimizer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GTrim\+Optimizer\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=176pt]{class_g_trim_optimizer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} \mbox{\hyperlink{class_g_trim_optimizer_a52b860de40163586c7d0142456b660fd}{trim}} (\mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&elements)
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_trim_optimizer_affeeccde5245f99f2ee17a1a585064c3}{GElement\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_trim_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}{GRegion}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_trim_optimizer_a52b860de40163586c7d0142456b660fd}\label{class_g_trim_optimizer_a52b860de40163586c7d0142456b660fd}} 
+\index{GTrimOptimizer@{GTrimOptimizer}!trim@{trim}}
+\index{trim@{trim}!GTrimOptimizer@{GTrimOptimizer}}
+\doxysubsubsection{\texorpdfstring{trim()}{trim()}}
+{\footnotesize\ttfamily static \mbox{\hyperlink{_c_val_type_8h_aa88d67f9deb9607e0ccaa946a5042966}{CSize}} GTrim\+Optimizer\+::trim (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_g_element_sorter_8h_a56ca0a528fb8114e94d91b8967da6dde}{GSorted\+GElement\+Ptr\+Set}} \&}]{elements }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+针对图结构，做剪裁；具体算法为： (1) collect\+Paths：以入度为0的结点开始，通过递归，收集整个elements集合中的路径paths (2) build\+Graph：对paths进行分析，构建一个\mbox{[}s, s\mbox{]}的矩阵graph，s为elements所有元素的个数，其中 graph\mbox{[}x\mbox{]}\mbox{[}y\mbox{]}表示elements中index为x的元素是否可以达到index为y的元素 (3) 剪枝\+: 遍历elements，如果发现elements的前序结点x/y存在可达关系x-\/$>$y，类似于x -\/$>$ y 那么可以把x-\/$>$cur的依赖关系删除 ↘ ↙ cur (4) 如果elements存在某个元素是\+REGION，那么继续调用\+REGION自己的trim (本质上就是上述算法) (5) 记录总共被剪枝的元素个数 
+\begin{DoxyParams}{Parameters}
+{\em elements} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_trim_optimizer_a52b860de40163586c7d0142456b660fd_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_trim_optimizer_affeeccde5245f99f2ee17a1a585064c3}\label{class_g_trim_optimizer_affeeccde5245f99f2ee17a1a585064c3}} 
+\index{GTrimOptimizer@{GTrimOptimizer}!GElementManager@{GElementManager}}
+\index{GElementManager@{GElementManager}!GTrimOptimizer@{GTrimOptimizer}}
+\doxysubsubsection{\texorpdfstring{GElementManager}{GElementManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_element_manager}{GElement\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_trim_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}\label{class_g_trim_optimizer_a2ddf6b2a302039a39825b3613cd3e48c}} 
+\index{GTrimOptimizer@{GTrimOptimizer}!GRegion@{GRegion}}
+\index{GRegion@{GRegion}!GTrimOptimizer@{GTrimOptimizer}}
+\doxysubsubsection{\texorpdfstring{GRegion}{GRegion}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_region}{GRegion}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+\_\+\+GOptimizer/\mbox{\hyperlink{_g_trim_optimizer_8h}{GTrim\+Optimizer.\+h}}\end{DoxyCompactItemize}

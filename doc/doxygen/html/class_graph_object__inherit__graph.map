@@ -1,0 +1,51 @@
+<map id="GraphObject" name="GraphObject">
+<area shape="rect" id="node1" title="GraphObject = CObject，没有新增或删除任何成员" alt="" coords="127,806,229,833"/>
+<area shape="rect" id="node3" href="$class_g_aspect_object.html" title="在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/belong_ param_manager_/event_man..." alt="" coords="284,147,403,174"/>
+<area shape="rect" id="node9" href="$class_g_daemon_object.html" title="在GraphObject和CDescInfo的基础上新增私有成员param_manager_/event_manager_/param_/interval_ param_manager_/event_m..." alt="" coords="279,274,408,301"/>
+<area shape="rect" id="node14" href="$class_g_element_object.html" title="GElementObject = GraphObject = CObject，没有新增或删除任何成员" alt="" coords="279,451,407,478"/>
+<area shape="rect" id="node29" href="$class_g_event_object.html" title=" " alt="" coords="288,629,399,655"/>
+<area shape="rect" id="node32" href="$class_g_message_object.html" title="GMessageObject在继承GraphObject的基础上删除了run函数 (GraphObject = CObject)" alt="" coords="277,755,409,782"/>
+<area shape="rect" id="node36" href="$class_g_param_object.html" title=" " alt="" coords="286,857,401,883"/>
+<area shape="rect" id="node41" href="$class_g_perf.html" title="pipeline性能分析，具体做法是通过inject注入统计性能的切面，然后运行pipeline， 接着输出最长路径和整个pipeline的可视化，最后通过recover删除切面恢复原来的pipelin..." alt="" coords="314,907,373,934"/>
+<area shape="rect" id="node42" href="$class_g_pipeline_object.html" title=" " alt="" coords="280,1034,407,1061"/>
+<area shape="rect" id="node46" href="$class_g_schedule.html" title=" " alt="" coords="298,1085,389,1111"/>
+<area shape="rect" id="node47" href="$class_g_stage_object.html" title=" " alt="" coords="288,1186,399,1213"/>
+<area shape="rect" id="node2" href="$class_c_object.html" title=" " alt="" coords="5,806,79,833"/>
+<area shape="rect" id="node4" href="$class_g_aspect.html" title=" " alt="" coords="523,83,599,110"/>
+<area shape="rect" id="node8" href="$class_g_aspect_manager.html" title=" " alt="" coords="495,147,628,174"/>
+<area shape="rect" id="node5" href="$class_g_template_aspect.html" title=" " alt="" coords="727,5,907,47"/>
+<area shape="rect" id="node6" href="$class_g_template_aspect.html" title="GTemplateAspect(空) = GAspect，但是实现成模板类，可以自己用模板参数加以实现" alt="" coords="719,71,914,98"/>
+<area shape="rect" id="node7" href="$class_switch_g_aspect.html" title=" " alt="" coords="757,122,876,149"/>
+<area shape="rect" id="node10" href="$class_g_daemon.html" title=" " alt="" coords="518,223,605,250"/>
+<area shape="rect" id="node13" href="$class_g_daemon_manager.html" title="维护GDaemon实例的集合daemons_ 支持批量init/批量destroy，在daemons_里面add/destroy或者清空daemons_等" alt="" coords="489,274,633,301"/>
+<area shape="rect" id="node11" href="$class_camera_g_daemon.html" title=" " alt="" coords="747,173,886,199"/>
+<area shape="rect" id="node12" href="$class_g_template_daemon.html" title="GTemplateDaemon(空) = GDaemon，但是实现成模板类，可以自己用模板参数加以实现" alt="" coords="713,223,920,250"/>
+<area shape="rect" id="node15" href="$class_g_element.html" title="CGraph所有广义&quot;结点&quot;的基类，可派生出GNode/GGroup/GAdapter类 public: 提供addGAspect加入切面/addDependGElement加入前序依赖/removeD..." alt="" coords="518,325,605,351"/>
+<area shape="rect" id="node19" href="$class_g_element_manager.html" title=" " alt="" coords="490,375,633,402"/>
+<area shape="rect" id="node20" href="$class_g_element_repository.html" title=" " alt="" coords="483,426,639,453"/>
+<area shape="rect" id="node21" href="$class_g_engine.html" title="CGraph的核心引擎，提供setup/link/getTopo/isDag等核心能力" alt="" coords="523,477,599,503"/>
+<area shape="rect" id="node25" href="$class_g_optimizer.html" title="GOptimizer是用来干嘛的?" alt="" coords="513,527,609,554"/>
+<area shape="rect" id="node16" href="$class_g_adapter.html" title=" " alt="" coords="775,274,858,301"/>
+<area shape="rect" id="node17" href="$class_g_group.html" title="所有节点组合的基类，所有节点组合功能，均继承自此类" alt="" coords="781,325,852,351"/>
+<area shape="rect" id="node18" href="$class_g_node.html" title="功能运行的最小单元(结点)" alt="" coords="783,375,850,402"/>
+<area shape="rect" id="node22" href="$class_g_dynamic_engine.html" title="CGraph的核心引擎，提供DAG类型分析、拓扑分析、动态图运行、全并发执行、全串行执行等能力" alt="" coords="749,426,884,453"/>
+<area shape="rect" id="node23" href="$class_g_static_engine.html" title="将待执行的图中的所有结点进行拓扑排序(setup)，排序结果存储在element_mat_； 然后将element_mat_各个拓扑排序好的结点提交到微线程或者线程池，等待执行完成获取结果(run)" alt="" coords="760,477,873,503"/>
+<area shape="rect" id="node24" href="$class_g_topo_engine.html" title="拓扑排序，并按照拓扑排序的顺序串行执行" alt="" coords="763,527,870,554"/>
+<area shape="rect" id="node26" href="$class_g_max_para_optimizer.html" title=" " alt="" coords="741,578,893,605"/>
+<area shape="rect" id="node27" href="$class_g_separate_optimizer.html" title="判断两个element是否可以独立运行" alt="" coords="739,629,894,655"/>
+<area shape="rect" id="node28" href="$class_g_trim_optimizer.html" title=" " alt="" coords="755,679,879,706"/>
+<area shape="rect" id="node30" href="$class_g_event.html" title="事件机制，addGEvent将事件注册到pipeline notify触发，process处理信号，trigger同步执行，asyncProcess异步执行，asyncWait等待异步任务结束" alt="" coords="527,578,596,605"/>
+<area shape="rect" id="node31" href="$class_g_event_manager.html" title=" " alt="" coords="498,629,625,655"/>
+<area shape="rect" id="node33" href="$class_g_message.html" title="基于UAtomicRingBufferQueue队列实现，支持send/recv" alt="" coords="464,679,659,706"/>
+<area shape="rect" id="node34" href="$class_g_message_manager.html" title="基于topic，支持send/recv(一发一收)，也支持pub/sub(一发多收) sub端每次订阅特定的topic之前都要先bindTopic生成一个唯一的conn_id_，实际上是绑定到这个con..." alt="" coords="467,730,656,757"/>
+<area shape="rect" id="node35" href="$class_g_message_manager_singleton.html" title="默认的GMessageObject使用的参数类型是GMessageParam，是全局参数，用单例管理更合适" alt="" coords="457,781,665,807"/>
+<area shape="rect" id="node37" href="$class_g_message_param.html" title="GMessageParam作用域为进程，GParam作用域为图(piepline) GPassedParam作用域为结点(GElement/GDaemon/GAspect/GEvent)" alt="" coords="496,831,627,858"/>
+<area shape="rect" id="node38" href="$class_g_param.html" title=" " alt="" coords="525,882,598,909"/>
+<area shape="rect" id="node39" href="$class_g_param_manager.html" title=" " alt="" coords="496,933,627,959"/>
+<area shape="rect" id="node40" href="$class_g_passed_param.html" title=" " alt="" coords="502,983,621,1010"/>
+<area shape="rect" id="node43" href="$class_g_pipeline.html" title=" " alt="" coords="519,1034,603,1061"/>
+<area shape="rect" id="node44" href="$class_g_pipeline_factory.html" title=" " alt="" coords="496,1085,627,1111"/>
+<area shape="rect" id="node45" href="$class_g_pipeline_manager.html" title=" " alt="" coords="491,1135,632,1162"/>
+<area shape="rect" id="node48" href="$class_g_stage.html" title=" " alt="" coords="527,1186,596,1213"/>
+<area shape="rect" id="node49" href="$class_g_stage_manager.html" title=" " alt="" coords="498,1237,625,1263"/>
+</map>

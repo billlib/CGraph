@@ -1,0 +1,299 @@
+\hypertarget{_u_thread_pool_define_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+UThread\+Pool\+Define.h File Reference}
+\label{_u_thread_pool_define_8h}\index{src/UtilsCtrl/ThreadPool/UThreadPoolDefine.h@{src/UtilsCtrl/ThreadPool/UThreadPoolDefine.h}}
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include \char`\"{}../\+Utils\+Define.\+h\char`\"{}}\newline
+Include dependency graph for UThread\+Pool\+Define.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_pool_define_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_thread_pool_define_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a13255e9685128b85500ba4f367d9411e}{CGRAPH\+\_\+\+CPU\+\_\+\+NUM}} = (\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}})std\+::thread\+::hardware\+\_\+concurrency()
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a8ca1fe194aa5fc20f1bcf14c692963b5}{CGRAPH\+\_\+\+THREAD\+\_\+\+TYPE\+\_\+\+PRIMARY}} = 1
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a857aca678ba2642204dd411f7771ad02}{CGRAPH\+\_\+\+THREAD\+\_\+\+TYPE\+\_\+\+SECONDARY}} = 2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER}} = SCHED\+\_\+\+OTHER
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a69569d229762b629851adac9b3f15f69}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+RR}} = SCHED\+\_\+\+RR
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a50efab8057265f74ce3f0f87894b60ad}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+FIFO}} = SCHED\+\_\+\+FIFO
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}{CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY}} = 0
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a893cdf1727746ed12068e570569fbd4a}{CGRAPH\+\_\+\+THREAD\+\_\+\+MAX\+\_\+\+PRIORITY}} = 99
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}{CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL}} = 1999999999
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a8a6e171185fd0f31d5e827b7dc28c7ad}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE}} = 64
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{_u_thread_pool_define_8h_ad8c914c0e431c900d6be23d1d68e711b}{CGRAPH\+\_\+\+MAIN\+\_\+\+THREAD\+\_\+\+ID}} = -\/1
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} \mbox{\hyperlink{_u_thread_pool_define_8h_aafc8289fbf52673294591e61d3c0d88f}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+COMMON\+\_\+\+ID}} = -\/2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY}} = -\/1
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_ac60a2314fc31115840101c0a46c29336}{CGRAPH\+\_\+\+POOL\+\_\+\+TASK\+\_\+\+STRATEGY}} = -\/2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a07c1aec0050cdd5d78c62d62d349abfc}{CGRAPH\+\_\+\+LONG\+\_\+\+TIME\+\_\+\+TASK\+\_\+\+STRATEGY}} = -\/101
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_af7feaf4e2b5574596a2b69240629cad2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+THREAD\+\_\+\+SIZE}} = 8
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_aece7fac27e01024acf98b340e03220ba}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+SIZE}} = 0
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a626db6a0cd1c2d67be36712257d29692}{CGRAPH\+\_\+\+MAX\+\_\+\+THREAD\+\_\+\+SIZE}} = 8
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a79fa20708b601711ed0ef2f252ce38e6}{CGRAPH\+\_\+\+MAX\+\_\+\+TASK\+\_\+\+STEAL\+\_\+\+RANGE}} = 7
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{_u_thread_pool_define_8h_a64cf63cceda16fa221d51172b04b4212}{CGRAPH\+\_\+\+BATCH\+\_\+\+TASK\+\_\+\+ENABLE}} = false
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a096c048e33cdd7a7afcb9ecaf9444b7e}{CGRAPH\+\_\+\+MAX\+\_\+\+LOCAL\+\_\+\+BATCH\+\_\+\+SIZE}} = 2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a928b52e27c72c7c41ebf38efc9744d97}{CGRAPH\+\_\+\+MAX\+\_\+\+POOL\+\_\+\+BATCH\+\_\+\+SIZE}} = 2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a493ef854b0287c074ad8aa91ea0d8fd6}{CGRAPH\+\_\+\+MAX\+\_\+\+STEAL\+\_\+\+BATCH\+\_\+\+SIZE}} = 2
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a2fb81de300eb0d477fa7dc94f2ccda5d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+BUSY\+\_\+\+EPOCH}} = 5
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{_u_thread_pool_define_8h_a7eecdce03230df6043a80a7a83689f01}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+EMPTY\+\_\+\+INTERVAL}} = 1000
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} \mbox{\hyperlink{_u_thread_pool_define_8h_ae6c1ba654c28784a5f82faa1716571ae}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+TTL}} = 10
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{_u_thread_pool_define_8h_ae75a271fab282a732b9be98abe4cebcc}{CGRAPH\+\_\+\+MONITOR\+\_\+\+ENABLE}} = false
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} \mbox{\hyperlink{_u_thread_pool_define_8h_a91166689863d823bfdd0bffa58f53a4c}{CGRAPH\+\_\+\+MONITOR\+\_\+\+SPAN}} = 5
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{_u_thread_pool_define_8h_aca8b3630af26b21ba56f52eb8ce39920}{CGRAPH\+\_\+\+QUEUE\+\_\+\+EMPTY\+\_\+\+INTERVAL}} = 1000
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{_u_thread_pool_define_8h_aa91a97e7af936805a453fb070b03bcad}{CGRAPH\+\_\+\+BIND\+\_\+\+CPU\+\_\+\+ENABLE}} = false
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a5ad6897b56c7af826f1f782d07d83ad2}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+POLICY}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER}}
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a3e17f148fc0be3570ddc77ac8aa9d579}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+POLICY}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER}}
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a1a8eadbe58a12da07a01f00576da4d0d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+PRIORITY}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}{CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY}}
+\item 
+static const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{_u_thread_pool_define_8h_a0c4bc11021b4601acaf86e01a07f4a0f}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+PRIORITY}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}{CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a64cf63cceda16fa221d51172b04b4212}\label{_u_thread_pool_define_8h_a64cf63cceda16fa221d51172b04b4212}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_BATCH\_TASK\_ENABLE@{CGRAPH\_BATCH\_TASK\_ENABLE}}
+\index{CGRAPH\_BATCH\_TASK\_ENABLE@{CGRAPH\_BATCH\_TASK\_ENABLE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_BATCH\_TASK\_ENABLE}{CGRAPH\_BATCH\_TASK\_ENABLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} CGRAPH\+\_\+\+BATCH\+\_\+\+TASK\+\_\+\+ENABLE = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_aa91a97e7af936805a453fb070b03bcad}\label{_u_thread_pool_define_8h_aa91a97e7af936805a453fb070b03bcad}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_BIND\_CPU\_ENABLE@{CGRAPH\_BIND\_CPU\_ENABLE}}
+\index{CGRAPH\_BIND\_CPU\_ENABLE@{CGRAPH\_BIND\_CPU\_ENABLE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_BIND\_CPU\_ENABLE}{CGRAPH\_BIND\_CPU\_ENABLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} CGRAPH\+\_\+\+BIND\+\_\+\+CPU\+\_\+\+ENABLE = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a13255e9685128b85500ba4f367d9411e}\label{_u_thread_pool_define_8h_a13255e9685128b85500ba4f367d9411e}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_CPU\_NUM@{CGRAPH\_CPU\_NUM}}
+\index{CGRAPH\_CPU\_NUM@{CGRAPH\_CPU\_NUM}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_CPU\_NUM}{CGRAPH\_CPU\_NUM}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+CPU\+\_\+\+NUM = (\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}})std\+::thread\+::hardware\+\_\+concurrency()\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a8a6e171185fd0f31d5e827b7dc28c7ad}\label{_u_thread_pool_define_8h_a8a6e171185fd0f31d5e827b7dc28c7ad}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE@{CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE}}
+\index{CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE@{CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE}{CGRAPH\_DEFAULT\_RINGBUFFER\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a22d61e20b4ca85793d6d094ef18e3169}{CUInt}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+RINGBUFFER\+\_\+\+SIZE = 64\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}\label{_u_thread_pool_define_8h_a2a340237ad0646bd6bd49c8933c9665c}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_DEFAULT\_TASK\_STRATEGY@{CGRAPH\_DEFAULT\_TASK\_STRATEGY}}
+\index{CGRAPH\_DEFAULT\_TASK\_STRATEGY@{CGRAPH\_DEFAULT\_TASK\_STRATEGY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_TASK\_STRATEGY}{CGRAPH\_DEFAULT\_TASK\_STRATEGY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+TASK\+\_\+\+STRATEGY = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_af7feaf4e2b5574596a2b69240629cad2}\label{_u_thread_pool_define_8h_af7feaf4e2b5574596a2b69240629cad2}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_DEFAULT\_THREAD\_SIZE@{CGRAPH\_DEFAULT\_THREAD\_SIZE}}
+\index{CGRAPH\_DEFAULT\_THREAD\_SIZE@{CGRAPH\_DEFAULT\_THREAD\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DEFAULT\_THREAD\_SIZE}{CGRAPH\_DEFAULT\_THREAD\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+DEFAULT\+\_\+\+THREAD\+\_\+\+SIZE = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+以下为线程池配置信息 \mbox{\Hypertarget{_u_thread_pool_define_8h_a07c1aec0050cdd5d78c62d62d349abfc}\label{_u_thread_pool_define_8h_a07c1aec0050cdd5d78c62d62d349abfc}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_LONG\_TIME\_TASK\_STRATEGY@{CGRAPH\_LONG\_TIME\_TASK\_STRATEGY}}
+\index{CGRAPH\_LONG\_TIME\_TASK\_STRATEGY@{CGRAPH\_LONG\_TIME\_TASK\_STRATEGY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_LONG\_TIME\_TASK\_STRATEGY}{CGRAPH\_LONG\_TIME\_TASK\_STRATEGY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+LONG\+\_\+\+TIME\+\_\+\+TASK\+\_\+\+STRATEGY = -\/101\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ad8c914c0e431c900d6be23d1d68e711b}\label{_u_thread_pool_define_8h_ad8c914c0e431c900d6be23d1d68e711b}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAIN\_THREAD\_ID@{CGRAPH\_MAIN\_THREAD\_ID}}
+\index{CGRAPH\_MAIN\_THREAD\_ID@{CGRAPH\_MAIN\_THREAD\_ID}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAIN\_THREAD\_ID}{CGRAPH\_MAIN\_THREAD\_ID}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} CGRAPH\+\_\+\+MAIN\+\_\+\+THREAD\+\_\+\+ID = -\/1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}\label{_u_thread_pool_define_8h_a43d0e2929dc2f25d405d47c37dd12c8b}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_BLOCK\_TTL@{CGRAPH\_MAX\_BLOCK\_TTL}}
+\index{CGRAPH\_MAX\_BLOCK\_TTL@{CGRAPH\_MAX\_BLOCK\_TTL}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_BLOCK\_TTL}{CGRAPH\_MAX\_BLOCK\_TTL}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} CGRAPH\+\_\+\+MAX\+\_\+\+BLOCK\+\_\+\+TTL = 1999999999\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a096c048e33cdd7a7afcb9ecaf9444b7e}\label{_u_thread_pool_define_8h_a096c048e33cdd7a7afcb9ecaf9444b7e}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE@{CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE}}
+\index{CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE@{CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE}{CGRAPH\_MAX\_LOCAL\_BATCH\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+MAX\+\_\+\+LOCAL\+\_\+\+BATCH\+\_\+\+SIZE = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a928b52e27c72c7c41ebf38efc9744d97}\label{_u_thread_pool_define_8h_a928b52e27c72c7c41ebf38efc9744d97}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_POOL\_BATCH\_SIZE@{CGRAPH\_MAX\_POOL\_BATCH\_SIZE}}
+\index{CGRAPH\_MAX\_POOL\_BATCH\_SIZE@{CGRAPH\_MAX\_POOL\_BATCH\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_POOL\_BATCH\_SIZE}{CGRAPH\_MAX\_POOL\_BATCH\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+MAX\+\_\+\+POOL\+\_\+\+BATCH\+\_\+\+SIZE = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a493ef854b0287c074ad8aa91ea0d8fd6}\label{_u_thread_pool_define_8h_a493ef854b0287c074ad8aa91ea0d8fd6}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_STEAL\_BATCH\_SIZE@{CGRAPH\_MAX\_STEAL\_BATCH\_SIZE}}
+\index{CGRAPH\_MAX\_STEAL\_BATCH\_SIZE@{CGRAPH\_MAX\_STEAL\_BATCH\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_STEAL\_BATCH\_SIZE}{CGRAPH\_MAX\_STEAL\_BATCH\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+MAX\+\_\+\+STEAL\+\_\+\+BATCH\+\_\+\+SIZE = 2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a79fa20708b601711ed0ef2f252ce38e6}\label{_u_thread_pool_define_8h_a79fa20708b601711ed0ef2f252ce38e6}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_TASK\_STEAL\_RANGE@{CGRAPH\_MAX\_TASK\_STEAL\_RANGE}}
+\index{CGRAPH\_MAX\_TASK\_STEAL\_RANGE@{CGRAPH\_MAX\_TASK\_STEAL\_RANGE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_TASK\_STEAL\_RANGE}{CGRAPH\_MAX\_TASK\_STEAL\_RANGE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+MAX\+\_\+\+TASK\+\_\+\+STEAL\+\_\+\+RANGE = 7\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a626db6a0cd1c2d67be36712257d29692}\label{_u_thread_pool_define_8h_a626db6a0cd1c2d67be36712257d29692}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MAX\_THREAD\_SIZE@{CGRAPH\_MAX\_THREAD\_SIZE}}
+\index{CGRAPH\_MAX\_THREAD\_SIZE@{CGRAPH\_MAX\_THREAD\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MAX\_THREAD\_SIZE}{CGRAPH\_MAX\_THREAD\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+MAX\+\_\+\+THREAD\+\_\+\+SIZE = 8\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ae75a271fab282a732b9be98abe4cebcc}\label{_u_thread_pool_define_8h_ae75a271fab282a732b9be98abe4cebcc}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MONITOR\_ENABLE@{CGRAPH\_MONITOR\_ENABLE}}
+\index{CGRAPH\_MONITOR\_ENABLE@{CGRAPH\_MONITOR\_ENABLE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MONITOR\_ENABLE}{CGRAPH\_MONITOR\_ENABLE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} CGRAPH\+\_\+\+MONITOR\+\_\+\+ENABLE = false\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a91166689863d823bfdd0bffa58f53a4c}\label{_u_thread_pool_define_8h_a91166689863d823bfdd0bffa58f53a4c}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_MONITOR\_SPAN@{CGRAPH\_MONITOR\_SPAN}}
+\index{CGRAPH\_MONITOR\_SPAN@{CGRAPH\_MONITOR\_SPAN}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_MONITOR\_SPAN}{CGRAPH\_MONITOR\_SPAN}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} CGRAPH\+\_\+\+MONITOR\+\_\+\+SPAN = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ac60a2314fc31115840101c0a46c29336}\label{_u_thread_pool_define_8h_ac60a2314fc31115840101c0a46c29336}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_POOL\_TASK\_STRATEGY@{CGRAPH\_POOL\_TASK\_STRATEGY}}
+\index{CGRAPH\_POOL\_TASK\_STRATEGY@{CGRAPH\_POOL\_TASK\_STRATEGY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_POOL\_TASK\_STRATEGY}{CGRAPH\_POOL\_TASK\_STRATEGY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+POOL\+\_\+\+TASK\+\_\+\+STRATEGY = -\/2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a2fb81de300eb0d477fa7dc94f2ccda5d}\label{_u_thread_pool_define_8h_a2fb81de300eb0d477fa7dc94f2ccda5d}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH@{CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH}}
+\index{CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH@{CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH}{CGRAPH\_PRIMARY\_THREAD\_BUSY\_EPOCH}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+BUSY\+\_\+\+EPOCH = 5\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a7eecdce03230df6043a80a7a83689f01}\label{_u_thread_pool_define_8h_a7eecdce03230df6043a80a7a83689f01}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL@{CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL}}
+\index{CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL@{CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL}{CGRAPH\_PRIMARY\_THREAD\_EMPTY\_INTERVAL}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+EMPTY\+\_\+\+INTERVAL = 1000\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a5ad6897b56c7af826f1f782d07d83ad2}\label{_u_thread_pool_define_8h_a5ad6897b56c7af826f1f782d07d83ad2}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_PRIMARY\_THREAD\_POLICY@{CGRAPH\_PRIMARY\_THREAD\_POLICY}}
+\index{CGRAPH\_PRIMARY\_THREAD\_POLICY@{CGRAPH\_PRIMARY\_THREAD\_POLICY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PRIMARY\_THREAD\_POLICY}{CGRAPH\_PRIMARY\_THREAD\_POLICY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+POLICY = \mbox{\hyperlink{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a1a8eadbe58a12da07a01f00576da4d0d}\label{_u_thread_pool_define_8h_a1a8eadbe58a12da07a01f00576da4d0d}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_PRIMARY\_THREAD\_PRIORITY@{CGRAPH\_PRIMARY\_THREAD\_PRIORITY}}
+\index{CGRAPH\_PRIMARY\_THREAD\_PRIORITY@{CGRAPH\_PRIMARY\_THREAD\_PRIORITY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_PRIMARY\_THREAD\_PRIORITY}{CGRAPH\_PRIMARY\_THREAD\_PRIORITY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+PRIORITY = \mbox{\hyperlink{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}{CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_aca8b3630af26b21ba56f52eb8ce39920}\label{_u_thread_pool_define_8h_aca8b3630af26b21ba56f52eb8ce39920}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_QUEUE\_EMPTY\_INTERVAL@{CGRAPH\_QUEUE\_EMPTY\_INTERVAL}}
+\index{CGRAPH\_QUEUE\_EMPTY\_INTERVAL@{CGRAPH\_QUEUE\_EMPTY\_INTERVAL}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_QUEUE\_EMPTY\_INTERVAL}{CGRAPH\_QUEUE\_EMPTY\_INTERVAL}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} CGRAPH\+\_\+\+QUEUE\+\_\+\+EMPTY\+\_\+\+INTERVAL = 1000\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_aafc8289fbf52673294591e61d3c0d88f}\label{_u_thread_pool_define_8h_aafc8289fbf52673294591e61d3c0d88f}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID@{CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID}}
+\index{CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID@{CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID}{CGRAPH\_SECONDARY\_THREAD\_COMMON\_ID}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ab1bcfbfb4d9a2f52fbb02c4f16bfae81}{CIndex}} CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+COMMON\+\_\+\+ID = -\/2\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a3e17f148fc0be3570ddc77ac8aa9d579}\label{_u_thread_pool_define_8h_a3e17f148fc0be3570ddc77ac8aa9d579}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_SECONDARY\_THREAD\_POLICY@{CGRAPH\_SECONDARY\_THREAD\_POLICY}}
+\index{CGRAPH\_SECONDARY\_THREAD\_POLICY@{CGRAPH\_SECONDARY\_THREAD\_POLICY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SECONDARY\_THREAD\_POLICY}{CGRAPH\_SECONDARY\_THREAD\_POLICY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+POLICY = \mbox{\hyperlink{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}{CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a0c4bc11021b4601acaf86e01a07f4a0f}\label{_u_thread_pool_define_8h_a0c4bc11021b4601acaf86e01a07f4a0f}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_SECONDARY\_THREAD\_PRIORITY@{CGRAPH\_SECONDARY\_THREAD\_PRIORITY}}
+\index{CGRAPH\_SECONDARY\_THREAD\_PRIORITY@{CGRAPH\_SECONDARY\_THREAD\_PRIORITY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SECONDARY\_THREAD\_PRIORITY}{CGRAPH\_SECONDARY\_THREAD\_PRIORITY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+PRIORITY = \mbox{\hyperlink{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}{CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY}}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_aece7fac27e01024acf98b340e03220ba}\label{_u_thread_pool_define_8h_aece7fac27e01024acf98b340e03220ba}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_SECONDARY\_THREAD\_SIZE@{CGRAPH\_SECONDARY\_THREAD\_SIZE}}
+\index{CGRAPH\_SECONDARY\_THREAD\_SIZE@{CGRAPH\_SECONDARY\_THREAD\_SIZE}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SECONDARY\_THREAD\_SIZE}{CGRAPH\_SECONDARY\_THREAD\_SIZE}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+SIZE = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ae6c1ba654c28784a5f82faa1716571ae}\label{_u_thread_pool_define_8h_ae6c1ba654c28784a5f82faa1716571ae}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_SECONDARY\_THREAD\_TTL@{CGRAPH\_SECONDARY\_THREAD\_TTL}}
+\index{CGRAPH\_SECONDARY\_THREAD\_TTL@{CGRAPH\_SECONDARY\_THREAD\_TTL}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_SECONDARY\_THREAD\_TTL}{CGRAPH\_SECONDARY\_THREAD\_TTL}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+TTL = 10\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a893cdf1727746ed12068e570569fbd4a}\label{_u_thread_pool_define_8h_a893cdf1727746ed12068e570569fbd4a}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_MAX\_PRIORITY@{CGRAPH\_THREAD\_MAX\_PRIORITY}}
+\index{CGRAPH\_THREAD\_MAX\_PRIORITY@{CGRAPH\_THREAD\_MAX\_PRIORITY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_MAX\_PRIORITY}{CGRAPH\_THREAD\_MAX\_PRIORITY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+MAX\+\_\+\+PRIORITY = 99\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}\label{_u_thread_pool_define_8h_ac17334f52fe7350afaeaae2611ca6726}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_MIN\_PRIORITY@{CGRAPH\_THREAD\_MIN\_PRIORITY}}
+\index{CGRAPH\_THREAD\_MIN\_PRIORITY@{CGRAPH\_THREAD\_MIN\_PRIORITY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_MIN\_PRIORITY}{CGRAPH\_THREAD\_MIN\_PRIORITY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+MIN\+\_\+\+PRIORITY = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a50efab8057265f74ce3f0f87894b60ad}\label{_u_thread_pool_define_8h_a50efab8057265f74ce3f0f87894b60ad}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_SCHED\_FIFO@{CGRAPH\_THREAD\_SCHED\_FIFO}}
+\index{CGRAPH\_THREAD\_SCHED\_FIFO@{CGRAPH\_THREAD\_SCHED\_FIFO}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_SCHED\_FIFO}{CGRAPH\_THREAD\_SCHED\_FIFO}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+FIFO = SCHED\+\_\+\+FIFO\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}\label{_u_thread_pool_define_8h_ae0f75d9584d095946739d62d215a5fb1}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_SCHED\_OTHER@{CGRAPH\_THREAD\_SCHED\_OTHER}}
+\index{CGRAPH\_THREAD\_SCHED\_OTHER@{CGRAPH\_THREAD\_SCHED\_OTHER}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_SCHED\_OTHER}{CGRAPH\_THREAD\_SCHED\_OTHER}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+OTHER = SCHED\+\_\+\+OTHER\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a69569d229762b629851adac9b3f15f69}\label{_u_thread_pool_define_8h_a69569d229762b629851adac9b3f15f69}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_SCHED\_RR@{CGRAPH\_THREAD\_SCHED\_RR}}
+\index{CGRAPH\_THREAD\_SCHED\_RR@{CGRAPH\_THREAD\_SCHED\_RR}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_SCHED\_RR}{CGRAPH\_THREAD\_SCHED\_RR}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+SCHED\+\_\+\+RR = SCHED\+\_\+\+RR\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a8ca1fe194aa5fc20f1bcf14c692963b5}\label{_u_thread_pool_define_8h_a8ca1fe194aa5fc20f1bcf14c692963b5}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_TYPE\_PRIMARY@{CGRAPH\_THREAD\_TYPE\_PRIMARY}}
+\index{CGRAPH\_THREAD\_TYPE\_PRIMARY@{CGRAPH\_THREAD\_TYPE\_PRIMARY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_TYPE\_PRIMARY}{CGRAPH\_THREAD\_TYPE\_PRIMARY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+TYPE\+\_\+\+PRIMARY = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{_u_thread_pool_define_8h_a857aca678ba2642204dd411f7771ad02}\label{_u_thread_pool_define_8h_a857aca678ba2642204dd411f7771ad02}} 
+\index{UThreadPoolDefine.h@{UThreadPoolDefine.h}!CGRAPH\_THREAD\_TYPE\_SECONDARY@{CGRAPH\_THREAD\_TYPE\_SECONDARY}}
+\index{CGRAPH\_THREAD\_TYPE\_SECONDARY@{CGRAPH\_THREAD\_TYPE\_SECONDARY}!UThreadPoolDefine.h@{UThreadPoolDefine.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_THREAD\_TYPE\_SECONDARY}{CGRAPH\_THREAD\_TYPE\_SECONDARY}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} CGRAPH\+\_\+\+THREAD\+\_\+\+TYPE\+\_\+\+SECONDARY = 2\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,24 @@
+\hypertarget{_u_timer_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Timer/\+UTimer.h File Reference}
+\label{_u_timer_8h}\index{src/UtilsCtrl/Timer/UTimer.h@{src/UtilsCtrl/Timer/UTimer.h}}
+{\ttfamily \#include \char`\"{}../\+Utils\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UTimer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_timer}{UTimer}}
+\begin{DoxyCompactList}\small\item\em 定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接口； 定时器的结束通过is\+\_\+stop\+\_\+这个std\+::atomic\+\_\+bool值和std\+::condition\+\_\+variable实现， start接口is\+\_\+stop\+\_\+ exchange为false，对exchange之前的值做检查也保证了不会重复start stop接口将is\+\_\+stop\+\_\+设置为true，并通知正在cv\+\_\+上等待的start直接退出，接着等待std\+::future对象返回 \end{DoxyCompactList}\end{DoxyCompactItemize}

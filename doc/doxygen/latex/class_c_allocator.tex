@@ -1,0 +1,115 @@
+\hypertarget{class_c_allocator}{}\doxysection{CAllocator Class Reference}
+\label{class_c_allocator}\index{CAllocator@{CAllocator}}
+
+
+{\ttfamily \#include $<$CAllocator.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ }\\static T $\ast$ \mbox{\hyperlink{class_c_allocator_a0dc9aab7eb021bd5432ea101842acafc}{safe\+Malloc\+CObject}} ()
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CStruct, T $>$\+::value, int $>$  = 0$>$ }\\static T $\ast$ \mbox{\hyperlink{class_c_allocator_aeb4a8057decb20dd684d9e6fe8de27e6}{safe\+Malloc\+CStruct}} ()
+\item 
+{\footnotesize template$<$typename T , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ }\\static T $\ast$ \mbox{\hyperlink{class_c_allocator_a233dd774c2ebb8f8b301d777c113946e}{safe\+Malloc\+Template\+CObject}} (Args \&\&... args)
+\item 
+{\footnotesize template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ }\\static std\+::unique\+\_\+ptr$<$ T $>$ \mbox{\hyperlink{class_c_allocator_a75322cd522856c6941c6ff62adc93ead}{make\+Unique\+CObject}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Static Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\static T $\ast$ \mbox{\hyperlink{class_c_allocator_acc01a00b87a8af24ef04a2a6157a39c2}{safe\+Malloc}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+用于安全申请\+CObject/\+CStruct及其派生类对象 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_allocator_a75322cd522856c6941c6ff62adc93ead}\label{class_c_allocator_a75322cd522856c6941c6ff62adc93ead}} 
+\index{CAllocator@{CAllocator}!makeUniqueCObject@{makeUniqueCObject}}
+\index{makeUniqueCObject@{makeUniqueCObject}!CAllocator@{CAllocator}}
+\doxysubsubsection{\texorpdfstring{makeUniqueCObject()}{makeUniqueCObject()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ \\
+static std\+::unique\+\_\+ptr$<$T$>$ CAllocator\+::make\+Unique\+CObject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+生成unique智能指针信息 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+T$>$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_allocator_acc01a00b87a8af24ef04a2a6157a39c2}\label{class_c_allocator_acc01a00b87a8af24ef04a2a6157a39c2}} 
+\index{CAllocator@{CAllocator}!safeMalloc@{safeMalloc}}
+\index{safeMalloc@{safeMalloc}!CAllocator@{CAllocator}}
+\doxysubsubsection{\texorpdfstring{safeMalloc()}{safeMalloc()}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+static T$\ast$ CAllocator\+::safe\+Malloc (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+生成\+T类型的对象 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_allocator_a0dc9aab7eb021bd5432ea101842acafc}\label{class_c_allocator_a0dc9aab7eb021bd5432ea101842acafc}} 
+\index{CAllocator@{CAllocator}!safeMallocCObject@{safeMallocCObject}}
+\index{safeMallocCObject@{safeMallocCObject}!CAllocator@{CAllocator}}
+\doxysubsubsection{\texorpdfstring{safeMallocCObject()}{safeMallocCObject()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ \\
+static T$\ast$ CAllocator\+::safe\+Malloc\+CObject (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+生成一个 \mbox{\hyperlink{class_c_object}{CObject}} 对象 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_allocator_aeb4a8057decb20dd684d9e6fe8de27e6}\label{class_c_allocator_aeb4a8057decb20dd684d9e6fe8de27e6}} 
+\index{CAllocator@{CAllocator}!safeMallocCStruct@{safeMallocCStruct}}
+\index{safeMallocCStruct@{safeMallocCStruct}!CAllocator@{CAllocator}}
+\doxysubsubsection{\texorpdfstring{safeMallocCStruct()}{safeMallocCStruct()}}
+{\footnotesize\ttfamily template$<$typename T , c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CStruct, T $>$\+::value, int $>$  = 0$>$ \\
+static T$\ast$ CAllocator\+::safe\+Malloc\+CStruct (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+生成一个 \mbox{\hyperlink{struct_c_struct}{CStruct}} 的对象 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_c_allocator_a233dd774c2ebb8f8b301d777c113946e}\label{class_c_allocator_a233dd774c2ebb8f8b301d777c113946e}} 
+\index{CAllocator@{CAllocator}!safeMallocTemplateCObject@{safeMallocTemplateCObject}}
+\index{safeMallocTemplateCObject@{safeMallocTemplateCObject}!CAllocator@{CAllocator}}
+\doxysubsubsection{\texorpdfstring{safeMallocTemplateCObject()}{safeMallocTemplateCObject()}}
+{\footnotesize\ttfamily template$<$typename T , typename ... Args, c\+\_\+enable\+\_\+if\+\_\+t$<$ std\+::is\+\_\+base\+\_\+of$<$ CObject, T $>$\+::value, int $>$  = 0$>$ \\
+static T$\ast$ CAllocator\+::safe\+Malloc\+Template\+CObject (\begin{DoxyParamCaption}\item[{Args \&\&...}]{args }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+生成带参数的普通指针 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+{\em Args} & \\
+\hline
+\end{DoxyTemplParams}
+
+\begin{DoxyParams}{Parameters}
+{\em args} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T$\ast$ 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+CBasic/\mbox{\hyperlink{_c_allocator_8h}{CAllocator.\+h}}\end{DoxyCompactItemize}

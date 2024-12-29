@@ -15,6 +15,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 多个Element的集合，一般非纯并行、也非纯串行(Gluster)时使用
+ * 
+ */
 class GRegion : public GGroup {
 public:
     /**

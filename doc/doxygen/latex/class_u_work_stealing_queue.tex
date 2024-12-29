@@ -1,0 +1,239 @@
+\hypertarget{class_u_work_stealing_queue}{}\doxysection{UWork\+Stealing\+Queue$<$ T $>$ Class Template Reference}
+\label{class_u_work_stealing_queue}\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+
+
+工作窃取队列，实现为双端队列(deque\+\_\+)； push在队尾发生，可以一次性写入一个或多个任务，也支持try\+Push和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持try\+Pop； try\+Steal在队尾发生，可以一次性窃取一个或多个任务；  
+
+
+
+
+{\ttfamily \#include $<$UWork\+Stealing\+Queue.\+h$>$}
+
+
+
+Inheritance diagram for UWork\+Stealing\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_u_work_stealing_queue__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UWork\+Stealing\+Queue$<$ T $>$\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=229pt]{class_u_work_stealing_queue__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue_a0efbe3eb86a775ffd0640c1b889e586b}{push}} (T \&\&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue_ae44be6f6303ad4ae846dc7bc57e40b88}{push}} (T \&\&value, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} enable, \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} lockable)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue_ab59874a445c98d7923bcfaa99de87492}{try\+Push}} (T \&\&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue_a7f351c5b9be1cb483befa6c0ef81b29b}{push}} (const std\+::vector$<$ T $>$ \&values)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue_a1a5a21833f933fe70abcfa1a331f2dea}{try\+Pop}} (T \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue_a9ecd83ed5e5eedbaad8b7cd6f7a79f4e}{try\+Pop}} (std\+::vector$<$ T $>$ \&values, int max\+Local\+Batch\+Size)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue_a36dcf866f973bbebf3a6454c633d7555}{try\+Steal}} (T \&value)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue_aa0fead1f0a0823afe8a3a099f4582b02}{try\+Steal}} (std\+::vector$<$ T $>$ \&values, int max\+Steal\+Batch\+Size)
+\item 
+\mbox{\hyperlink{class_u_work_stealing_queue_a80f8682d00cbeda2757a31b0d8f1d402}{UWork\+Stealing\+Queue}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::deque$<$ T $>$ \mbox{\hyperlink{class_u_work_stealing_queue_a420cd1ec886ed3a84a3db75777d81288}{deque\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class UWork\+Stealing\+Queue$<$ T $>$}
+
+工作窃取队列，实现为双端队列(deque\+\_\+)； push在队尾发生，可以一次性写入一个或多个任务，也支持try\+Push和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持try\+Pop； try\+Steal在队尾发生，可以一次性窃取一个或多个任务； 
+
+
+\begin{DoxyEnumerate}
+\item 工作的拿取发生在队头、窃取发生在队尾，可以显著减小工作线程和窃取线程竞争的概率；
+\item 主线程的工作拿取优先发生在第一队列、其次第二队列；窃取优先发生在第二队列、其次发生在第一队列，又可以进一步降低竞争概率； 
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \\
+\hline
+\end{DoxyTemplParams}
+
+\end{DoxyEnumerate}
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a80f8682d00cbeda2757a31b0d8f1d402}\label{class_u_work_stealing_queue_a80f8682d00cbeda2757a31b0d8f1d402}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!UWorkStealingQueue@{UWorkStealingQueue}}
+\index{UWorkStealingQueue@{UWorkStealingQueue}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{UWorkStealingQueue()}{UWorkStealingQueue()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::\mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a7f351c5b9be1cb483befa6c0ef81b29b}\label{class_u_work_stealing_queue_a7f351c5b9be1cb483befa6c0ef81b29b}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ T $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+向队列中写入信息 
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_u_work_stealing_queue_a7f351c5b9be1cb483befa6c0ef81b29b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a0efbe3eb86a775ffd0640c1b889e586b}\label{class_u_work_stealing_queue_a0efbe3eb86a775ffd0640c1b889e586b}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+向队列中写入信息 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{class_u_work_stealing_queue_a0efbe3eb86a775ffd0640c1b889e586b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_u_work_stealing_queue_ae44be6f6303ad4ae846dc7bc57e40b88}\label{class_u_work_stealing_queue_ae44be6f6303ad4ae846dc7bc57e40b88}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!push@{push}}
+\index{push@{push}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::push (\begin{DoxyParamCaption}\item[{T \&\&}]{value,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{enable,  }\item[{\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}}}]{lockable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+有条件的写入数据信息 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+{\em enable} & \\
+\hline
+{\em state} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a9ecd83ed5e5eedbaad8b7cd6f7a79f4e}\label{class_u_work_stealing_queue_a9ecd83ed5e5eedbaad8b7cd6f7a79f4e}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{values,  }\item[{int}]{max\+Local\+Batch\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+从头部开始批量获取可执行任务信息 
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+{\em max\+Local\+Batch\+Size} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a1a5a21833f933fe70abcfa1a331f2dea}\label{class_u_work_stealing_queue_a1a5a21833f933fe70abcfa1a331f2dea}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!tryPop@{tryPop}}
+\index{tryPop@{tryPop}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPop()}{tryPop()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::try\+Pop (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+弹出节点，从头部进行 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_work_stealing_queue_ab59874a445c98d7923bcfaa99de87492}\label{class_u_work_stealing_queue_ab59874a445c98d7923bcfaa99de87492}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!tryPush@{tryPush}}
+\index{tryPush@{tryPush}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{tryPush()}{tryPush()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::try\+Push (\begin{DoxyParamCaption}\item[{T \&\&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+尝试往队列里写入信息 
+\begin{DoxyParams}{Parameters}
+{\em value} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_work_stealing_queue_aa0fead1f0a0823afe8a3a099f4582b02}\label{class_u_work_stealing_queue_aa0fead1f0a0823afe8a3a099f4582b02}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!trySteal@{trySteal}}
+\index{trySteal@{trySteal}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{trySteal()}{trySteal()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::try\+Steal (\begin{DoxyParamCaption}\item[{std\+::vector$<$ T $>$ \&}]{values,  }\item[{int}]{max\+Steal\+Batch\+Size }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+批量窃取节点，从尾部进行 
+\begin{DoxyParams}{Parameters}
+{\em values} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a36dcf866f973bbebf3a6454c633d7555}\label{class_u_work_stealing_queue_a36dcf866f973bbebf3a6454c633d7555}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!trySteal@{trySteal}}
+\index{trySteal@{trySteal}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{trySteal()}{trySteal()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::try\+Steal (\begin{DoxyParamCaption}\item[{T \&}]{value }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+窃取节点，从尾部进行 
+\begin{DoxyParams}{Parameters}
+{\em task} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_work_stealing_queue_a420cd1ec886ed3a84a3db75777d81288}\label{class_u_work_stealing_queue_a420cd1ec886ed3a84a3db75777d81288}} 
+\index{UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}!deque\_@{deque\_}}
+\index{deque\_@{deque\_}!UWorkStealingQueue$<$ T $>$@{UWorkStealingQueue$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{deque\_}{deque\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::deque$<$T$>$ \mbox{\hyperlink{class_u_work_stealing_queue}{UWork\+Stealing\+Queue}}$<$ T $>$\+::deque\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\mbox{\hyperlink{_u_work_stealing_queue_8h}{UWork\+Stealing\+Queue.\+h}}\end{DoxyCompactItemize}

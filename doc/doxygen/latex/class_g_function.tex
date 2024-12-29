@@ -1,0 +1,167 @@
+\hypertarget{class_g_function}{}\doxysection{GFunction Class Reference}
+\label{class_g_function}\index{GFunction@{GFunction}}
+
+
+将一个函数注入成一个\+GElement，函数可以注入为这个新的\+GElement的init/run/destroy  
+
+
+
+
+{\ttfamily \#include $<$GFunction.\+h$>$}
+
+
+
+Inheritance diagram for GFunction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{class_g_function__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GFunction\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_function__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_function}{GFunction}} $\ast$ \mbox{\hyperlink{class_g_function_aca53471a01bba45a54bca36c956cf927}{set\+Function}} (const \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}} \&type, \mbox{\hyperlink{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}} func)
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_function_ace5e5e0d575fd3d27e8be5ddfc42465b}{GFunction}} ()
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_function_a14362ca58841789f2a613c171fbb8148}{init}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_function_abb3d8a7fab3dbbcc45274b8ecd61b746}{run}} () final
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{class_g_function_ae2d1dd5fbdac9daa07ce6605c3ea8ae5}{destroy}} () final
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} \mbox{\hyperlink{class_g_function_af56c5d3af30b44cc60278c2c3a8a0551}{init\+\_\+function\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} \mbox{\hyperlink{class_g_function_a204f033848b4835b41942585cb9d3e61}{run\+\_\+function\+\_\+}} = nullptr
+\item 
+\mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} \mbox{\hyperlink{class_g_function_a003bd7e0753b5c333be9caeada54fe20}{destroy\+\_\+function\+\_\+}} = nullptr
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_function_a4e007dc772c018d10373bf18b528f96d}{GPipeline}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+将一个函数注入成一个\+GElement，函数可以注入为这个新的\+GElement的init/run/destroy 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_function_ace5e5e0d575fd3d27e8be5ddfc42465b}\label{class_g_function_ace5e5e0d575fd3d27e8be5ddfc42465b}} 
+\index{GFunction@{GFunction}!GFunction@{GFunction}}
+\index{GFunction@{GFunction}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{GFunction()}{GFunction()}}
+{\footnotesize\ttfamily GFunction\+::\+GFunction (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}, {\ttfamily [private]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_g_function_ace5e5e0d575fd3d27e8be5ddfc42465b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_function_ae2d1dd5fbdac9daa07ce6605c3ea8ae5}\label{class_g_function_ae2d1dd5fbdac9daa07ce6605c3ea8ae5}} 
+\index{GFunction@{GFunction}!destroy@{destroy}}
+\index{destroy@{destroy}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{destroy()}{destroy()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GFunction\+::destroy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+释放函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a8248fa50905f3339e7b98563987567c7}{CObject}}.
+
+\mbox{\Hypertarget{class_g_function_a14362ca58841789f2a613c171fbb8148}\label{class_g_function_a14362ca58841789f2a613c171fbb8148}} 
+\index{GFunction@{GFunction}!init@{init}}
+\index{init@{init}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GFunction\+::init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+初始化函数 
+
+Reimplemented from \mbox{\hyperlink{class_c_object_a9ac160b3def9267b8bffc6149d425735}{CObject}}.
+
+\mbox{\Hypertarget{class_g_function_abb3d8a7fab3dbbcc45274b8ecd61b746}\label{class_g_function_abb3d8a7fab3dbbcc45274b8ecd61b746}} 
+\index{GFunction@{GFunction}!run@{run}}
+\index{run@{run}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} GFunction\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [final]}, {\ttfamily [private]}, {\ttfamily [virtual]}}
+
+流程处理函数 
+
+Implements \mbox{\hyperlink{class_c_object_aed3636663d62bb308b6eeda4837496d1}{CObject}}.
+
+\mbox{\Hypertarget{class_g_function_aca53471a01bba45a54bca36c956cf927}\label{class_g_function_aca53471a01bba45a54bca36c956cf927}} 
+\index{GFunction@{GFunction}!setFunction@{setFunction}}
+\index{setFunction@{setFunction}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{setFunction()}{setFunction()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_basic_define_8h_a41cb86b553ae23ac90ea89fc2b9a8872}{CGRAPH\+\_\+\+NAMESPACE\+\_\+\+BEGIN}} \mbox{\hyperlink{_g_function_8h_a2359cb68c7fa65ffadb7c8c71fd346da}{GFunction\+Ptr}} GFunction\+::set\+Function (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{_c_func_type_8h_a5bb758c8c016ab04b83da621811e4fb8}{CFunction\+Type}} \&}]{type,  }\item[{\mbox{\hyperlink{_c_func_type_8h_aef0c34be579beb4b5fe9580ae2d11a25}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+CONST\+\_\+\+FUNCTION\+\_\+\+REF}}}]{func }\end{DoxyParamCaption})}
+
+设置执行函数具体内容 
+\begin{DoxyParams}{Parameters}
+{\em type} & \\
+\hline
+{\em func} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_function_a4e007dc772c018d10373bf18b528f96d}\label{class_g_function_a4e007dc772c018d10373bf18b528f96d}} 
+\index{GFunction@{GFunction}!GPipeline@{GPipeline}}
+\index{GPipeline@{GPipeline}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{GPipeline}{GPipeline}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_pipeline}{GPipeline}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_function_a003bd7e0753b5c333be9caeada54fe20}\label{class_g_function_a003bd7e0753b5c333be9caeada54fe20}} 
+\index{GFunction@{GFunction}!destroy\_function\_@{destroy\_function\_}}
+\index{destroy\_function\_@{destroy\_function\_}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{destroy\_function\_}{destroy\_function\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} GFunction\+::destroy\+\_\+function\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_function_af56c5d3af30b44cc60278c2c3a8a0551}\label{class_g_function_af56c5d3af30b44cc60278c2c3a8a0551}} 
+\index{GFunction@{GFunction}!init\_function\_@{init\_function\_}}
+\index{init\_function\_@{init\_function\_}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{init\_function\_}{init\_function\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} GFunction\+::init\+\_\+function\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_function_a204f033848b4835b41942585cb9d3e61}\label{class_g_function_a204f033848b4835b41942585cb9d3e61}} 
+\index{GFunction@{GFunction}!run\_function\_@{run\_function\_}}
+\index{run\_function\_@{run\_function\_}!GFunction@{GFunction}}
+\doxysubsubsection{\texorpdfstring{run\_function\_}{run\_function\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_func_type_8h_a336c3dbef5201c1fada37cb0a34827d3}{CGRAPH\+\_\+\+CSTATUS\+\_\+\+FUNCTION}} GFunction\+::run\+\_\+function\+\_\+ = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GFunction/\mbox{\hyperlink{_g_function_8h}{GFunction.\+h}}\item 
+src/\+Graph\+Ctrl/\+Graph\+Element/\+GAdapter/\+GFunction/\mbox{\hyperlink{_g_function_8cpp}{GFunction.\+cpp}}\end{DoxyCompactItemize}

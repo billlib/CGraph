@@ -15,6 +15,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief GOptimizer是用来干嘛的?
+ */
 class GOptimizer : public GElementObject {
 protected:
     /**
@@ -27,11 +30,13 @@ protected:
     static CVoid collect(GElementPtr element,
                          std::vector<GElementPtr>& curPath,
                          std::vector<std::vector<GElementPtr>>& paths) {
+        // 前驱结点已加入curPath的，下次递归调用将后继节点(入度不一定为1)依次加入curPath
         curPath.emplace_back(element);
         if (element->run_before_.empty()) {
-            // 如果是最后一个信息了，则记录下来
+            // 如果是最后一个信息了，说明到达当前正在搜索的路径的终点，将这条curPath记录下来
             paths.emplace_back(curPath);
         } else {
+            // 广度优先搜索，对当前入度为0的结点的所有后继结点递归调用collect
             for (auto& cur : element->run_before_) {
                 collect(cur, curPath, paths);
             }
@@ -48,6 +53,7 @@ protected:
         std::vector<std::vector<GElementPtr>> paths;
         for (const auto& element : elements) {
             std::vector<GElementPtr> curPath;
+            // 从入度为0的结点开始，通过collect递归搜索所有以该结点为头结点的路径存入curPath
             if (element->dependence_.empty()) {
                 collect(element, curPath, paths);
             }
@@ -58,6 +64,7 @@ protected:
 
     /**
      * 构造对应的二维矩阵图
+     * 将每条path的可达关系构造成一个二维矩阵图，father可以直接或通过串联的多个元素到达son，反之不行
      * @param elements
      * @param paths
      * @param father

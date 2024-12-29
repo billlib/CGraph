@@ -17,6 +17,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 所有以GraphObject为基类的对象（GAsepct/GDaemon/GEvent/GElement/GPipeline/GParam）的管理器的基类
+ * @tparam T 
+ */
 template<typename T,
         c_enable_if_t<std::is_base_of<GraphObject, T>::value, int> = 0>
 class GraphManager : public CObject {

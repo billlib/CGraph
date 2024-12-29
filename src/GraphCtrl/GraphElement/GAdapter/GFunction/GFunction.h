@@ -13,6 +13,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 将一个函数注入成一个GElement，函数可以注入为这个新的GElement的init/run/destroy
+ */
 class GFunction : public GAdapter {
 public:
     /**

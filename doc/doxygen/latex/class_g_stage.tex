@@ -1,0 +1,136 @@
+\hypertarget{class_g_stage}{}\doxysection{GStage Class Reference}
+\label{class_g_stage}\index{GStage@{GStage}}
+
+
+{\ttfamily \#include $<$GStage.\+h$>$}
+
+
+
+Inheritance diagram for GStage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{class_g_stage__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for GStage\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{class_g_stage__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_g_stage_a3248f4cc7fabe54f77a5125b6b7bf7f1}{GStage}} ()=default
+\item 
+\mbox{\hyperlink{class_g_stage}{GStage}} $\ast$ \mbox{\hyperlink{class_g_stage_aefb7f11263ec39fc50617a2d290d435b}{set\+Threshold}} (\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} threshold)
+\item 
+\mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} \mbox{\hyperlink{class_g_stage_a11a6b3fd7308511b3446c11b5b5da016}{waiting}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_g_stage_a7753666915f0f8922a732c0bff0630dd}{threshold\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{class_g_stage_a7ee89676492df9ed3476798d6a1da3ad}{cur\+\_\+value\+\_\+}} \{ 0 \}
+\item 
+\mbox{\hyperlink{struct_u_cv_mutex}{UCv\+Mutex}} \mbox{\hyperlink{class_g_stage_a7ade4973273c10540176efcfc961b124}{locker\+\_\+}}
+\item 
+std\+::mutex \mbox{\hyperlink{class_g_stage_a5159c959c53adaf2a5de95e8a4860498}{waiting\+\_\+mutex\+\_\+}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_g_stage_a3d4915857ecbb9a3bb048d2cd6606323}{GStage\+Manager}}
+\item 
+class \mbox{\hyperlink{class_g_stage_a17a0077689f477d78437264108a1577c}{CAllocator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_g_stage_a3248f4cc7fabe54f77a5125b6b7bf7f1}\label{class_g_stage_a3248f4cc7fabe54f77a5125b6b7bf7f1}} 
+\index{GStage@{GStage}!GStage@{GStage}}
+\index{GStage@{GStage}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{GStage()}{GStage()}}
+{\footnotesize\ttfamily GStage\+::\+GStage (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_stage_aefb7f11263ec39fc50617a2d290d435b}\label{class_g_stage_aefb7f11263ec39fc50617a2d290d435b}} 
+\index{GStage@{GStage}!setThreshold@{setThreshold}}
+\index{setThreshold@{setThreshold}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{setThreshold()}{setThreshold()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_g_stage}{GStage}}$\ast$ GStage\+::set\+Threshold (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}}}]{threshold }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+设置阈值信息 
+\begin{DoxyParams}{Parameters}
+{\em threshold} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_g_stage_a11a6b3fd7308511b3446c11b5b5da016}\label{class_g_stage_a11a6b3fd7308511b3446c11b5b5da016}} 
+\index{GStage@{GStage}!waiting@{waiting}}
+\index{waiting@{waiting}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{waiting()}{waiting()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_af811623760d39a6f76af698e064e431e}{CVoid}} GStage\+::waiting (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [private]}}
+
+进入等待区域 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_g_stage_a17a0077689f477d78437264108a1577c}\label{class_g_stage_a17a0077689f477d78437264108a1577c}} 
+\index{GStage@{GStage}!CAllocator@{CAllocator}}
+\index{CAllocator@{CAllocator}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{CAllocator}{CAllocator}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_c_allocator}{CAllocator}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{class_g_stage_a3d4915857ecbb9a3bb048d2cd6606323}\label{class_g_stage_a3d4915857ecbb9a3bb048d2cd6606323}} 
+\index{GStage@{GStage}!GStageManager@{GStageManager}}
+\index{GStageManager@{GStageManager}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{GStageManager}{GStageManager}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_g_stage_manager}{GStage\+Manager}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_g_stage_a7ee89676492df9ed3476798d6a1da3ad}\label{class_g_stage_a7ee89676492df9ed3476798d6a1da3ad}} 
+\index{GStage@{GStage}!cur\_value\_@{cur\_value\_}}
+\index{cur\_value\_@{cur\_value\_}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{cur\_value\_}{cur\_value\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} GStage\+::cur\+\_\+value\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_stage_a7ade4973273c10540176efcfc961b124}\label{class_g_stage_a7ade4973273c10540176efcfc961b124}} 
+\index{GStage@{GStage}!locker\_@{locker\_}}
+\index{locker\_@{locker\_}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{locker\_}{locker\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{struct_u_cv_mutex}{UCv\+Mutex}} GStage\+::locker\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_stage_a7753666915f0f8922a732c0bff0630dd}\label{class_g_stage_a7753666915f0f8922a732c0bff0630dd}} 
+\index{GStage@{GStage}!threshold\_@{threshold\_}}
+\index{threshold\_@{threshold\_}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{threshold\_}{threshold\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} GStage\+::threshold\+\_\+ \{ 0 \}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_g_stage_a5159c959c53adaf2a5de95e8a4860498}\label{class_g_stage_a5159c959c53adaf2a5de95e8a4860498}} 
+\index{GStage@{GStage}!waiting\_mutex\_@{waiting\_mutex\_}}
+\index{waiting\_mutex\_@{waiting\_mutex\_}!GStage@{GStage}}
+\doxysubsubsection{\texorpdfstring{waiting\_mutex\_}{waiting\_mutex\_}}
+{\footnotesize\ttfamily std\+::mutex GStage\+::waiting\+\_\+mutex\+\_\+\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Graph\+Ctrl/\+Graph\+Stage/\mbox{\hyperlink{_g_stage_8h}{GStage.\+h}}\end{DoxyCompactItemize}

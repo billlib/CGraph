@@ -1,0 +1,56 @@
+\hypertarget{_g_stage_manager_wrapper_8h}{}\doxysection{src/\+Graph\+Ctrl/\+Graph\+Stage/\+GStage\+Manager\+Wrapper.h File Reference}
+\label{_g_stage_manager_wrapper_8h}\index{src/GraphCtrl/GraphStage/GStageManagerWrapper.h@{src/GraphCtrl/GraphStage/GStageManagerWrapper.h}}
+{\ttfamily \#include \char`\"{}GStage.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}GStage\+Manager.\+h\char`\"{}}\newline
+Include dependency graph for GStage\+Manager\+Wrapper.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_stage_manager_wrapper_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_g_stage_manager_wrapper_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{_g_stage_manager_wrapper_8h_af1e9fa16d3159a10dd3ebb223032b728}{CGRAPH\+\_\+\+DECLARE\+\_\+\+STAGE\+\_\+\+MANAGER\+\_\+\+WRAPPER\+\_\+\+WITH\+\_\+\+MEMBER}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{_g_stage_manager_wrapper_8h_af1e9fa16d3159a10dd3ebb223032b728}\label{_g_stage_manager_wrapper_8h_af1e9fa16d3159a10dd3ebb223032b728}} 
+\index{GStageManagerWrapper.h@{GStageManagerWrapper.h}!CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER@{CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER}}
+\index{CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER@{CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER}!GStageManagerWrapper.h@{GStageManagerWrapper.h}}
+\doxysubsubsection{\texorpdfstring{CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER}{CGRAPH\_DECLARE\_STAGE\_MANAGER\_WRAPPER\_WITH\_MEMBER}}
+{\footnotesize\ttfamily \#define CGRAPH\+\_\+\+DECLARE\+\_\+\+STAGE\+\_\+\+MANAGER\+\_\+\+WRAPPER\+\_\+\+WITH\+\_\+\+MEMBER}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\textcolor{keyword}{protected}:                                                           \(\backslash\)                                                              \(\backslash\)}
+\DoxyCodeLine{    CStatus enterStage(\textcolor{keyword}{const} std::string\& key) \{                     \mbox{\hyperlink{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}{\(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}{        CGRAPH\_FUNCTION\_BEGIN                                        \(\backslash\)}}}
+\DoxyCodeLine{\mbox{\hyperlink{_utils_define_8h_a008c2cf2c95b19aea9074fe35fb8872b}{        CGRAPH\_ASSERT\_NOT\_NULL}}(stage\_manager\_);                      \(\backslash\)}
+\DoxyCodeLine{        status = stage\_manager\_-\/>waitForReady(key);                  \(\backslash\)}
+\DoxyCodeLine{        CGRAPH\_FUNCTION\_END                                          \(\backslash\)}
+\DoxyCodeLine{    \}                                                                \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{private:                                                             \(\backslash\)}
+\DoxyCodeLine{    CVoidPtr setGStageManager(\mbox{\hyperlink{class_g_stage_manager}{GStageManagerPtr}} sm) \{                 \(\backslash\)}
+\DoxyCodeLine{        stage\_manager\_ = sm;                                         \(\backslash\)}
+\DoxyCodeLine{        return \textcolor{keyword}{this};                                                 \(\backslash\)}
+\DoxyCodeLine{    \}                                                                \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+\DoxyCodeLine{private:                                                             \(\backslash\)}
+\DoxyCodeLine{    GStageManagerPtr stage\_manager\_ \{ \textcolor{keyword}{nullptr} \};                     \(\backslash\)}
+\DoxyCodeLine{protected:                                                           \(\backslash\)}
+\DoxyCodeLine{                                                                     \(\backslash\)}
+
+\end{DoxyCode}

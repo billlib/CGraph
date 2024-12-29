@@ -1,0 +1,247 @@
+\hypertarget{struct_u_thread_pool_config}{}\doxysection{UThread\+Pool\+Config Struct Reference}
+\label{struct_u_thread_pool_config}\index{UThreadPoolConfig@{UThreadPoolConfig}}
+
+
+具体值含义，参考\+UThread\+Pool\+Define.\+h文件；支持配置以下项目： default\+\_\+thread\+\_\+size\+\_\+\+: 默认开启主线程个数 secondary\+\_\+thread\+\_\+size\+\_\+\+: 默认开启辅助线程个数 max\+\_\+thread\+\_\+size\+\_\+\+: 最大线程个数 max\+\_\+task\+\_\+steal\+\_\+range\+\_\+\+: 盗取机制相邻范围 max\+\_\+local\+\_\+batch\+\_\+size\+\_\+\+: 批量执行本地任务最大值 max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+\+: 批量执行通用任务最大值 max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+\+: 批量盗取任务最大值 primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+\+: 主线程进入wait状态的轮数，数值越大，理论性能越高，但空转可能性也越大 primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+\+: 主线程进入休眠状态的默认时间 secondary\+\_\+thread\+\_\+ttl\+\_\+\+: 辅助线程ttl，单位为s monitor\+\_\+span\+\_\+\+: 监控线程执行间隔，单位为s queue\+\_\+emtpy\+\_\+interval\+\_\+\+: 队列为空时，等待的时间。仅针对辅助线程，单位为ms primary\+\_\+thread\+\_\+policy\+\_\+\+: 主线程调度策略 secondary\+\_\+thread\+\_\+policy\+\_\+\+: 辅助线程调度策略 primary\+\_\+thread\+\_\+priority\+\_\+\+: 主线程调度优先级（取值范围0$\sim$99，配合调度策略一起使用，不建议不了解相关内容的童鞋做修改） secondary\+\_\+thread\+\_\+priority\+\_\+\+: 辅助线程调度优先级（同上） bind\+\_\+cpu\+\_\+enable\+\_\+\+: 是否开启绑定cpu模式（仅针对主线程） batch\+\_\+task\+\_\+enable\+\_\+\+: 是否开启批量任务功能 monitor\+\_\+enable\+\_\+\+: 是否开启监控程序  
+
+
+
+
+{\ttfamily \#include $<$UThread\+Pool\+Config.\+h$>$}
+
+
+
+Inheritance diagram for UThread\+Pool\+Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{struct_u_thread_pool_config__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UThread\+Pool\+Config\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{struct_u_thread_pool_config__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} \mbox{\hyperlink{struct_u_thread_pool_config_a48820ba0cf2272d97cb1422f754da8cf}{check}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a9aa4841fefe518421b323435a2297a6f}{default\+\_\+thread\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_af7feaf4e2b5574596a2b69240629cad2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+THREAD\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_aae33543accff61425936cf396968d364}{secondary\+\_\+thread\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_aece7fac27e01024acf98b340e03220ba}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a31523fbac8ff70e3bde5715cb32d547e}{max\+\_\+thread\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a626db6a0cd1c2d67be36712257d29692}{CGRAPH\+\_\+\+MAX\+\_\+\+THREAD\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a208e518ad1a4daecc56fcf9152703a0b}{max\+\_\+task\+\_\+steal\+\_\+range\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a79fa20708b601711ed0ef2f252ce38e6}{CGRAPH\+\_\+\+MAX\+\_\+\+TASK\+\_\+\+STEAL\+\_\+\+RANGE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a3c059039f987badc154d81455c5523e7}{max\+\_\+local\+\_\+batch\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a096c048e33cdd7a7afcb9ecaf9444b7e}{CGRAPH\+\_\+\+MAX\+\_\+\+LOCAL\+\_\+\+BATCH\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_acfee622f734c9da8e1be7999b5ef3fa7}{max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a928b52e27c72c7c41ebf38efc9744d97}{CGRAPH\+\_\+\+MAX\+\_\+\+POOL\+\_\+\+BATCH\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a1a020a5a82f6f2a1ba4132b165487d66}{max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a493ef854b0287c074ad8aa91ea0d8fd6}{CGRAPH\+\_\+\+MAX\+\_\+\+STEAL\+\_\+\+BATCH\+\_\+\+SIZE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_ac8f503a92aff8024a046e3814f4b1e60}{primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a2fb81de300eb0d477fa7dc94f2ccda5d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+BUSY\+\_\+\+EPOCH}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{struct_u_thread_pool_config_ad03a5c99557725e275b315b98a4d7052}{primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a7eecdce03230df6043a80a7a83689f01}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+EMPTY\+\_\+\+INTERVAL}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} \mbox{\hyperlink{struct_u_thread_pool_config_a1188dbdbb839ec82cb766f8280a8b1bb}{secondary\+\_\+thread\+\_\+ttl\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ae6c1ba654c28784a5f82faa1716571ae}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+TTL}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} \mbox{\hyperlink{struct_u_thread_pool_config_a90d6134cef0fc63790bb923bce240419}{monitor\+\_\+span\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a91166689863d823bfdd0bffa58f53a4c}{CGRAPH\+\_\+\+MONITOR\+\_\+\+SPAN}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} \mbox{\hyperlink{struct_u_thread_pool_config_a68557fdc273dfee256f30586ddd303ae}{queue\+\_\+emtpy\+\_\+interval\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_aca8b3630af26b21ba56f52eb8ce39920}{CGRAPH\+\_\+\+QUEUE\+\_\+\+EMPTY\+\_\+\+INTERVAL}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_ae3820b3c0e983027252c05e865658df6}{primary\+\_\+thread\+\_\+policy\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a5ad6897b56c7af826f1f782d07d83ad2}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+POLICY}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a0e7e8462d177af0409b582b86bc1ceda}{secondary\+\_\+thread\+\_\+policy\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a3e17f148fc0be3570ddc77ac8aa9d579}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+POLICY}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a46a3b85d357b9d69d051d3ff042d492b}{primary\+\_\+thread\+\_\+priority\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a1a8eadbe58a12da07a01f00576da4d0d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+PRIORITY}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} \mbox{\hyperlink{struct_u_thread_pool_config_a8d2c5103a2c6710e30a6c3e4bf65b986}{secondary\+\_\+thread\+\_\+priority\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a0c4bc11021b4601acaf86e01a07f4a0f}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+PRIORITY}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{struct_u_thread_pool_config_a5506ace85aeebbc7eaaee724f400e01a}{bind\+\_\+cpu\+\_\+enable\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_aa91a97e7af936805a453fb070b03bcad}{CGRAPH\+\_\+\+BIND\+\_\+\+CPU\+\_\+\+ENABLE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{struct_u_thread_pool_config_a959086edd84f2cc6e34f880c33d74469}{batch\+\_\+task\+\_\+enable\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_a64cf63cceda16fa221d51172b04b4212}{CGRAPH\+\_\+\+BATCH\+\_\+\+TASK\+\_\+\+ENABLE}}
+\item 
+\mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} \mbox{\hyperlink{struct_u_thread_pool_config_ad6ad446858935587769da258b2d94424}{monitor\+\_\+enable\+\_\+}} = \mbox{\hyperlink{_u_thread_pool_define_8h_ae75a271fab282a732b9be98abe4cebcc}{CGRAPH\+\_\+\+MONITOR\+\_\+\+ENABLE}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{struct_u_thread_pool_config_aeeee578d0305399d35238b668b3700ca}{calc\+Steal\+Range}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{struct_u_thread_pool_config_a3f934ef6375b614c6b41b9cb718c904c}{UThread\+Primary}}
+\item 
+class \mbox{\hyperlink{struct_u_thread_pool_config_a411af2b6e3c0eb714cd787b9c2cb381f}{UThread\+Secondary}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+具体值含义，参考\+UThread\+Pool\+Define.\+h文件；支持配置以下项目： default\+\_\+thread\+\_\+size\+\_\+\+: 默认开启主线程个数 secondary\+\_\+thread\+\_\+size\+\_\+\+: 默认开启辅助线程个数 max\+\_\+thread\+\_\+size\+\_\+\+: 最大线程个数 max\+\_\+task\+\_\+steal\+\_\+range\+\_\+\+: 盗取机制相邻范围 max\+\_\+local\+\_\+batch\+\_\+size\+\_\+\+: 批量执行本地任务最大值 max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+\+: 批量执行通用任务最大值 max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+\+: 批量盗取任务最大值 primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+\+: 主线程进入wait状态的轮数，数值越大，理论性能越高，但空转可能性也越大 primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+\+: 主线程进入休眠状态的默认时间 secondary\+\_\+thread\+\_\+ttl\+\_\+\+: 辅助线程ttl，单位为s monitor\+\_\+span\+\_\+\+: 监控线程执行间隔，单位为s queue\+\_\+emtpy\+\_\+interval\+\_\+\+: 队列为空时，等待的时间。仅针对辅助线程，单位为ms primary\+\_\+thread\+\_\+policy\+\_\+\+: 主线程调度策略 secondary\+\_\+thread\+\_\+policy\+\_\+\+: 辅助线程调度策略 primary\+\_\+thread\+\_\+priority\+\_\+\+: 主线程调度优先级（取值范围0$\sim$99，配合调度策略一起使用，不建议不了解相关内容的童鞋做修改） secondary\+\_\+thread\+\_\+priority\+\_\+\+: 辅助线程调度优先级（同上） bind\+\_\+cpu\+\_\+enable\+\_\+\+: 是否开启绑定cpu模式（仅针对主线程） batch\+\_\+task\+\_\+enable\+\_\+\+: 是否开启批量任务功能 monitor\+\_\+enable\+\_\+\+: 是否开启监控程序 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{struct_u_thread_pool_config_aeeee578d0305399d35238b668b3700ca}\label{struct_u_thread_pool_config_aeeee578d0305399d35238b668b3700ca}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!calcStealRange@{calcStealRange}}
+\index{calcStealRange@{calcStealRange}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{calcStealRange()}{calcStealRange()}}
+{\footnotesize\ttfamily int UThread\+Pool\+Config\+::calc\+Steal\+Range (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [protected]}}
+
+计算可盗取的范围，盗取范围不能超过默认线程数-\/1 \begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\mbox{\Hypertarget{struct_u_thread_pool_config_a48820ba0cf2272d97cb1422f754da8cf}\label{struct_u_thread_pool_config_a48820ba0cf2272d97cb1422f754da8cf}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!check@{check}}
+\index{check@{check}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{check()}{check()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_aa60d403027daa8560015135f90d8b5fa}{CStatus}} UThread\+Pool\+Config\+::check (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{struct_u_thread_pool_config_a3f934ef6375b614c6b41b9cb718c904c}\label{struct_u_thread_pool_config_a3f934ef6375b614c6b41b9cb718c904c}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!UThreadPrimary@{UThreadPrimary}}
+\index{UThreadPrimary@{UThreadPrimary}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{UThreadPrimary}{UThreadPrimary}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_primary}{UThread\+Primary}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a411af2b6e3c0eb714cd787b9c2cb381f}\label{struct_u_thread_pool_config_a411af2b6e3c0eb714cd787b9c2cb381f}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!UThreadSecondary@{UThreadSecondary}}
+\index{UThreadSecondary@{UThreadSecondary}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{UThreadSecondary}{UThreadSecondary}}
+{\footnotesize\ttfamily friend class \mbox{\hyperlink{class_u_thread_secondary}{UThread\+Secondary}}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{struct_u_thread_pool_config_a959086edd84f2cc6e34f880c33d74469}\label{struct_u_thread_pool_config_a959086edd84f2cc6e34f880c33d74469}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!batch\_task\_enable\_@{batch\_task\_enable\_}}
+\index{batch\_task\_enable\_@{batch\_task\_enable\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{batch\_task\_enable\_}{batch\_task\_enable\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Pool\+Config\+::batch\+\_\+task\+\_\+enable\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a64cf63cceda16fa221d51172b04b4212}{CGRAPH\+\_\+\+BATCH\+\_\+\+TASK\+\_\+\+ENABLE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a5506ace85aeebbc7eaaee724f400e01a}\label{struct_u_thread_pool_config_a5506ace85aeebbc7eaaee724f400e01a}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!bind\_cpu\_enable\_@{bind\_cpu\_enable\_}}
+\index{bind\_cpu\_enable\_@{bind\_cpu\_enable\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{bind\_cpu\_enable\_}{bind\_cpu\_enable\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Pool\+Config\+::bind\+\_\+cpu\+\_\+enable\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_aa91a97e7af936805a453fb070b03bcad}{CGRAPH\+\_\+\+BIND\+\_\+\+CPU\+\_\+\+ENABLE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a9aa4841fefe518421b323435a2297a6f}\label{struct_u_thread_pool_config_a9aa4841fefe518421b323435a2297a6f}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!default\_thread\_size\_@{default\_thread\_size\_}}
+\index{default\_thread\_size\_@{default\_thread\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{default\_thread\_size\_}{default\_thread\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::default\+\_\+thread\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_af7feaf4e2b5574596a2b69240629cad2}{CGRAPH\+\_\+\+DEFAULT\+\_\+\+THREAD\+\_\+\+SIZE}}}
+
+具体值含义，参考\+UThread\+Pool\+Define.\+h文件 \mbox{\Hypertarget{struct_u_thread_pool_config_a3c059039f987badc154d81455c5523e7}\label{struct_u_thread_pool_config_a3c059039f987badc154d81455c5523e7}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!max\_local\_batch\_size\_@{max\_local\_batch\_size\_}}
+\index{max\_local\_batch\_size\_@{max\_local\_batch\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{max\_local\_batch\_size\_}{max\_local\_batch\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::max\+\_\+local\+\_\+batch\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a096c048e33cdd7a7afcb9ecaf9444b7e}{CGRAPH\+\_\+\+MAX\+\_\+\+LOCAL\+\_\+\+BATCH\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_acfee622f734c9da8e1be7999b5ef3fa7}\label{struct_u_thread_pool_config_acfee622f734c9da8e1be7999b5ef3fa7}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!max\_pool\_batch\_size\_@{max\_pool\_batch\_size\_}}
+\index{max\_pool\_batch\_size\_@{max\_pool\_batch\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{max\_pool\_batch\_size\_}{max\_pool\_batch\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::max\+\_\+pool\+\_\+batch\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a928b52e27c72c7c41ebf38efc9744d97}{CGRAPH\+\_\+\+MAX\+\_\+\+POOL\+\_\+\+BATCH\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a1a020a5a82f6f2a1ba4132b165487d66}\label{struct_u_thread_pool_config_a1a020a5a82f6f2a1ba4132b165487d66}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!max\_steal\_batch\_size\_@{max\_steal\_batch\_size\_}}
+\index{max\_steal\_batch\_size\_@{max\_steal\_batch\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{max\_steal\_batch\_size\_}{max\_steal\_batch\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::max\+\_\+steal\+\_\+batch\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a493ef854b0287c074ad8aa91ea0d8fd6}{CGRAPH\+\_\+\+MAX\+\_\+\+STEAL\+\_\+\+BATCH\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a208e518ad1a4daecc56fcf9152703a0b}\label{struct_u_thread_pool_config_a208e518ad1a4daecc56fcf9152703a0b}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!max\_task\_steal\_range\_@{max\_task\_steal\_range\_}}
+\index{max\_task\_steal\_range\_@{max\_task\_steal\_range\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{max\_task\_steal\_range\_}{max\_task\_steal\_range\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::max\+\_\+task\+\_\+steal\+\_\+range\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a79fa20708b601711ed0ef2f252ce38e6}{CGRAPH\+\_\+\+MAX\+\_\+\+TASK\+\_\+\+STEAL\+\_\+\+RANGE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a31523fbac8ff70e3bde5715cb32d547e}\label{struct_u_thread_pool_config_a31523fbac8ff70e3bde5715cb32d547e}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!max\_thread\_size\_@{max\_thread\_size\_}}
+\index{max\_thread\_size\_@{max\_thread\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{max\_thread\_size\_}{max\_thread\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::max\+\_\+thread\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a626db6a0cd1c2d67be36712257d29692}{CGRAPH\+\_\+\+MAX\+\_\+\+THREAD\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_ad6ad446858935587769da258b2d94424}\label{struct_u_thread_pool_config_ad6ad446858935587769da258b2d94424}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!monitor\_enable\_@{monitor\_enable\_}}
+\index{monitor\_enable\_@{monitor\_enable\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{monitor\_enable\_}{monitor\_enable\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ad35685a7710c79cc8c68bc222fbaf915}{CBool}} UThread\+Pool\+Config\+::monitor\+\_\+enable\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_ae75a271fab282a732b9be98abe4cebcc}{CGRAPH\+\_\+\+MONITOR\+\_\+\+ENABLE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a90d6134cef0fc63790bb923bce240419}\label{struct_u_thread_pool_config_a90d6134cef0fc63790bb923bce240419}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!monitor\_span\_@{monitor\_span\_}}
+\index{monitor\_span\_@{monitor\_span\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{monitor\_span\_}{monitor\_span\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} UThread\+Pool\+Config\+::monitor\+\_\+span\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a91166689863d823bfdd0bffa58f53a4c}{CGRAPH\+\_\+\+MONITOR\+\_\+\+SPAN}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_ac8f503a92aff8024a046e3814f4b1e60}\label{struct_u_thread_pool_config_ac8f503a92aff8024a046e3814f4b1e60}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!primary\_thread\_busy\_epoch\_@{primary\_thread\_busy\_epoch\_}}
+\index{primary\_thread\_busy\_epoch\_@{primary\_thread\_busy\_epoch\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{primary\_thread\_busy\_epoch\_}{primary\_thread\_busy\_epoch\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::primary\+\_\+thread\+\_\+busy\+\_\+epoch\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a2fb81de300eb0d477fa7dc94f2ccda5d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+BUSY\+\_\+\+EPOCH}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_ad03a5c99557725e275b315b98a4d7052}\label{struct_u_thread_pool_config_ad03a5c99557725e275b315b98a4d7052}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!primary\_thread\_empty\_interval\_@{primary\_thread\_empty\_interval\_}}
+\index{primary\_thread\_empty\_interval\_@{primary\_thread\_empty\_interval\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{primary\_thread\_empty\_interval\_}{primary\_thread\_empty\_interval\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UThread\+Pool\+Config\+::primary\+\_\+thread\+\_\+empty\+\_\+interval\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a7eecdce03230df6043a80a7a83689f01}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+EMPTY\+\_\+\+INTERVAL}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_ae3820b3c0e983027252c05e865658df6}\label{struct_u_thread_pool_config_ae3820b3c0e983027252c05e865658df6}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!primary\_thread\_policy\_@{primary\_thread\_policy\_}}
+\index{primary\_thread\_policy\_@{primary\_thread\_policy\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{primary\_thread\_policy\_}{primary\_thread\_policy\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::primary\+\_\+thread\+\_\+policy\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a5ad6897b56c7af826f1f782d07d83ad2}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+POLICY}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a46a3b85d357b9d69d051d3ff042d492b}\label{struct_u_thread_pool_config_a46a3b85d357b9d69d051d3ff042d492b}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!primary\_thread\_priority\_@{primary\_thread\_priority\_}}
+\index{primary\_thread\_priority\_@{primary\_thread\_priority\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{primary\_thread\_priority\_}{primary\_thread\_priority\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::primary\+\_\+thread\+\_\+priority\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a1a8eadbe58a12da07a01f00576da4d0d}{CGRAPH\+\_\+\+PRIMARY\+\_\+\+THREAD\+\_\+\+PRIORITY}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a68557fdc273dfee256f30586ddd303ae}\label{struct_u_thread_pool_config_a68557fdc273dfee256f30586ddd303ae}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!queue\_emtpy\_interval\_@{queue\_emtpy\_interval\_}}
+\index{queue\_emtpy\_interval\_@{queue\_emtpy\_interval\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{queue\_emtpy\_interval\_}{queue\_emtpy\_interval\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a9ab4192e6114af69a1275d1f0ac88717}{CMSec}} UThread\+Pool\+Config\+::queue\+\_\+emtpy\+\_\+interval\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_aca8b3630af26b21ba56f52eb8ce39920}{CGRAPH\+\_\+\+QUEUE\+\_\+\+EMPTY\+\_\+\+INTERVAL}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a0e7e8462d177af0409b582b86bc1ceda}\label{struct_u_thread_pool_config_a0e7e8462d177af0409b582b86bc1ceda}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!secondary\_thread\_policy\_@{secondary\_thread\_policy\_}}
+\index{secondary\_thread\_policy\_@{secondary\_thread\_policy\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{secondary\_thread\_policy\_}{secondary\_thread\_policy\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::secondary\+\_\+thread\+\_\+policy\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a3e17f148fc0be3570ddc77ac8aa9d579}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+POLICY}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a8d2c5103a2c6710e30a6c3e4bf65b986}\label{struct_u_thread_pool_config_a8d2c5103a2c6710e30a6c3e4bf65b986}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!secondary\_thread\_priority\_@{secondary\_thread\_priority\_}}
+\index{secondary\_thread\_priority\_@{secondary\_thread\_priority\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{secondary\_thread\_priority\_}{secondary\_thread\_priority\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::secondary\+\_\+thread\+\_\+priority\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_a0c4bc11021b4601acaf86e01a07f4a0f}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+PRIORITY}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_aae33543accff61425936cf396968d364}\label{struct_u_thread_pool_config_aae33543accff61425936cf396968d364}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!secondary\_thread\_size\_@{secondary\_thread\_size\_}}
+\index{secondary\_thread\_size\_@{secondary\_thread\_size\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{secondary\_thread\_size\_}{secondary\_thread\_size\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_a419408c05039f54a5963fd2e61a4f19e}{CInt}} UThread\+Pool\+Config\+::secondary\+\_\+thread\+\_\+size\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_aece7fac27e01024acf98b340e03220ba}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+SIZE}}}
+
+\mbox{\Hypertarget{struct_u_thread_pool_config_a1188dbdbb839ec82cb766f8280a8b1bb}\label{struct_u_thread_pool_config_a1188dbdbb839ec82cb766f8280a8b1bb}} 
+\index{UThreadPoolConfig@{UThreadPoolConfig}!secondary\_thread\_ttl\_@{secondary\_thread\_ttl\_}}
+\index{secondary\_thread\_ttl\_@{secondary\_thread\_ttl\_}!UThreadPoolConfig@{UThreadPoolConfig}}
+\doxysubsubsection{\texorpdfstring{secondary\_thread\_ttl\_}{secondary\_thread\_ttl\_}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_val_type_8h_ae148c208aae90e5cb131248189441198}{CSec}} UThread\+Pool\+Config\+::secondary\+\_\+thread\+\_\+ttl\+\_\+ = \mbox{\hyperlink{_u_thread_pool_define_8h_ae6c1ba654c28784a5f82faa1716571ae}{CGRAPH\+\_\+\+SECONDARY\+\_\+\+THREAD\+\_\+\+TTL}}}
+
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/\+Utils\+Ctrl/\+Thread\+Pool/\mbox{\hyperlink{_u_thread_pool_config_8h}{UThread\+Pool\+Config.\+h}}\end{DoxyCompactItemize}

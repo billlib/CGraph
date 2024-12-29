@@ -16,6 +16,28 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 具体值含义，参考UThreadPoolDefine.h文件；支持配置以下项目：
+ * default_thread_size_: 默认开启主线程个数
+ * secondary_thread_size_: 默认开启辅助线程个数
+ * max_thread_size_: 最大线程个数
+ * max_task_steal_range_: 盗取机制相邻范围
+ * max_local_batch_size_: 批量执行本地任务最大值
+ * max_pool_batch_size_: 批量执行通用任务最大值
+ * max_steal_batch_size_: 批量盗取任务最大值
+ * primary_thread_busy_epoch_: 主线程进入wait状态的轮数，数值越大，理论性能越高，但空转可能性也越大
+ * primary_thread_empty_interval_: 主线程进入休眠状态的默认时间
+ * secondary_thread_ttl_: 辅助线程ttl，单位为s
+ * monitor_span_: 监控线程执行间隔，单位为s
+ * queue_emtpy_interval_: 队列为空时，等待的时间。仅针对辅助线程，单位为ms
+ * primary_thread_policy_: 主线程调度策略
+ * secondary_thread_policy_: 辅助线程调度策略
+ * primary_thread_priority_: 主线程调度优先级（取值范围0~99，配合调度策略一起使用，不建议不了解相关内容的童鞋做修改）
+ * secondary_thread_priority_: 辅助线程调度优先级（同上）
+ * bind_cpu_enable_: 是否开启绑定cpu模式（仅针对主线程）
+ * batch_task_enable_: 是否开启批量任务功能
+ * monitor_enable_: 是否开启监控程序
+ */
 struct UThreadPoolConfig : public CStruct {
     /** 具体值含义，参考UThreadPoolDefine.h文件 */
     CInt default_thread_size_ = CGRAPH_DEFAULT_THREAD_SIZE;

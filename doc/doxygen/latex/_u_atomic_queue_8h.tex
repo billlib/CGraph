@@ -1,0 +1,29 @@
+\hypertarget{_u_atomic_queue_8h}{}\doxysection{src/\+Utils\+Ctrl/\+Thread\+Pool/\+Queue/\+UAtomic\+Queue.h File Reference}
+\label{_u_atomic_queue_8h}\index{src/UtilsCtrl/ThreadPool/Queue/UAtomicQueue.h@{src/UtilsCtrl/ThreadPool/Queue/UAtomicQueue.h}}
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$mutex$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$condition\+\_\+variable$>$}\newline
+{\ttfamily \#include \char`\"{}../\+UThread\+Pool\+Define.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}UQueue\+Object.\+h\char`\"{}}\newline
+Include dependency graph for UAtomic\+Queue.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_atomic_queue_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_u_atomic_queue_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{class_u_atomic_queue}{UAtomic\+Queue$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em 包含一个普通队列成员，基于mutex\+\_\+封装成一个原子的优先级队列， 支持原子的wait\+Pop/try\+Pop/pop\+With\+Timeout/push/empty 新增ready\+\_\+flag\+\_\+用于通知辅助线程快速退出 \end{DoxyCompactList}\end{DoxyCompactItemize}

@@ -123,7 +123,7 @@ inline CVoid CGRAPH_YIELD() {
 #elif _CGRAPH_SLEEP_NS_AS_YIELD_
     std::this_thread::sleep_for(std::chrono::nanoseconds(1));
 #else
-    // 默认情况下，还是直接调用系统的yield
+    // 默认情况下，还是直接调用系统的yield，让系统动态调度等待时间
     std::this_thread::yield();
 #endif
 }

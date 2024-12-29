@@ -1,0 +1,7 @@
+<map id="UThreadSecondary" name="UThreadSecondary">
+<area shape="rect" id="node1" title="和主线程UThreadPrimary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool_task_queue_)和优先级任务队列(pool_priori..." alt="" coords="5,304,151,331"/>
+<area shape="rect" id="node2" href="$class_u_thread_base.html" title="线程池中实际使用的线程的基类，有以下关键成员： UAtomicQueue&lt;UTask&gt;* pool_task_queue_：存储当前线程待执行的普通任务； UAtomicPriorityQueue&lt;UT..." alt="" coords="23,229,133,256"/>
+<area shape="rect" id="node3" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="19,155,137,181"/>
+<area shape="rect" id="node4" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="31,80,125,107"/>
+<area shape="rect" id="node5" href="$class_c_object.html" title=" " alt="" coords="41,5,115,32"/>
+</map>

@@ -13,12 +13,16 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 距离计算类的基类，提供calc(计算向量距离)、check(检查向量)、normalize(向量归一化)三个虚函数
+ *        其中calc是纯虚函数，派生类必须重写
+ */
 /** 传入的类型和计算结果的类型，可能不同。一般默认相同 */
 template<typename TSrc, typename TRes = TSrc>
 class UDistance : public UDistanceObject {
 public:
     /**
-     * 计算距离信息
+     * 计算距离信息，纯虚函数，派生类必须重写
      * @param v1 向量1
      * @param v2 向量2
      * @param dim1 向量1的维度

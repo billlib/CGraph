@@ -20,6 +20,9 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 用于安全申请CObject/CStruct及其派生类对象
+ */
 class CAllocator {
 public:
     /**

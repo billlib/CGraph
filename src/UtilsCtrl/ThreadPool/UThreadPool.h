@@ -26,6 +26,10 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等
+ * 
+ */
 class UThreadPool : public UThreadObject {
 public:
     /**
@@ -62,7 +66,12 @@ public:
     CStatus init() final;
 
     /**
-     * 提交任务信息
+     * 提交任务信息并分发到对应的任务队列(普通or优先)和线程池(主or辅)
+     * 入参index可以指定线程id，但是实际上仍然需要通过dispatch来真正分发
+     * 分发到的index在主线程index范围内的，提交到主线程池的执行(primary_threads_)
+     * 指定的index为长时间任务的，只能分发到优先级队列执行(priority_task_queue_)
+     * 其他情况下分发到默认的任务队列执行(task_queue_)
+     * 返回的是将task封装成std::packaged_task后get_future返回的std::future对象
      * @tparam FunctionType
      * @param task
      * @param index
@@ -72,6 +81,9 @@ public:
     auto commit(const FunctionType& task,
                 CIndex index = CGRAPH_DEFAULT_TASK_STRATEGY)
     -> std::future<decltype(std::declval<FunctionType>()())>;
+    // declval<FunctionType>()  可以在不实例化FunctionType的情况下模拟这个Function
+    // declval<FunctionType>()()可以在不实例化FunctionType的情况下模拟执行这个Function
+    // 因此decltype(std::declval<FunctionType>()())的作用就是推导出FunctionType的返回值类型
 
     /**
      * 向特定的线程id中，提交任务信息
@@ -132,6 +144,7 @@ public:
 
     /**
      * 获取根据线程id信息，获取线程index信息
+     * thread_record_map_会维护tid到线程index的映射关系，通过查表得到index
      * @param tid
      * @return
      * @notice 辅助线程返回-1
@@ -152,6 +165,7 @@ public:
 
     /**
      * 生成辅助线程。内部确保辅助线程数量不超过设定参数
+     * 最大线程数量(max) ≥ 主线程数量(default) + 已有辅助线程数量(secondary)
      * @param size
      * @return
      */

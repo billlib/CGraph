@@ -16,6 +16,11 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * 基于UTimer实现的定时器，通过async提交异步任务，通过future等待异步任务完成
+ * 支持中途打断，以及支持中途改变每次执行任务的间隔时间
+ * 不需要run，在init的同时就会启动timer_定周期执行daemonTask
+ */
 class GDaemon : public GDaemonObject {
 protected:
     /**

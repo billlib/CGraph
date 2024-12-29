@@ -14,6 +14,14 @@
 
 CGRAPH_NAMESPACE_BEGIN
 
+/**
+ * @brief 支持默认构造一个T类型的对象、封装成单例使用
+ *        目前实际上只支持CObject及其派生类作为单例要维护的对象类型，其他类型在init/destroy阶段啥都不做
+ * 
+ * @tparam T 单例实际维护的对象类型，在USingleton内部维护为T *句柄
+ * @tparam type 单例模式，支持懒汉(LAZY)和饿汉(HUNGRY)模式，默认HUNGRY
+ * @tparam autoInit 是否在构造时自动初始化，默认false
+ */
 template<typename T,
         USingletonType type = USingletonType::HUNGRY,
         CBool autoInit = false>
@@ -39,6 +47,7 @@ public:
      * @return
      */
     T* get() {
+        /* 懒汉模式：get的时候才create */
         if (USingletonType::LAZY == type) {
             create();
         }
@@ -71,6 +80,8 @@ protected:
      * @return
      */
     CVoid create() {
+        // unlikely只用于编译器优化，告诉编译器这个条件不太可能为真，帮忙编译器重排代码
+        // 实际上无论该条件是否满足，下面的语句块都会执行
         if (unlikely(nullptr == handle_)) {
             CGRAPH_LOCK_GUARD lock(lock_);
             if (nullptr == handle_) {
