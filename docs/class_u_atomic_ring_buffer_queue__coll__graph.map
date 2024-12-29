@@ -1,7 +1,0 @@
-<map id="UAtomicRingBufferQueue&lt; T, capacity &gt;" name="UAtomicRingBufferQueue&lt; T, capacity &gt;">
-<area shape="rect" id="node1" title="包含一个基于std::vector的环形队列，基于mutex_实现原子的waitPopWithTimeout/push head_/tail_初始化为0，tail_及tail_之后一直到head_之前的..." alt="" coords="5,304,193,345"/>
-<area shape="rect" id="node2" href="$class_u_queue_object.html" title="UQueueObject单独继承UThreadObject，只在此基础上新增了mutex_和cv_成员" alt="" coords="41,229,157,256"/>
-<area shape="rect" id="node3" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="40,155,159,181"/>
-<area shape="rect" id="node4" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="52,80,147,107"/>
-<area shape="rect" id="node5" href="$class_c_object.html" title=" " alt="" coords="63,5,136,32"/>
-</map>

@@ -1,6 +1,0 @@
-<map id="USpinLock" name="USpinLock">
-<area shape="rect" id="node1" title="基于std::atomic_flag实现的用户态自旋锁，std::atomic_flag只有true/false两种状态； USpinLock提供以下三个方法：lock为忙等，tryLock为单次尝试，..." alt="" coords="19,229,110,256"/>
-<area shape="rect" id="node2" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="5,155,124,181"/>
-<area shape="rect" id="node3" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="17,80,112,107"/>
-<area shape="rect" id="node4" href="$class_c_object.html" title=" " alt="" coords="28,5,101,32"/>
-</map>

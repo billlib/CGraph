@@ -1,4 +1,0 @@
-<map id="GStaticEngine::run" name="GStaticEngine::run">
-<area shape="rect" id="node1" title="未绑定线程的微任务在macros排队执行；其他任务提交到线程池 TODO(bill.lee): 拓扑排序完，但是提交到线程池和微线程的线程怎么保证按照拓扑排序的顺序执行?..." alt="" coords="5,5,148,32"/>
-<area shape="rect" id="node2" href="$class_u_thread_pool.html#a888b45b81008cc0bda0e8009e5d4e941" title=" " alt="" coords="196,5,359,32"/>
-</map>

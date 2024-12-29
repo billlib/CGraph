@@ -1,5 +1,0 @@
-<map id="USerialUniqueArray&lt; T &gt;" name="USerialUniqueArray&lt; T &gt;">
-<area shape="rect" id="node1" title="内部基于std::vector存储，每次插入前进行检查，重复则不插入(uniqueAdd)，保证对外表现为一个不重复数组" alt="" coords="5,155,193,181"/>
-<area shape="rect" id="node2" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="52,80,147,107"/>
-<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="63,5,136,32"/>
-</map>

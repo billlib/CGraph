@@ -1,8 +1,0 @@
-<map id="UThreadBase" name="UThreadBase">
-<area shape="rect" id="node1" title="线程池中实际使用的线程的基类，有以下关键成员： UAtomicQueue&lt;UTask&gt;* pool_task_queue_：存储当前线程待执行的普通任务； UAtomicPriorityQueue&lt;UT..." alt="" coords="95,229,204,256"/>
-<area shape="rect" id="node5" href="$class_u_thread_primary.html" title="主线程类，核心成员是primary_queue_和secondary_queue_ 自身准备执行任务时，优先从primary_queue_取，其次从secondary_queue_取 自身准备窃取任务时..." alt="" coords="5,304,133,331"/>
-<area shape="rect" id="node6" href="$class_u_thread_secondary.html" title="和主线程UThreadPrimary不同，辅助线程没有第一第二任务队列的概念，因为辅助线程不允许窃取， 而是直接从普通任务队列(pool_task_queue_)和优先级任务队列(pool_priori..." alt="" coords="158,304,303,331"/>
-<area shape="rect" id="node2" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="90,155,209,181"/>
-<area shape="rect" id="node3" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="102,80,197,107"/>
-<area shape="rect" id="node4" href="$class_c_object.html" title=" " alt="" coords="113,5,186,32"/>
-</map>

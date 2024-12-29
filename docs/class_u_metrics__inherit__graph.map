@@ -1,4 +1,0 @@
-<map id="UMetrics" name="UMetrics">
-<area shape="rect" id="node1" title="CGraph自带的线程池性能指标统计，主要包含 本地任务队列pop、全局任务队列pop、工作窃取、任务push、轻量级等待(yield)、深度等待(cv.wait)等相关的指标" alt="" coords="5,80,85,107"/>
-<area shape="rect" id="node2" href="$struct_c_struct.html" title=" " alt="" coords="11,5,80,32"/>
-</map>

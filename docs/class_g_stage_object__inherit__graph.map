@@ -1,7 +1,0 @@
-<map id="GStageObject" name="GStageObject">
-<area shape="rect" id="node1" title=" " alt="" coords="46,155,157,181"/>
-<area shape="rect" id="node4" href="$class_g_stage.html" title=" " alt="" coords="5,229,75,256"/>
-<area shape="rect" id="node5" href="$class_g_stage_manager.html" title=" " alt="" coords="99,229,226,256"/>
-<area shape="rect" id="node2" href="$class_graph_object.html" title="GraphObject = CObject，没有新增或删除任何成员" alt="" coords="50,80,153,107"/>
-<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="65,5,138,32"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="UThreadPoolConfig" name="UThreadPoolConfig">
-<area shape="rect" id="node1" title="具体值含义，参考UThreadPoolDefine.h文件；支持配置以下项目： default_thread_size_: 默认开启主线程个数 secondary_thread_size_: 默认开启辅..." alt="" coords="5,80,152,107"/>
-<area shape="rect" id="node2" href="$struct_c_struct.html" title=" " alt="" coords="44,5,113,32"/>
-</map>

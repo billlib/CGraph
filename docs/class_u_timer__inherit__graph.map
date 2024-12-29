@@ -1,5 +1,0 @@
-<map id="UTimer" name="UTimer">
-<area shape="rect" id="node1" title="定周期执行任务的定时器，不需要在初始化的时候传入任务，只需要start的时候传入即可； start还可以指定定时器的执行周期interval、每次task执行完成后可以更改下一次执行周期的modify接..." alt="" coords="17,155,88,181"/>
-<area shape="rect" id="node2" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="5,80,100,107"/>
-<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="16,5,89,32"/>
-</map>
