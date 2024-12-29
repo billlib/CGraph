@@ -22,6 +22,9 @@
 >You, with it, can <b>build your own operators simply, and describe any running schedules</b> as you need, such as dependence, parallelling, aggregation and so on. Some useful tools and plugins are also provide to improve your project.</br></br>
 >Tutorials and contact information are show as follows. Please <b>get in touch with us for free</b> if you need more about this repository.
 
+## 零. 说明
+在 @Chunel.Feng 大佬的基础上写了一些注释，用doxygen搞了个API Reference的前端，需要学习这套框架的朋友可以参考本repo
+
 ## 一. 简介
 
 `CGraph`中文名为【色丶图】，是一套无任何第三方依赖的跨平台图流程执行框架。通过`GPipeline`(流水线)底层调度，提供了包含依赖元素依次执行、非依赖元素并发执行，支持暂停、恢复、超时设定的 `eDAG` 调度功能。
