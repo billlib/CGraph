@@ -1,0 +1,6 @@
+<map id="UTaskGroup" name="UTaskGroup">
+<area shape="rect" id="node1" title="注意，并非基于UTask，实际维护的是CGRAPH_DEFAULT_FUNCTION类型的函数数组(std::vector) 支持addTask将更多的函数加入task_arr_数组，支持指定任务组最大..." alt="" coords="15,229,115,256"/>
+<area shape="rect" id="node2" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node3" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="17,80,112,107"/>
+<area shape="rect" id="node4" href="$class_c_object.html" title=" " alt="" coords="28,5,101,32"/>
+</map>

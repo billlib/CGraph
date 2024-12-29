@@ -1,0 +1,5 @@
+<map id="URandom&lt; T, SEED, TEngine &gt;" name="URandom&lt; T, SEED, TEngine &gt;">
+<area shape="rect" id="node1" title="随机数生成类，支持模板入参T(默认CFloat)、SEED(0为完全随机值，其他为固定随机值)、 TEngine为随机数的生成方式(梅森旋转法/线性同余法/滞后Fibonacci/...." alt="" coords="5,155,232,181"/>
+<area shape="rect" id="node2" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="71,80,166,107"/>
+<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="82,5,155,32"/>
+</map>

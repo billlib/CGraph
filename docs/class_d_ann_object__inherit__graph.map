@@ -1,0 +1,7 @@
+<map id="DAnnObject" name="DAnnObject">
+<area shape="rect" id="node1" title="DAnnObject = DomainObject, run设置为CGRAPH_NO_SUPPORT." alt="" coords="60,155,159,181"/>
+<area shape="rect" id="node4" href="$class_d_ann_node.html" title="ANN领域算子模型抽象，说人话，就是抽象了一套跑NN相关的范式 prepareParam准备要接下来要run的函数类型 函数类型和DAnnNode的成员函数一一对应，分别有 train/search/i..." alt="" coords="5,229,96,256"/>
+<area shape="rect" id="node5" href="$struct_d_ann_param.html" title=" " alt="" coords="120,229,219,256"/>
+<area shape="rect" id="node2" href="$class_domain_object.html" title="DAnnObject = CObject." alt="" coords="52,80,167,107"/>
+<area shape="rect" id="node3" href="$class_c_object.html" title=" " alt="" coords="73,5,146,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="UWorkStealingQueue&lt; T &gt;" name="UWorkStealingQueue&lt; T &gt;">
+<area shape="rect" id="node1" title="工作窃取队列，实现为双端队列(deque_)； push在队尾发生，可以一次性写入一个或多个任务，也支持tryPush和带锁的push； pop在队头发生，可以一次性拿出一个或多个任务，也支持tryPo..." alt="" coords="5,304,204,331"/>
+<area shape="rect" id="node2" href="$class_u_queue_object.html" title="UQueueObject单独继承UThreadObject，只在此基础上新增了mutex_和cv_成员" alt="" coords="47,229,163,256"/>
+<area shape="rect" id="node3" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="45,155,164,181"/>
+<area shape="rect" id="node4" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="57,80,152,107"/>
+<area shape="rect" id="node5" href="$class_c_object.html" title=" " alt="" coords="68,5,141,32"/>
+</map>

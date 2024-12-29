@@ -1,0 +1,6 @@
+<map id="UThreadPool" name="UThreadPool">
+<area shape="rect" id="node1" title="线程池，包含主线程池、辅助线程池、普通任务队列、优先级任务队列、线程池配置、监控线程等" alt="" coords="12,229,117,256"/>
+<area shape="rect" id="node2" href="$class_u_thread_object.html" title="UThreadObject = UtilsObject，将run置为CGRAPH_NO_SUPPORT." alt="" coords="5,155,124,181"/>
+<area shape="rect" id="node3" href="$class_utils_object.html" title="UtilsObject单独继承CObject，run()标记为CGRAPH_NO_SUPPORT." alt="" coords="17,80,112,107"/>
+<area shape="rect" id="node4" href="$class_c_object.html" title=" " alt="" coords="28,5,101,32"/>
+</map>
